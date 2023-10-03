@@ -3,9 +3,9 @@
 <br>
 
 ## :memo: Description
-This the default template for my front-end projects.
+This is the default template for my front-end projects.
 
-The template includes, folder structure, components, tests, and a default configuration for tawiindCSS. It uses Shadcn/UI components..
+This template includes folder structure, components using Shadcn/UI best practices, tests, and a default configuration for tawiindCSS.
 
 <br>
 
