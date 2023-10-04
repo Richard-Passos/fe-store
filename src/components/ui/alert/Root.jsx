@@ -18,7 +18,7 @@ const Alert = ({ className, variant, ...props }, ref) => {
 const alertVariants = cnva('relative w-full rounded-lg border p-4', {
   variants: {
     variant: {
-      default: 'bg-background text-foreground ',
+      default: 'bg-background text-content ',
       destructive:
         'border-destructive/50 text-destructive dark:border-destructive [&>svg]:text-destructive',
     },

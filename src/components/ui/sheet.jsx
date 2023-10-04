@@ -95,7 +95,7 @@ SheetFooter.displayName = 'SheetFooter';
 
 const SheetTitle = ({ className, ...props }, ref) => (
   <SheetPrimitive.Title
-    className={cn('text-lg font-semibold text-foreground', className)}
+    className={cn('text-lg font-semibold text-content', className)}
     ref={ref}
     {...props}
   />
@@ -104,7 +104,7 @@ SheetTitle.displayName = SheetPrimitive.Title.displayName;
 
 const SheetDescription = ({ className, ...props }, ref) => (
   <SheetPrimitive.Description
-    className={cn('text-sm text-muted-foreground', className)}
+    className={cn('text-sm text-muted-content', className)}
     ref={ref}
     {...props}
   />

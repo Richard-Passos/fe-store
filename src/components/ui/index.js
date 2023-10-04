@@ -5,3 +5,4 @@ export { default as AspectRatio } from './aspect-ratio';
 export { default as Avatar } from './avatar';
 export { default as Badge } from './badge';
 export { default as Button } from './button';
+export { default as Calendar } from './calendar';
