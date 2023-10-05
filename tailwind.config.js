@@ -46,7 +46,7 @@ module.exports = {
       },
       fontSize: {
         base: '',
-        md: ['1rem', '1.5rem']
+        md: ['1rem', '1.5rem'],
       },
       borderRadius: {
         sm: 'var(--radius-sm)',
@@ -68,6 +68,7 @@ module.exports = {
         'accordion-up': 'accordion-up 0.2s ease-out',
       },
       data: {
+        checked: 'state=checked',
         closed: 'state=closed',
         open: 'state=open',
       },
