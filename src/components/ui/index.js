@@ -8,3 +8,6 @@ export { default as Button } from './button';
 export { default as Calendar } from './calendar';
 export { default as Checkbox } from './checkbox';
 export { default as Collapsible } from './collapsible';
+export { default as Command } from './command';
+export { default as Link } from './link';
+export { default as Svg } from './svg';

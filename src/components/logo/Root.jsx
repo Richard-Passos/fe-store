@@ -1,5 +1,4 @@
-import { Link } from '../ui/link';
-import { Svg } from '../ui/svg';
+import { Link, Svg } from '@/components/ui';
 
 const Root = (props) => {
   return (

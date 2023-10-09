@@ -2,7 +2,7 @@ import * as NavigationMenuPrimitive from '@radix-ui/react-navigation-menu';
 import { ChevronDown } from 'lucide-react';
 import * as React from 'react';
 
-import { cn } from '@/utils';
+import { cn, cnv } from '@/utils';
 
 const NavigationMenu = 
   ({ className, children, ...props }, ref) => (
@@ -35,14 +35,11 @@ NavigationMenuList.displayName = NavigationMenuPrimitive.List.displayName;
 
 const NavigationMenuItem = NavigationMenuPrimitive.Item;
 
-const navigationMenuTriggerStyle = cnva(
-  'group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-content focus:bg-accent focus:text-accent-content focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-open:bg-accent/50',
-);
 
 const NavigationMenuTrigger = 
   ({ className, children, ...props }, ref) => (
     <NavigationMenuPrimitive.Trigger
-      className={cn(navigationMenuTriggerStyle(), 'group', className)}
+      className={cn('group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-content focus:bg-accent focus:text-accent-content focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-open:bg-accent/50', 'group', className)}
       ref={ref}
       {...props}
     >
@@ -77,7 +74,7 @@ const NavigationMenuViewport =
     <div className={cn('absolute left-0 top-full flex justify-center')}>
       <NavigationMenuPrimitive.Viewport
         className={cn(
-          'origin-top-center data-closed:animate-out data-closed:zoom-out-95 data-open:animate-in data-open:zoom-in-90 relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-md border bg-popover text-popover-content shadow-lg md:w-[var(--radix-navigation-menu-viewport-width)]',
+          'origin-top-center data-closed:animate-out data-closed:zoom-out-95 data-open:animate-in data-open:zoom-in-90 relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-md border bg-muted text-muted-content shadow-lg md:w-[var(--radix-navigation-menu-viewport-width)]',
           className,
         )}
         ref={ref}

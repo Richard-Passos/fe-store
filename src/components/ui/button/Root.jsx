@@ -3,7 +3,6 @@ import { forwardRef } from 'react';
 
 import { cn, cnv } from '@/utils';
 
-
 const Button = ({ asChild, variants, className, ...props }, ref) => {
   const Tag = asChild ? Slot : 'button';
 
@@ -26,7 +25,7 @@ const buttonVariants = cnv({
       base: '[--base:--base] [--content:--content]',
     },
     variant: {
-      default: 'bg-base text-content hover:bg-base/80',
+      filled: 'bg-base text-content hover:bg-base/80',
       outline: 'border-base text-base hover:bg-base hover:text-content',
       ghost: 'text-base hover:bg-base/20 hover:text-content',
       link: 'text-base font-bold underline-offset-4 hover:underline',
@@ -40,7 +39,7 @@ const buttonVariants = cnv({
   },
   defaultVariants: {
     color: 'primary',
-    variant: 'default',
+    variant: 'filled',
     size: 'md',
   },
 });

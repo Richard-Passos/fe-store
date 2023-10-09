@@ -1,4 +1,4 @@
-import Accordion from '@/components/ui/accordion';
+import { Command } from '@/components/ui';
 import { cn } from '@/utils';
 
 const Root = ({ className, ...props }) => {
@@ -7,11 +7,7 @@ const Root = ({ className, ...props }) => {
       className={cn(className)}
       {...props}
     >
-      <Accordion>
-        <Accordion.Item>
-          <Accordion.Header />
-        </Accordion.Item>
-      </Accordion>
+      <Command />
     </main>
   );
 };

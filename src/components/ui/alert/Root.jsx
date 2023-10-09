@@ -2,7 +2,7 @@
 
 import { forwardRef } from 'react';
 
-import { cn } from '@/utils';
+import { cn, cnv } from '@/utils';
 
 const Alert = ({ className, variant, ...props }, ref) => {
   return (
@@ -15,7 +15,7 @@ const Alert = ({ className, variant, ...props }, ref) => {
   );
 };
 
-const alertVariants = cnva('relative w-full rounded-lg border p-4', {
+const alertVariants = cnv('relative w-full rounded-lg border p-4', {
   variants: {
     variant: {
       default: 'bg-background text-content ',

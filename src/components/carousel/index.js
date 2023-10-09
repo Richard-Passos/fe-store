@@ -9,4 +9,4 @@ Carousel.Item = Item;
 Carousel.Next = Next;
 Carousel.Prev = Prev;
 
-export { Carousel };
+export default Carousel;

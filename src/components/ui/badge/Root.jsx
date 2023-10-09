@@ -1,4 +1,4 @@
-import { cn, cnva } from '@/utils';
+import { cn, cnv } from '@/utils';
 
 const Badge = ({ variants, className, ...props }) => {
   return (
@@ -10,25 +10,26 @@ const Badge = ({ variants, className, ...props }) => {
   );
 };
 
-const badgeVariants = cnva(
-  'inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors',
-  {
-    variants: {
-      variant: {
-        default:
-          'border-transparent bg-primary text-primary-content hover:bg-primary/80',
-        secondary:
-          'border-transparent bg-secondary text-secondary-content hover:bg-secondary/80',
-        destructive:
-          'bg-destructive text-destructive-content hover:bg-destructive/80 border-transparent',
-        outline: 'text-content',
-      },
+const badgeVariants = cnv({
+  base: 'inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors border-transparent',
+  variants: {
+    color: {
+      primary: '[--base:--primary] [--content:--primary-c]',
+      secondary: '[--base:--secondary] [--content:--secondary-c]',
+      danger: '[--base:--danger] [--content:--danger-c]',
+      base: '[--base:--base] [--content:--content]',
     },
-    defaultVariants: {
-      variant: 'default',
+    variant: {
+      filled: 'bg-base text-content hover:bg-base/80',
+      outline: 'border-base text-base hover:bg-base hover:text-content',
+      ghost: 'text-base hover:bg-base/20 hover:text-content',
     },
   },
-);
+  defaultVariants: {
+    color: 'primary',
+    variant: 'filled',
+  },
+});
 
 export default Badge;
 export { badgeVariants };
