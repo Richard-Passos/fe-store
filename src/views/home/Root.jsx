@@ -1,4 +1,4 @@
-import { ContextMenu } from '@/components/ui';
+import { Button, Dialog } from '@/components/ui';
 import { cn } from '@/utils';
 
 const Root = ({ className, ...props }) => {
@@ -7,55 +7,66 @@ const Root = ({ className, ...props }) => {
       className={cn(className)}
       {...props}
     >
-      <ContextMenu>
-        <ContextMenu.Trigger className='flex h-[150px] w-[300px] items-center justify-center rounded-md border border-dashed text-sm'>
-          Right click here
-        </ContextMenu.Trigger>
-        <ContextMenu.Content className='w-64'>
-          <ContextMenu.Item>
-            Back
-            <ContextMenu.Shortcut>⌘[</ContextMenu.Shortcut>
-          </ContextMenu.Item>
-          <ContextMenu.Item disabled>
-            Forward
-            <ContextMenu.Shortcut>⌘]</ContextMenu.Shortcut>
-          </ContextMenu.Item>
-          <ContextMenu.Item>
-            Reload
-            <ContextMenu.Shortcut>⌘R</ContextMenu.Shortcut>
-          </ContextMenu.Item>
-          <ContextMenu.Sub>
-            <ContextMenu.Sub.Trigger>More Tools</ContextMenu.Sub.Trigger>
-            <ContextMenu.Sub.Content className='w-48'>
-              <ContextMenu.Item>
-                Save Page As...
-                <ContextMenu.Shortcut>⇧⌘S</ContextMenu.Shortcut>
-              </ContextMenu.Item>
-              <ContextMenu.Item>Create Shortcut...</ContextMenu.Item>
-              <ContextMenu.Item>Name Window...</ContextMenu.Item>
-              <ContextMenu.Separator />
-              <ContextMenu.Item>Developer Tools</ContextMenu.Item>
-            </ContextMenu.Sub.Content>
-          </ContextMenu.Sub>
-          <ContextMenu.Separator />
-          <ContextMenu.CheckboxItem checked>
-            Show Bookmarks Bar
-            <ContextMenu.Shortcut>⌘⇧B</ContextMenu.Shortcut>
-          </ContextMenu.CheckboxItem>
-          <ContextMenu.CheckboxItem>Show Full URLs</ContextMenu.CheckboxItem>
-          <ContextMenu.Separator />
-          <ContextMenu.RadioGroup value='pedro'>
-            <ContextMenu.Label>People</ContextMenu.Label>
-            <ContextMenu.Separator />
-            <ContextMenu.RadioItem value='pedro'>
-              Pedro Duarte
-            </ContextMenu.RadioItem>
-            <ContextMenu.RadioItem value='colm'>
-              Colm Tuite
-            </ContextMenu.RadioItem>
-          </ContextMenu.RadioGroup>
-        </ContextMenu.Content>
-      </ContextMenu>
+      <Dialog>
+        <Dialog.Trigger asChild>
+          <Button
+            variants={{
+              color: 'base',
+              variant: 'outline',
+            }}
+          >
+            Edit Profile
+          </Button>
+        </Dialog.Trigger>
+
+        <Dialog.Portal>
+          <Dialog.Overlay />
+
+          <Dialog.Content className='sm:max-w-[425px]'>
+            <Dialog.Header>
+              <Dialog.Title>Edit profile</Dialog.Title>
+              <Dialog.Description>
+                Make changes to your profile here. Click save when you&apos;re
+                done.
+              </Dialog.Description>
+            </Dialog.Header>
+            <div className='grid gap-4 py-4'>
+              <div className='grid grid-cols-4 items-center gap-4'>
+                <label
+                  className='text-right'
+                  htmlFor='name'
+                >
+                  Name
+                </label>
+
+                <input
+                  className='col-span-3'
+                  defaultValue='Pedro Duarte'
+                  id='name'
+                />
+              </div>
+
+              <div className='grid grid-cols-4 items-center gap-4'>
+                <label
+                  className='text-right'
+                  htmlFor='username'
+                >
+                  Username
+                </label>
+                <input
+                  className='col-span-3'
+                  defaultValue='@peduarte'
+                  id='username'
+                />
+              </div>
+            </div>
+
+            <Dialog.Footer>
+              <Button type='submit'>Save changes</Button>
+            </Dialog.Footer>
+          </Dialog.Content>
+        </Dialog.Portal>
+      </Dialog>
     </main>
   );
 };
