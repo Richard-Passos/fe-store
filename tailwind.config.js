@@ -52,20 +52,24 @@ module.exports = {
         sm: 'var(--radius-sm)',
         md: 'var(--radius-md)',
         lg: 'var(--radius-lg)',
+        inherit: 'inherit',
+      },
+      borderColor: {
+        DEFAULT: 'hsl(var(--muted-c)/.5)',
       },
       keyframes: {
-        'accordion-down': {
+        'slide-down': {
           from: { height: 0 },
           to: { height: 'var(--radix-accordion-content-height)' },
         },
-        'accordion-up': {
+        'slide-up': {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: 0 },
         },
       },
       animation: {
-        'accordion-down': 'accordion-down 0.2s ease-out',
-        'accordion-up': 'accordion-up 0.2s ease-out',
+        'slide-down': 'slide-down 300ms cubic-bezier(0.87, 0, 0.13, 1)',
+        'slide-up': 'slide-up 300ms cubic-bezier(0.87, 0, 0.13, 1)',
       },
       data: {
         checked: 'state=checked',

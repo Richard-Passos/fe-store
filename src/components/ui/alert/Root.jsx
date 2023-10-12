@@ -15,16 +15,17 @@ const Alert = ({ className, variant, ...props }, ref) => {
   );
 };
 
-const alertVariants = cnv('relative w-full rounded-lg border p-4', {
+const alertVariants = cnv({
+  base: 'relative w-full rounded-lg border p-4',
   variants: {
-    variant: {
-      default: 'bg-base text-content ',
-      destructive:
-        'border-destructive/50 text-destructive dark:border-destructive [&>svg]:text-destructive',
+    color: {
+      base: 'bg-base text-content',
+      danger:
+        'border-danger/50 text-danger dark:border-danger [&>svg]:text-danger',
     },
   },
   defaultVariants: {
-    variant: 'default',
+    color: 'base',
   },
 });
 
