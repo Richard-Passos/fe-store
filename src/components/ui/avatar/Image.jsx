@@ -11,7 +11,7 @@ const AvatarImage = ({ asChild, className, children, ...props }, ref) => {
     // eslint-disable-next-line jsx-a11y/alt-text
     <Image
       asChild
-      className={cn('aspect-square h-full w-full', className)}
+      className={cn('h-full w-full', className)}
       ref={ref}
       {...props}
     >
