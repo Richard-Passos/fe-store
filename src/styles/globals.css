@@ -21,14 +21,14 @@
     --accent: 296 76% 52%;
     --accent-c: 64 70% 7%;
 
-    --info: 64 69% 46%;
-    --info-c: 222.2 47.4% 95%;
+    --info: 188 77% 40%;
+    --info-c: 188 57% 90%;
 
-    --warning: 64 69% 46%;
-    --warning-c: 222.2 47.4% 95%;
+    --warning: 45 100% 51%;
+    --warning-c: 45 50% 91%;
 
-    --danger: 64 69% 46%;
-    --danger-c: 222.2 47.4% 95%;
+    --danger: 354 70% 53%;
+    --danger-c: 354 50% 93%;
 
     --radius-sm: 0.9rem;
     --radius-md: 1rem;
