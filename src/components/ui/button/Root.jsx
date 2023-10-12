@@ -16,7 +16,7 @@ const Button = ({ asChild, variants, className, ...props }, ref) => {
 };
 
 const buttonVariants = cnv({
-  base: 'inline-flex items-center justify-center rounded-md border border-transparent font-medium transition-colors',
+  base: 'inline-flex items-center justify-center rounded-lg border border-transparent font-medium transition-colors',
   variants: {
     color: {
       primary: '[--base:--primary] [--content:--primary-c]',

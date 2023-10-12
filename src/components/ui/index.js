@@ -11,5 +11,6 @@ export { default as Collapsible } from './collapsible';
 export { default as Command } from './command';
 export { default as ContextMenu } from './context-menu';
 export { default as Dialog } from './dialog';
+export { default as DropdownMenu } from './dropdown-menu';
 export { default as Link } from './link';
 export { default as Svg } from './svg';

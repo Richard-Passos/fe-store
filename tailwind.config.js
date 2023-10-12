@@ -71,7 +71,7 @@ module.exports = {
         checked: 'state=checked',
         closed: 'state=closed',
         open: 'state=open',
-        disabled: 'disabled'
+        disabled: 'disabled',
       },
     },
   },

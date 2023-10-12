@@ -1,74 +1,107 @@
-import { Button, Dialog } from '@/components/ui';
+import { Check, ChevronRight, Circle } from 'lucide-react';
+
+import { Button, DropdownMenu } from '@/components/ui';
 import { cn } from '@/utils';
 
-const Root = ({ className, ...props }) => {
+const Home = ({ className, ...props }) => {
   return (
     <main
-      className={cn(className)}
+      className={cn('mt-24 flex w-full justify-center', className)}
       {...props}
     >
-      <Dialog>
-        <Dialog.Trigger asChild>
-          <Button
-            variants={{
-              color: 'base',
-              variant: 'outline',
-            }}
-          >
-            Edit Profile
-          </Button>
-        </Dialog.Trigger>
+      <DropdownMenu>
+        <DropdownMenu.Trigger asChild>
+          <Button aria-label='Customise options'>Open</Button>
+        </DropdownMenu.Trigger>
 
-        <Dialog.Portal>
-          <Dialog.Overlay />
+        <DropdownMenu.Portal>
+          <DropdownMenu.Content>
+            <DropdownMenu.Group>
+              <DropdownMenu.Item>
+                New Tab <DropdownMenu.Shortcut>⌘+T</DropdownMenu.Shortcut>
+              </DropdownMenu.Item>
 
-          <Dialog.Content className='sm:max-w-[425px]'>
-            <Dialog.Header>
-              <Dialog.Title>Edit profile</Dialog.Title>
-              <Dialog.Description>
-                Make changes to your profile here. Click save when you&apos;re
-                done.
-              </Dialog.Description>
-            </Dialog.Header>
-            <div className='grid gap-4 py-4'>
-              <div className='grid grid-cols-4 items-center gap-4'>
-                <label
-                  className='text-right'
-                  htmlFor='name'
-                >
-                  Name
-                </label>
+              <DropdownMenu.Item>
+                New Window <DropdownMenu.Shortcut>⌘+N</DropdownMenu.Shortcut>
+              </DropdownMenu.Item>
 
-                <input
-                  className='col-span-3'
-                  defaultValue='Pedro Duarte'
-                  id='name'
-                />
-              </div>
+              <DropdownMenu.Item disabled>
+                New Private Window{' '}
+                <DropdownMenu.Shortcut>⇧+⌘+N</DropdownMenu.Shortcut>
+              </DropdownMenu.Item>
 
-              <div className='grid grid-cols-4 items-center gap-4'>
-                <label
-                  className='text-right'
-                  htmlFor='username'
-                >
-                  Username
-                </label>
-                <input
-                  className='col-span-3'
-                  defaultValue='@peduarte'
-                  id='username'
-                />
-              </div>
-            </div>
+              <DropdownMenu.Sub>
+                <DropdownMenu.Sub.Trigger>
+                  More Tools <ChevronRight />
+                </DropdownMenu.Sub.Trigger>
 
-            <Dialog.Footer>
-              <Button type='submit'>Save changes</Button>
-            </Dialog.Footer>
-          </Dialog.Content>
-        </Dialog.Portal>
-      </Dialog>
+                <DropdownMenu.Portal>
+                  <DropdownMenu.Sub.Content
+                    alignOffset={-5}
+                    sideOffset={8}
+                  >
+                    <DropdownMenu.Item>
+                      Save Page As…{' '}
+                      <DropdownMenu.Shortcut>⌘+S</DropdownMenu.Shortcut>
+                    </DropdownMenu.Item>
+
+                    <DropdownMenu.Item>Create Shortcut…</DropdownMenu.Item>
+
+                    <DropdownMenu.Item>Name Window…</DropdownMenu.Item>
+
+                    <DropdownMenu.Separator />
+
+                    <DropdownMenu.Item>Developer Tools</DropdownMenu.Item>
+                  </DropdownMenu.Sub.Content>
+                </DropdownMenu.Portal>
+              </DropdownMenu.Sub>
+            </DropdownMenu.Group>
+
+            <DropdownMenu.Separator />
+
+            <DropdownMenu.Group>
+              <DropdownMenu.CheckboxItem checked>
+                <DropdownMenu.ItemIndicator>
+                  <Check />
+                </DropdownMenu.ItemIndicator>
+                Show Bookmarks{' '}
+                <DropdownMenu.Shortcut>⌘+B</DropdownMenu.Shortcut>
+              </DropdownMenu.CheckboxItem>
+
+              <DropdownMenu.CheckboxItem>
+                <DropdownMenu.ItemIndicator>
+                  <Check />
+                </DropdownMenu.ItemIndicator>
+                Show Full URLs
+              </DropdownMenu.CheckboxItem>
+            </DropdownMenu.Group>
+
+            <DropdownMenu.Separator />
+
+            <DropdownMenu.Group>
+              <DropdownMenu.Label>People</DropdownMenu.Label>
+
+              <DropdownMenu.RadioGroup value='pedro'>
+                <DropdownMenu.RadioItem value='pedro'>
+                  <DropdownMenu.ItemIndicator>
+                    <Circle className='scale-50 fill-current' />
+                  </DropdownMenu.ItemIndicator>
+                  Pedro Duarte
+                </DropdownMenu.RadioItem>
+
+                <DropdownMenu.RadioItem value='colm'>
+                  <DropdownMenu.ItemIndicator>
+                    <Circle className='scale-50 fill-current' />
+                  </DropdownMenu.ItemIndicator>
+                  Colm Tuite
+                </DropdownMenu.RadioItem>
+              </DropdownMenu.RadioGroup>
+            </DropdownMenu.Group>
+          </DropdownMenu.Content>
+        </DropdownMenu.Portal>
+      </DropdownMenu>
     </main>
   );
 };
 
-export default Root;
+export default Home;

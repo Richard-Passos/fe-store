@@ -8,7 +8,7 @@ import { cn } from '@/utils';
 const ContextMenuSeparator = ({ className, ...props }, ref) => {
   return (
     <Separator
-      className={cn('bg-border -mx-1 my-1 h-px', className)}
+      className={cn('-mx-1 my-1 h-px bg-muted', className)}
       ref={ref}
       {...props}
     />
