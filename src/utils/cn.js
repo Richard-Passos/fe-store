@@ -1,5 +1,5 @@
-import { twMerge } from 'tailwind-merge';
+import customTailwindMergeConfig from './customTailwindMergeConfig';
 
-const cn = twMerge;
+const cn = customTailwindMergeConfig;
 
 export default cn;
