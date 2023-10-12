@@ -16,20 +16,20 @@ const Button = ({ asChild, variants, className, ...props }, ref) => {
 };
 
 const buttonVariants = cnv({
-  base: 'inline-flex items-center justify-center rounded-lg border border-transparent font-medium transition-colors',
+  base: 'inline-flex items-center justify-center rounded-lg border border-transparent font-medium transition-all active:scale-[.98] disabled:pointer-events-none disabled:opacity-50',
   variants: {
     color: {
       primary: '[--base:--primary] [--content:--primary-c]',
       secondary: '[--base:--secondary] [--content:--secondary-c]',
+      accent: '[--base:--accent] [--content:--accent-c]',
       danger: '[--base:--danger] [--content:--danger-c]',
-      base: '[--base:--base] [--content:--content]',
+      base: '[--base] [--content]',
     },
     variant: {
       filled: 'bg-base text-content hover:bg-base/80',
       outline: 'border-base text-base hover:bg-base hover:text-content',
-      ghost: 'text-base hover:bg-base/20 hover:text-content',
+      ghost: 'text-base hover:bg-base/20',
       link: 'text-base font-bold underline-offset-4 hover:underline',
-      disabled: 'opacity-50',
     },
     size: {
       sm: 'h-10 px-4 text-sm',
