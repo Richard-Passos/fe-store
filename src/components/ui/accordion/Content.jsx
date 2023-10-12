@@ -5,16 +5,18 @@ import { forwardRef } from 'react';
 
 import { cn } from '@/utils';
 
-const AccordionContent = ({ className, ...props }, ref) => {
+const AccordionContent = ({ className, children, ...props }, ref) => {
   return (
     <Content
       className={cn(
-        'data-closed:animate-accordion-up data-open:animate-accordion-down overflow-hidden pb-4 text-sm transition-all',
+        'data-closed:animate-slide-up data-open:animate-slide-down overflow-hidden text-sm',
         className,
       )}
       ref={ref}
       {...props}
-    />
+    >
+      <div className='p-4 pt-0'>{children}</div>
+    </Content>
   );
 };
 

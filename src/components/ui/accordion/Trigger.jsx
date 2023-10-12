@@ -9,7 +9,7 @@ const AccordionTrigger = ({ className, ...props }, ref) => {
   return (
     <Trigger
       className={cn(
-        'flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline',
+        'flex w-full items-center justify-between p-4 font-medium hover:bg-muted/20',
         className,
       )}
       ref={ref}
