@@ -1,13 +1,11 @@
-'use client';
-
 import { forwardRef } from 'react';
 
 import { cn, cnv } from '@/utils';
 
-const Alert = ({ className, variant, ...props }, ref) => {
+const Alert = ({ className, variants, ...props }, ref) => {
   return (
     <section
-      className={cn(alertVariants({ variant }), className)}
+      className={cn(alertVariants(variants), className)}
       ref={ref}
       role='alert'
       {...props}
@@ -16,16 +14,22 @@ const Alert = ({ className, variant, ...props }, ref) => {
 };
 
 const alertVariants = cnv({
-  base: 'relative w-full rounded-lg border p-4',
+  base: 'relative w-full max-w-lg rounded-md border border-transparent p-4',
   variants: {
     color: {
-      base: 'bg-base text-content',
-      danger:
-        'border-danger/50 text-danger dark:border-danger [&>svg]:text-danger',
+      info: '[--base:--info] [--content:--info-c]',
+      warning: '[--base:--warning] [--content:--warning-c]',
+      danger: '[--base:--danger] [--content:--danger-c]',
+      base: '[--base] [--content]',
+    },
+    variant: {
+      filled: 'text-base-content bg-base',
+      outline: 'border-base text-base',
     },
   },
   defaultVariants: {
-    color: 'base',
+    color: 'info',
+    variant: 'filled',
   },
 });
 

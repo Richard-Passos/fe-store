@@ -1,5 +1,3 @@
-'use client';
-
 import { Slot } from '@radix-ui/react-slot';
 import { forwardRef } from 'react';
 
@@ -10,7 +8,7 @@ const AlertDescription = ({ asChild, className, ...props }, ref) => {
 
   return (
     <Tag
-      className={cn('text-sm', className)}
+      className={cn('text-sm leading-relaxed', className)}
       ref={ref}
       {...props}
     />
