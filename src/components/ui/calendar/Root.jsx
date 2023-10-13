@@ -14,12 +14,14 @@ const Calendar = ({ className, classNames = {}, components, ...props }) => {
     ...components,
   };
 
+  const mergedClassNames = Object.entries(CLASS_NAMES).reduce(
+    (obj, [key, value]) => ({ ...obj, [key]: cn(value, classNames[key]) }),
+    {},
+  );
+
   classNames = {
     ...classNames,
-    ...Object.entries(CLASS_NAMES).reduce(
-      (obj, [key, value]) => ({ ...obj, [key]: cn(value, classNames[key]) }),
-      {},
-    ),
+    ...mergedClassNames,
   };
 
   return (
