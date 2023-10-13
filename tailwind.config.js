@@ -6,6 +6,7 @@ module.exports = {
   content: [
     './src/app/**/*.jsx',
     './src/components/**/*.jsx',
+    './src/components/ui/variantsColor.js',
     './src/patterns/**/*.jsx',
     './src/views/**/*.jsx',
   ],
@@ -14,9 +15,9 @@ module.exports = {
       colors: {
         main: getColor('--main'),
         content: getColor('--content'),
-        neutral: {
-          DEFAULT: getColor('--neutral'),
-          content: getColor('--neutral-c'),
+        inverted: {
+          DEFAULT: getColor('--inverted'),
+          content: getColor('--inverted-c'),
         },
         muted: {
           DEFAULT: getColor('--muted'),

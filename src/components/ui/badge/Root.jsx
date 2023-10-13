@@ -1,4 +1,6 @@
-import { cn, cnv, variantsColor } from '@/utils';
+import { cn, cnv } from '@/utils';
+
+import variantsColor from '../variantsColor';
 
 const Badge = ({ variants, className, ...props }) => {
   return (

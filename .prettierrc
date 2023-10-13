@@ -16,8 +16,6 @@
   "singleAttributePerLine": true,
   "singleQuote": true,
   "tabWidth": 2,
-  "": "aaaa",
-  "tailwindAttributes": ["classNames"],
   "tailwindFunctions": ["cnv"],
   "trailingComma": "all",
   "useTabs": false

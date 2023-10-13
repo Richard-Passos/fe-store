@@ -1,7 +1,9 @@
 import { Slot } from '@radix-ui/react-slot';
 import { forwardRef } from 'react';
 
-import { cn, cnv, variantsColor } from '@/utils';
+import { cn, cnv } from '@/utils';
+
+import variantsColor from '../variantsColor';
 
 const Button = ({ asChild, variants, className, ...props }, ref) => {
   const Tag = asChild ? Slot : 'button';

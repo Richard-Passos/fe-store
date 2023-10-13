@@ -1,6 +1,6 @@
 const variantsColor = {
   base: '[--main] [--content]',
-  neutral: '[--main:--neutral] [--content:--neutral-c]',
+  inverted: '[--main:--inverted] [--content:--inverted-c]',
   muted: '[--main:--muted] [--content:--muted-c]',
   primary: '[--main:--primary] [--content:--primary-c]',
   secondary: '[--main:--secondary] [--content:--secondary-c]',
