@@ -40,12 +40,13 @@ const CLASS_NAMES = {
   button: buttonVariants({
     color: 'inverted',
     variant: 'ghost',
-    className: 'px-0 aspect-square text-sm',
+    size: 'sm',
+    className: 'aspect-square px-0',
   }),
 
-  caption: 'relative flex items-center justify-center mt-1',
-  caption_dropdowns: 'flex [&>div:first-child]:hidden gap-4',
-  caption_label: 'text-sm font-medium flex items-center gap-2',
+  caption: 'relative mt-1 flex items-center justify-center text-2xl',
+  caption_dropdowns: 'flex gap-4 [&>div:first-child]:hidden',
+  caption_label: 'flex items-center gap-2 text-sm font-medium',
 
   cell: 'p-0',
 
@@ -57,9 +58,9 @@ const CLASS_NAMES = {
   day_range_start: 'rounded-r-none [&.rounded-l-none]:rounded-r-lg',
   day_selected: 'bg-primary text-primary-content hover:bg-primary/80',
 
-  dropdown: 'opacity-0 bg-main text-content absolute inset-0 cursor-pointer',
-  dropdown_month: 'relative [&>span]:hidden [&>select:focus+div]:outline',
-  dropdown_year: 'relative [&>span]:hidden [&>select:focus+div]:outline',
+  dropdown: 'bg-main absolute inset-0 cursor-pointer text-content opacity-0',
+  dropdown_month: 'relative [&>select:focus+div]:outline [&>span]:hidden',
+  dropdown_year: 'relative [&>select:focus+div]:outline [&>span]:hidden',
 
   head_cell: 'inline-block w-9 text-sm font-normal text-muted-content',
 
@@ -73,6 +74,8 @@ const CLASS_NAMES = {
   nav_icon: 'relative h-4 w-4',
 
   row: 'mt-2 flex',
+
+  weeknumber: 'flex h-9 w-9 items-center justify-center text-muted-content',
 };
 
 export default Calendar;
