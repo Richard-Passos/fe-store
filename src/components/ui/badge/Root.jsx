@@ -15,9 +15,9 @@ const badgeVariants = cnv({
   variants: {
     color: variantsColor,
     variant: {
-      filled: 'bg-base text-content',
-      outline: 'border-base text-base',
-      ghost: 'bg-base/20 text-base',
+      filled: 'bg-main text-content',
+      outline: 'border-main text-main',
+      ghost: 'bg-main/20 text-main',
     },
   },
   defaultVariants: {

@@ -20,10 +20,10 @@ const buttonVariants = cnv({
   variants: {
     color: variantsColor,
     variant: {
-      filled: 'bg-base text-content hover:bg-base/80',
-      outline: 'border-base text-base hover:bg-base hover:text-content',
-      ghost: 'text-base hover:bg-base/20',
-      link: 'font-bold text-base underline-offset-4 hover:underline',
+      filled: 'bg-main hover:bg-main/80 text-content',
+      outline: 'border-main text-main hover:bg-main hover:text-content',
+      ghost: 'text-main hover:bg-main/20',
+      link: 'text-main font-bold underline-offset-4 hover:underline',
     },
     size: {
       sm: 'h-10 px-4 text-sm',

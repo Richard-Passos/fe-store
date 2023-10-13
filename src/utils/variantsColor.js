@@ -1,13 +1,13 @@
 const variantsColor = {
-  base: '[--base] [--content]',
-  neutral: '[--base:--neutral] [--content:--neutral-c]',
-  muted: '[--base:--muted] [--content:--muted-c]',
-  primary: '[--base:--primary] [--content:--primary-c]',
-  secondary: '[--base:--secondary] [--content:--secondary-c]',
-  accent: '[--base:--accent] [--content:--accent-c]',
-  info: '[--base:--info] [--content:--info-c]',
-  warning: '[--base:--warning] [--content:--warning-c]',
-  danger: '[--base:--danger] [--content:--danger-c]',
+  base: '[--main] [--content]',
+  neutral: '[--main:--neutral] [--content:--neutral-c]',
+  muted: '[--main:--muted] [--content:--muted-c]',
+  primary: '[--main:--primary] [--content:--primary-c]',
+  secondary: '[--main:--secondary] [--content:--secondary-c]',
+  accent: '[--main:--accent] [--content:--accent-c]',
+  info: '[--main:--info] [--content:--info-c]',
+  warning: '[--main:--warning] [--content:--warning-c]',
+  danger: '[--main:--danger] [--content:--danger-c]',
 };
 
 export default variantsColor;

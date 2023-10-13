@@ -35,24 +35,24 @@ const Calendar = ({ className, classNames = {}, components, ...props }) => {
 };
 
 const CLASS_NAMES = {
-  months: 'flex max-sm:flex-col gap-4',
+  months: ' flex max-sm:flex-col',
   month: 'space-y-4',
   caption: 'relative flex items-center justify-center pt-1',
   caption_label: 'text-sm font-medium',
   nav: 'flex items-center',
   nav_button: buttonVariants({
-    color: 'neutral',
+    color: 'danger',
     variant: 'ghost',
     className:
-      'h-7 aspect-square px-0 [&_svg]:h-4 [&_svg]:w-4 [&_svg]:relative',
+      'aspect-square h-9 px-0 [&_svg]:relative [&_svg]:h-7 [&_svg]:w-7',
   }),
   nav_button_previous: 'absolute left-1 [&_svg]:right-px',
   nav_button_next: 'absolute right-1 [&_svg]:left-px',
-  head_cell: 'w-9 inline-block text-sm font-normal text-muted-content',
+  head_cell: 'inline-block w-9 text-sm font-normal text-muted-content',
   row: 'mt-2 flex',
   cell: 'p-0 text-sm',
   day: buttonVariants({
-    color: 'neutral',
+    color: 'danger',
     variant: 'ghost',
     className: 'h-9 w-9 px-0 font-normal disabled:opacity-25',
   }),

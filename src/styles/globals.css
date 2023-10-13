@@ -6,7 +6,7 @@
   :root {
     @apply [--max-h:calc(var(--max-w)/1.778)] [--max-w:theme(screens.2xl)];
 
-    --base: 237 76% 5%;
+    --main: 237 76% 5%;
     --content: 237 66% 95%;
 
     --neutral: 237 66% 95%;
@@ -39,7 +39,7 @@
   }
 
   body {
-    @apply bg-base text-content;
+    @apply bg-main text-content;
   }
 
   * {

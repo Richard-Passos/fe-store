@@ -12,7 +12,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        base: getColor('--base'),
+        main: getColor('--main'),
         content: getColor('--content'),
         neutral: {
           DEFAULT: getColor('--neutral'),

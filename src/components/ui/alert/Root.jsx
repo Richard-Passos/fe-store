@@ -18,8 +18,8 @@ const alertVariants = cnv({
   variants: {
     color: variantsColor,
     variant: {
-      filled: 'text-base-content bg-base',
-      outline: 'border-base text-base',
+      filled: 'text-main-content bg-main',
+      outline: 'border-main text-main',
     },
   },
   defaultVariants: {
