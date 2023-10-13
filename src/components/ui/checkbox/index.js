@@ -1,8 +1,3 @@
-import Indicator from './Indicator';
-import Root from './Root';
-
-const Checkbox = Root;
-
-Checkbox.Indicator = Indicator;
+import Checkbox from './Root';
 
 export default Checkbox;
