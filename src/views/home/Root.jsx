@@ -1,21 +1,20 @@
-import { Terminal } from 'lucide-react';
+'use client';
 
-import { Alert } from '@/components/ui/';
+import { useState } from 'react';
+
+import { Calendar } from '@/components/ui/';
 
 const Home = () => {
+  const [range, setRange] = useState({});
+
   return (
-    <main className='flex min-h-screen items-center justify-center px-48'>
-      <Alert>
-        <Terminal className='h-4 w-4' />
-
-        <Alert.Title>Heads up!</Alert.Title>
-
-        <Alert.Description>
-          You can add components to your app using the cli.
-        </Alert.Description>
-      </Alert>
+    <main className='my-24 flex min-h-screen flex-col items-center justify-center gap-12 px-48'>
+      <Calendar
+        mode='range'
+        onSelect={setRange}
+        selected={range}
+      />
     </main>
   );
 };
-
 export default Home;

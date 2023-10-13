@@ -14,6 +14,10 @@ module.exports = {
       colors: {
         base: getColor('--base'),
         content: getColor('--content'),
+        neutral: {
+          DEFAULT: getColor('--neutral'),
+          content: getColor('--neutral-c'),
+        },
         muted: {
           DEFAULT: getColor('--muted'),
           content: getColor('--muted-c'),

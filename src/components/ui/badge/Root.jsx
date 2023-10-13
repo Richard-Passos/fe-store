@@ -1,4 +1,4 @@
-import { cn, cnv } from '@/utils';
+import { cn, cnv, variantsColor } from '@/utils';
 
 const Badge = ({ variants, className, ...props }) => {
   return (
@@ -11,19 +11,13 @@ const Badge = ({ variants, className, ...props }) => {
 };
 
 const badgeVariants = cnv({
-  base: 'inline-flex items-center rounded-full border border-transparent px-2.5 py-0.5 text-xs font-semibold transition-colors',
+  base: 'inline-flex items-center rounded-full border border-transparent px-2.5 py-0.5 text-xs font-semibold',
   variants: {
-    color: {
-      primary: '[--base:--primary] [--content:--primary-c]',
-      secondary: '[--base:--secondary] [--content:--secondary-c]',
-      accent: '[--base:--accent] [--content:--accent-c]',
-      danger: '[--base:--danger] [--content:--danger-c]',
-      base: '[--base] [--content]',
-    },
+    color: variantsColor,
     variant: {
       filled: 'bg-base text-content',
       outline: 'border-base text-base',
-      ghost: 'bg-base/20 text-content',
+      ghost: 'bg-base/20 text-base',
     },
   },
   defaultVariants: {

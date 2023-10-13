@@ -7,55 +7,61 @@ import { cn } from '@/utils';
 
 import { buttonVariants } from '../button';
 
-const Calendar = ({
-  className,
-  classNames,
-  showOutsideDays = true,
-  ...props
-}) => {
+const Calendar = ({ className, classNames = {}, components, ...props }) => {
+  components = {
+    IconLeft: ChevronLeft,
+    IconRight: ChevronRight,
+    ...components,
+  };
+
+  classNames = {
+    ...classNames,
+    ...Object.entries(CLASS_NAMES).reduce(
+      (obj, [key, value]) => ({ ...obj, [key]: cn(value, classNames[key]) }),
+      {},
+    ),
+  };
+
   return (
     <DayPicker
-      className={cn('p-3', className)}
-      classNames={{
-        months: 'flex max-sm:flex-col max-sm:space-y-4 sm:space-x-4',
-        month: 'space-y-4',
-        caption: 'relative flex items-center justify-center pt-1',
-        caption_label: 'text-sm font-medium',
-        nav: 'flex items-center space-x-1',
-        nav_button: cn(
-          buttonVariants({ color: 'base', variant: 'outline' }),
-          'h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100',
-        ),
-        nav_button_previous: 'absolute left-1',
-        nav_button_next: 'absolute right-1',
-        table: 'w-full border-collapse space-y-1',
-        head_row: 'flex',
-        head_cell:
-          'w-9 rounded-md text-[0.8rem] font-normal text-muted-content',
-        row: 'mt-2 flex w-full',
-        cell: 'relative p-0 text-center text-sm focus-within:relative focus-within:z-20 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md',
-        day: cn(
-          buttonVariants({ variant: 'ghost' }),
-          'h-9 w-9 p-0 font-normal aria-selected:opacity-100',
-        ),
-        day_selected:
-          'bg-primary text-primary-content hover:bg-primary hover:text-primary-content focus:bg-primary focus:text-primary-content',
-        day_today: 'bg-accent text-accent-content',
-        day_outside: 'text-muted-content opacity-50',
-        day_disabled: 'text-muted-content opacity-50',
-        day_range_middle:
-          'aria-selected:bg-accent aria-selected:text-accent-content',
-        day_hidden: 'invisible',
-        ...classNames,
-      }}
-      components={{
-        IconLeft: () => <ChevronLeft className='h-4 w-4' />,
-        IconRight: () => <ChevronRight className='h-4 w-4' />,
-      }}
-      showOutsideDays={showOutsideDays}
+      className={cn('rounded-md border p-3', className)}
+      classNames={classNames}
+      components={components}
+      fixedWeeks
+      showOutsideDays
       {...props}
     />
   );
+};
+
+const CLASS_NAMES = {
+  months: 'flex max-sm:flex-col gap-4',
+  month: 'space-y-4',
+  caption: 'relative flex items-center justify-center pt-1',
+  caption_label: 'text-sm font-medium',
+  nav: 'flex items-center',
+  nav_button: buttonVariants({
+    color: 'neutral',
+    variant: 'ghost',
+    className:
+      'h-7 aspect-square px-0 [&_svg]:h-4 [&_svg]:w-4 [&_svg]:relative',
+  }),
+  nav_button_previous: 'absolute left-1 [&_svg]:right-px',
+  nav_button_next: 'absolute right-1 [&_svg]:left-px',
+  head_cell: 'w-9 inline-block text-sm font-normal text-muted-content',
+  row: 'mt-2 flex',
+  cell: 'p-0 text-sm',
+  day: buttonVariants({
+    color: 'neutral',
+    variant: 'ghost',
+    className: 'h-9 w-9 px-0 font-normal disabled:opacity-25',
+  }),
+  day_selected: 'bg-primary text-primary-content hover:bg-primary/80',
+  day_outside: 'opacity-50 aria-selected:opacity-100',
+  day_range_start: 'rounded-r-none [&.rounded-l-none]:rounded-r-lg',
+  day_range_middle: 'rounded-none',
+  day_range_end: 'rounded-l-none [&.rounded-r-none]:rounded-l-lg',
+  day_hidden: 'invisible',
 };
 
 export default Calendar;
