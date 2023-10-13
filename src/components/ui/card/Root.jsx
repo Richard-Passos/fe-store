@@ -1,12 +1,15 @@
 import { forwardRef } from 'react';
 
 import { cn } from '@/utils';
+import { Slot } from '@radix-ui/react-slot';
 
-const Card = ({ className, ...props }, ref) => {
+const Card = ({ asChild, className, ...props }, ref) => {
+  const Tag = asChild ? Slot : 'article'
+
   return (
-    <article
+    <Tag
       className={cn(
-        'rounded-lg border bg-muted text-content shadow-sm',
+        'space-y-6 rounded-md bg-muted p-6 text-content shadow-sm',
         className,
       )}
       ref={ref}

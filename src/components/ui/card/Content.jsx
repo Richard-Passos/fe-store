@@ -1,11 +1,9 @@
 import { forwardRef } from 'react';
 
-import { cn } from '@/utils';
-
-const CardContent = ({ className, ...props }, ref) => {
+const CardContent = (props, ref) => {
   return (
     <section
-      className={cn('p-6 pt-0', className)}
+      aria-label='Content'
       ref={ref}
       {...props}
     />
