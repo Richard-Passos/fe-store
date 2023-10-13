@@ -45,7 +45,9 @@
   * {
     @apply outline-none;
   }
-  *:focus-visible {
+
+  *:focus-visible,
+  .outline {
     @apply outline-2 outline-offset-2 outline-current;
   }
 
