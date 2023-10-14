@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { Close } from '@radix-ui/react-dialog';
 import { forwardRef } from 'react';
@@ -9,7 +9,7 @@ const DialogClose = ({ className, ...props }, ref) => {
   return (
     <Close
       className={cn(
-        'absolute right-4 top-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 disabled:pointer-events-none data-open:bg-accent data-open:text-muted-content',
+        'absolute right-4 top-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 disabled:pointer-events-none',
         className,
       )}
       ref={ref}
