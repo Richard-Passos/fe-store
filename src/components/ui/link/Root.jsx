@@ -12,7 +12,7 @@ const Link = ({ href, className, ...props }, ref) => {
 
   props = {
     className: cn(
-      'cursor-pointer font-bold inline-flex items-center justify-center',
+      'inline-flex cursor-pointer items-center justify-center font-semibold',
       className,
     ),
     href,
