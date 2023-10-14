@@ -1,18 +1,16 @@
 'use client';
 
 import { Command } from 'cmdk';
-import { forwardRef } from 'react';
 
 import { cn } from '@/utils';
 
-const CommandSeparator = ({ className, ...props }, ref) => {
+const CommandSeparator = ({ className, ...props }) => {
   return (
     <Command.Separator
-      className={cn('-mx-1 h-px bg-muted', className)}
-      ref={ref}
+      className={cn('-mx-1 h-px bg-muted-content/50', className)}
       {...props}
     />
   );
 };
 
-export default forwardRef(CommandSeparator);
+export default CommandSeparator;

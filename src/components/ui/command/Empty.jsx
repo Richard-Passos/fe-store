@@ -8,7 +8,7 @@ import { cn } from '@/utils';
 const CommandEmpty = ({ className, ...props }, ref) => {
   return (
     <Command.Empty
-      className={cn('py-6 text-center text-sm', className)}
+      className={cn('py-6 text-center text-sm text-muted-content', className)}
       ref={ref}
       {...props}
     />
