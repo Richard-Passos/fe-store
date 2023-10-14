@@ -3,19 +3,20 @@
 import { Content } from '@radix-ui/react-context-menu';
 import { forwardRef } from 'react';
 
-import { cn } from '@/utils';
+import { cn, cnv } from '@/utils';
 
 const ContextMenuContent = ({ className, ...props }, ref) => {
   return (
     <Content
-      className={cn(
-        'bg-main z-50 min-w-[8rem] overflow-hidden rounded-sm border p-1 text-content shadow-md animate-in fade-in-80 data-closed:animate-out data-closed:fade-out-0 data-closed:zoom-out-95 data-open:animate-in data-open:fade-in-0 data-open:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2',
-        className,
-      )}
+      className={cn(contentVariants(), className)}
       ref={ref}
       {...props}
     />
   );
 };
+
+const contentVariants = cnv({
+  base: 'z-50 min-w-[8rem] overflow-hidden rounded-md border bg-main p-1 text-content shadow-md animate-in fade-in-80 data-closed:animate-out data-closed:fade-out-0 data-closed:zoom-out-95 data-open:animate-in data-open:fade-in-0 data-open:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2',
+});
 
 export default forwardRef(ContextMenuContent);

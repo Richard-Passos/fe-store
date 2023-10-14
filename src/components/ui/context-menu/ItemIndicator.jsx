@@ -7,7 +7,10 @@ import { cn } from '@/utils';
 const ContextMenuItemIndicator = ({ className, ...props }) => {
   return (
     <ItemIndicator
-      className={cn(className)}
+      className={cn(
+        'absolute left-3.5 flex aspect-square w-3.5 items-center justify-center',
+        className,
+      )}
       {...props}
     />
   );
