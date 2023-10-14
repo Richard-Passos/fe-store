@@ -9,7 +9,7 @@ const DropdownMenuItemIndicator = ({ className, ...props }, ref) => {
   return (
     <ItemIndicator
       className={cn(
-        'absolute left-3.5 flex h-3.5 w-3.5 items-center justify-center [&>svg]:h-4 [&>svg]:w-4',
+        'absolute left-3.5 flex aspect-square w-3.5 items-center justify-center',
         className,
       )}
       ref={ref}

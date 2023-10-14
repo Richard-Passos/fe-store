@@ -8,7 +8,7 @@ import { cn } from '@/utils';
 const Checkbox = ({ className, children, ...props }, ref) => (
   <Root
     className={cn(
-      'h-5 w-5 shrink-0 rounded-sm border border-primary text-primary-content disabled:cursor-not-allowed disabled:opacity-50 data-checked:bg-primary [&_svg]:aspect-square [&_svg]:w-4',
+      'h-4 w-4 shrink-0 rounded-sm border border-primary text-primary-content disabled:cursor-not-allowed disabled:opacity-50 data-checked:bg-primary [&_svg]:aspect-square [&_svg]:w-3.5',
       className,
     )}
     ref={ref}

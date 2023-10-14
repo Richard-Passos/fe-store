@@ -5,7 +5,7 @@ import { cn } from '@/utils';
 const CardActions = ({ className, ...props }, ref) => {
   return (
     <section
-      className={cn('flex items-center', className)}
+      className={cn('flex items-center gap-2', className)}
       label='Actions'
       ref={ref}
       {...props}
