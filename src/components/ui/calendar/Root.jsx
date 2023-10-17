@@ -3,9 +3,8 @@
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { DayPicker } from 'react-day-picker';
 
+import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/utils';
-
-import { buttonVariants } from '../button';
 
 const Calendar = ({ className, classNames = {}, ...props }) => {
   const mergedClassNames = Object.entries(CLASS_NAMES).reduce(

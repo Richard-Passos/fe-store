@@ -9,7 +9,7 @@ const AvatarFallback = ({ className, ...props }, ref) => {
   return (
     <Fallback
       className={cn(
-        'rounded-inherit flex h-full w-full items-center justify-center bg-muted',
+        'flex h-full w-full items-center justify-center rounded-inherit bg-muted',
         className,
       )}
       ref={ref}

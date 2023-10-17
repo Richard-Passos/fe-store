@@ -1,10 +1,10 @@
+import { Slot } from '@radix-ui/react-slot';
 import { forwardRef } from 'react';
 
 import { cn } from '@/utils';
-import { Slot } from '@radix-ui/react-slot';
 
 const Card = ({ asChild, className, ...props }, ref) => {
-  const Tag = asChild ? Slot : 'article'
+  const Tag = asChild ? Slot : 'article';
 
   return (
     <Tag

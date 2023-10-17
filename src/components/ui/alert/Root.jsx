@@ -1,6 +1,7 @@
 import { forwardRef } from 'react';
 
 import { cn, cnv } from '@/utils';
+
 import variantsColor from '../variantsColor';
 
 const Alert = ({ className, variants, ...props }, ref) => {

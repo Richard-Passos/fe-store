@@ -1,8 +1,7 @@
 import { forwardRef } from 'react';
 
+import Text from '@/components/ui/text';
 import { cn } from '@/utils';
-
-import Text from '../text';
 
 const CardDescription = ({ className, ...props }, ref) => {
   return (

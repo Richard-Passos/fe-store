@@ -3,27 +3,31 @@
 <br>
 
 ## :memo: Description
+
 This is the default template for my front-end projects.
 
-This template includes folder structure, components using Shadcn/UI best practices, tests, and a default configuration for tawiindCSS.
+This template includes folder structure, components using Shadcn/UI best practices, tests, and a default configuration for tawilndCSS.
 
 <br>
 
 ## :wrench: Technologies used
-* Next.js
-* Jest.js
-* RadixUI
-* TailwindCSS
-* JavaScript
+
+- Next.js
+- Jest.js
+- RadixUI
+- TailwindCSS
+- JavaScript
 
 <br>
 
 ## :rocket: Run project
+
 It is recommended to clone the project.
 
 <br>
 
 ## :handshake: Team
+
 <table>
   <tr>
     <td align="center">
@@ -40,4 +44,5 @@ It is recommended to clone the project.
 <br>
 
 ## :dart: Status
+
 In progress
