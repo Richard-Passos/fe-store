@@ -55,7 +55,7 @@
     @apply w-fit;
   }
 
-  :where(span, a) {
+  :where(span, a, small) {
     @apply inline-block;
   }
 }
