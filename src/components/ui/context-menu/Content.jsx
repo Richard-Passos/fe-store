@@ -20,3 +20,4 @@ const contentVariants = cnv({
 });
 
 export default forwardRef(ContextMenuContent);
+export { contentVariants };

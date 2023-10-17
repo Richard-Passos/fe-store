@@ -5,7 +5,7 @@ import { forwardRef } from 'react';
 
 import { cn } from '@/utils';
 
-import { contentVariants } from '../../dropdown-menu/Content';
+import { contentVariants } from '../Content';
 
 const ContextMenuSubContent = ({ className, ...props }, ref) => {
   return (
