@@ -8,7 +8,7 @@ import { cn } from '@/utils';
 const Label = ({ className, ...props }, ref) => (
   <Root
     className={cn(
-      'text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70',
+      'text-sm font-medium leading-none text-muted-content peer-disabled:cursor-not-allowed peer-disabled:opacity-50',
       className,
     )}
     ref={ref}
