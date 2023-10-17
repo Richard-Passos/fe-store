@@ -1,17 +1,17 @@
-import { cn } from '@/utils';
 import { forwardRef } from 'react';
 
-const Input = ({ className, type, ...props }, ref) => {
+import { cn } from '@/utils';
+
+const Input = ({ className, ...props }, ref) => {
   return (
     <input
       className={cn(
-        'flex h-10 w-full rounded-md border bg-main px-4 text-sm file:border-0 file:bg-transparent file:font-medium placeholder:text-muted-content disabled:cursor-not-allowed disabled:opacity-50',
+        'flex h-10 w-full bg-main px-4 shadow-[0_1px_0_hsl(var(--tw-shadow-color))] shadow-muted-content/50 transition-shadow file:bg-transparent file:font-medium placeholder:text-muted-content focus:shadow-primary focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50',
         className,
       )}
       ref={ref}
-      type={type}
       {...props}
     />
   );
-}
+};
 export default forwardRef(Input);
