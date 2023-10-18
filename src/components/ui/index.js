@@ -14,6 +14,8 @@ export { default as ContextMenu } from './context-menu';
 export { default as Dialog } from './dialog';
 export { default as DropdownMenu } from './dropdown-menu';
 export { default as Form } from './form';
+export { default as HoverCard } from './hover-card';
+export { default as Image } from './image';
 export { default as Input } from './input';
 export { default as Label } from './label';
 export { default as Link } from './link';
