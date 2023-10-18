@@ -5,12 +5,12 @@ import { forwardRef } from 'react';
 
 import { cn, cnv } from '@/utils';
 
-const DropdownMenuContent = ({ className, sideOffset = 8, ...props }, ref) => {
+const DropdownMenuContent = ({ className, ...props }, ref) => {
   return (
     <Content
       className={cn(contentVariants(), className)}
       ref={ref}
-      sideOffset={sideOffset}
+      sideOffset={8}
       {...props}
     />
   );
