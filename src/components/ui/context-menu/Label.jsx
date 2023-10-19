@@ -8,10 +8,7 @@ import { cn } from '@/utils';
 const ContextMenuLabel = ({ className, ...props }, ref) => {
   return (
     <Label
-      className={cn(
-        'px-4 py-1.5 text-sm font-semibold text-muted-content',
-        className,
-      )}
+      className={cn('px-4 py-1.5 text-sm font-semibold', className)}
       ref={ref}
       {...props}
     />

@@ -10,7 +10,11 @@ import { itemVariants } from '../Item';
 const ContextMenuSubTrigger = ({ className, ...props }, ref) => {
   return (
     <SubTrigger
-      className={cn(itemVariants(), className)}
+      className={cn(
+        itemVariants(),
+        'data-open:bg-muted data-open:text-content',
+        className,
+      )}
       ref={ref}
       {...props}
     />

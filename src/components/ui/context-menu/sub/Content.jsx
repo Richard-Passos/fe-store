@@ -10,8 +10,9 @@ import { contentVariants } from '../Content';
 const ContextMenuSubContent = ({ className, ...props }, ref) => {
   return (
     <SubContent
-      className={cn(contentVariants(), 'rounded-sm', className)}
+      className={cn(contentVariants(), 'shadow-lg', className)}
       ref={ref}
+      sideOffset={8}
       {...props}
     />
   );
