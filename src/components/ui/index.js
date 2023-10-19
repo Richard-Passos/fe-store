@@ -18,6 +18,7 @@ export { default as HoverCard } from './hover-card';
 export { default as Image } from './image';
 export { default as Input } from './input';
 export { default as Label } from './label';
+export { default as Menubar } from './menubar';
 export { default as Link } from './link';
 export { default as Svg } from './svg';
 export { default as Text } from './text';
