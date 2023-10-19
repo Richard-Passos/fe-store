@@ -12,6 +12,7 @@ const DropdownMenuSubContent = ({ className, ...props }, ref) => {
     <SubContent
       className={cn(contentVariants(), 'shadow-lg', className)}
       ref={ref}
+      sideOffset={8}
       {...props}
     />
   );

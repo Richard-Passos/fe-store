@@ -12,7 +12,7 @@ const DropdownMenuSubTrigger = ({ className, ...props }, ref) => {
     <SubTrigger
       className={cn(
         itemVariants(),
-        'data-open:bg-muted [&>svg]:h-4 [&>svg]:w-4',
+        'data-open:bg-muted data-open:text-content',
         className,
       )}
       ref={ref}

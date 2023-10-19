@@ -1,15 +1,15 @@
 'use client';
 
-import { Label } from '@radix-ui/react-context-menu';
+import { Label } from '@radix-ui/react-dropdown-menu';
 import { forwardRef } from 'react';
 
 import { cn } from '@/utils';
 
-const ContextMenuLabel = ({ className, ...props }, ref) => {
+const DropdownMenuLabel = ({ className, ...props }, ref) => {
   return (
     <Label
       className={cn(
-        'px-4 py-1.5 text-sm font-semibold text-muted-content',
+        'px-4 py-1.5 text-sm font-semibold',
         className,
       )}
       ref={ref}
@@ -18,4 +18,4 @@ const ContextMenuLabel = ({ className, ...props }, ref) => {
   );
 };
 
-export default forwardRef(ContextMenuLabel);
+export default forwardRef(DropdownMenuLabel);
