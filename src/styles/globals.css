@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    @apply [--max-h:calc(var(--max-w)/1.778)] [--max-w:theme(screens.2xl)];
+    @apply [--font-blank-space:.25em] [--max-h:calc(var(--max-w)/1.778)] [--max-w:theme(screens.2xl)];
 
     --main: 237 76% 5%;
     --content: 237 66% 95%;
@@ -33,9 +33,9 @@
     --danger: 354 70% 53%;
     --danger-c: 354 60% 93%;
 
-    --radius-sm: 0.9rem;
+    --radius-sm: 0.75rem;
     --radius-md: 1rem;
-    --radius-lg: 1.9rem;
+    --radius-lg: 1.25rem;
   }
 
   body {
