@@ -9,7 +9,7 @@ const Menubar = ({ className, ...props }, ref) => {
   return (
     <Root
       className={cn(
-        'flex h-10 items-center gap-1 rounded-md border bg-main p-1',
+        'flex items-center gap-1 rounded-md border bg-main p-1',
         className,
       )}
       ref={ref}

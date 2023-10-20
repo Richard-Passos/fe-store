@@ -3,25 +3,19 @@
 import { Trigger } from '@radix-ui/react-menubar';
 import { forwardRef } from 'react';
 
-import { cn, cnv } from '@/utils';
-
-import { itemVariants } from './Item';
+import { cn } from '@/utils';
 
 const MenubarTrigger = ({ className, ...props }, ref) => {
   return (
     <Trigger
-      className={cn(triggerVariants(), className)}
+      className={cn(
+        'inline-flex items-center gap-2 rounded-sm px-4 py-1.5 text-sm font-medium transition-colors hover:bg-muted focus-visible:[transition:outline_0ms_1ms] data-open:bg-muted data-disabled:pointer-events-none data-disabled:opacity-50',
+        className,
+      )}
       ref={ref}
       {...props}
     />
   );
 };
 
-const triggerVariants = cnv({
-  base: itemVariants({
-    className: 'font-medium data-open:bg-muted data-open:text-content',
-  }),
-});
-
 export default forwardRef(MenubarTrigger);
-export { triggerVariants };
