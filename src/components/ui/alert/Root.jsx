@@ -20,7 +20,7 @@ const alertVariants = cnv({
   variants: {
     color: variantsColor,
     variant: {
-      filled: 'text-main-content bg-main',
+      filled: 'bg-main text-content',
       outline: 'border-main text-main',
     },
   },

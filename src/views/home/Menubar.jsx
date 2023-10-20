@@ -88,6 +88,7 @@ const HomeMenubar = (props) => {
           </Menubar.Content>
         </Menubar.Portal>
       </Menubar.Menu>
+
       <Menubar.Menu>
         <Menubar.Trigger>View</Menubar.Trigger>
 
