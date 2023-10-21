@@ -16,7 +16,7 @@ const Alert = ({ className, variants, ...props }, ref) => {
 };
 
 const alertVariants = cnv({
-  base: 'relative w-full max-w-lg rounded-md border border-transparent p-4',
+  base: 'relative w-full max-w-lg rounded-md border border-transparent p-5',
   variants: {
     color: variantsColor,
     variant: {

@@ -9,7 +9,7 @@ const AccordionContent = ({ className, children, ...props }, ref) => {
   return (
     <Content
       className={cn(
-        'overflow-hidden text-sm data-closed:animate-slide-up data-open:animate-slide-down [&>div]:p-4 [&>div]:pt-0',
+        'overflow-hidden text-sm data-closed:animate-slide-up data-open:animate-slide-down [&>div]:p-5 [&>div]:pt-0',
         className,
       )}
       ref={ref}

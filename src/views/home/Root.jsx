@@ -1,186 +1,133 @@
-'use client';
+import { X } from 'lucide-react';
 
-import { ChevronDown, LogOut } from 'lucide-react';
-import { forwardRef } from 'react';
-
-import { Link, NavigationMenu } from '@/components/ui';
-import { triggerVariants } from '@/components/ui/navigation-menu/Trigger';
-import { cn } from '@/utils';
-
-import HomeMenubar from './Menubar';
-
-const components = [
-  {
-    title: 'Alert Dialog',
-    href: '/docs/primitives/alert-dialog',
-    description:
-      'A modal dialog that interrupts the user with important content and expects a response.',
-  },
-  {
-    title: 'Hover Card',
-    href: '/docs/primitives/hover-card',
-    description:
-      'For sighted users to preview content available behind a link.',
-  },
-  {
-    title: 'Progress',
-    href: '/docs/primitives/progress',
-    description:
-      'Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.',
-  },
-  {
-    title: 'Scroll-area',
-    href: '/docs/primitives/scroll-area',
-    description: 'Visually or semantically separates content.',
-  },
-  {
-    title: 'Tabs',
-    href: '/docs/primitives/tabs',
-    description:
-      'A set of layered sections of content—known as tab panels—that are displayed one at a time.',
-  },
-  {
-    title: 'Tooltip',
-    href: '/docs/primitives/tooltip',
-    description:
-      'A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.',
-  },
-];
+import { Button, Dialog, Input, Label, Popover } from '@/components/ui';
 
 const Home = () => {
   return (
     <main className='mt-48 flex w-full flex-col items-center gap-48'>
-      <NavigationMenu>
-        <NavigationMenu.List>
-          <NavigationMenu.Item>
-            <NavigationMenu.Trigger>
-              Getting started
-              <ChevronDown
-                aria-hidden
-                className='relative top-[1px] w-3.5 transition-transform group-data-open:-rotate-180'
-              />
-            </NavigationMenu.Trigger>
+      <Popover>
+        <Popover.Trigger asChild>
+          <Button variants={{ variant: 'outline' }}>Open popover</Button>
+        </Popover.Trigger>
 
-            <NavigationMenu.Content>
-              <ul className='grid list-none gap-x-3 gap-y-1.5 p-6 sm:w-[500px] sm:grid-cols-[0.75fr_1fr]'>
-                <li className='row-span-3 grid'>
-                  <Link
-                    href='/'
-                    legacyBehavior
-                    passHref
-                  >
-                    <NavigationMenu.Link className='flex h-full w-full flex-col justify-end rounded-sm bg-gradient-to-b from-primary/50 to-primary p-6 no-underline'>
-                      <LogOut className='h-6 w-6' />
+        <Popover.Portal>
+          <Popover.Content className='grid gap-5'>
+            <header className='space-y-2'>
+              <h4 className='font-medium leading-none'>Dimensions</h4>
 
-                      <div className='mb-2 mt-4 text-lg font-medium'>
-                        shadcn/ui
-                      </div>
+              <p className='text-sm text-muted-content'>
+                Set the dimensions for the layer.
+              </p>
+            </header>
 
-                      <p className='text-sm leading-tight text-muted-content'>
-                        Beautifully designed components built with Radix UI and
-                        Tailwind CSS.
-                      </p>
-                    </NavigationMenu.Link>
-                  </Link>
-                </li>
+            <div className='grid gap-2'>
+              <div className='grid grid-cols-3 items-center gap-4'>
+                <Label htmlFor='width'>Width</Label>
 
-                <ListItem
-                  href='/docs'
-                  title='Introduction'
+                <Input
+                  className='col-span-2 h-8'
+                  id='width'
+                  placeholder='100%'
+                />
+              </div>
+
+              <div className='grid grid-cols-3 items-center gap-4'>
+                <Label htmlFor='maxWidth'>Max. width</Label>
+
+                <Input
+                  className='col-span-2 h-8'
+                  id='maxWidth'
+                  placeholder='300px'
+                />
+              </div>
+
+              <div className='grid grid-cols-3 items-center gap-4'>
+                <Label htmlFor='height'>Height</Label>
+
+                <Input
+                  className='col-span-2 h-8'
+                  id='height'
+                  placeholder='25px'
+                />
+              </div>
+
+              <div className='grid grid-cols-3 items-center gap-4'>
+                <Label htmlFor='maxHeight'>Max. height</Label>
+
+                <Input
+                  className='col-span-2 h-8'
+                  id='maxHeight'
+                  placeholder='none'
+                />
+              </div>
+            </div>
+
+            <Popover.Close>
+              <X />
+            </Popover.Close>
+          </Popover.Content>
+        </Popover.Portal>
+      </Popover>
+
+      <Dialog>
+        <Dialog.Trigger asChild>
+          <Button variants={{ variant: 'outline' }}>Edit Profile</Button>
+        </Dialog.Trigger>
+        <Dialog.Portal>
+          <Dialog.Overlay />
+
+          <Dialog.Content className='sm:max-w-[425px]'>
+            <Dialog.Header>
+              <Dialog.Title>Edit profile</Dialog.Title>
+              <Dialog.Description>
+                Make changes to your profile here. Click save when you&apos;re
+                done.
+              </Dialog.Description>
+            </Dialog.Header>
+
+            <div className='grid gap-4 py-4'>
+              <div className='grid grid-cols-4 items-center gap-4'>
+                <Label
+                  className=''
+                  htmlFor='name'
                 >
-                  Re-usable components built using Radix UI and Tailwind CSS.
-                </ListItem>
+                  Name
+                </Label>
 
-                <ListItem
-                  href='/docs/installation'
-                  title='Installation'
+                <Input
+                  className='col-span-3'
+                  defaultValue='Pedro Duarte'
+                  id='name'
+                />
+              </div>
+              <div className='grid grid-cols-4 items-center gap-4'>
+                <Label
+                  className=''
+                  htmlFor='username'
                 >
-                  How to install dependencies and structure your app.
-                </ListItem>
+                  Username
+                </Label>
 
-                <ListItem
-                  href='/docs/primitives/typography'
-                  title='Typography'
-                >
-                  Styles for headings, paragraphs, lists...etc
-                </ListItem>
-              </ul>
-            </NavigationMenu.Content>
-          </NavigationMenu.Item>
+                <Input
+                  className='col-span-3'
+                  defaultValue='@peduarte'
+                  id='username'
+                />
+              </div>
+            </div>
 
-          <NavigationMenu.Item>
-            <NavigationMenu.Trigger>
-              Components
-              <ChevronDown
-                aria-hidden
-                className='relative top-[1px] w-3.5 transition-transform group-data-open:-rotate-180'
-              />
-            </NavigationMenu.Trigger>
+            <Dialog.Actions>
+              <Button type='submit'>Save changes</Button>
+            </Dialog.Actions>
 
-            <NavigationMenu.Content>
-              <ul className='grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] '>
-                {components.map((component) => (
-                  <ListItem
-                    href={component.href}
-                    key={component.title}
-                    title={component.title}
-                  >
-                    {component.description}
-                  </ListItem>
-                ))}
-              </ul>
-            </NavigationMenu.Content>
-          </NavigationMenu.Item>
-
-          <NavigationMenu.Item>
-            <Link
-              href='/docs'
-              legacyBehavior
-              passHref
-            >
-              <NavigationMenu.Link className={triggerVariants()}>
-                Documentation
-              </NavigationMenu.Link>
-            </Link>
-          </NavigationMenu.Item>
-        </NavigationMenu.List>
-
-        <NavigationMenu.Viewport />
-      </NavigationMenu>
-
-      <HomeMenubar />
+            <Dialog.Close>
+              <X />
+            </Dialog.Close>
+          </Dialog.Content>
+        </Dialog.Portal>
+      </Dialog>
     </main>
   );
 };
-
-const ListItem = forwardRef(function Item(
-  { className, title, children, href, ...props },
-  ref,
-) {
-  return (
-    <li>
-      <Link
-        href={href}
-        legacyBehavior
-        passHref
-      >
-        <NavigationMenu.Link
-          className={cn(
-            'block space-y-1.5 rounded-sm p-3 leading-none no-underline transition-colors hover:bg-muted',
-            className,
-          )}
-          ref={ref}
-          {...props}
-        >
-          <div className='text-sm font-medium leading-none'>{title}</div>
-
-          <p className='line-clamp-2 text-sm leading-snug text-muted-content'>
-            {children}
-          </p>
-        </NavigationMenu.Link>
-      </Link>
-    </li>
-  );
-});
 
 export default Home;
