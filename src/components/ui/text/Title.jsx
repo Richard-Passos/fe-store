@@ -1,16 +1,21 @@
 import { Slot } from '@radix-ui/react-slot';
+import { forwardRef } from 'react';
 
 import { cn } from '@/utils';
 
-const TextTitle = ({ asChild, className, ...props }) => {
+const TextTitle = ({ asChild, className, ...props }, ref) => {
   const Tag = asChild ? Slot : 'h2';
 
   return (
     <Tag
-      className={cn('text-xl font-bold text-content', className)}
+      className={cn(
+        'text-xl font-bold',
+        className,
+      )}
+      ref={ref}
       {...props}
     />
   );
 };
 
-export default TextTitle;
+export default forwardRef(TextTitle);
