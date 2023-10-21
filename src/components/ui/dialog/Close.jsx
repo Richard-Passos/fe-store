@@ -8,8 +8,9 @@ import { cn } from '@/utils';
 const DialogClose = ({ className, ...props }, ref) => {
   return (
     <Close
+      aria-label='Close'
       className={cn(
-        'absolute right-4 top-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 disabled:pointer-events-none',
+        'absolute right-3 top-3 inline-flex h-6 w-6 items-center justify-center rounded-sm text-content transition-colors hover:bg-content/20 disabled:pointer-events-none disabled:opacity-50 [&>svg]:h-4 [&>svg]:w-4',
         className,
       )}
       ref={ref}
