@@ -22,5 +22,6 @@ export { default as Link } from './link';
 export { default as Menubar } from './menubar';
 export { default as NavigationMenu } from './navigation-menu';
 export { default as Popover } from './popover';
+export { default as Progress } from './progress';
 export { default as Svg } from './svg';
 export { default as Text } from './text';
