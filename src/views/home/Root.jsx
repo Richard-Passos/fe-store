@@ -1,39 +1,44 @@
-'use client';
+import { Circle } from 'lucide-react';
 
-import { useEffect, useState } from 'react';
-
-import { Progress } from '@/components/ui';
-import variantsColor from '@/components/ui/variantsColor';
-
-const getKeys = (obj) => Object.keys(obj);
-
-const progressVariants = [
-  ...getKeys(variantsColor).map((key) => ({ color: key, size: 'sm' })),
-  ...getKeys(variantsColor).map((key) => ({ color: key, size: 'md' })),
-  ...getKeys(variantsColor).map((key) => ({ color: key, size: 'lg' })),
-];
+import { Label, RadioGroup } from '@/components/ui';
 
 export default function ProgressDemo() {
-  const [progress, setProgress] = useState(10);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setProgress(66), 500);
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <main className='flex min-h-screen w-full items-center justify-center'>
-      <div className='w-full max-w-lg space-y-6'>
-        {progressVariants.map((variants, i) => (
-          <Progress
-            key={`Home progress ${i}`}
-            value={progress}
-            variants={variants}
+      <RadioGroup defaultValue='comfortable'>
+        <div className='flex items-center space-x-2'>
+          <RadioGroup.Item
+            id='r1'
+            value='default'
           >
-            <Progress.Indicator />
-          </Progress>
-        ))}
-      </div>
+            <Circle className='fill-current' />
+          </RadioGroup.Item>
+
+          <Label htmlFor='r1'>Default</Label>
+        </div>
+
+        <div className='flex items-center space-x-2'>
+          <RadioGroup.Item
+            id='r2'
+            value='comfortable'
+          >
+            <Circle className='fill-current' />
+          </RadioGroup.Item>
+
+          <Label htmlFor='r2'>Comfortable</Label>
+        </div>
+
+        <div className='flex items-center space-x-2'>
+          <RadioGroup.Item
+            id='r3'
+            value='compact'
+          >
+            <Circle className='fill-current' />
+          </RadioGroup.Item>
+
+          <Label htmlFor='r3'>Compact</Label>
+        </div>
+      </RadioGroup>
     </main>
   );
 }
