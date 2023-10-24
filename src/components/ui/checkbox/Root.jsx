@@ -14,7 +14,7 @@ const Checkbox = ({ className, children, ...props }, ref) => (
     ref={ref}
     {...props}
   >
-    <Indicator className='flex h-full w-full items-center justify-center'>
+    <Indicator className='flex h-full w-full items-center justify-center rounded-inherit'>
       {children}
     </Indicator>
   </Root>
