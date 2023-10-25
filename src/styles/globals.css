@@ -38,10 +38,6 @@
     --radius-lg: 1.25rem;
   }
 
-  body {
-    @apply bg-main text-content;
-  }
-
   * {
     @apply outline-none;
   }

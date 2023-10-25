@@ -14,7 +14,9 @@ module.exports = {
     extend: {
       spacing: {
         px: 0.8,
+        'font-blank-space': 'var(--font-blank-space)',
       },
+
       colors: {
         main: getColor('--main'),
         content: getColor('--content'),
@@ -52,14 +54,20 @@ module.exports = {
         },
         current: 'currentColor',
       },
+      borderColor: {
+        DEFAULT: 'hsl(var(--muted-c)/.5)',
+      },
       borderRadius: {
         sm: 'var(--radius-sm)',
         md: 'var(--radius-md)',
         lg: 'var(--radius-lg)',
         inherit: 'inherit',
       },
-      borderColor: {
-        DEFAULT: 'hsl(var(--muted-c)/.5)',
+      maxHeight: {
+        bounds: 'var(--max-h)',
+      },
+      maxWidth: {
+        bounds: 'var(--max-w)',
       },
       keyframes: {
         'slide-down': {
