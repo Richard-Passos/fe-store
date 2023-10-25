@@ -1,44 +1,47 @@
-import { Circle } from 'lucide-react';
+import { ScrollArea } from '@/components/ui';
 
-import { Label, RadioGroup } from '@/components/ui';
+const TAGS = [...Array(50)].map((_, i, arr) => `v1.2.0-beta.${arr.length - i}`);
 
 export default function ProgressDemo() {
   return (
-    <main className='flex min-h-screen w-full items-center justify-center'>
-      <RadioGroup defaultValue='comfortable'>
-        <div className='flex items-center space-x-2'>
-          <RadioGroup.Item
-            id='r1'
-            value='default'
-          >
-            <Circle className='fill-current' />
-          </RadioGroup.Item>
+    <main className='max-w-bounds flex min-h-screen w-full items-center justify-center'>
+      <ScrollArea className='h-72 w-36 border'>
+        <ScrollArea.Viewport>
+          <div className='w-36 px-4 py-5'>
+            <div>Tags</div>
 
-          <Label htmlFor='r1'>Default</Label>
-        </div>
+            {TAGS.map((tag) => (
+              <div
+                className='Tag'
+                key={tag}
+              >
+                {tag}
+              </div>
+            ))}
+          </div>
 
-        <div className='flex items-center space-x-2'>
-          <RadioGroup.Item
-            id='r2'
-            value='comfortable'
-          >
-            <Circle className='fill-current' />
-          </RadioGroup.Item>
+          <div className='flex px-4 py-5'>
+            <div>Tags</div>
 
-          <Label htmlFor='r2'>Comfortable</Label>
-        </div>
+            {TAGS.map((tag) => (
+              <div
+                className='Tag'
+                key={tag}
+              >
+                {tag}
+              </div>
+            ))}
+          </div>
+        </ScrollArea.Viewport>
 
-        <div className='flex items-center space-x-2'>
-          <RadioGroup.Item
-            id='r3'
-            value='compact'
-          >
-            <Circle className='fill-current' />
-          </RadioGroup.Item>
+        <ScrollArea.Scrollbar orientation='horizontal'>
+          <ScrollArea.Scrollbar.Thumb />
+        </ScrollArea.Scrollbar>
 
-          <Label htmlFor='r3'>Compact</Label>
-        </div>
-      </RadioGroup>
+        <ScrollArea.Scrollbar>
+          <ScrollArea.Scrollbar.Thumb />
+        </ScrollArea.Scrollbar>
+      </ScrollArea>
     </main>
   );
 }
