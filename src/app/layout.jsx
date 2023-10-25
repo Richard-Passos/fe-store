@@ -15,7 +15,7 @@ const Layout = ({ children }) => {
     <html lang='en'>
       <body
         className={cn(
-          'relative mx-auto min-h-screen max-w-[--max-w] overflow-x-clip',
+          'relative mx-auto min-h-screen bg-main text-content',
           font.className,
         )}
       >
