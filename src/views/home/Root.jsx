@@ -4,7 +4,7 @@ const TAGS = [...Array(50)].map((_, i, arr) => `v1.2.0-beta.${arr.length - i}`);
 
 export default function ProgressDemo() {
   return (
-    <main className='max-w-bounds flex min-h-screen w-full items-center justify-center'>
+    <main className='flex min-h-screen w-full max-w-bounds items-center justify-center'>
       <ScrollArea className='h-72 w-36 border'>
         <ScrollArea.Viewport>
           <div className='w-36 px-4 py-5'>
