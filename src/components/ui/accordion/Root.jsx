@@ -1,7 +1,19 @@
 'use client';
 
 import { Root } from '@radix-ui/react-accordion';
+import { forwardRef } from 'react';
 
-const Accordion = Root;
+import { cn } from '@/utils';
 
-export default Accordion;
+const Accordion = ({ className, ...props }, ref) => {
+  return (
+    <Root
+      className={cn('h-fit w-full rounded-md border bg-main', className)}
+      collapsible
+      ref={ref}
+      {...props}
+    />
+  );
+};
+
+export default forwardRef(Accordion);

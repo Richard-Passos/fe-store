@@ -9,7 +9,7 @@ const AccordionItem = ({ className, ...props }, ref) => {
   return (
     <Item
       className={cn(
-        'overflow-hidden border-x border-b first:rounded-t-sm first:border-t last:rounded-b-sm',
+        'w-full overflow-hidden border-b first:rounded-t-inherit last:rounded-b-inherit last:border-b-0 focus-within:outline',
         className,
       )}
       ref={ref}
