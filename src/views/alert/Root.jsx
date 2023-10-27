@@ -20,7 +20,7 @@ const AlertView = ({ className, ...props }) => {
     >
       {ALERT_VARIANTS.map(({ color, variant }) => (
         <section
-          className={'space-y-6'}
+          className='space-y-6'
           key={color + variant}
         >
           <h2 className='font-medium'>
