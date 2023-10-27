@@ -1,3 +1,3 @@
-import ContextMenu from './Root';
+import Accordion from './Root';
 
-export default ContextMenu;
+export default Accordion;

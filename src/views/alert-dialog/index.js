@@ -1,3 +1,3 @@
-import ContextMenu from './Root';
+import AlertDialog from './Root';
 
-export default ContextMenu;
+export default AlertDialog;
