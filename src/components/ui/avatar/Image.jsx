@@ -10,7 +10,7 @@ const AvatarImage = ({ asChild, className, children, ...props }, ref) => {
   return (
     <RadixImage
       asChild
-      className={cn('h-full w-full', className)}
+      className={cn('h-full w-full rounded-inherit', className)}
       ref={ref}
       {...props}
     >
