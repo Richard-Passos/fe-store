@@ -31,3 +31,4 @@ const alertVariants = cnv({
 });
 
 export default forwardRef(Alert);
+export { alertVariants };

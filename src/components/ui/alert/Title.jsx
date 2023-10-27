@@ -4,7 +4,7 @@ import { forwardRef } from 'react';
 import { cn } from '@/utils';
 
 const AlertTitle = ({ asChild, className, ...props }, ref) => {
-  const Tag = asChild ? Slot : 'h5';
+  const Tag = asChild ? Slot : 'h2';
 
   return (
     <Tag
