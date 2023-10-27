@@ -3,7 +3,7 @@ import { ChevronDown } from 'lucide-react';
 import { Accordion } from '@/components/ui';
 import { cn } from '@/utils';
 
-const DialogView = ({ className, ...props }) => {
+const AccordionView = ({ className, ...props }) => {
   return (
     <main
       className={cn(
@@ -57,4 +57,4 @@ const AccordionTrigger = (props) => {
   );
 };
 
-export default DialogView;
+export default AccordionView;
