@@ -13,9 +13,12 @@ const DialogView = ({ className, ...props }) => {
       <div className='w-full max-w-lg'>
         <AspectRatio ratio={16 / 9}>
           <Image
-            alt=''
+            alt='A road winding through a forest near the ocean.'
             className='rounded-md object-cover'
             fill
+            priority
+            quality={100}
+            src='/images/demo.png'
           />
         </AspectRatio>
       </div>
