@@ -7,13 +7,13 @@
     @apply [--font-blank-space:.25em] [--max-h:calc(var(--max-w)/1.778)] [--max-w:theme(screens.2xl)];
 
     --main: 237 76% 5%;
-    --content: 237 66% 95%;
+    --content: 237 76% 98%;
 
-    --inverted: 237 66% 95%;
+    --inverted: 237 76% 95%;
     --inverted-c: 237 76% 5%;
 
     --muted: 237 56% 7%;
-    --muted-c: 237 10% 60%;
+    --muted-c: 237 10% 68%;
 
     --primary: 266 76% 34%;
     --primary-c: 266 66% 94%;
