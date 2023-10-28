@@ -26,5 +26,6 @@ export { default as Progress } from './progress';
 export { default as RadioGroup } from './radio-group';
 export { default as ScrollArea } from './scroll-area';
 export { default as Select } from './select';
+export { default as Separator } from './separator';
 export { default as Svg } from './svg';
 export { default as Text } from './text';
