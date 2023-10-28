@@ -13,7 +13,7 @@ const Link = ({ href, className, ...props }, ref) => {
   return (
     <NextLink
       className={cn(
-        'inline-flex cursor-pointer items-center justify-center gap-font-blank-space font-semibold',
+        'inline-flex cursor-pointer items-center justify-center gap-font-blank-space font-semibold underline-offset-4 hover:underline',
         className,
       )}
       href={href}
