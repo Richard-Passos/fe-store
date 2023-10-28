@@ -9,7 +9,6 @@ const Accordion = ({ className, ...props }, ref) => {
   return (
     <Root
       className={cn('w-full rounded-md border bg-main', className)}
-      collapsible
       ref={ref}
       {...props}
     />
