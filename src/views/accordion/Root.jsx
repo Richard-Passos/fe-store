@@ -1,45 +1,76 @@
 import { ChevronDown } from 'lucide-react';
 
-import { Accordion } from '@/components/ui';
+import { Accordion, Text } from '@/components/ui';
 import { cn } from '@/utils';
+
+const ACCORDION_VARIANTS = [
+  { type: 'single', collapsible: true },
+  { type: 'single', collapsible: false },
+  { type: 'multiple' },
+];
 
 const AccordionView = ({ className, ...props }) => {
   return (
-    <main
-      className={cn(
-        'flex min-h-screen w-full max-w-bounds items-center justify-center',
-        className,
-      )}
+    <ul
+      className={cn('flex w-full flex-wrap justify-center gap-12', className)}
       {...props}
     >
-      <Accordion className='max-w-screen-md'>
-        <Accordion.Item value='item-1'>
-          <AccordionTrigger>Is it accessible?</AccordionTrigger>
+      {ACCORDION_VARIANTS.map((variants) => (
+        <li
+          className='h-fit w-full max-w-md space-y-6 rounded-md bg-muted p-5 shadow-md'
+          key={getKeyValue(variants).join()}
+        >
+          <Title variants={variants} />
 
-          <Accordion.Content>
-            Yes. It adheres to the WAI-ARIA design pattern.
-          </Accordion.Content>
-        </Accordion.Item>
+          <Accordion {...variants}>
+            <Accordion.Item value='item-1'>
+              <AccordionTrigger>Is it accessible?</AccordionTrigger>
 
-        <Accordion.Item value='item-2'>
-          <AccordionTrigger>Is it styled?</AccordionTrigger>
+              <Accordion.Content>
+                Yes. It adheres to the WAI-ARIA design pattern.
+              </Accordion.Content>
+            </Accordion.Item>
 
-          <Accordion.Content>
-            Yes. It comes with default styles that matches the other
-            components&apos; aesthetic.
-          </Accordion.Content>
-        </Accordion.Item>
+            <Accordion.Item value='item-2'>
+              <AccordionTrigger>Is it styled?</AccordionTrigger>
 
-        <Accordion.Item value='item-3'>
-          <AccordionTrigger>Is it animated?</AccordionTrigger>
+              <Accordion.Content>
+                Yes. It comes with default styles that matches the other
+                components&apos; aesthetic.
+              </Accordion.Content>
+            </Accordion.Item>
 
-          <Accordion.Content>
-            Yes. It&apos;s animated by default, but you can disable it if you
-            prefer.
-          </Accordion.Content>
-        </Accordion.Item>
-      </Accordion>
-    </main>
+            <Accordion.Item value='item-3'>
+              <AccordionTrigger>Is it animated?</AccordionTrigger>
+
+              <Accordion.Content>
+                Yes. It&apos;s animated by default, but you can disable it if
+                you prefer.
+              </Accordion.Content>
+            </Accordion.Item>
+          </Accordion>
+        </li>
+      ))}
+    </ul>
+  );
+};
+
+const getKeyValue = (obj) => Object.entries(obj);
+
+const Title = ({ variants, className, ...props }) => {
+  return (
+    <Text.Title
+      className={cn('text-base font-medium', className)}
+      {...props}
+    >
+      {getKeyValue(variants).map(([key, value], i, arr) => (
+        <>
+          <span className='first:capitalize'>{key}</span>:{' '}
+          <span className='text-muted-content'>{value.toString()}</span>
+          {i < arr.length - 1 && ' - '}
+        </>
+      ))}
+    </Text.Title>
   );
 };
 
