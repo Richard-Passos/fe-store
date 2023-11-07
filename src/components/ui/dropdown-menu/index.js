@@ -1,32 +1,51 @@
-import CheckboxItem from './CheckboxItem';
-import Content from './Content';
-import Group from './Group';
-import Item from './Item';
-import ItemIndicator from './ItemIndicator';
-import Label from './Label';
-import Portal from './Portal';
-import RadioGroup from './RadioGroup';
-import RadioItem from './RadioItem';
-import Root from './Root';
-import Separator from './Separator';
-import Shortcut from './Shortcut';
-import Trigger from './Trigger';
-import Sub from './sub';
+import DropdownMenuCheckboxItem from './CheckboxItem';
+import DropdownMenuContent from './Content';
+import DropdownMenuGroup from './Group';
+import DropdownMenuIcon from './Icon';
+import DropdownMenuItem from './Item';
+import DropdownMenuItemIndicator from './ItemIndicator';
+import DropdownMenuLabel from './Label';
+import DropdownMenuPortal from './Portal';
+import DropdownMenuRadioGroup from './RadioGroup';
+import DropdownMenuRadioItem from './RadioItem';
+import DropdownMenuRoot from './Root';
+import DropdownMenuSeparator from './Separator';
+import DropdownMenuShortcut from './Shortcut';
+import DropdownMenuTrigger from './Trigger';
+import DropdownMenuSub from './sub';
 
-const DropdownMenu = Root;
+const DropdownMenu = DropdownMenuRoot;
 
-DropdownMenu.CheckboxItem = CheckboxItem;
-DropdownMenu.Content = Content;
-DropdownMenu.Group = Group;
-DropdownMenu.Item = Item;
-DropdownMenu.ItemIndicator = ItemIndicator;
-DropdownMenu.Label = Label;
-DropdownMenu.Portal = Portal;
-DropdownMenu.RadioGroup = RadioGroup;
-DropdownMenu.RadioItem = RadioItem;
-DropdownMenu.Separator = Separator;
-DropdownMenu.Shortcut = Shortcut;
-DropdownMenu.Trigger = Trigger;
-DropdownMenu.Sub = Sub;
+DropdownMenu.CheckboxItem = DropdownMenuCheckboxItem;
+DropdownMenu.Content = DropdownMenuContent;
+DropdownMenu.Group = DropdownMenuGroup;
+DropdownMenu.Icon = DropdownMenuIcon;
+DropdownMenu.Item = DropdownMenuItem;
+DropdownMenu.ItemIndicator = DropdownMenuItemIndicator;
+DropdownMenu.Label = DropdownMenuLabel;
+DropdownMenu.Portal = DropdownMenuPortal;
+DropdownMenu.RadioGroup = DropdownMenuRadioGroup;
+DropdownMenu.RadioItem = DropdownMenuRadioItem;
+DropdownMenu.Separator = DropdownMenuSeparator;
+DropdownMenu.Shortcut = DropdownMenuShortcut;
+DropdownMenu.Trigger = DropdownMenuTrigger;
+DropdownMenu.Sub = DropdownMenuSub;
 
 export default DropdownMenu;
+export {
+  DropdownMenuRoot as DropdownMenu,
+  DropdownMenuCheckboxItem,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuIcon,
+  DropdownMenuItem,
+  DropdownMenuItemIndicator,
+  DropdownMenuLabel,
+  DropdownMenuPortal,
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem,
+  DropdownMenuSeparator,
+  DropdownMenuShortcut,
+  DropdownMenuTrigger,
+  DropdownMenuSub,
+};

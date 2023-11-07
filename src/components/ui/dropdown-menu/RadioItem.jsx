@@ -5,12 +5,12 @@ import { forwardRef } from 'react';
 
 import { cn } from '@/utils';
 
-import { itemVariants } from './Item';
+import { dropdownMenuItemVariants } from './Item';
 
 const DropdownMenuRadioItem = ({ className, ...props }, ref) => {
   return (
     <RadioItem
-      className={cn(itemVariants(), 'relative pl-[2.375rem]', className)}
+      className={cn(dropdownMenuItemVariants(), 'relative pl-8', className)}
       ref={ref}
       {...props}
     />

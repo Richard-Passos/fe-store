@@ -8,7 +8,7 @@ import { cn } from '@/utils';
 const ScrollAreaViewport = ({ className, ...props }, ref) => {
   return (
     <Viewport
-      className={cn('h-full w-full rounded-inherit', className)}
+      className={cn('h-full w-full', className)}
       ref={ref}
       {...props}
     />

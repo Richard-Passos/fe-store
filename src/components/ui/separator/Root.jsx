@@ -17,13 +17,15 @@ const Separator = ({ className, orientation, ...props }, ref) => {
   );
 };
 
+const separatorOrientations = {
+  horizontal: 'h-px w-full',
+  vertical: 'h-full w-px',
+};
+
 const separatorVariants = cnv({
-  base: 'shrink-0 bg-muted-content/50',
+  base: 'shrink-0 bg-border',
   variants: {
-    orientation: {
-      horizontal: 'h-px w-full',
-      vertical: 'h-full w-px',
-    },
+    orientation: separatorOrientations,
   },
   defaultVariants: {
     orientation: 'horizontal',
@@ -31,3 +33,4 @@ const separatorVariants = cnv({
 });
 
 export default forwardRef(Separator);
+export { separatorOrientations, separatorVariants };

@@ -5,7 +5,7 @@ import { cn } from '@/utils';
 const CardHeader = ({ className, ...props }, ref) => {
   return (
     <header
-      className={cn('space-y-1.5', className)}
+      className={cn('space-y-2', className)}
       ref={ref}
       {...props}
     />

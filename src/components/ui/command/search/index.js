@@ -1,10 +1,15 @@
-import Icon from './Icon';
-import Input from './Input';
-import Root from './Root';
+import ContentMenuSearchIcon from './Icon';
+import ContentMenuSearchInput from './Input';
+import ContentMenuSearchRoot from './Root';
 
-const Search = Root;
+const ContentMenuSearch = ContentMenuSearchRoot;
 
-Search.Input = Input;
-Search.Icon = Icon;
+ContentMenuSearch.Input = ContentMenuSearchInput;
+ContentMenuSearch.Icon = ContentMenuSearchIcon;
 
-export default Search;
+export default ContentMenuSearch;
+export {
+  ContentMenuSearchRoot as ContentMenuSearch,
+  ContentMenuSearchInput,
+  ContentMenuSearchIcon,
+};

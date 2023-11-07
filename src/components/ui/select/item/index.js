@@ -1,10 +1,11 @@
-import Indicator from './Indicator';
-import Root from './Root';
-import Text from './Text';
+import SelectItemIndicator from './Indicator';
+import SelectItemRoot from './Root';
+import SelectItemText from './Text';
 
-const Item = Root;
+const SelectItem = SelectItemRoot;
 
-Item.Indicator = Indicator;
-Item.Text = Text;
+SelectItem.Indicator = SelectItemIndicator;
+SelectItem.Text = SelectItemText;
 
-export default Item;
+export default SelectItem;
+export { SelectItemRoot as SelectItem, SelectItemIndicator, SelectItemText };

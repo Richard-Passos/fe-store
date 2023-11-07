@@ -6,7 +6,8 @@ module.exports = {
   content: [
     './src/app/**/*.jsx',
     './src/components/**/*.jsx',
-    './src/components/ui/variantsColor.js',
+    './src/components-demo/**/*.jsx',
+    './src/components/ui/variantColors.js',
     './src/patterns/**/*.jsx',
     './src/views/**/*.jsx',
   ],
@@ -44,6 +45,10 @@ module.exports = {
           DEFAULT: getColor('--info'),
           content: getColor('--info-c'),
         },
+        success: {
+          DEFAULT: getColor('--success'),
+          content: getColor('--success-c'),
+        },
         warning: {
           DEFAULT: getColor('--warning'),
           content: getColor('--warning-c'),
@@ -52,16 +57,26 @@ module.exports = {
           DEFAULT: getColor('--danger'),
           content: getColor('--danger-c'),
         },
+        border: 'hsl(var(--muted-c)/.2)',
         current: 'currentColor',
       },
       borderColor: {
-        DEFAULT: 'hsl(var(--muted-c)/.5)',
+        DEFAULT: 'hsl(var(--muted-c)/.2)',
       },
       borderRadius: {
         sm: 'var(--radius-sm)',
         md: 'var(--radius-md)',
         lg: 'var(--radius-lg)',
         inherit: 'inherit',
+      },
+      outlineColor: {
+        DEFAULT: 'currentColor',
+      },
+      outlineOffset: {
+        DEFAULT: '2',
+      },
+      outlineWidth: {
+        DEFAULT: 2,
       },
       maxHeight: {
         bounds: 'var(--max-h)',
@@ -72,16 +87,19 @@ module.exports = {
       keyframes: {
         'slide-down': {
           from: { height: 0 },
-          to: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: 'var(--height, 0)' },
         },
         'slide-up': {
-          from: { height: 'var(--radix-accordion-content-height)' },
+          from: { height: 'var(--height, 0)' },
           to: { height: 0 },
         },
       },
       animation: {
         'slide-down': 'slide-down 300ms cubic-bezier(0.87, 0, 0.13, 1)',
         'slide-up': 'slide-up 300ms cubic-bezier(0.87, 0, 0.13, 1)',
+      },
+      fontFamily: {
+        app: 'var(--font-app)',
       },
       data: {
         checked: 'state=checked',

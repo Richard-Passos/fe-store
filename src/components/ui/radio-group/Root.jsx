@@ -8,7 +8,7 @@ import { cn } from '@/utils';
 const RadioGroup = ({ className, ...props }, ref) => {
   return (
     <Root
-      className={cn('grid gap-2', className)}
+      className={cn('space-y-2', className)}
       ref={ref}
       {...props}
     />

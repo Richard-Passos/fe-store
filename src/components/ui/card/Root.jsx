@@ -9,7 +9,7 @@ const Card = ({ asChild, className, ...props }, ref) => {
   return (
     <Tag
       className={cn(
-        'space-y-6 rounded-md bg-muted p-6 text-content shadow-sm',
+        'space-y-6 rounded-md border bg-main p-6 shadow-md',
         className,
       )}
       ref={ref}

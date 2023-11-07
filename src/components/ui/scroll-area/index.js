@@ -1,12 +1,18 @@
-import Corner from './Corner';
-import Root from './Root';
-import Viewport from './Viewport';
-import Scrollbar from './scrollbar';
+import ScrollAreaCorner from './Corner';
+import ScrollAreaRoot from './Root';
+import ScrollAreaViewport from './Viewport';
+import ScrollAreaScrollbar from './scrollbar';
 
-const ScrollArea = Root;
+const ScrollArea = ScrollAreaRoot;
 
-ScrollArea.Corner = Corner;
-ScrollArea.Viewport = Viewport;
-ScrollArea.Scrollbar = Scrollbar;
+ScrollArea.Corner = ScrollAreaCorner;
+ScrollArea.Viewport = ScrollAreaViewport;
+ScrollArea.Scrollbar = ScrollAreaScrollbar;
 
 export default ScrollArea;
+export {
+  ScrollAreaRoot as ScrollArea,
+  ScrollAreaCorner,
+  ScrollAreaViewport,
+  ScrollAreaScrollbar,
+};

@@ -1,10 +1,11 @@
-import Content from './Content';
-import Root from './Root';
-import Trigger from './Trigger';
+import MenubarSubContent from './Content';
+import MenubarSubRoot from './Root';
+import MenubarSubTrigger from './Trigger';
 
-const Sub = Root;
+const MenubarSub = MenubarSubRoot;
 
-Sub.Content = Content;
-Sub.Trigger = Trigger;
+MenubarSub.Content = MenubarSubContent;
+MenubarSub.Trigger = MenubarSubTrigger;
 
-export default Sub;
+export default MenubarSub;
+export { MenubarSubRoot as MenubarSub, MenubarSubContent, MenubarSubTrigger };

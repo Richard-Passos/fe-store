@@ -1,15 +1,15 @@
 'use client';
 
-import { Command as Root } from 'cmdk';
+import { CommandRoot } from 'cmdk';
 import { forwardRef } from 'react';
 
 import { cn } from '@/utils';
 
 const Command = ({ className, ...props }, ref) => {
   return (
-    <Root
+    <CommandRoot
       className={cn(
-        'flex h-full w-full flex-col overflow-hidden rounded-md border bg-main',
+        'flex w-full flex-col rounded-md border bg-main',
         className,
       )}
       ref={ref}

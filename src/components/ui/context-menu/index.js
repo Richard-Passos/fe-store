@@ -1,32 +1,51 @@
-import CheckboxItem from './CheckboxItem';
-import Content from './Content';
-import Group from './Group';
-import Item from './Item';
-import ItemIndicator from './ItemIndicator';
-import Label from './Label';
-import Portal from './Portal';
-import RadioGroup from './RadioGroup';
-import RadioItem from './RadioItem';
-import Root from './Root';
-import Separator from './Separator';
-import Shortcut from './Shortcut';
-import Trigger from './Trigger';
-import Sub from './sub';
+import ContextMenuCheckboxItem from './CheckboxItem';
+import ContextMenuContent from './Content';
+import ContextMenuGroup from './Group';
+import ContextMenuIcon from './Icon';
+import ContextMenuItem from './Item';
+import ContextMenuItemIndicator from './ItemIndicator';
+import ContextMenuLabel from './Label';
+import ContextMenuPortal from './Portal';
+import ContextMenuRadioGroup from './RadioGroup';
+import ContextMenuRadioItem from './RadioItem';
+import ContextMenuRoot from './Root';
+import ContextMenuSeparator from './Separator';
+import ContextMenuShortcut from './Shortcut';
+import ContextMenuTrigger from './Trigger';
+import ContextMenuSub from './sub';
 
-const ContextMenu = Root;
+const ContextMenu = ContextMenuRoot;
 
-ContextMenu.CheckboxItem = CheckboxItem;
-ContextMenu.Content = Content;
-ContextMenu.Group = Group;
-ContextMenu.Item = Item;
-ContextMenu.ItemIndicator = ItemIndicator;
-ContextMenu.Label = Label;
-ContextMenu.Portal = Portal;
-ContextMenu.RadioGroup = RadioGroup;
-ContextMenu.RadioItem = RadioItem;
-ContextMenu.Separator = Separator;
-ContextMenu.Shortcut = Shortcut;
-ContextMenu.Trigger = Trigger;
-ContextMenu.Sub = Sub;
+ContextMenu.CheckboxItem = ContextMenuCheckboxItem;
+ContextMenu.Content = ContextMenuContent;
+ContextMenu.Group = ContextMenuGroup;
+ContextMenu.Icon = ContextMenuIcon;
+ContextMenu.Item = ContextMenuItem;
+ContextMenu.ItemIndicator = ContextMenuItemIndicator;
+ContextMenu.Label = ContextMenuLabel;
+ContextMenu.Portal = ContextMenuPortal;
+ContextMenu.RadioGroup = ContextMenuRadioGroup;
+ContextMenu.RadioItem = ContextMenuRadioItem;
+ContextMenu.Separator = ContextMenuSeparator;
+ContextMenu.Shortcut = ContextMenuShortcut;
+ContextMenu.Trigger = ContextMenuTrigger;
+ContextMenu.Sub = ContextMenuSub;
 
 export default ContextMenu;
+export {
+  ContextMenuRoot as ContextMenu,
+  ContextMenuCheckboxItem,
+  ContextMenuContent,
+  ContextMenuGroup,
+  ContextMenuIcon,
+  ContextMenuItem,
+  ContextMenuItemIndicator,
+  ContextMenuLabel,
+  ContextMenuPortal,
+  ContextMenuRadioGroup,
+  ContextMenuRadioItem,
+  ContextMenuSeparator,
+  ContextMenuShortcut,
+  ContextMenuTrigger,
+  ContextMenuSub,
+};

@@ -5,14 +5,14 @@ import { forwardRef } from 'react';
 
 import { cn } from '@/utils';
 
-import { itemVariants } from '../Item';
+import { dropdownMenuItemVariants } from '../Item';
 
 const DropdownMenuSubTrigger = ({ className, ...props }, ref) => {
   return (
     <SubTrigger
       className={cn(
-        itemVariants(),
-        'data-open:bg-muted data-open:text-content',
+        dropdownMenuItemVariants(),
+        'data-open:bg-muted',
         className,
       )}
       ref={ref}

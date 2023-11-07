@@ -6,7 +6,7 @@ import { useFormContext } from 'react-hook-form';
 
 import { useFormField } from '@/hooks';
 
-const FormControl = (props, ref) => {
+const FormControl = ({ customRegister, ...props }, ref) => {
   const { error, descriptionId, messageId, id, name } = useFormField(),
     { register } = useFormContext();
 
@@ -18,7 +18,7 @@ const FormControl = (props, ref) => {
       aria-invalid={!!error}
       id={id}
       ref={ref}
-      {...register(name)}
+      {...(customRegister || register(name))}
       {...props}
     />
   );

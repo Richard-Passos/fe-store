@@ -1,20 +1,20 @@
 'use client';
 
 import { ItemIndicator } from '@radix-ui/react-select';
+import { Slot } from '@radix-ui/react-slot';
 import { forwardRef } from 'react';
 
 import { cn } from '@/utils';
 
-const SelectItemIndicator = ({ className, ...props }, ref) => {
+const SelectItemIndicator = ({ className, children, ...props }, ref) => {
   return (
     <ItemIndicator
-      className={cn(
-        'absolute left-[.5625rem] inline-flex h-3.5 w-3.5 items-center justify-center',
-        className,
-      )}
+      className={cn('absolute left-[.5625rem] h-3.5 w-3.5', className)}
       ref={ref}
       {...props}
-    />
+    >
+      <Slot className='h-full w-full'>{children}</Slot>
+    </ItemIndicator>
   );
 };
 

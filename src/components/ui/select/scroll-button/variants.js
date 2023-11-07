@@ -1,7 +1,7 @@
 import { cnv } from '@/utils';
 
-const scrollButtonVariants = cnv({
-  base: 'absolute z-10 flex h-6 w-full cursor-default items-center justify-center bg-main/75 p-1 backdrop-blur-sm',
+const selectScrollButtonVariants = cnv({
+  base: 'absolute z-10 flex h-6 w-full cursor-default items-center justify-center bg-main/75 backdrop-blur-sm',
   variants: {
     side: {
       down: 'bottom-0 border-t',
@@ -13,4 +13,4 @@ const scrollButtonVariants = cnv({
   },
 });
 
-export default scrollButtonVariants;
+export default selectScrollButtonVariants;

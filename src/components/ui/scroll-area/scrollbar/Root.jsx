@@ -3,24 +3,12 @@
 import { Scrollbar } from '@radix-ui/react-scroll-area';
 import { forwardRef } from 'react';
 
-import { cn } from '@/utils';
+import { cn, cnv } from '@/utils';
 
-const ScrollAreaScrollbar = (
-  { className, orientation = 'vertical', ...props },
-  ref,
-) => {
-  const orientationClassName = {
-    vertical: 'h-full w-2.5',
-    horizontal: 'h-2.5 flex-col',
-  };
-
+const ScrollAreaScrollbar = ({ orientation, className, ...props }, ref) => {
   return (
     <Scrollbar
-      className={cn(
-        'flex touch-none select-none bg-muted p-0.5',
-        orientationClassName[orientation],
-        className,
-      )}
+      className={cn(scrollAreaScrollbarVariants({ orientation }), className)}
       orientation={orientation}
       ref={ref}
       {...props}
@@ -28,4 +16,20 @@ const ScrollAreaScrollbar = (
   );
 };
 
+const scrollAreaScrollbarOrientations = {
+  vertical: 'h-full w-2.5',
+  horizontal: 'h-2.5 flex-col',
+};
+
+const scrollAreaScrollbarVariants = cnv({
+  base: 'flex touch-none select-none bg-muted p-0.5',
+  variants: {
+    orientation: scrollAreaScrollbarOrientations,
+  },
+  defaultVariants: {
+    orientation: 'vertical',
+  },
+});
+
 export default forwardRef(ScrollAreaScrollbar);
+export { scrollAreaScrollbarOrientations, scrollAreaScrollbarVariants };

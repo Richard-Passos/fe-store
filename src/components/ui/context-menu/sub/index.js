@@ -1,10 +1,15 @@
-import Content from './Content';
-import Root from './Root';
-import Trigger from './Trigger';
+import ContextMenuSubContent from './Content';
+import ContextMenuSubRoot from './Root';
+import ContextMenuSubTrigger from './Trigger';
 
-const Sub = Root;
+const ContextMenuSub = ContextMenuSubRoot;
 
-Sub.Content = Content;
-Sub.Trigger = Trigger;
+ContextMenuSub.Content = ContextMenuSubContent;
+ContextMenuSub.Trigger = ContextMenuSubTrigger;
 
-export default Sub;
+export default ContextMenuSub;
+export {
+  ContextMenuSubRoot as ContextMenuSub,
+  ContextMenuSubContent,
+  ContextMenuSubTrigger,
+};

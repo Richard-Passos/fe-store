@@ -3,8 +3,9 @@
 import { Image as RadixImage } from '@radix-ui/react-avatar';
 import { forwardRef } from 'react';
 
-import Image from '@/components/ui/image';
 import { cn } from '@/utils';
+
+import Image from '../image';
 
 const AvatarImage = ({ asChild, className, children, ...props }, ref) => {
   return (

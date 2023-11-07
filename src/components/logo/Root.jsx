@@ -1,14 +1,16 @@
-import { Link, Svg } from '@/components/ui';
+import { Text } from '@/components/ui';
 
-const Root = (props) => {
+const Logo = (props) => {
   return (
-    <Link
+    <Text
+      asChild
+      className='font-semibold'
       href='/'
       {...props}
     >
-      <Svg.Logo />
-    </Link>
+      <span>Logo</span>
+    </Text>
   );
 };
 
-export default Root;
+export default Logo;

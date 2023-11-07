@@ -5,16 +5,12 @@ import { forwardRef } from 'react';
 
 import { cn } from '@/utils';
 
-import { itemVariants } from '../Item';
+import { menubarItemVariants } from '../Item';
 
 const MenubarSubTrigger = ({ className, ...props }, ref) => {
   return (
     <SubTrigger
-      className={cn(
-        itemVariants(),
-        'data-open:bg-muted data-open:text-content',
-        className,
-      )}
+      className={cn(menubarItemVariants(), 'data-open:bg-muted', className)}
       ref={ref}
       {...props}
     />

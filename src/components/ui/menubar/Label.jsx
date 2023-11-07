@@ -8,7 +8,10 @@ import { cn } from '@/utils';
 const MenubarLabel = ({ className, ...props }, ref) => {
   return (
     <Label
-      className={cn('px-4 py-1.5 text-sm font-semibold', className)}
+      className={cn(
+        'px-3 py-1.5 text-sm font-semibold text-muted-content',
+        className,
+      )}
       ref={ref}
       {...props}
     />

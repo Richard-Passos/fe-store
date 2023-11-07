@@ -1,10 +1,15 @@
-import Content from './Content';
-import Root from './Root';
-import Trigger from './Trigger';
+import CollapsibleContent from './Content';
+import CollapsibleRoot from './Root';
+import CollapsibleTrigger from './Trigger';
 
-const Collapsible = Root;
+const Collapsible = CollapsibleRoot;
 
-Collapsible.Content = Content;
-Collapsible.Trigger = Trigger;
+Collapsible.Content = CollapsibleContent;
+Collapsible.Trigger = CollapsibleTrigger;
 
 export default Collapsible;
+export {
+  CollapsibleRoot as Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+};

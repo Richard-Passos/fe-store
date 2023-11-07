@@ -1,20 +1,36 @@
-import Empty from './Empty';
-import Group from './Group';
-import Item from './Item';
-import List from './List';
-import Root from './Root';
-import Separator from './Separator';
-import Shortcut from './Shortcut';
-import Search from './search';
+import CommandEmpty from './Empty';
+import CommandGroup from './Group';
+import CommandIcon from './Icon';
+import CommandItem from './Item';
+import CommandList from './List';
+import CommandLoading from './Loading';
+import CommandRoot from './Root';
+import CommandSeparator from './Separator';
+import CommandShortcut from './Shortcut';
+import CommandSearch from './search';
 
-const Command = Root;
+const Command = CommandRoot;
 
-Command.Empty = Empty;
-Command.Group = Group;
-Command.Item = Item;
-Command.List = List;
-Command.Separator = Separator;
-Command.Shortcut = Shortcut;
-Command.Search = Search;
+Command.Empty = CommandEmpty;
+Command.Group = CommandGroup;
+Command.Icon = CommandIcon;
+Command.Item = CommandItem;
+Command.List = CommandList;
+Command.Loading = CommandLoading;
+Command.Separator = CommandSeparator;
+Command.Shortcut = CommandShortcut;
+Command.Search = CommandSearch;
 
 export default Command;
+export {
+  CommandRoot as Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandIcon,
+  CommandItem,
+  CommandList,
+  CommandLoading,
+  CommandSeparator,
+  CommandShortcut,
+  CommandSearch,
+};

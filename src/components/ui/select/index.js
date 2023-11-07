@@ -1,28 +1,42 @@
-import Content from './Content';
-import Group from './Group';
-import Icon from './Icon';
-import Label from './Label';
-import Portal from './Portal';
-import Root from './Root';
-import Separator from './Separator';
-import Trigger from './Trigger';
-import Value from './Value';
-import Viewport from './Viewport';
-import Item from './item';
-import ScrollButton from './scroll-button';
+import SelectContent from './Content';
+import SelectGroup from './Group';
+import SelectIcon from './Icon';
+import SelectLabel from './Label';
+import SelectPortal from './Portal';
+import SelectRoot from './Root';
+import SelectSeparator from './Separator';
+import SelectTrigger from './Trigger';
+import SelectValue from './Value';
+import SelectViewport from './Viewport';
+import SelectItem from './item';
+import SelectScrollButton from './scroll-button';
 
-const Select = Root;
+const Select = SelectRoot;
 
-Select.Content = Content;
-Select.Group = Group;
-Select.Icon = Icon;
-Select.Label = Label;
-Select.Portal = Portal;
-Select.Separator = Separator;
-Select.Trigger = Trigger;
-Select.Value = Value;
-Select.Viewport = Viewport;
-Select.Item = Item;
-Select.ScrollButton = ScrollButton;
+Select.Content = SelectContent;
+Select.Group = SelectGroup;
+Select.Icon = SelectIcon;
+Select.Label = SelectLabel;
+Select.Portal = SelectPortal;
+Select.Separator = SelectSeparator;
+Select.Trigger = SelectTrigger;
+Select.Value = SelectValue;
+Select.Viewport = SelectViewport;
+Select.Item = SelectItem;
+Select.ScrollButton = SelectScrollButton;
 
 export default Select;
+export {
+  SelectRoot as Select,
+  SelectContent,
+  SelectGroup,
+  SelectIcon,
+  SelectLabel,
+  SelectPortal,
+  SelectSeparator,
+  SelectTrigger,
+  SelectValue,
+  SelectViewport,
+  SelectItem,
+  SelectScrollButton,
+};

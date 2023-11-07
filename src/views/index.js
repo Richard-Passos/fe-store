@@ -1,1 +1,1 @@
-export { Home } from './home';
+export { default as HomeView } from './home';

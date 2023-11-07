@@ -1,16 +1,24 @@
-import Actions from './Actions';
-import Content from './Content';
-import Description from './Description';
-import Header from './Header';
-import Root from './Root';
-import Title from './Title';
+import CardActions from './Actions';
+import CardContent from './Content';
+import CardDescription from './Description';
+import CardHeader from './Header';
+import CardRoot from './Root';
+import CardTitle from './Title';
 
-const Card = Root;
+const Card = CardRoot;
 
-Card.Content = Content;
-Card.Description = Description;
-Card.Actions = Actions;
-Card.Header = Header;
-Card.Title = Title;
+Card.Content = CardContent;
+Card.Description = CardDescription;
+Card.Actions = CardActions;
+Card.Header = CardHeader;
+Card.Title = CardTitle;
 
 export default Card;
+export {
+  CardRoot as Card,
+  CardContent,
+  CardDescription,
+  CardActions,
+  CardHeader,
+  CardTitle,
+};

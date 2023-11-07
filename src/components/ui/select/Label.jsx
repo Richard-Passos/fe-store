@@ -8,7 +8,10 @@ import { cn } from '@/utils';
 const SelectLabel = ({ className, ...props }, ref) => {
   return (
     <Label
-      className={cn('px-4 py-1.5 pl-8 text-sm font-semibold', className)}
+      className={cn(
+        'py-1.5 pl-8 pr-4 text-sm font-semibold text-muted-content',
+        className,
+      )}
       ref={ref}
       {...props}
     />

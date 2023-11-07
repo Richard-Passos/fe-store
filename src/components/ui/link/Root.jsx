@@ -3,10 +3,11 @@
 import NextLink from 'next/link';
 import { forwardRef } from 'react';
 
-import { cn, isExternalUrl } from '@/utils';
+import { useIsExternalUrl } from '@/hooks';
+import { cn } from '@/utils';
 
 const Link = ({ href, className, ...props }, ref) => {
-  const isExternal = isExternalUrl(href);
+  const isExternal = useIsExternalUrl(href);
 
   const externalLinkProps = { rel: 'noreferrer', target: '_blank' };
 

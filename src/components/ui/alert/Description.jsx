@@ -1,13 +1,12 @@
-import { Slot } from '@radix-ui/react-slot';
 import { forwardRef } from 'react';
 
 import { cn } from '@/utils';
 
-const AlertDescription = ({ asChild, className, ...props }, ref) => {
-  const Tag = asChild ? Slot : 'p';
+import { Text } from '../text';
 
+const AlertDescription = ({ className, ...props }, ref) => {
   return (
-    <Tag
+    <Text
       className={cn('text-sm leading-relaxed', className)}
       ref={ref}
       {...props}

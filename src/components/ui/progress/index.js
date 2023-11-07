@@ -1,8 +1,14 @@
-import Indicator from './Indicator';
-import Root from './Root';
+import ProgressIndicator from './Indicator';
+import ProgressRoot, { progressSizes, progressVariants } from './Root';
 
-const Progress = Root;
+const Progress = ProgressRoot;
 
-Progress.Indicator = Indicator;
+Progress.Indicator = ProgressIndicator;
 
 export default Progress;
+export {
+  ProgressRoot as Progress,
+  ProgressIndicator,
+  progressSizes,
+  progressVariants,
+};

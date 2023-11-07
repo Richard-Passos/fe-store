@@ -10,8 +10,8 @@ const Image = ({ src, alt, fill, ...props }, ref) => {
 
   props = {
     ref,
-    ...props,
     fill,
+    ...props,
     ...(src
       ? {
           src,

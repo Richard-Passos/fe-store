@@ -1,10 +1,11 @@
-import Content from './Content';
-import Root from './Root';
-import Trigger from './Trigger';
+import HoverCardContent from './Content';
+import HoverCardRoot from './Root';
+import HoverCardTrigger from './Trigger';
 
-const HoverCard = Root;
+const HoverCard = HoverCardRoot;
 
-HoverCard.Content = Content;
-HoverCard.Trigger = Trigger;
+HoverCard.Content = HoverCardContent;
+HoverCard.Trigger = HoverCardTrigger;
 
 export default HoverCard;
+export { HoverCardRoot as HoverCard, HoverCardContent, HoverCardTrigger };

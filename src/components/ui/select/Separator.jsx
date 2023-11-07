@@ -8,7 +8,7 @@ import { cn } from '@/utils';
 const SelectSeparator = ({ className, ...props }, ref) => {
   return (
     <Separator
-      className={cn('-mx-1 my-1 h-px bg-muted-content/50', className)}
+      className={cn('-mx-1 my-1 h-px bg-border', className)}
       ref={ref}
       {...props}
     />

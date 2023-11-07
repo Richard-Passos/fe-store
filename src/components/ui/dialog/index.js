@@ -1,24 +1,39 @@
-import Actions from './Actions';
-import Close from './Close';
-import Content from './Content';
-import Description from './Description';
-import Header from './Header';
-import Overlay from './Overlay';
-import Portal from './Portal';
-import Root from './Root';
-import Title from './Title';
-import Trigger from './Trigger';
+import DialogAction from './Action';
+import DialogActions from './Actions';
+import DialogClose from './Close';
+import DialogContent from './Content';
+import DialogDescription from './Description';
+import DialogHeader from './Header';
+import DialogOverlay from './Overlay';
+import DialogPortal from './Portal';
+import DialogRoot from './Root';
+import DialogTitle from './Title';
+import DialogTrigger from './Trigger';
 
-const Dialog = Root;
+const Dialog = DialogRoot;
 
-Dialog.Actions = Actions;
-Dialog.Close = Close;
-Dialog.Content = Content;
-Dialog.Description = Description;
-Dialog.Header = Header;
-Dialog.Overlay = Overlay;
-Dialog.Portal = Portal;
-Dialog.Title = Title;
-Dialog.Trigger = Trigger;
+Dialog.Action = DialogAction;
+Dialog.Actions = DialogActions;
+Dialog.Close = DialogClose;
+Dialog.Content = DialogContent;
+Dialog.Description = DialogDescription;
+Dialog.Header = DialogHeader;
+Dialog.Overlay = DialogOverlay;
+Dialog.Portal = DialogPortal;
+Dialog.Title = DialogTitle;
+Dialog.Trigger = DialogTrigger;
 
 export default Dialog;
+export {
+  DialogRoot as Dialog,
+  DialogAction,
+  DialogActions,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogOverlay,
+  DialogPortal,
+  DialogTitle,
+  DialogTrigger,
+};

@@ -1,20 +1,33 @@
-import Control from './Control';
-import Description from './Description';
-import Field from './Field';
-import Label from './Label';
-import Message from './Message';
-import Provider from './Provider';
-import Root from './Root';
-import Submit from './Submit';
+import FormControl from './Control';
+import FormDescription from './Description';
+import FormField from './Field';
+import FormLabel from './Label';
+import FormMessage from './Message';
+import FormProvider from './Provider';
+import FormReset from './Reset';
+import FormRoot from './Root';
+import FormSubmit from './Submit';
 
-const Form = Root;
+const Form = FormRoot;
 
-Form.Control = Control;
-Form.Description = Description;
-Form.Field = Field;
-Form.Label = Label;
-Form.Message = Message;
-Form.Provider = Provider;
-Form.Submit = Submit;
+Form.Control = FormControl;
+Form.Description = FormDescription;
+Form.Field = FormField;
+Form.Label = FormLabel;
+Form.Message = FormMessage;
+Form.Provider = FormProvider;
+Form.Submit = FormSubmit;
+Form.Reset = FormReset;
 
 export default Form;
+export {
+  FormRoot as Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormLabel,
+  FormMessage,
+  FormProvider,
+  FormReset,
+  FormSubmit,
+};

@@ -1,9 +1,9 @@
-import Down from './Down';
-import Up from './Up';
+import SelectScrollButtonDown from './Down';
+import SelectScrollButtonUp from './Up';
 
-const ScrollButton = {
-  Down,
-  Up,
+const SelectScrollButton = {
+  Down: SelectScrollButtonDown,
+  Up: SelectScrollButtonUp,
 };
 
-export default ScrollButton;
+export default SelectScrollButton;

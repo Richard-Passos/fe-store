@@ -1,8 +1,12 @@
-import Root from './Root';
-import Thumb from './Thumb';
+import ScrollAreaScrollbarRoot from './Root';
+import ScrollAreaScrollbarThumb from './Thumb';
 
-const Scrollbar = Root;
+const ScrollAreaScrollbar = ScrollAreaScrollbarRoot;
 
-Scrollbar.Thumb = Thumb;
+ScrollAreaScrollbar.Thumb = ScrollAreaScrollbarThumb;
 
-export default Scrollbar;
+export default ScrollAreaScrollbar;
+export {
+  ScrollAreaScrollbarRoot as ScrollAreaScrollbar,
+  ScrollAreaScrollbarThumb,
+};

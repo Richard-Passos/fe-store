@@ -16,7 +16,7 @@
   "singleAttributePerLine": true,
   "singleQuote": true,
   "tabWidth": 2,
-  "tailwindAttributes": ["classNames"],
+  "tailwindAttributes": ["classNames", "Variants$"],
   "tailwindFunctions": ["cnv"],
   "trailingComma": "all",
   "useTabs": false

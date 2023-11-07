@@ -1,14 +1,21 @@
-import Close from './Close';
-import Content from './Content';
-import Portal from './Portal';
-import Root from './Root';
-import Trigger from './Trigger';
+import PopoverClose from './Close';
+import PopoverContent from './Content';
+import PopoverPortal from './Portal';
+import PopoverRoot from './Root';
+import PopoverTrigger from './Trigger';
 
-const Popover = Root;
+const Popover = PopoverRoot;
 
-Popover.Close = Close;
-Popover.Content = Content;
-Popover.Portal = Portal;
-Popover.Trigger = Trigger;
+Popover.Close = PopoverClose;
+Popover.Content = PopoverContent;
+Popover.Portal = PopoverPortal;
+Popover.Trigger = PopoverTrigger;
 
 export default Popover;
+export {
+  PopoverRoot as Popover,
+  PopoverClose,
+  PopoverContent,
+  PopoverPortal,
+  PopoverTrigger,
+};

@@ -5,12 +5,12 @@ import { forwardRef } from 'react';
 
 import { cn } from '@/utils';
 
-import scrollButtonVariants from './variants';
+import selectScrollButtonVariants from './variants';
 
 const SelectScrollDownButton = ({ className, ...props }, ref) => {
   return (
     <ScrollDownButton
-      className={cn(scrollButtonVariants(), className)}
+      className={cn(selectScrollButtonVariants(), className)}
       ref={ref}
       {...props}
     />

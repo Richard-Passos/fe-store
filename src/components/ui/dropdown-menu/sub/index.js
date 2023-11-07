@@ -1,10 +1,15 @@
-import Content from './Content';
-import Root from './Root';
-import Trigger from './Trigger';
+import DropdownMenuSubContent from './Content';
+import DropdownMenuSubRoot from './Root';
+import DropdownMenuSubTrigger from './Trigger';
 
-const Sub = Root;
+const DropdownMenuSub = DropdownMenuSubRoot;
 
-Sub.Content = Content;
-Sub.Trigger = Trigger;
+DropdownMenuSub.Content = DropdownMenuSubContent;
+DropdownMenuSub.Trigger = DropdownMenuSubTrigger;
 
-export default Sub;
+export default DropdownMenuSub;
+export {
+  DropdownMenuSubRoot as DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
+};

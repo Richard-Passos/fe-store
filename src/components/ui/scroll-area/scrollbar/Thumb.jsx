@@ -9,7 +9,7 @@ const ScrollAreaScrollbarThumb = ({ className, ...props }, ref) => {
   return (
     <Thumb
       className={cn(
-        'flex-1 rounded-full bg-muted-content/50 transition-colors hover:bg-muted-content',
+        'flex-1 rounded-full bg-muted-content/25 transition-colors hover:bg-muted-content/50',
         className,
       )}
       ref={ref}

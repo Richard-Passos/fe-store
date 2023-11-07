@@ -1,7 +1,31 @@
 'use client';
 
-import { Link } from '@radix-ui/react-navigation-menu';
+import { Link as RadixLink } from '@radix-ui/react-navigation-menu';
+import { forwardRef } from 'react';
 
-const NavigationMenuLink = Link;
+import { useIsExternalUrl } from '@/hooks';
+import { cn } from '@/utils';
 
-export default NavigationMenuLink;
+import Link from '../link';
+
+const NavigationMenuLink = ({ href, ...props }, ref) => {
+  const isExternal = useIsExternalUrl(href);
+
+  const externalLinkProps = { rel: 'noreferrer', target: '_blank' };
+
+  return (
+    <Link
+      href={href}
+      legacyBehavior
+      passHref
+    >
+      <RadixLink
+        ref={ref}
+        {...(isExternal && externalLinkProps)}
+        {...props}
+      />
+    </Link>
+  );
+};
+
+export default forwardRef(NavigationMenuLink);
