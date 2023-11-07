@@ -1,3 +1,3 @@
-import SkeletonDemo from './Root'
+import SkeletonDemo from './Root';
 
-export default SkeletonDemo
+export default SkeletonDemo;

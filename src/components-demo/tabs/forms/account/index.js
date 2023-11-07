@@ -1,3 +1,3 @@
-import TabsDemoAccountForm from './Root'
+import TabsDemoAccountForm from './Root';
 
-export default TabsDemoAccountForm
+export default TabsDemoAccountForm;

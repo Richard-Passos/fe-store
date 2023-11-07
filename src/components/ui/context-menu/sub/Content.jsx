@@ -10,7 +10,11 @@ import { contextMenuContentVariants } from '../Content';
 const ContextMenuSubContent = ({ className, ...props }, ref) => {
   return (
     <SubContent
-      className={cn(contextMenuContentVariants(), 'shadow-lg min-w-[8rem]', className)}
+      className={cn(
+        contextMenuContentVariants(),
+        'min-w-[8rem] shadow-lg',
+        className,
+      )}
       ref={ref}
       {...props}
     />

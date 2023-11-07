@@ -9,7 +9,9 @@ import { Form, FormProvider } from '@/components/ui/form';
 import { capitalize } from '@/utils';
 
 const tabsDemoPasswordClientFormSchema = z.object({
-  currPassword: z.string().min(2, 'Current password must be at least 2 characters.'),
+  currPassword: z
+    .string()
+    .min(2, 'Current password must be at least 2 characters.'),
   newPassword: z.string().min(2, 'New password must be at least 2 characters.'),
 });
 

@@ -1,3 +1,3 @@
-import ToastDemo from "./Root";
+import ToastDemo from './Root';
 
 export default ToastDemo;

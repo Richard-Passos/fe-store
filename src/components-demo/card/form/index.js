@@ -1,3 +1,3 @@
-import CardDemoForm from './Root'
+import CardDemoForm from './Root';
 
-export default CardDemoForm
+export default CardDemoForm;
