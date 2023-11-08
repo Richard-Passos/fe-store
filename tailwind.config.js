@@ -8,7 +8,6 @@ module.exports = {
     './src/components/**/*.jsx',
     './src/components-demo/**/*.jsx',
     './src/components/ui/variantColors.js',
-    './src/patterns/**/*.jsx',
     './src/views/**/*.jsx',
   ],
   theme: {
