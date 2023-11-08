@@ -53,7 +53,7 @@
     @apply w-fit;
   }
 
-  :where(span, a, small, label, time) {
+  :where(span, a, small, label) {
     @apply inline-block;
   }
 }
