@@ -21,8 +21,9 @@ This template includes folder structure, components using Shadcn/UI best practic
 <br>
 
 ## :rocket: Run project
-
-It is recommended to clone the project.
+```
+https://fe-default-template.vercel.app
+```
 
 <br>
 
