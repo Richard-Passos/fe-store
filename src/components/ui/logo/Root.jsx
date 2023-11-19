@@ -1,10 +1,11 @@
 import { Text } from '@/components/ui';
+import { cn } from '@/utils';
 
-const Logo = (props) => {
+const Logo = ({ className, ...props }) => {
   return (
     <Text
       asChild
-      className='font-semibold'
+      className={cn('font-semibold uppercase', className)}
       href='/'
       {...props}
     >

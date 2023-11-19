@@ -2,8 +2,7 @@
 
 import { ChevronDownIcon } from '@radix-ui/react-icons';
 
-import { Logo } from '@/components';
-import { NavigationMenu, Text } from '@/components/ui';
+import { Logo, NavigationMenu, Text } from '@/components/ui';
 import { navigationMenuTriggerVariants } from '@/components/ui/navigation-menu/Trigger';
 import { cn } from '@/utils';
 
