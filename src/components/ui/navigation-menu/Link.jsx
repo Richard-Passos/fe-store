@@ -4,7 +4,6 @@ import { Link as RadixLink } from '@radix-ui/react-navigation-menu';
 import { forwardRef } from 'react';
 
 import { useIsExternalUrl } from '@/hooks';
-import { cn } from '@/utils';
 
 import Link from '../link';
 
