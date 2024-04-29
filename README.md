@@ -1,33 +1,45 @@
-<h1 align="center">:file_cabinet: Front-end template</h1>
+<h1 align="center">🗄️ Front-end template</h1>
 
 <br>
 
-## :memo: Description
+## 🚀 Run project
 
-This is the default template for my front-end projects.
-
-This template includes folder structure, components using Shadcn/UI best practices, tests, and a default configuration for tawilndCSS.
-
-<br>
-
-## :wrench: Technologies used
-
-- Next.js
-- Jest.js
-- RadixUI
-- TailwindCSS
-- JavaScript
+Visit the live [website](https://fetemplate.vercel.app
+)
 
 <br>
 
-## :rocket: Run project
-```
-https://fe-default-template.vercel.app
-```
+## 📝 Description
+
+Welcome to the ultimate front-end template repository! My go-to starting point for front-end projects. Dive in and explore the meticulously crafted folder structure and components, meticulously designed using Shadcn/UI best practices. Start building your next masterpiece with ease and efficiency!
+
+<br/>
+
+## 🛠️ Features
+
+Explore website's functionalities:
+
+- `Components`: A collection of meticulously crafted and neatly organized components, ready for integration and customization.
+- `Internalization`: Seamlessly handles internalization, ensuring your website can reach a global audience with ease.
+- `Data management`: Designed for effortless integration with any Headless CMS, streamlining data management for your front-end projects.
+
+<br/>
+
+## 🔧 Technologies used
+
+Cutting-edge technologies to ensure an great experience:
+
+- `Next.js`
+- `Next-intl`
+- `Jest`
+- `TailwindCSS`
+- `JavaScript`
 
 <br>
 
-## :handshake: Team
+## 🤝 Our Team
+
+Meet the talented individuals who brought this masterpiece to life:
 
 <table>
   <tr>
@@ -44,6 +56,6 @@ https://fe-default-template.vercel.app
 
 <br>
 
-## :dart: Status
+## 🎯 Status
 
 In progress
