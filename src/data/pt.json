@@ -1,0 +1,478 @@
+{
+  "pages": {
+    "home": {
+      "sections": {
+        "hero": {
+          "template": "hero",
+          "title": "Welcome to FE Template!",
+          "description": "My go-to starting point for front-end projects. Dive in and explore the <b>meticulously crafted folder structure</b> and <b>components</b>, meticulously designed using Shadcn/UI best practices. Start building your next masterpiece with <b>ease</b> and <b>efficiency</b>!",
+          "action": {
+            "label": "Go to github",
+            "href": "https://github.com/Richard-Passos/fe-template",
+            "isExternal": "true",
+            "color": "primary",
+            "type": "solid",
+            "size": "md"
+          },
+          "scroll": {
+            "icon": "/images/caret-down.svg",
+            "description": "Scroll to see more"
+          },
+          "block": {
+            "slug": "components-nav",
+            "title": "Amazing components"
+          }
+        },
+        "whyUs": {
+          "template": "one-column",
+          "type": "pattern",
+          "title": "Why FE template?",
+          "block": {
+            "slug": "why-us",
+            "items": {
+              "0": {
+                "color": "muted",
+                "title": "Saves time",
+                "description": "No need to spend hours implementing all over again. Get it right away!",
+                "icon": "/images/stopwatch.svg"
+              },
+              "1": {
+                "color": "muted",
+                "title": "It’s realistic",
+                "description": "Get internalization, templates, and a easy to customize code.",
+                "icon": "/images/globe.svg"
+              },
+              "2": {
+                "color": "muted",
+                "title": "It’s simple",
+                "description": "Clone it via Github, and remove what you don't want.",
+                "icon": "/images/check-badge.svg"
+              }
+            }
+          }
+        },
+        "about": {
+          "template": "one-column",
+          "block": {
+            "slug": "bento-grid",
+            "templates": {
+              "default": "'item-0' 'item-1' 'item-2' 'item-3'",
+              "sm": "'item-0 item-0' 'item-1 item-2' 'item-3 item-3'",
+              "lg": "'item-0 item-0 item-0 item-0 item-0 item-1 item-1' 'item-0 item-0 item-0 item-0 item-0 item-1 item-1' 'item-2 item-2 item-2 item-2 item-3 item-3 item-3'"
+            },
+            "items": {
+              "0": {
+                "type": "bold",
+                "title": "100% Free!",
+                "description": "Forevar.",
+                "color": "primary"
+              },
+              "1": {
+                "type": "bold",
+                "title": "100% Free!",
+                "description": "Forevar.",
+                "color": "muted"
+              },
+              "2": {
+                "type": "bold",
+                "title": "100% Free!",
+                "description": "Forevar.",
+                "color": "inverted"
+              },
+              "3": {
+                "type": "bold",
+                "title": "100% Free!",
+                "description": "Forevar.",
+                "color": "accent"
+              }
+            }
+          }
+        },
+        "howWorks": {
+          "template": "three-columns",
+          "color": "muted",
+          "type": "solid",
+          "title": "How Does it Work?",
+          "description": "Get your next masterpiece project in a few steps.",
+          "block": {
+            "slug": "bento-grid",
+            "templates": {
+              "default": "'item-0' 'item-1' 'item-2' 'item-3'",
+              "md": "'item-0 item-1' 'item-2 item-3'"
+            },
+            "items": {
+              "0": {
+                "type": "enum",
+                "color": "muted",
+                "description": "Start with two neutral colors for the text and the background."
+              },
+              "1": {
+                "type": "enum",
+                "color": "muted",
+                "description": "Choose your primary and secondary colors. Primary is for main CTAs and sections, and Secondary is for less important buttons and info cards."
+              },
+              "2": {
+                "type": "enum",
+                "color": "muted",
+                "description": "Accent color is an additional color. It appears in images, highlights, hyperlinks, boxes, cards, etc."
+              },
+              "3": {
+                "type": "enum",
+                "color": "muted",
+                "description": "Happy with the results? Press on “Export” and choose among different options to export in various formats, like .zip, .png, CSS, SCSS, QR Code, and more."
+              }
+            }
+          }
+        },
+        "pricing": {
+          "template": "one-column",
+          "title": "Plans & Pricing",
+          "description": "The repository is 100% free! This is just a generic section.",
+          "block": {
+            "slug": "pricing",
+            "items": {
+              "0": {
+                "title": "Basic",
+                "price": "Free",
+                "action": {
+                  "label": "Get Started",
+                  "color": "muted"
+                },
+                "items": {
+                  "0": {
+                    "description": "Choose any component",
+                    "icon": "/images/check-circle.svg"
+                  },
+                  "1": {
+                    "description": "Export all you want",
+                    "icon": "/images/check-circle.svg"
+                  }
+                }
+              },
+              "1": {
+                "color": "primary",
+                "title": "Pro",
+                "price": "$0.00 / month",
+                "action": {
+                  "label": "Get Started"
+                },
+                "badge": {
+                  "label": "Most popular"
+                },
+                "items": {
+                  "0": {
+                    "description": "Choose any component",
+                    "icon": "/images/check-circle.svg"
+                  },
+                  "1": {
+                    "description": "Export all you want",
+                    "icon": "/images/check-circle.svg"
+                  },
+                  "2": {
+                    "description": "Get a big thank you for checking this site out",
+                    "icon": "/images/check-circle.svg"
+                  },
+                  "3": {
+                    "description": "Get access to dashboard",
+                    "icon": "/images/check-circle.svg"
+                  }
+                }
+              },
+              "2": {
+                "title": "Enterprise",
+                "price": "$0.00 / month",
+                "action": {
+                  "label": "Learn more",
+                  "color": "muted"
+                },
+                "items": {
+                  "0": {
+                    "description": "Choose any component",
+                    "icon": "/images/check-circle.svg"
+                  },
+                  "1": {
+                    "description": "Export all you want",
+                    "icon": "/images/check-circle.svg"
+                  },
+                  "2": {
+                    "description": "Get a big thank you for checking this site out",
+                    "icon": "/images/check-circle.svg"
+                  },
+                  "3": {
+                    "description": "Get access to dashboard",
+                    "icon": "/images/check-circle.svg"
+                  },
+                  "4": {
+                    "description": "Super duper exclusive members-only content.",
+                    "icon": "/images/check-circle.svg"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "header": {
+    "menu": {
+      "title": "FE template",
+      "description": "Easy way to navigate between component.",
+      "direction": "left",
+      "trigger": {
+        "label": "Toggle menu",
+        "icon": "/images/menu.svg",
+        "color": null,
+        "type": "ghost",
+        "size": "md"
+      },
+      "close": {
+        "label": "Close menu",
+        "icon": "/images/times.svg"
+      }
+    }
+  },
+  "footer": {
+    "title": "Footer"
+  },
+  "personalInfo": {
+    "name": {
+      "first": "FE",
+      "last": "Template"
+    },
+    "summary": "The ultimate front-end template repository.",
+    "description": "Unleash your front-end projects with FE Template, the definitive starting point for your web development journey. Dive into meticulously organized folders and expertly crafted components, designed with industry best practices in mind. Build your next masterpiece effortlessly and efficiently, with unparalleled ease and precision.",
+    "email": "hi.richardp@gmail.com",
+    "logo": {
+      "src": "/images/logo.svg",
+      "alt": "Richard Passos logo",
+      "width": 63,
+      "height": 63
+    },
+    "favicon": "/images/favicon.icon",
+    "socials": [
+      {
+        "icon": {
+          "src": "/images/github.svg"
+        },
+        "title": "Github",
+        "description": "Github",
+        "href": "https://github.com/Richard-Passos",
+        "isExternal": true
+      },
+      {
+        "icon": {
+          "src": "/images/instagram.svg"
+        },
+        "title": "Instagram",
+        "description": "Instagram",
+        "href": "https://www.instagram.com/richardp.dev",
+        "isExternal": true
+      },
+      {
+        "icon": {
+          "src": "/images/linkedin.svg"
+        },
+        "title": "Linkedin",
+        "description": "Linkedin",
+        "href": "https://www.linkedin.com/in/richardp-dev",
+        "isExternal": true
+      }
+    ]
+  },
+  "components": {
+    "accordion": {
+      "title": "Accordion",
+      "description": "Accordion",
+      "variants": [
+        { "type": "single", "collapsible": true },
+        { "type": "single", "collapsible": false },
+        { "type": "single", "defaultValue": "item-1" },
+        { "type": "multiple" },
+        { "type": "multiple", "defaultValue": ["item-1", "item-2"] }
+      ]
+    },
+    "alert": {
+      "title": "Alert",
+      "description": "Alert"
+    },
+    "alertDialog": {
+      "title": "Alert dialog",
+      "description": "Alert dialog"
+    },
+    "aspectRatio": {
+      "title": "Aspect ratio",
+      "description": "Aspect ratio"
+    },
+    "avatar": {
+      "title": "Avatar",
+      "description": "Avatar"
+    },
+    "badge": {
+      "title": "Badge",
+      "description": "Badge"
+    },
+    "button": {
+      "title": "Button",
+      "description": "Button"
+    },
+    "calendar": {
+      "title": "Calendar",
+      "description": "Calendar"
+    },
+    "card": {
+      "title": "Card",
+      "description": "Card"
+    },
+    "checkbox": {
+      "title": "Checkbox",
+      "description": "Checkbox"
+    },
+    "collapsible": {
+      "title": "Collapsible",
+      "description": "Collapsible"
+    },
+    "combobox": {
+      "title": "Combobox",
+      "description": "Combobox"
+    },
+    "command": {
+      "title": "Command",
+      "description": "Command"
+    },
+    "contextMenu": {
+      "title": "Context menu",
+      "description": "Context menu"
+    },
+    "datePicker": {
+      "title": "Date picker",
+      "description": "Date picker"
+    },
+    "dialog": {
+      "title": "Dialog",
+      "description": "Dialog"
+    },
+    "dropdownMenu": {
+      "title": "Dropdown menu",
+      "description": "Dropdown menu"
+    },
+    "form": {
+      "title": "Form",
+      "description": "Form"
+    },
+    "hoverCard": {
+      "title": "Hover card",
+      "description": "Hover card"
+    },
+    "image": {
+      "title": "Image",
+      "description": "Image"
+    },
+    "input": {
+      "title": "Input",
+      "description": "Input"
+    },
+    "label": {
+      "title": "Label",
+      "description": "Label"
+    },
+    "link": {
+      "title": "Link",
+      "description": "Link"
+    },
+    "menubar": {
+      "title": "Menubar",
+      "description": "Menubar"
+    },
+    "popover": {
+      "title": "Popover",
+      "description": "Popover"
+    },
+    "progress": {
+      "title": "Progress",
+      "description": "Progress"
+    },
+    "radioGroup": {
+      "title": "Radio group",
+      "description": "Radio group"
+    },
+    "scrollArea": {
+      "title": "Scroll area",
+      "description": "Scroll area"
+    },
+    "select": {
+      "title": "Select",
+      "description": "Select"
+    },
+    "separator": {
+      "title": "Separator",
+      "description": "Separator"
+    },
+    "sheet": {
+      "title": "Sheet",
+      "description": "Sheet"
+    },
+    "skeleton": {
+      "title": "Skeleton",
+      "description": "Skeleton"
+    },
+    "slider": {
+      "title": "Slider",
+      "description": "Slider"
+    },
+    "switch": {
+      "title": "Switch",
+      "description": "Switch"
+    },
+    "table": {
+      "title": "Table",
+      "description": "Table"
+    },
+    "tabs": {
+      "title": "Tabs",
+      "description": "Tabs"
+    },
+    "text": {
+      "title": "Text",
+      "description": "Text"
+    },
+    "textarea": {
+      "title": "Textarea",
+      "description": "Textarea"
+    },
+    "timerbar": {
+      "title": "Timerbar",
+      "description": "Timerbar"
+    },
+    "toast": {
+      "title": "Toast",
+      "description": "Toast"
+    },
+    "toggle": {
+      "title": "Toggle",
+      "description": "Toggle"
+    },
+    "tooltip": {
+      "title": "Tooltip",
+      "description": "Tooltip"
+    }
+  },
+  "themes": {
+    "light": {
+      "label": "Light",
+      "icon": "/images/sun.svg"
+    },
+    "dark": {
+      "label": "Dark",
+      "icon": "/images/moon.svg"
+    },
+    "system": {
+      "label": "System",
+      "icon": "/images/settings.svg"
+    }
+  },
+  "locales": {
+    "en": "English",
+    "pt": "Portuguese"
+  }
+}

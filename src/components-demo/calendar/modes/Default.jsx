@@ -1,6 +1,6 @@
 'use client';
 
-import { Calendar } from '@/components/ui';
+import { Calendar } from '@/components/molecules';
 
 import CALENDAR_PROPS from './props';
 

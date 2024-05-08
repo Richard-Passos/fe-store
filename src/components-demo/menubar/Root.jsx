@@ -4,11 +4,11 @@ import {
   DotFilledIcon,
 } from '@radix-ui/react-icons';
 
-import { Menubar } from '@/components/ui';
+import { Menubar } from '@/components/molecules';
 
 const MenubarDemo = ({ className, ...props }) => {
   return (
-    <Menubar {...props}>
+    <Menubar.Root {...props}>
       <Menubar.Menu>
         <Menubar.Trigger>File</Menubar.Trigger>
 
@@ -26,7 +26,7 @@ const MenubarDemo = ({ className, ...props }) => {
 
             <Menubar.Separator />
 
-            <Menubar.Sub>
+            <Menubar.Sub.Root>
               <Menubar.Sub.Trigger>
                 Share <ChevronRightIcon className='ml-auto' />
               </Menubar.Sub.Trigger>
@@ -38,7 +38,7 @@ const MenubarDemo = ({ className, ...props }) => {
 
                 <Menubar.Item>Notes</Menubar.Item>
               </Menubar.Sub.Content>
-            </Menubar.Sub>
+            </Menubar.Sub.Root>
 
             <Menubar.Separator />
 
@@ -64,7 +64,7 @@ const MenubarDemo = ({ className, ...props }) => {
 
             <Menubar.Separator />
 
-            <Menubar.Sub>
+            <Menubar.Sub.Root>
               <Menubar.Sub.Trigger>
                 Find <ChevronRightIcon className='ml-auto' />
               </Menubar.Sub.Trigger>
@@ -80,7 +80,7 @@ const MenubarDemo = ({ className, ...props }) => {
 
                 <Menubar.Item>Find Previous</Menubar.Item>
               </Menubar.Sub.Content>
-            </Menubar.Sub>
+            </Menubar.Sub.Root>
 
             <Menubar.Separator />
 
@@ -148,7 +148,7 @@ const MenubarDemo = ({ className, ...props }) => {
           </Menubar.Content>
         </Menubar.Portal>
       </Menubar.Menu>
-    </Menubar>
+    </Menubar.Root>
   );
 };
 

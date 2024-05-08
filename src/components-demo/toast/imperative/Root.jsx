@@ -1,11 +1,12 @@
 'use client';
 
-import { ListComponent } from '@/components';
-import { Button, Toast } from '@/components/ui';
+import { ListComponent } from '@/components/molecules';
+import { Button } from '@/components/atoms';
+import { Toast } from '@/components/molecules';
 import { useToast } from '@/hooks';
 import { cn } from '@/utils';
 
-import TOAST_VARIANTS from '../variants';
+import TOAST from '../variants';
 import Toaster from './Toaster';
 
 const ToastDemoImperative = ({ className, ...props }) => {
@@ -13,8 +14,8 @@ const ToastDemoImperative = ({ className, ...props }) => {
 
   return (
     <>
-      <ListComponent {...props}>
-        {TOAST_VARIANTS.map((variants) => (
+      <ListComponent.Root {...props}>
+        {TOAST.map((variants) => (
           <ListComponent.Item
             className='max-w-sm'
             key={Object.entries(variants).join()}
@@ -27,7 +28,7 @@ const ToastDemoImperative = ({ className, ...props }) => {
                   title: 'Imperative toast',
                   description:
                     'This toast is called via a toast function from useToast.',
-                  action: <ToastAction variants={variants}>Close</ToastAction>,
+                  action: <ToastAction {...variants}>Close</ToastAction>,
                   variants,
                 })
               }
@@ -36,7 +37,7 @@ const ToastDemoImperative = ({ className, ...props }) => {
             </Button>
           </ListComponent.Item>
         ))}
-      </ListComponent>
+      </ListComponent.Root>
 
       <Toaster />
     </>
@@ -56,7 +57,7 @@ const ToastAction = ({ variants, className, children, ...props }) => {
         className={cn(style !== 'outline' && '[--main:--content]', className)}
         variants={{
           color: 'inherit',
-          style: 'outline',
+          type: 'outline',
           size: 'sm',
         }}
       >

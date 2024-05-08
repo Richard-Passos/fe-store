@@ -1,4 +1,4 @@
-import { Input, Label } from '@/components/ui';
+import { Input, Label } from '@/components/atoms';
 import { cn } from '@/utils';
 
 const LabelDemo = ({ className, ...props }) => {

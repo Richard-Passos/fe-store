@@ -16,11 +16,12 @@ import {
   Share1Icon,
 } from '@radix-ui/react-icons';
 
-import { Button, DropdownMenu } from '@/components/ui';
+import { Button } from '@/components/atoms';
+import { DropdownMenu } from '@/components/molecules';
 
 const DropdownMenuDemo = (props) => {
   return (
-    <DropdownMenu {...props}>
+    <DropdownMenu.Root {...props}>
       <DropdownMenu.Trigger asChild>
         <Button>Open</Button>
       </DropdownMenu.Trigger>
@@ -84,7 +85,7 @@ const DropdownMenuDemo = (props) => {
               <span>Team</span>
             </DropdownMenu.Item>
 
-            <DropdownMenu.Sub>
+            <DropdownMenu.Sub.Root>
               <DropdownMenu.Sub.Trigger>
                 <DropdownMenu.Icon>
                   <Link2Icon />
@@ -126,7 +127,7 @@ const DropdownMenuDemo = (props) => {
                   </DropdownMenu.Item>
                 </DropdownMenu.Sub.Content>
               </DropdownMenu.Portal>
-            </DropdownMenu.Sub>
+            </DropdownMenu.Sub.Root>
 
             <DropdownMenu.Item>
               <DropdownMenu.Icon>
@@ -176,7 +177,7 @@ const DropdownMenuDemo = (props) => {
           </DropdownMenu.Item>
         </DropdownMenu.Content>
       </DropdownMenu.Portal>
-    </DropdownMenu>
+    </DropdownMenu.Root>
   );
 };
 

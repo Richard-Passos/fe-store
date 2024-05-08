@@ -1,7 +1,7 @@
-import { ListComponent } from '@/components';
-import { Input } from '@/components/ui';
+import { ListComponent } from '@/components/molecules';
+import { Input } from '@/components/atoms';
 
-const INPUT_VARIANTS = [
+const INPUT = [
   { type: 'color' },
   { type: 'email', placeholder: 'johndoe@example.com' },
   { type: 'file' },
@@ -17,8 +17,8 @@ const INPUT_VARIANTS = [
 
 const InputDemo = (props) => {
   return (
-    <ListComponent {...props}>
-      {INPUT_VARIANTS.map(({ placeholder, ...variants }) => (
+    <ListComponent.Root {...props}>
+      {INPUT.map(({ placeholder, ...variants }) => (
         <ListComponent.Item
           className='max-w-xs'
           key={Object.entries(variants).join()}
@@ -31,7 +31,7 @@ const InputDemo = (props) => {
           />
         </ListComponent.Item>
       ))}
-    </ListComponent>
+    </ListComponent.Root>
   );
 };
 

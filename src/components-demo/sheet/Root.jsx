@@ -3,23 +3,23 @@
 import { Cross2Icon } from '@radix-ui/react-icons';
 import { forwardRef } from 'react';
 
-import { ListComponent } from '@/components';
-import { Button, Form, Input, Sheet } from '@/components/ui';
-import { sheetContentSides } from '@/components/ui/sheet/Content';
+import { Button, Input } from '@/components/atoms';
+import { Form, Sheet, ListComponent } from '@/components/molecules';
+import { sheetContentDirections } from '@/components/molecules/sheet';
 import { cn } from '@/utils';
 
 import ClientForm from './ClientForm';
 
-const SHEET_VARIANTS = Object.keys(sheetContentSides).map((side) => ({ side }));
+const SHEET = Object.keys(sheetContentDirections).map((side) => ({ side }));
 
 const SheetDemo = ({ className, ...props }) => {
   return (
-    <ListComponent {...props}>
-      {SHEET_VARIANTS.map((variants) => (
+    <ListComponent.Root {...props}>
+      {SHEET.map((variants) => (
         <ListComponent.Item key={Object.entries(variants).join()}>
           <ListComponent.Subtitle variants={variants} />
 
-          <Sheet>
+          <Sheet.Root>
             <Sheet.Trigger asChild>
               <Button>Open</Button>
             </Sheet.Trigger>
@@ -86,10 +86,10 @@ const SheetDemo = ({ className, ...props }) => {
                 </ClientForm>
               </Sheet.Content>
             </Sheet.Portal>
-          </Sheet>
+          </Sheet.Root>
         </ListComponent.Item>
       ))}
-    </ListComponent>
+    </ListComponent.Root>
   );
 };
 

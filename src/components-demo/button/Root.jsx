@@ -1,45 +1,45 @@
-import { ListComponent } from '@/components';
-import { Button } from '@/components/ui';
-import { buttonSizes, buttonStyles } from '@/components/ui/button';
-import variantColors from '@/components/ui/variantColors';
+import { Button } from '@/components/atoms';
+import { buttonSizes, buttonTypes } from '@/components/atoms/button';
+import colorVariants from '@/components/colorVariants';
+import { ListComponent } from '@/components/molecules';
 
-const BUTTON_COLOR_VARIANTS = Object.keys(variantColors),
-  BUTTON_STYLE_VARIANTS = Object.keys(buttonStyles),
-  BUTTON_SIZE_VARIANTS = Object.keys(buttonSizes);
+const BUTTON_COLORS = Object.keys(colorVariants),
+  BUTTON_TYPES = Object.keys(buttonTypes),
+  BUTTON_SIZES = Object.keys(buttonSizes);
 
-const BUTTON_VARIANTS = BUTTON_COLOR_VARIANTS.map((color) =>
-  BUTTON_STYLE_VARIANTS.map((style) =>
-    BUTTON_SIZE_VARIANTS.map((size) => ({
+const BUTTON = BUTTON_COLORS.map((color) =>
+  BUTTON_TYPES.map((type) =>
+    BUTTON_SIZES.map((size) => ({
       color,
-      style,
-      size,
-    })),
-  ),
+      type,
+      size
+    }))
+  )
 )
   .reduce(
     (arr, variantsArr) => [
       ...arr,
-      ...variantsArr.reduce((arr, variants) => [...arr, ...variants], []),
+      ...variantsArr.reduce((arr, variants) => [...arr, ...variants], [])
     ],
-    [],
+    []
   )
-  .sort((a, b) => b.style.localeCompare(a.style))
+  .sort((a, b) => b.type.localeCompare(a.type))
   .sort((a, b) => b.size.localeCompare(a.size));
 
 const ButtonDemo = ({ className, ...props }) => {
   return (
-    <ListComponent {...props}>
-      {BUTTON_VARIANTS.map((variants) => (
+    <ListComponent.Root {...props}>
+      {BUTTON.map((variants) => (
         <ListComponent.Item
           className='max-w-sm'
           key={Object.entries(variants).join()}
         >
           <ListComponent.Subtitle variants={variants} />
 
-          <Button variants={variants}>Button</Button>
+          <Button {...variants}>Button</Button>
         </ListComponent.Item>
       ))}
-    </ListComponent>
+    </ListComponent.Root>
   );
 };
 

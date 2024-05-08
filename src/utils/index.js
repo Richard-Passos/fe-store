@@ -1,7 +1,14 @@
+export { default as addQueryLocale } from './addQueryLocale';
 export { default as capitalize } from './capitalize';
 export { default as cn } from './cn';
 export { default as cnv } from './cnv';
+export { default as getData } from './getData';
+export { default as getTemplate } from './getTemplate';
+export { default as getTranslationKeys } from './getTranslationKeys';
 export { default as isExternalUrl } from './isExternalUrl';
-export { default as isFunctionThanCall } from './isFunctionThanCall';
-export { default as normalizeCompName } from './normalizeCompName';
+export { default as normCompName } from './normCompName';
+export { default as normId } from './normId';
+export { default as normKey } from './normKey';
+export { default as renderComp } from './renderComp';
+export { default as normGridTemplates } from './normGridTemplates';
 export { default as setRefs } from './setRefs';

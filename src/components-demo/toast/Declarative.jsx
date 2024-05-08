@@ -3,27 +3,27 @@
 import { Cross2Icon } from '@radix-ui/react-icons';
 import { useEffect, useRef, useState } from 'react';
 
-import { ListComponent } from '@/components';
-import { Button, Timerbar, Toast } from '@/components/ui';
-import { cn, isFunctionThanCall } from '@/utils';
+import {Toast, ListComponent } from '@/components/molecules';
+import { Button, Timerbar } from '@/components/atoms';
+import { cn } from '@/utils';
 
 import { TOAST_DURATION } from './Root';
-import TOAST_VARIANTS from './variants';
+import TOAST from './variants';
 
 const ToastDemoDeclarative = (props) => {
   const [isOpen, setIsOpen] = useState({}),
     [isPaused, setIsPaused] = useState(false);
 
   return (
-    <ListComponent {...props}>
-      {TOAST_VARIANTS.map((variants) => {
-        const { style, color } = variants;
+    <ListComponent.Root {...props}>
+      {TOAST.map((variants) => {
+        const { type, color } = variants;
 
-        const isToastOpen = !!isOpen[style]?.[color],
+        const isToastOpen = !!isOpen[type]?.[color],
           setIsToastOpen = (toastState) =>
             setIsOpen((state) => ({
               ...state,
-              [style]: { ...state[style], [color]: toastState },
+              [type]: { ...state[type], [color]: toastState },
             }));
 
         return (
@@ -37,7 +37,7 @@ const ToastDemoDeclarative = (props) => {
               Add to calendar
             </ToastTrigger>
 
-            <Toast
+            <Toast.Root
               onOpenChange={setIsToastOpen}
               onPause={() => setIsPaused(true)}
               onResume={() => setIsPaused(false)}
@@ -64,15 +64,15 @@ const ToastDemoDeclarative = (props) => {
 
               {isToastOpen && (
                 <ToastTimerbar
-                  pause={isPaused}
+                isPaused={isPaused}
                   variants={variants}
                 />
               )}
-            </Toast>
+            </Toast.Root>
           </ListComponent.Item>
         );
       })}
-    </ListComponent>
+    </ListComponent.Root>
   );
 };
 
@@ -90,7 +90,7 @@ const ToastTrigger = ({ setIsToastOpen, ...props }) => {
         clearTimeout(delayRef.current);
 
         delayRef.current = setTimeout(() => {
-          isFunctionThanCall(props.onClick, ev);
+          props.onClick?.(ev);
 
           setIsToastOpen(true);
         }, 100);
@@ -111,7 +111,7 @@ const ToastAction = ({ variants, className, children, ...props }) => {
         className={cn(style !== 'outline' && '[--main:--content]', className)}
         variants={{
           color: 'inherit',
-          style: 'outline',
+          type: 'outline',
           size: 'sm',
         }}
       >
@@ -138,7 +138,7 @@ const ToastTimerbar = ({ variants, className, ...props }) => {
   const { style } = variants;
 
   return (
-    <Timerbar
+    <Timerbar.Root
       className={cn(
         'absolute bottom-0 left-0',
         style !== 'outline' && '[--main:--content]',
@@ -152,7 +152,7 @@ const ToastTimerbar = ({ variants, className, ...props }) => {
       {...props}
     >
       <Timerbar.Indicator />
-    </Timerbar>
+    </Timerbar.Root>
   );
 };
 

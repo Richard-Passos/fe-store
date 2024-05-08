@@ -1,4 +1,4 @@
-import { Skeleton } from '@/components/ui';
+import { Skeleton } from '@/components/atoms';
 import { cn } from '@/utils';
 
 const SkeletonDemo = ({ className, ...props }) => {

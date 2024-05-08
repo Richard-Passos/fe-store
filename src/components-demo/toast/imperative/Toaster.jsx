@@ -3,7 +3,8 @@
 import { Cross2Icon } from '@radix-ui/react-icons';
 import { useState } from 'react';
 
-import { Timerbar, Toast } from '@/components/ui';
+import { Toast } from '@/components/molecules';
+import {Timerbar } from '@/components/atoms';
 import { useToast } from '@/hooks';
 import { cn } from '@/utils';
 
@@ -15,7 +16,7 @@ const ToastDemoImperativeToaster = () => {
 
   return toasts.map(
     ({ id, title, description, action, variants, ...props }) => (
-      <Toast
+      <Toast.Root
         key={id}
         onPause={() => setIsPaused(true)}
         onResume={() => setIsPaused(false)}
@@ -36,7 +37,7 @@ const ToastDemoImperativeToaster = () => {
           pause={isPaused}
           variants={variants}
         />
-      </Toast>
+      </Toast.Root>
     ),
   );
 };
@@ -58,7 +59,7 @@ const ToastTimerbar = ({ variants, className, ...props }) => {
   const { style } = variants;
 
   return (
-    <Timerbar
+    <Timerbar.Root
       className={cn(
         'absolute bottom-0 left-0',
         style !== 'outline' && '[--main:--content]',
@@ -72,7 +73,7 @@ const ToastTimerbar = ({ variants, className, ...props }) => {
       {...props}
     >
       <Timerbar.Indicator />
-    </Timerbar>
+    </Timerbar.Root>
   );
 };
 

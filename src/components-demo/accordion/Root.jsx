@@ -1,24 +1,15 @@
 import { ChevronDownIcon } from '@radix-ui/react-icons';
 
-import { ListComponent } from '@/components';
-import { Accordion } from '@/components/ui';
+import { ListComponent, Accordion } from '@/components/molecules';
 
-const ACCORDION_VARIANTS = [
-  { type: 'single', collapsible: true },
-  { type: 'single', collapsible: false },
-  { type: 'single', defaultValue: 'item-1' },
-  { type: 'multiple' },
-  { type: 'multiple', defaultValue: ['item-1', 'item-2'] },
-];
-
-const AccordionDemo = ({ className, ...props }) => {
+const AccordionDemo = ({ variants = {}, lassName, ...props }) => {
   return (
-    <ListComponent {...props}>
-      {ACCORDION_VARIANTS.map((variants) => (
+    <ListComponent.Root {...props}>
+      {variants.map((variants) => (
         <ListComponent.Item key={Object.entries(variants).join()}>
           <ListComponent.Subtitle variants={variants} />
 
-          <Accordion {...variants}>
+          <Accordion.Root {...variants}>
             <Accordion.Item value='item-1'>
               <AccordionTrigger>Is it accessible?</AccordionTrigger>
 
@@ -44,10 +35,10 @@ const AccordionDemo = ({ className, ...props }) => {
                 you prefer.
               </Accordion.Content>
             </Accordion.Item>
-          </Accordion>
+          </Accordion.Root>
         </ListComponent.Item>
       ))}
-    </ListComponent>
+    </ListComponent.Root>
   );
 };
 

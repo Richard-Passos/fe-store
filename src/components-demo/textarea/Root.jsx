@@ -1,4 +1,4 @@
-import { Textarea } from '@/components/ui';
+import { Textarea } from '@/components/atoms';
 import { cn } from '@/utils';
 
 const TextareaDemo = ({ className, ...props }) => {

@@ -8,22 +8,22 @@ import {
   PersonIcon,
 } from '@radix-ui/react-icons';
 
-import { ListComponent } from '@/components';
-import { Button, Command, Dialog, Text } from '@/components/ui';
+import { ListComponent, Command, Dialog } from '@/components/molecules';
+import { Button, Text } from '@/components/atoms';
 
 const CommandDemo = (props) => {
   return (
-    <ListComponent {...props}>
+    <ListComponent.Root {...props}>
       <ListComponent.Item>
-        <Text className='font-medium'>Without dialog</Text>
+        <Text.Root className='font-medium'>Without dialog</Text.Root>
 
         <CommandComp />
       </ListComponent.Item>
 
       <ListComponent.Item>
-        <Text className='font-medium'>With dialog</Text>
+        <Text.Root className='font-medium'>With dialog</Text.Root>
 
-        <Dialog>
+        <Dialog.Root>
           <Dialog.Trigger asChild>
             <Button>Open dialog</Button>
           </Dialog.Trigger>
@@ -35,22 +35,22 @@ const CommandDemo = (props) => {
               <CommandComp />
             </Dialog.Content>
           </Dialog.Portal>
-        </Dialog>
+        </Dialog.Root>
       </ListComponent.Item>
-    </ListComponent>
+    </ListComponent.Root>
   );
 };
 
 const CommandComp = (props) => {
   return (
-    <Command {...props}>
-      <Command.Search>
+    <Command.Root {...props}>
+      <Command.Search.Root>
         <Command.Search.Input placeholder='Type a command or search...' />
 
         <Command.Search.Icon>
           <MagnifyingGlassIcon />
         </Command.Search.Icon>
-      </Command.Search>
+      </Command.Search.Root>
 
       <Command.List>
         <Command.Empty>No results found.</Command.Empty>
@@ -115,7 +115,7 @@ const CommandComp = (props) => {
           </Command.Item>
         </Command.Group>
       </Command.List>
-    </Command>
+    </Command.Root>
   );
 };
 

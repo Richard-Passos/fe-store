@@ -1,34 +1,34 @@
-import { ListComponent } from '@/components';
-import { Badge } from '@/components/ui';
-import { badgeStyles } from '@/components/ui/badge';
-import variantColors from '@/components/ui/variantColors';
+import { Badge } from '@/components/atoms';
+import { badgeTypes } from '@/components/atoms/badge';
+import colorVariants from '@/components/colorVariants';
+import { ListComponent } from '@/components/molecules';
 
-const BADGE_COLOR_VARIANTS = Object.keys(variantColors),
-  BADGE_STYLE_VARIANTS = Object.keys(badgeStyles);
+const BADGE_COLORS = Object.keys(colorVariants),
+  BADGE_TYPES = Object.keys(badgeTypes);
 
-const BADGE_VARIANTS = BADGE_COLOR_VARIANTS.map((color) =>
-  BADGE_STYLE_VARIANTS.map((style) => ({
+const BADGE = BADGE_COLORS.map((color) =>
+  BADGE_TYPES.map((type) => ({
     color,
-    style,
-  })),
+    type
+  }))
 )
   .reduce((arr, variants) => [...arr, ...variants], [])
-  .sort((a, b) => b.style.localeCompare(a.style));
+  .sort((a, b) => b.type.localeCompare(a.type));
 
 const BadgeDemo = ({ className, ...props }) => {
   return (
-    <ListComponent {...props}>
-      {BADGE_VARIANTS.map((variants) => (
+    <ListComponent.Root {...props}>
+      {BADGE.map((variants) => (
         <ListComponent.Item
           className='max-w-xs'
           key={Object.entries(variants).join()}
         >
           <ListComponent.Subtitle variants={variants} />
 
-          <Badge variants={variants}>Badge</Badge>
+          <Badge {...variants}>Badge</Badge>
         </ListComponent.Item>
       ))}
-    </ListComponent>
+    </ListComponent.Root>
   );
 };
 

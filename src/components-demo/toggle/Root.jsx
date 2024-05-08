@@ -2,16 +2,16 @@
 
 import { FontItalicIcon } from '@radix-ui/react-icons';
 
-import { ListComponent } from '@/components';
-import { Toggle } from '@/components/ui';
-import { toggleSizes, toggleStyles } from '@/components/ui/toggle';
+import { ListComponent } from '@/components/molecules';
+import { Toggle } from '@/components/atoms';
+import { toggleSizes, toggleTypes } from '@/components/atoms/toggle';
 
-const TOGGLE_STYLE_VARIANTS = Object.keys(toggleStyles),
-  TOGGLE_SIZE_VARIANTS = Object.keys(toggleSizes);
+const TOGGLE_TYPES = Object.keys(toggleTypes),
+  TOGGLE_SIZES = Object.keys(toggleSizes);
 
-const TOGGLE_VARIANTS = TOGGLE_STYLE_VARIANTS.map((style) =>
-  TOGGLE_SIZE_VARIANTS.map((size) => ({
-    style,
+const TOGGLE = TOGGLE_TYPES.map((type) =>
+  TOGGLE_SIZES.map((size) => ({
+    type,
     size,
   })),
 )
@@ -20,8 +20,8 @@ const TOGGLE_VARIANTS = TOGGLE_STYLE_VARIANTS.map((style) =>
 
 const ToggleDemo = (props) => {
   return (
-    <ListComponent {...props}>
-      {TOGGLE_VARIANTS.map((variants) => (
+    <ListComponent.Root {...props}>
+      {TOGGLE.map((variants) => (
         <ListComponent.Item
           className='max-w-xs'
           key={Object.entries(variants).join()}
@@ -36,7 +36,7 @@ const ToggleDemo = (props) => {
           </Toggle>
         </ListComponent.Item>
       ))}
-    </ListComponent>
+    </ListComponent.Root>
   );
 };
 

@@ -3,23 +3,23 @@
 import {
   CalendarIcon,
   ChevronLeftIcon,
-  ChevronRightIcon,
+  ChevronRightIcon
 } from '@radix-ui/react-icons';
 import { format } from 'date-fns';
 import { useState } from 'react';
 
-import { Calendar, Popover } from '@/components/ui';
+import { Calendar, Popover } from '@/components/molecules';
 import { cn } from '@/utils';
 
 const DatePickerDemo = () => {
   const [date, setDate] = useState();
 
   return (
-    <Popover>
+    <Popover.Root>
       <Popover.Trigger asChild>
         <button
           className={cn(
-            'flex h-10 w-[277.6px] items-center gap-2 rounded-sm border bg-main px-4 text-sm',
+            'flex h-10 w-[277.6px] items-center gap-2 rounded-sm border bg-main px-4 text-sm'
           )}
         >
           <CalendarIcon className='h-4 w-4' />
@@ -27,7 +27,7 @@ const DatePickerDemo = () => {
           {date ? (
             format(date, 'PPP')
           ) : (
-            <span className='text-muted-content'>Pick a date</span>
+            <span className='text-content/75'>Pick a date</span>
           )}
         </button>
       </Popover.Trigger>
@@ -38,7 +38,7 @@ const DatePickerDemo = () => {
             className='rounded-inherit'
             components={{
               IconLeft: ChevronLeftIcon,
-              IconRight: ChevronRightIcon,
+              IconRight: ChevronRightIcon
             }}
             initialFocus
             mode='single'
@@ -47,7 +47,7 @@ const DatePickerDemo = () => {
           />
         </Popover.Content>
       </Popover.Portal>
-    </Popover>
+    </Popover.Root>
   );
 };
 

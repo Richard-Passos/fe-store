@@ -1,6 +1,6 @@
 import { CheckIcon } from '@radix-ui/react-icons';
 
-import { Checkbox, Label } from '@/components/ui';
+import { Checkbox, Label } from '@/components/atoms';
 import { cn } from '@/utils';
 
 const CheckboxDemo = ({ className, ...props }) => {
@@ -9,11 +9,11 @@ const CheckboxDemo = ({ className, ...props }) => {
       className={cn('inline-flex items-center gap-4', className)}
       {...props}
     >
-      <Checkbox>
+      <Checkbox.Root>
         <Checkbox.Indicator>
           <CheckIcon />
         </Checkbox.Indicator>
-      </Checkbox>
+      </Checkbox.Root>
 
       <span>Accept terms and conditions.</span>
     </Label>

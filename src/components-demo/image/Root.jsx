@@ -1,7 +1,7 @@
-import { ListComponent } from '@/components';
-import { Image } from '@/components/ui';
+import { ListComponent } from '@/components/molecules';
+import { Image } from '@/components/atoms';
 
-const IMAGE_VARIANTS = [
+const IMAGE = [
   {
     src: '/images/demo.png',
     alt: 'A road winding through a forest near the ocean.',
@@ -19,8 +19,8 @@ const IMAGE_VARIANTS = [
 
 const ImageDemo = (props) => {
   return (
-    <ListComponent {...props}>
-      {IMAGE_VARIANTS.map(({ width = 0, height = 0, ...variants }, i) => (
+    <ListComponent.Root {...props}>
+      {IMAGE.map(({ width = 0, height = 0, ...variants }, i) => (
         <ListComponent.Item key={Object.entries(variants).join()}>
           <ListComponent.Subtitle variants={variants} />
 
@@ -34,7 +34,7 @@ const ImageDemo = (props) => {
           />
         </ListComponent.Item>
       ))}
-    </ListComponent>
+    </ListComponent.Root>
   );
 };
 

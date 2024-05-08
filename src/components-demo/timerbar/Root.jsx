@@ -1,21 +1,16 @@
-'use client';
+import { Timerbar } from '@/components/atoms';
+import { progressSizes } from '@/components/atoms/progress';
+import colorVariants from '@/components/colorVariants';
+import { ListComponent } from '@/components/molecules';
 
-import { useEffect, useReducer } from 'react';
+const TIMERBAR_COLORS = Object.keys(colorVariants),
+  TIMERBAR_SIZES = Object.keys(progressSizes);
 
-import { ListComponent } from '@/components';
-import { Timerbar } from '@/components/ui';
-import { progressSizes } from '@/components/ui/progress';
-import { TIMERBAR_UPDATE_DELAY } from '@/components/ui/timerbar';
-import variantColors from '@/components/ui/variantColors';
-
-const TIMERBAR_COLOR_VARIANTS = Object.keys(variantColors),
-  TIMERBAR_SIZE_VARIANTS = Object.keys(progressSizes);
-
-const TIMERBAR_VARIANTS = TIMERBAR_COLOR_VARIANTS.map((color) =>
-  TIMERBAR_SIZE_VARIANTS.map((size) => ({
+const TIMERBAR = TIMERBAR_COLORS.map((color) =>
+  TIMERBAR_SIZES.map((size) => ({
     color,
-    size,
-  })),
+    size
+  }))
 )
   .reduce((arr, variants) => [...arr, ...variants], [])
   .sort((a, b) => b.size.localeCompare(a.size));
@@ -23,35 +18,24 @@ const TIMERBAR_VARIANTS = TIMERBAR_COLOR_VARIANTS.map((color) =>
 const TIMERBAR_DURATION = 5000;
 
 const TimerbarDemo = (props) => {
-  const [key, forceUpdate] = useReducer((x) => x + 1, 0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      forceUpdate();
-    }, TIMERBAR_DURATION + TIMERBAR_UPDATE_DELAY);
-
-    return () => clearInterval(timer);
-  }, []);
-
   return (
-    <ListComponent {...props}>
-      {TIMERBAR_VARIANTS.map((variants) => (
+    <ListComponent.Root {...props}>
+      {TIMERBAR.map((variants) => (
         <ListComponent.Item
           className='max-w-sm'
           key={Object.entries(variants).join()}
         >
           <ListComponent.Subtitle variants={variants} />
 
-          <Timerbar
+          <Timerbar.Root
             duration={TIMERBAR_DURATION}
-            key={key}
             variants={variants}
           >
             <Timerbar.Indicator />
-          </Timerbar>
+          </Timerbar.Root>
         </ListComponent.Item>
       ))}
-    </ListComponent>
+    </ListComponent.Root>
   );
 };
 

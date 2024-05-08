@@ -3,34 +3,34 @@
 import {
   CheckIcon,
   ChevronDownIcon,
-  MagnifyingGlassIcon,
+  MagnifyingGlassIcon
 } from '@radix-ui/react-icons';
 import { useState } from 'react';
 
-import { Command, Popover } from '@/components/ui';
+import { Command, Popover } from '@/components/molecules';
 import { cn } from '@/utils';
 
 const DATA = [
   {
     value: 'next.js',
-    label: 'Next.js',
+    label: 'Next.js'
   },
   {
     value: 'sveltekit',
-    label: 'SvelteKit',
+    label: 'SvelteKit'
   },
   {
     value: 'nuxt.js',
-    label: 'Nuxt.js',
+    label: 'Nuxt.js'
   },
   {
     value: 'remix',
-    label: 'Remix',
+    label: 'Remix'
   },
   {
     value: 'astro',
-    label: 'Astro',
-  },
+    label: 'Astro'
+  }
 ];
 
 const ComboboxDemo = () => {
@@ -38,7 +38,7 @@ const ComboboxDemo = () => {
     [currValue, setCurrValue] = useState('');
 
   return (
-    <Popover
+    <Popover.Root
       onOpenChange={setIsOpen}
       open={isOpen}
     >
@@ -48,7 +48,7 @@ const ComboboxDemo = () => {
           className='group flex h-10 w-52 items-center justify-between rounded-sm border bg-main px-4 text-sm transition-colors focus:outline disabled:pointer-events-none disabled:opacity-50'
           role='combobox'
         >
-          <span className={cn(currValue === '' && 'text-muted-content')}>
+          <span className={cn(currValue === '' && 'text-content/75')}>
             {currValue
               ? DATA.find(({ value }) => value === currValue)?.label
               : 'Select a framework...'}
@@ -60,14 +60,14 @@ const ComboboxDemo = () => {
 
       <Popover.Portal>
         <Popover.Content className='w-52 border-none p-0'>
-          <Command>
-            <Command.Search>
+          <Command.Root>
+            <Command.Search.Root>
               <Command.Search.Icon>
                 <MagnifyingGlassIcon />
               </Command.Search.Icon>
 
               <Command.Search.Input placeholder='Search framework...' />
-            </Command.Search>
+            </Command.Search.Root>
 
             <Command.List>
               <Command.Empty>No framework found.</Command.Empty>
@@ -86,7 +86,7 @@ const ComboboxDemo = () => {
                     <CheckIcon
                       className={cn(
                         'absolute left-[.5625rem] h-3.5 w-3.5 opacity-0',
-                        currValue === value && 'opacity-100',
+                        currValue === value && 'opacity-100'
                       )}
                     />
 
@@ -95,10 +95,10 @@ const ComboboxDemo = () => {
                 ))}
               </Command.Group>
             </Command.List>
-          </Command>
+          </Command.Root>
         </Popover.Content>
       </Popover.Portal>
-    </Popover>
+    </Popover.Root>
   );
 };
 

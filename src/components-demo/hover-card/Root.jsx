@@ -1,16 +1,17 @@
 import { CalendarIcon } from '@radix-ui/react-icons';
 
-import { Avatar, Button, HoverCard, Text } from '@/components/ui';
+import { Button, Text } from '@/components/atoms';
+import { Avatar, HoverCard } from '@/components/molecules';
 
 const HoverCardDemo = (props) => {
   return (
-    <HoverCard {...props}>
+    <HoverCard.Root {...props}>
       <HoverCard.Trigger asChild>
-        <Button variants={{ style: 'link' }}>@nextjs</Button>
+        <Button variants={{ type: 'link' }}>@nextjs</Button>
       </HoverCard.Trigger>
 
       <HoverCard.Content>
-        <Avatar>
+        <Avatar.Root>
           <Avatar.Image
             alt='A road winding through a forest near the ocean.'
             height={902}
@@ -20,21 +21,23 @@ const HoverCardDemo = (props) => {
           />
 
           <Avatar.Fallback>RF</Avatar.Fallback>
-        </Avatar>
+        </Avatar.Root>
 
         <section className='space-y-1 text-sm'>
           <Text.Subtitle className='text-sm'>@nextjs</Text.Subtitle>
 
-          <Text>The React Framework – created and maintained by @vercel.</Text>
+          <Text.Root>
+            The React Framework – created and maintained by @vercel.
+          </Text.Root>
 
-          <div className='flex items-center gap-2 pt-2 text-muted-content'>
+          <div className='flex items-center gap-2 pt-2 text-content/75'>
             <CalendarIcon className='h-4 w-4' />
 
-            <Text>Joined December 2021</Text>
+            <Text.Root>Joined December 2021</Text.Root>
           </div>
         </section>
       </HoverCard.Content>
-    </HoverCard>
+    </HoverCard.Root>
   );
 };
 

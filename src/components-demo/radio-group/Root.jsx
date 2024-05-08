@@ -1,11 +1,12 @@
 import { DotFilledIcon } from '@radix-ui/react-icons';
 
-import { Label, RadioGroup } from '@/components/ui';
+import { Label } from '@/components/atoms';
+import { RadioGroup } from '@/components/molecules';
 import { cn } from '@/utils';
 
 const RadioGroupDemo = (props) => {
   return (
-    <RadioGroup
+    <RadioGroup.Root
       defaultValue='comfortable'
       {...props}
     >
@@ -14,7 +15,7 @@ const RadioGroupDemo = (props) => {
       <RadioGroupItem value='comfortable'>Comfortable</RadioGroupItem>
 
       <RadioGroupItem value='compact'>Compact</RadioGroupItem>
-    </RadioGroup>
+    </RadioGroup.Root>
   );
 };
 

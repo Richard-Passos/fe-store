@@ -1,19 +1,19 @@
-import { ListComponent } from '@/components';
-import { cn, normalizeCompName } from '@/utils';
+import { ListComponent } from '@/components/molecules';
+import { cn, normCompName } from '@/utils';
 
 import * as CalendarModes from './modes';
 
-const CALENDAR_MODE_VARIANTS = ['default', 'single', 'multiple', 'range'],
-  CALENDAR_CAPTION_LAYOUT_VARIANTS = [
+const CALENDAR_MODE = ['default', 'single', 'multiple', 'range'],
+  CALENDAR_CAPTION_LAYOUT = [
     'buttons',
     'dropdown',
     'dropdown-buttons',
   ],
-  CALENDAR_NUMBER_OF_MONTHS_VARIANTS = [1, 2];
+  CALENDAR_NUMBER_OF_MONTHS = [1, 2];
 
-const CALENDAR_VARIANTS = CALENDAR_MODE_VARIANTS.map((mode) =>
-  CALENDAR_CAPTION_LAYOUT_VARIANTS.map((captionLayout) =>
-    CALENDAR_NUMBER_OF_MONTHS_VARIANTS.map((numberOfMonths) => ({
+const CALENDAR = CALENDAR_MODE.map((mode) =>
+  CALENDAR_CAPTION_LAYOUT.map((captionLayout) =>
+    CALENDAR_NUMBER_OF_MONTHS.map((numberOfMonths) => ({
       mode,
       captionLayout,
       numberOfMonths,
@@ -31,10 +31,10 @@ const CALENDAR_VARIANTS = CALENDAR_MODE_VARIANTS.map((mode) =>
 
 const CalendarDemo = ({ className, ...props }) => {
   return (
-    <ListComponent {...props}>
-      {CALENDAR_VARIANTS.map((variants) => {
+    <ListComponent.Root {...props}>
+      {CALENDAR.map((variants) => {
         const Calendar =
-          CalendarModes[normalizeCompName(variants.mode)] ||
+          CalendarModes[normCompName(variants.mode)] ||
           CalendarModes.Default;
 
         return (
@@ -59,7 +59,7 @@ const CalendarDemo = ({ className, ...props }) => {
           </ListComponent.Item>
         );
       })}
-    </ListComponent>
+    </ListComponent.Root>
   );
 };
 

@@ -1,5 +1,6 @@
-import { Button, Card, Form } from '@/components/ui';
-import { TabsContent } from '@/components/ui/tabs';
+import { Button } from '@/components/atoms';
+import { Card, Form } from '@/components/molecules';
+import { TabsContent } from '@/components/molecules/tabs';
 
 import ClientForm from './Client';
 import PasswordInput from './Input';
@@ -10,7 +11,7 @@ const TabsDemoPasswordForm = (props) => {
       value='password'
       {...props}
     >
-      <Card asChild>
+      <Card.Root asChild>
         <ClientForm className='space-y-4'>
           <Card.Header className='mb-6'>
             <Card.Title>Password</Card.Title>
@@ -57,7 +58,7 @@ const TabsDemoPasswordForm = (props) => {
             </Form.Submit>
           </Card.Actions>
         </ClientForm>
-      </Card>
+      </Card.Root>
     </TabsContent>
   );
 };

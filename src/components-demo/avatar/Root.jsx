@@ -1,8 +1,8 @@
-import { Avatar } from '@/components/ui';
+import { Avatar } from '@/components/molecules';
 
 const AvatarDemo = (props) => {
   return (
-    <Avatar {...props}>
+    <Avatar.Root {...props}>
       <Avatar.Image
         alt='A road winding through a forest near the ocean.'
         height={902}
@@ -12,7 +12,7 @@ const AvatarDemo = (props) => {
       />
 
       <Avatar.Fallback>RF</Avatar.Fallback>
-    </Avatar>
+    </Avatar.Root>
   );
 };
 

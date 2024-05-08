@@ -1,4 +1,4 @@
-import { Label, Switch } from '@/components/ui';
+import { Label, Switch } from '@/components/atoms';
 import { cn } from '@/utils';
 
 const SwitchDemo = ({ className, ...props }) => {
@@ -9,9 +9,9 @@ const SwitchDemo = ({ className, ...props }) => {
     >
       <Label htmlFor='airplane-mode'>Airplane mode</Label>
 
-      <Switch id='airplane-mode'>
+      <Switch.Root id='airplane-mode'>
         <Switch.Thumb />
-      </Switch>
+      </Switch.Root>
     </div>
   );
 };

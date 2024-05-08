@@ -5,7 +5,7 @@ import { forwardRef } from 'react';
 import { useForm } from 'react-hook-form';
 import * as z from 'zod';
 
-import { Form, FormProvider } from '@/components/ui/form';
+import { FormRoot, FormProvider } from '@/components/molecules/form';
 import { capitalize } from '@/utils';
 
 const popoverDemoClientFormSchema = z.object({
@@ -28,7 +28,7 @@ const PopoverDemoClientForm = (props, ref) => {
 
   return (
     <FormProvider {...form}>
-      <Form
+      <FormRoot
         onSubmit={popoverDemoClientFormOnSubmit}
         ref={ref}
         {...props}

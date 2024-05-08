@@ -5,7 +5,7 @@ import { forwardRef } from 'react';
 import { useForm } from 'react-hook-form';
 import * as z from 'zod';
 
-import { Form, FormProvider } from '@/components/ui/form';
+import { FormRoot, FormProvider } from '@/components/molecules/form';
 import { capitalize } from '@/utils';
 
 const dialogDemoClientFormSchema = z.object({
@@ -24,7 +24,7 @@ const DialogDemoClientForm = (props, ref) => {
 
   return (
     <FormProvider {...form}>
-      <Form
+      <FormRoot
         onSubmit={dialogDemoClientFormOnSubmit}
         ref={ref}
         {...props}

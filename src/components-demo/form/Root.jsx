@@ -1,10 +1,11 @@
-import { Button, Card, Form, Input } from '@/components/ui';
+import { Button, Input } from '@/components/atoms';
+import { Card, Form } from '@/components/molecules';
 
 import ClientForm from './Client';
 
 const FormDemo = (props) => {
   return (
-    <Card
+    <Card.Root
       asChild
       {...props}
     >
@@ -48,7 +49,7 @@ const FormDemo = (props) => {
             asChild
             values={{ name: '', email: '' }}
           >
-            <Button variants={{ color: 'inverted', style: 'outline' }}>
+            <Button variants={{ color: 'inverted', type: 'outline' }}>
               Cancel
             </Button>
           </Form.Reset>
@@ -58,7 +59,7 @@ const FormDemo = (props) => {
           </Form.Submit>
         </Card.Actions>
       </ClientForm>
-    </Card>
+    </Card.Root>
   );
 };
 

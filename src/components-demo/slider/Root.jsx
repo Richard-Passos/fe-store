@@ -1,14 +1,14 @@
 'use client';
 
-import { ListComponent } from '@/components';
-import { Slider } from '@/components/ui';
-import { sliderOrientations } from '@/components/ui/slider';
+import { ListComponent } from '@/components/molecules';
+import { Slider } from '@/components/atoms';
+import { sliderDirections } from '@/components/atoms/slider';
 
-const SLIDER_ORIENTATION_VARIANTS = Object.keys(sliderOrientations),
-  SLIDER_INVERTED_VARIANTS = [false, true];
+const SLIDER_ORIENTATION = Object.keys(sliderDirections),
+  SLIDER_INVERTED = [false, true];
 
-const SLIDER_VARIANTS = SLIDER_ORIENTATION_VARIANTS.map((orientation) =>
-  SLIDER_INVERTED_VARIANTS.map((inverted) => ({
+const SLIDER = SLIDER_ORIENTATION.map((orientation) =>
+  SLIDER_INVERTED.map((inverted) => ({
     orientation,
     inverted,
   })),
@@ -16,15 +16,15 @@ const SLIDER_VARIANTS = SLIDER_ORIENTATION_VARIANTS.map((orientation) =>
 
 const SliderDemo = ({ className, ...props }) => {
   return (
-    <ListComponent {...props}>
-      {SLIDER_VARIANTS.map((variants) => (
+    <ListComponent.Root {...props}>
+      {SLIDER.map((variants) => (
         <ListComponent.Item
           className='max-w-lg'
           key={Object.entries(variants).join()}
         >
           <ListComponent.Subtitle variants={variants} />
 
-          <Slider
+          <Slider.Root
             className={variants.orientation === 'vertical' && 'h-96'}
             defaultValue={[50]}
             {...variants}
@@ -34,10 +34,10 @@ const SliderDemo = ({ className, ...props }) => {
             </Slider.Track>
 
             <Slider.Thumb aria-label='Volume' />
-          </Slider>
+          </Slider.Root>
         </ListComponent.Item>
       ))}
-    </ListComponent>
+    </ListComponent.Root>
   );
 };
 

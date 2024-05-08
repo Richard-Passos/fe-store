@@ -1,18 +1,18 @@
 import {
   CheckIcon,
   ChevronDownIcon,
-  ChevronUpIcon,
+  ChevronUpIcon
 } from '@radix-ui/react-icons';
 
-import ListComponent from '@/components/list-component';
-import { Select } from '@/components/ui';
+import { Select } from '@/components/atoms';
+import { ListComponent } from '@/components/molecules';
 
-const SELECT_VARIANTS = [{ position: 'popper' }, { position: 'item-aligned' }];
+const SELECT = [{ position: 'popper' }, { position: 'item-aligned' }];
 
 const SelectDemo = (props) => {
   return (
-    <ListComponent {...props}>
-      {SELECT_VARIANTS.map((variants) => (
+    <ListComponent.Root {...props}>
+      {SELECT.map((variants) => (
         <ListComponent.Item
           className='max-w-[theme(spacing.56)]'
           key={Object.entries(variants).join()}
@@ -22,22 +22,17 @@ const SelectDemo = (props) => {
           <SelectComp variants={variants} />
         </ListComponent.Item>
       ))}
-    </ListComponent>
+    </ListComponent.Root>
   );
 };
 
 const SelectComp = ({ variants, ...props }) => {
   return (
-    <Select {...props}>
+    <Select.Root {...props}>
       <Select.Trigger>
         <Select.Value placeholder='Select a fruit…' />
 
-        <Select.Icon
-          asChild
-          className='transition-transform duration-300 group-data-open:rotate-180'
-        >
-          <ChevronDownIcon />
-        </Select.Icon>
+        <ChevronDownIcon className='size-3.5 transition-transform duration-300 group-data-open:rotate-180' />
       </Select.Trigger>
 
       <Select.Portal>
@@ -102,19 +97,19 @@ const SelectComp = ({ variants, ...props }) => {
           </Select.ScrollButton.Down>
         </Select.Content>
       </Select.Portal>
-    </Select>
+    </Select.Root>
   );
 };
 
 const SelectItem = ({ children, ...props }) => {
   return (
-    <Select.Item {...props}>
+    <Select.Item.Root {...props}>
       <Select.Item.Text>{children}</Select.Item.Text>
 
       <Select.Item.Indicator>
         <CheckIcon />
       </Select.Item.Indicator>
-    </Select.Item>
+    </Select.Item.Root>
   );
 };
 

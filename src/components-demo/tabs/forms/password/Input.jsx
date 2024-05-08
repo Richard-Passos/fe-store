@@ -4,7 +4,7 @@ import { EyeClosedIcon, EyeOpenIcon } from '@radix-ui/react-icons';
 import { Slot } from '@radix-ui/react-slot';
 import { forwardRef, useState } from 'react';
 
-import { Input } from '@/components/ui';
+import { Input } from '@/components/atoms';
 
 const TabsDemoPasswordFormInput = (props, ref) => {
   const [isShowing, setIsShowing] = useState(false);

@@ -1,14 +1,15 @@
 import { Cross2Icon } from '@radix-ui/react-icons';
 import { forwardRef } from 'react';
 
-import { Button, Dialog, Form, Input } from '@/components/ui';
+import { Button, Input } from '@/components/atoms';
+import { Dialog, Form } from '@/components/molecules';
 import { cn } from '@/utils';
 
 import ClientForm from './ClientForm';
 
 const DialogDemo = (props) => {
   return (
-    <Dialog {...props}>
+    <Dialog.Root {...props}>
       <Dialog.Trigger asChild>
         <Button>Edit Profile</Button>
       </Dialog.Trigger>
@@ -72,7 +73,7 @@ const DialogDemo = (props) => {
           </ClientForm>
         </Dialog.Content>
       </Dialog.Portal>
-    </Dialog>
+    </Dialog.Root>
   );
 };
 

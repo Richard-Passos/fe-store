@@ -1,8 +1,9 @@
-import { AlertDialog, Button } from '@/components/ui';
+import { Button } from '@/components/atoms';
+import { AlertDialog } from '@/components/molecules';
 
 const AlertDialogDemo = (props) => {
   return (
-    <AlertDialog {...props}>
+    <AlertDialog.Root {...props}>
       <AlertDialog.Trigger asChild>
         <Button>Show dialog</Button>
       </AlertDialog.Trigger>
@@ -23,7 +24,7 @@ const AlertDialogDemo = (props) => {
           <AlertDialog.Actions>
             <AlertDialog.Cancel asChild>
               <Button
-                variants={{ color: 'inverted', style: 'outline', size: 'sm' }}
+                variants={{ color: 'inverted', type: 'outline', size: 'sm' }}
               >
                 Cancel
               </Button>
@@ -37,7 +38,7 @@ const AlertDialogDemo = (props) => {
           </AlertDialog.Actions>
         </AlertDialog.Content>
       </AlertDialog.Portal>
-    </AlertDialog>
+    </AlertDialog.Root>
   );
 };
 

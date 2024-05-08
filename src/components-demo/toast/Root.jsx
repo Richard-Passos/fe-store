@@ -1,7 +1,7 @@
 'use client';
 
-import { Separator, Text } from '@/components/ui';
-import { ToastProvider, ToastViewport } from '@/components/ui/toast';
+import { Separator, Text } from '@/components/atoms';
+import { ToastProvider, ToastViewport } from '@/components/molecules/toast';
 import { TOAST_REMOVE_DELAY_FOR_ANIMATIONS } from '@/hooks/useToast';
 import { cn } from '@/utils';
 
@@ -22,10 +22,10 @@ const ToastDemo = ({ className, ...props }) => {
         )}
         {...props}
       >
-        <Text className='text-center sm:px-12'>
+        <Text.Root className='text-center sm:px-12'>
           Each button shows a Toast when clicked, so... feel free to click
           around.
-        </Text>
+        </Text.Root>
 
         <Separator />
 

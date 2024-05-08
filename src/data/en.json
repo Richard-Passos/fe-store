@@ -1,0 +1,651 @@
+{
+  "pages": {
+    "home": {
+      "sections": {
+        "hero": {
+          "template": "hero",
+          "title": "Welcome to FE Template!",
+          "description": "My go-to starting point for front-end projects. Dive in and explore the <b>meticulously crafted folder structure</b> and <b>components</b>, designed using Shadcn/UI best practices. Start building <b>your next masterpiece</b> with <b>ease</b> and <b>efficiency</b>!",
+          "action": {
+            "label": "Go to github",
+            "href": "https://github.com/Richard-Passos/fe-template",
+            "color": "primary",
+            "type": "solid",
+            "size": null
+          },
+          "scroll": {
+            "icon": "/images/caret-down.svg",
+            "description": "Scroll to see more"
+          },
+          "block": {
+            "slug": "box",
+            "template": "components-nav",
+            "title": "Amazing components",
+            "action": {
+              "color": "muted",
+              "type": null,
+              "size": null
+            },
+            "color": null,
+            "type": null
+          }
+        },
+        "whyUs": {
+          "template": "one-column",
+          "title": "Why FE template?",
+          "description": null,
+          "block": {
+            "slug": "list",
+            "template": "cards.why-us",
+            "items": {
+              "0": {
+                "title": "Saves time",
+                "description": "No need to spend hours implementing all over again. Get it right away!",
+                "icon": "/images/stopwatch.svg",
+                "color": "muted",
+                "type": null
+              },
+              "1": {
+                "title": "It’s realistic",
+                "description": "Get internalization, templates, and a easy to customize code.",
+                "icon": "/images/globe.svg",
+                "color": "muted",
+                "type": null
+              },
+              "2": {
+                "title": "It’s simple",
+                "description": "Clone it via Github, and remove what you don't want.",
+                "icon": "/images/check-badge.svg",
+                "color": "muted",
+                "type": null
+              }
+            }
+          },
+          "color": null,
+          "type": null,
+          "size": null,
+          "hasPattern": true
+        },
+        "about": {
+          "template": "one-column",
+          "title": null,
+          "description": null,
+          "block": {
+            "slug": "bento-grid",
+            "templates": {
+              "default": "'item-0' 'item-1' 'item-2' 'item-3'",
+              "sm": "'item-0 item-0' 'item-1 item-3' 'item-2 item-2'",
+              "lg": "'item-0 item-0 item-0 item-0 item-1' 'item-0 item-0 item-0 item-0 item-1' 'item-2 item-2 item-2 item-3 item-3'"
+            },
+            "items": {
+              "0": {
+                "title": "100% Free!",
+                "description": "Forevar.",
+                "color": "primary",
+                "type": null,
+                "template": "cards.bold"
+              },
+              "1": {
+                "title": "100% Free!",
+                "description": "Forevar.",
+                "color": "muted",
+                "type": null,
+                "template": "cards.bold"
+              },
+              "2": {
+                "title": "100% Free!",
+                "description": "Forevar.",
+                "color": "inverted",
+                "type": null,
+                "template": "cards.bold"
+              },
+              "3": {
+                "title": "100% Free!",
+                "description": "Forevar.",
+                "color": "accent",
+                "type": null,
+                "template": "cards.bold"
+              }
+            }
+          },
+          "color": null,
+          "type": null,
+          "size": null,
+          "hasPattern": false
+        },
+        "howWorks": {
+          "template": "three-columns",
+          "title": "How Does it Work?",
+          "description": "Get your next masterpiece project in a few steps.",
+          "block": {
+            "slug": "list",
+            "template": "cards.enum",
+            "items": {
+              "0": {
+                "description": "Start with two neutral colors for the text and the background.",
+                "color": null,
+                "type": "clean"
+              },
+              "1": {
+                "description": "Choose your primary and secondary colors. Primary is for main CTAs and sections, and Secondary is for less important buttons and info cards.",
+                "color": null,
+                "type": "clean"
+              },
+              "2": {
+                "description": "Accent color is an additional color. It appears in images, highlights, hyperlinks, boxes, cards, etc.",
+                "color": null,
+                "type": "clean"
+              },
+              "3": {
+                "description": "Happy with the results? Press on “Export” and choose among different options to export in various formats, like .zip, .png, CSS, SCSS, QR Code, and more.",
+                "color": null,
+                "type": "clean"
+              }
+            }
+          },
+          "color": "muted",
+          "type": "solid",
+          "size": null,
+          "hasPattern": false
+        },
+        "pricing": {
+          "template": "one-column",
+          "title": "Plans & Pricing",
+          "description": "The repository is 100% free! This is just a generic section.",
+          "block": {
+            "slug": "list",
+            "template": "cards.pricing",
+            "items": {
+              "0": {
+                "title": "Basic",
+                "price": "Free",
+                "action": {
+                  "label": "Get Started",
+                  "color": "muted",
+                  "type": null,
+                  "size": null
+                },
+                "badge": null,
+                "items": {
+                  "0": {
+                    "description": "Choose any component",
+                    "icon": "/images/check-circle.svg"
+                  },
+                  "1": {
+                    "description": "Export all you want",
+                    "icon": "/images/check-circle.svg"
+                  }
+                },
+                "color": null,
+                "type": null
+              },
+              "1": {
+                "title": "Pro",
+                "price": "$0.00 / month",
+                "action": {
+                  "label": "Get Started",
+                  "color": null,
+                  "type": null,
+                  "size": null
+                },
+                "badge": {
+                  "label": "Most popular",
+                  "color": null,
+                  "type": null
+                },
+                "items": {
+                  "0": {
+                    "description": "Choose any component",
+                    "icon": "/images/check-circle.svg"
+                  },
+                  "1": {
+                    "description": "Export all you want",
+                    "icon": "/images/check-circle.svg"
+                  },
+                  "2": {
+                    "description": "Get a big thank you for checking this site out",
+                    "icon": "/images/check-circle.svg"
+                  },
+                  "3": {
+                    "description": "Get access to dashboard",
+                    "icon": "/images/check-circle.svg"
+                  }
+                },
+                "color": null,
+                "type": null
+              },
+              "2": {
+                "title": "Enterprise",
+                "price": "$0.00 / month",
+                "action": {
+                  "label": "Learn more",
+                  "color": "muted",
+                  "type": null,
+                  "size": null
+                },
+                "badge": null,
+                "items": {
+                  "0": {
+                    "description": "Choose any component",
+                    "icon": "/images/check-circle.svg"
+                  },
+                  "1": {
+                    "description": "Export all you want",
+                    "icon": "/images/check-circle.svg"
+                  },
+                  "2": {
+                    "description": "Get a big thank you for checking this site out",
+                    "icon": "/images/check-circle.svg"
+                  },
+                  "3": {
+                    "description": "Get access to dashboard",
+                    "icon": "/images/check-circle.svg"
+                  },
+                  "4": {
+                    "description": "Super duper exclusive members-only content.",
+                    "icon": "/images/check-circle.svg"
+                  }
+                },
+                "color": null,
+                "type": null
+              }
+            }
+          },
+          "color": null,
+          "type": null,
+          "size": null,
+          "hasPattern": false
+        },
+        "testimonials": {
+          "template": "one-column",
+          "title": "Testimonials",
+          "description": "What (imaginary) people are saying about this site.",
+          "block": {
+            "slug": "list",
+            "template": "cards.testimonials",
+            "items": {
+              "0": {
+                "description": "Wow! I love this site. Realtime Colors is all websites at the same time.",
+                "quoteIcon": "/images/quote.svg",
+                "author": {
+                  "name": "Cool User",
+                  "role": "Product Designer",
+                  "image": null
+                },
+                "rating": {
+                  "value": 5,
+                  "icon": "/images/star.svg"
+                },
+                "color": "muted",
+                "type": null
+              },
+              "1": {
+                "description": "Amazing. I found my favorite colors in literally... 2 minutes? Woah! Totally real review",
+                "quoteIcon": "/images/quote.svg",
+                "author": {
+                  "name": "Creative Person",
+                  "role": "Product Owner",
+                  "image": null
+                },
+                "rating": {
+                  "value": 5,
+                  "icon": "/images/star.svg"
+                },
+                "color": "muted",
+                "type": null
+              },
+              "2": {
+                "description": "Astonished. This product is so cool. You should try it and upgrade to Enterprise plan. No kidding.",
+                "quoteIcon": "/images/quote.svg",
+                "author": {
+                  "name": "Real Reviewer",
+                  "role": "Developer",
+                  "image": null
+                },
+                "rating": {
+                  "value": 5,
+                  "icon": "/images/star.svg"
+                },
+                "color": "muted",
+                "type": null
+              }
+            }
+          },
+          "color": null,
+          "type": null,
+          "size": null,
+          "hasPattern": true
+        },
+        "faq": {
+          "template": "three-columns",
+          "title": "FAQ",
+          "description": "Answers to some questions you might have.",
+          "block": {
+            "slug": "box",
+            "template": "accordions.faq",
+            "icon": "/images/plus.svg",
+            "animation": "rotate135",
+            "items": {
+              "0": {
+                "title": "How many colors should I choose?",
+                "description": "Normally, 3 colors are absolutely fine (meaning background, text, and one accent color). However, if you want, you can have more. Usually, we don’t add more than 6 colors across a platform. It would just make things too... complicated. Plus, it makes it hard to keep the colors consistent throughout the design."
+              },
+              "1": {
+                "title": "How does the contrast checker work?",
+                "description": "The contrast checker shows the contrast ratio between the selected color and its background/foreground. The contrast checker has 3 lights: x / Red: The contrast ratio does not pass either AAA or AA. Therefore, both large and normal texts are hardly readable. - / Yellow: The contrast ratio might pass AA but won't pass AAA. Large texts might be readable but normal texts are probably not readable. ✓ / Green: The contrast ratio passes both AA and AAA. Both large and normal texts are readable. Learn more about the contrast checker."
+              },
+              "2": {
+                "title": "What does the hero image represent?",
+                "description": "The hero image is inspired by Piet Mondrian's Composition with Large Red Plane, Yellow, Black, Grey and Blue. This composition keeps the ratio of the main colors (red, blue, and yellow) very close to the 60-30-10 rule of UI design. This is mainly why I've chosen this composition to visualize the distribution of the colors on the page."
+              },
+              "3": {
+                "title": "How can I set up the fonts?",
+                "description": "You can enter the name of a font from Google Fonts or the fonts installed on your device. Read more about Font Setup."
+              },
+              "4": {
+                "title": "How can I learn more about this tool?",
+                "description": "You can find more information about Realtime Colors on the Docs. You can also contact me for any questions you might have."
+              }
+            },
+            "color": "muted",
+            "type": null,
+            "collapsible": true
+          },
+          "color": null,
+          "type": null,
+          "size": null,
+          "hasPattern": false
+        },
+        "cta": {
+          "template": "one-column",
+          "title": null,
+          "description": null,
+          "block": {
+            "slug": "box",
+            "template": "cta",
+            "title": "Your <b>journey</b> shouldn't end here.",
+            "description": "Feel free to stay tuned with my Github repos.",
+            "action": {
+              "label": "Stay tuned",
+              "href": "https://github.com/Richard-Passos",
+              "color": null,
+              "type": null,
+              "size": null
+            },
+            "color": "muted",
+            "type": null
+          },
+          "color": null,
+          "type": "slot",
+          "size": null,
+          "hasPattern": true
+        }
+      }
+    }
+  },
+  "header": {
+    "menu": {
+      "title": "FE template",
+      "description": "Easy way to navigate between component.",
+      "direction": "left",
+      "trigger": {
+        "label": "Toggle menu",
+        "icon": "/images/menu.svg",
+        "color": "main",
+        "type": null,
+        "size": null
+      },
+      "close": {
+        "label": "Close menu",
+        "icon": "/images/times.svg"
+      }
+    }
+  },
+  "footer": {
+    "description": "Accent color is an additional color. It appears in images, highlights, hyperlinks, boxes, cards, etc.",
+    "contact": {
+      "label": "Wanna talk? Send me a message.",
+      "icon": "/images/paperplane.svg"
+    },
+    "backTop": {
+      "label": "Back to the top",
+      "icon": "/images/arrow-up.svg"
+    },
+    "copyright": {
+      "label": "© 2024 <a>Richard Passos</a>",
+      "href": "https://github.com/Richard-Passos"
+    },
+    "message": {
+      "label": "Made with ❤️ by <a>Richard Passos</a>",
+      "href": "https://github.com/Richard-Passos"
+    }
+  },
+  "personalInfo": {
+    "name": {
+      "first": "FE",
+      "last": "Template"
+    },
+    "summary": "The ultimate front-end template repository.",
+    "description": "Unleash your front-end projects with FE Template, the definitive starting point for your web development journey. Dive into meticulously organized folders and expertly crafted components, designed with industry best practices in mind. Build your next masterpiece effortlessly and efficiently, with unparalleled ease and precision.",
+    "email": "hi.richardp@gmail.com",
+    "logo": {
+      "src": "/images/logo.svg",
+      "alt": "Richard Passos logo",
+      "width": 63,
+      "height": 63
+    },
+    "favicon": "/images/favicon.icon",
+    "socials": {
+      "portfolio": {
+        "label": "Portfolio",
+        "href": "https://richardp.vercel.app",
+        "icon": "/images/link.svg"
+      },
+      "github": {
+        "label": "Github",
+        "href": "https://github.com/Richard-Passos",
+        "icon": "/images/github.svg"
+      },
+      "linkedin": {
+        "label": "Linkedin",
+        "href": "https://www.linkedin.com/in/richardp-dev",
+        "icon": "/images/linkedin.svg"
+      }
+    }
+  },
+  "components": {
+    "accordion": {
+      "title": "Accordion",
+      "description": "Accordion",
+      "variants": [
+        { "variant": "single", "collapsible": true },
+        { "variant": "single", "collapsible": false },
+        { "variant": "single", "defaultValue": "item-1" },
+        { "variant": "multiple" },
+        { "variant": "multiple", "defaultValue": ["item-1", "item-2"] }
+      ]
+    },
+    "alert": {
+      "title": "Alert",
+      "description": "Alert"
+    },
+    "alertDialog": {
+      "title": "Alert dialog",
+      "description": "Alert dialog"
+    },
+    "aspectRatio": {
+      "title": "Aspect ratio",
+      "description": "Aspect ratio"
+    },
+    "avatar": {
+      "title": "Avatar",
+      "description": "Avatar"
+    },
+    "badge": {
+      "title": "Badge",
+      "description": "Badge"
+    },
+    "button": {
+      "title": "Button",
+      "description": "Button"
+    },
+    "calendar": {
+      "title": "Calendar",
+      "description": "Calendar"
+    },
+    "card": {
+      "title": "Card",
+      "description": "Card"
+    },
+    "checkbox": {
+      "title": "Checkbox",
+      "description": "Checkbox"
+    },
+    "collapsible": {
+      "title": "Collapsible",
+      "description": "Collapsible"
+    },
+    "combobox": {
+      "title": "Combobox",
+      "description": "Combobox"
+    },
+    "command": {
+      "title": "Command",
+      "description": "Command"
+    },
+    "contextMenu": {
+      "title": "Context menu",
+      "description": "Context menu"
+    },
+    "datePicker": {
+      "title": "Date picker",
+      "description": "Date picker"
+    },
+    "dialog": {
+      "title": "Dialog",
+      "description": "Dialog"
+    },
+    "dropdownMenu": {
+      "title": "Dropdown menu",
+      "description": "Dropdown menu"
+    },
+    "form": {
+      "title": "Form",
+      "description": "Form"
+    },
+    "hoverCard": {
+      "title": "Hover card",
+      "description": "Hover card"
+    },
+    "image": {
+      "title": "Image",
+      "description": "Image"
+    },
+    "input": {
+      "title": "Input",
+      "description": "Input"
+    },
+    "label": {
+      "title": "Label",
+      "description": "Label"
+    },
+    "link": {
+      "title": "Link",
+      "description": "Link"
+    },
+    "menubar": {
+      "title": "Menubar",
+      "description": "Menubar"
+    },
+    "popover": {
+      "title": "Popover",
+      "description": "Popover"
+    },
+    "progress": {
+      "title": "Progress",
+      "description": "Progress"
+    },
+    "radioGroup": {
+      "title": "Radio group",
+      "description": "Radio group"
+    },
+    "scrollArea": {
+      "title": "Scroll area",
+      "description": "Scroll area"
+    },
+    "select": {
+      "title": "Select",
+      "description": "Select"
+    },
+    "separator": {
+      "title": "Separator",
+      "description": "Separator"
+    },
+    "sheet": {
+      "title": "Sheet",
+      "description": "Sheet"
+    },
+    "skeleton": {
+      "title": "Skeleton",
+      "description": "Skeleton"
+    },
+    "slider": {
+      "title": "Slider",
+      "description": "Slider"
+    },
+    "switch": {
+      "title": "Switch",
+      "description": "Switch"
+    },
+    "table": {
+      "title": "Table",
+      "description": "Table"
+    },
+    "tabs": {
+      "title": "Tabs",
+      "description": "Tabs"
+    },
+    "text": {
+      "title": "Text",
+      "description": "Text"
+    },
+    "textarea": {
+      "title": "Textarea",
+      "description": "Textarea"
+    },
+    "timerbar": {
+      "title": "Timerbar",
+      "description": "Timerbar"
+    },
+    "toast": {
+      "title": "Toast",
+      "description": "Toast"
+    },
+    "toggle": {
+      "title": "Toggle",
+      "description": "Toggle"
+    },
+    "tooltip": {
+      "title": "Tooltip",
+      "description": "Tooltip"
+    }
+  },
+  "themes": {
+    "light": {
+      "label": "Light",
+      "icon": "/images/sun.svg"
+    },
+    "dark": {
+      "label": "Dark",
+      "icon": "/images/moon.svg"
+    },
+    "system": {
+      "label": "System",
+      "icon": "/images/settings.svg"
+    }
+  },
+  "locales": {
+    "en": "English",
+    "pt": "Portuguese"
+  }
+}

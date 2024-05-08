@@ -1,30 +1,29 @@
 import { InfoCircledIcon } from '@radix-ui/react-icons';
 
-import { ListComponent } from '@/components';
-import { Alert } from '@/components/ui';
-import { alertStyles } from '@/components/ui/alert';
-import variantColors from '@/components/ui/variantColors';
+import colorVariants from '@/components/colorVariants';
+import { Alert, ListComponent } from '@/components/molecules';
+import { alertTypes } from '@/components/molecules/alert';
 
-const ALERT_COLOR_VARIANTS = Object.keys(variantColors),
-  ALERT_STYLE_VARIANTS = Object.keys(alertStyles);
+const ALERT_COLORS = Object.keys(colorVariants),
+  ALERT_TYPES = Object.keys(alertTypes);
 
-const ALERT_VARIANTS = ALERT_COLOR_VARIANTS.map((color) =>
-  ALERT_STYLE_VARIANTS.map((style) => ({
+const ALERT = ALERT_COLORS.map((color) =>
+  ALERT_TYPES.map((type) => ({
     color,
-    style,
-  })),
+    type
+  }))
 )
   .reduce((arr, variants) => [...arr, ...variants], [])
-  .sort((a, b) => b.style.localeCompare(a.style));
+  .sort((a, b) => b.type.localeCompare(a.type));
 
-const AlertDemo = ({ className, ...props }) => {
+const AlertDemo = (props) => {
   return (
-    <ListComponent {...props}>
-      {ALERT_VARIANTS.map((variants) => (
+    <ListComponent.Root {...props}>
+      {ALERT.map((variants) => (
         <ListComponent.Item key={Object.entries(variants).join()}>
           <ListComponent.Subtitle variants={variants} />
 
-          <Alert variants={variants}>
+          <Alert.Root {...variants}>
             <Alert.Icon>
               <InfoCircledIcon />
             </Alert.Icon>
@@ -34,10 +33,10 @@ const AlertDemo = ({ className, ...props }) => {
             <Alert.Description>
               You can add components to your app using the cli.
             </Alert.Description>
-          </Alert>
+          </Alert.Root>
         </ListComponent.Item>
       ))}
-    </ListComponent>
+    </ListComponent.Root>
   );
 };
 

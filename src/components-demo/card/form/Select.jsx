@@ -7,8 +7,8 @@ import {
 } from '@radix-ui/react-icons';
 import { useFormContext } from 'react-hook-form';
 
-import { Select } from '@/components/ui';
-import { FormControl } from '@/components/ui/form';
+import { Select } from '@/components/atoms';
+import { FormControl } from '@/components/molecules/form';
 import { useChangeKeyWhenFalsy, useFormField } from '@/hooks';
 
 const CardDemoFormSelect = (props) => {
@@ -21,7 +21,7 @@ const CardDemoFormSelect = (props) => {
   const key = useChangeKeyWhenFalsy(currValue);
 
   return (
-    <Select
+    <Select.Root
       key={key}
       onValueChange={(value) => onChange({ target: { name, value } })}
       {...rest}
@@ -61,19 +61,19 @@ const CardDemoFormSelect = (props) => {
           </Select.ScrollButton.Down>
         </Select.Content>
       </Select.Portal>
-    </Select>
+    </Select.Root>
   );
 };
 
 const SelectItem = ({ children, ...props }) => {
   return (
-    <Select.Item {...props}>
+    <Select.Item.Root {...props}>
       <Select.Item.Indicator>
         <CheckIcon />
       </Select.Item.Indicator>
 
       <Select.Item.Text>{children}</Select.Item.Text>
-    </Select.Item>
+    </Select.Item.Root>
   );
 };
 

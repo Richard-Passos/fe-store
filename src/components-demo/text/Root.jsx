@@ -1,17 +1,17 @@
-import { ListComponent } from '@/components';
-import { Text } from '@/components/ui';
-import { cn, normalizeCompName } from '@/utils';
+import { ListComponent } from '@/components/molecules';
+import { Text } from '@/components/atoms';
+import { cn, normCompName } from '@/utils';
 
-const TEXT_VARIANTS = ['title', 'subtitle', 'text', 'small'];
+const TEXT = ['title', 'subtitle', 'text', 'small'];
 
 const TextDemo = ({ className, ...props }) => {
   return (
-    <ListComponent
+    <ListComponent.Root
       className={cn('flex-col flex-nowrap items-center', className)}
       {...props}
     >
-      {TEXT_VARIANTS.map((variants) => {
-        const TextComp = Text[normalizeCompName(variants)] || Text;
+      {TEXT.map((variants) => {
+        const TextComp = Text[normCompName(variants)] || Text.Root;
 
         return (
           <ListComponent.Item key={variants}>
@@ -24,7 +24,7 @@ const TextDemo = ({ className, ...props }) => {
           </ListComponent.Item>
         );
       })}
-    </ListComponent>
+    </ListComponent.Root>
   );
 };
 

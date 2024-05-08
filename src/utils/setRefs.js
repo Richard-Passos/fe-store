@@ -1,10 +1,8 @@
-import isFunctionThanCall from './isFunctionThanCall';
-
 const setRefs = (refFromFowardRef, refFromUseRef) => {
-  return (el) => {
-    isFunctionThanCall(refFromFowardRef, el);
+  return (node) => {
+    refFromFowardRef?.(node);
 
-    refFromUseRef.current = el;
+    refFromUseRef.current = node;
   };
 };
 

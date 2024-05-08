@@ -1,6 +1,7 @@
 'use client';
 
-import { Button, Card, Form, Input } from '@/components/ui';
+import { Button, Input } from '@/components/atoms';
+import { Card, Form } from '@/components/molecules';
 import { cn } from '@/utils';
 
 import ClientForm from './Client';
@@ -8,7 +9,7 @@ import CardFormSelect from './Select';
 
 const CardDemoForm = ({ className, ...props }) => {
   return (
-    <Card
+    <Card.Root
       asChild
       className={cn('w-full max-w-sm', className)}
       {...props}
@@ -53,7 +54,7 @@ const CardDemoForm = ({ className, ...props }) => {
             asChild
             values={{ name: '', framework: '' }}
           >
-            <Button variants={{ color: 'inverted', style: 'outline' }}>
+            <Button variants={{ color: 'inverted', type: 'outline' }}>
               Cancel
             </Button>
           </Form.Reset>
@@ -63,7 +64,7 @@ const CardDemoForm = ({ className, ...props }) => {
           </Form.Submit>
         </Card.Actions>
       </ClientForm>
-    </Card>
+    </Card.Root>
   );
 };
 

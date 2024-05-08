@@ -1,4 +1,4 @@
-import { Link, Separator, Text } from '@/components/ui';
+import { Link, Separator, Text } from '@/components/atoms';
 
 const SeparatorDemo = (props) => {
   return (
@@ -8,9 +8,9 @@ const SeparatorDemo = (props) => {
           Radix Primitives
         </Text.Subtitle>
 
-        <Text className='text-sm text-muted-content'>
+        <Text.Root className='text-sm text-content/75'>
           An open-source UI component library.
-        </Text>
+        </Text.Root>
       </header>
 
       <Separator className='my-4' />

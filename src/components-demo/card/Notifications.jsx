@@ -1,11 +1,12 @@
 import { BellIcon } from '@radix-ui/react-icons';
 
-import { Button, Card, Switch, Text } from '@/components/ui';
+import { Button, Switch, Text } from '@/components/atoms';
+import { Card } from '@/components/molecules';
 import { cn } from '@/utils';
 
 const CardDemoNotfications = ({ className, ...props }) => {
   return (
-    <Card
+    <Card.Root
       className={cn('w-full max-w-sm', className)}
       {...props}
     >
@@ -24,14 +25,14 @@ const CardDemoNotfications = ({ className, ...props }) => {
               Push Notifications
             </Text.Subtitle>
 
-            <Text className='text-sm text-muted-content'>
+            <Text.Root className='text-sm text-content/75'>
               Send notifications to device.
-            </Text>
+            </Text.Root>
           </div>
 
-          <Switch>
+          <Switch.Root>
             <Switch.Thumb />
-          </Switch>
+          </Switch.Root>
         </section>
 
         <ul className='space-y-6'>
@@ -45,9 +46,9 @@ const CardDemoNotfications = ({ className, ...props }) => {
               <section className='space-y-1'>
                 <Text.Subtitle className='text-sm'>{title}</Text.Subtitle>
 
-                <Text className='text-sm text-muted-content'>
+                <Text.Root className='text-sm text-content/75'>
                   {description}
-                </Text>
+                </Text.Root>
               </section>
             </li>
           ))}
@@ -57,23 +58,23 @@ const CardDemoNotfications = ({ className, ...props }) => {
       <Card.Actions>
         <Button className='w-full'>Mark all as read</Button>
       </Card.Actions>
-    </Card>
+    </Card.Root>
   );
 };
 
 const notifications = [
   {
     title: 'Your call has been confirmed.',
-    description: '1 hour ago',
+    description: '1 hour ago'
   },
   {
     title: 'You have a new message!',
-    description: '1 hour ago',
+    description: '1 hour ago'
   },
   {
     title: 'Your subscription is expiring soon!',
-    description: '2 hours ago',
-  },
+    description: '2 hours ago'
+  }
 ];
 
 export default CardDemoNotfications;

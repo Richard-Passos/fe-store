@@ -4,11 +4,11 @@ import {
   DotFilledIcon,
 } from '@radix-ui/react-icons';
 
-import { ContextMenu } from '@/components/ui';
+import { ContextMenu } from '@/components/molecules';
 
 const ContextMenuDemo = (props) => {
   return (
-    <ContextMenu {...props}>
+    <ContextMenu.Root {...props}>
       <ContextMenu.Trigger className='flex aspect-video w-full max-w-xs items-center justify-center rounded-md border border-dashed text-sm'>
         Right click here
       </ContextMenu.Trigger>
@@ -29,7 +29,7 @@ const ContextMenuDemo = (props) => {
           <ContextMenu.Shortcut>⌘R</ContextMenu.Shortcut>
         </ContextMenu.Item>
 
-        <ContextMenu.Sub>
+        <ContextMenu.Sub.Root>
           <ContextMenu.Sub.Trigger>
             More Tools
             <ContextMenu.Icon className='ml-auto'>
@@ -51,7 +51,7 @@ const ContextMenuDemo = (props) => {
 
             <ContextMenu.Item>Developer Tools</ContextMenu.Item>
           </ContextMenu.Sub.Content>
-        </ContextMenu.Sub>
+        </ContextMenu.Sub.Root>
 
         <ContextMenu.Separator />
 
@@ -74,7 +74,7 @@ const ContextMenuDemo = (props) => {
           <ContextMenuRadioItem value='colm'>Colm Tuite</ContextMenuRadioItem>
         </ContextMenu.RadioGroup>
       </ContextMenu.Content>
-    </ContextMenu>
+    </ContextMenu.Root>
   );
 };
 

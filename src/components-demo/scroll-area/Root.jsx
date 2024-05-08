@@ -1,4 +1,5 @@
-import { ScrollArea, Separator, Text } from '@/components/ui';
+import { Separator, Text } from '@/components/atoms';
+import { ScrollArea } from '@/components/molecules';
 import { cn } from '@/utils';
 
 const ScrollAreaDemo = ({ className, ...props }) => {
@@ -7,7 +8,7 @@ const ScrollAreaDemo = ({ className, ...props }) => {
       className={cn('flex flex-col items-center gap-12', className)}
       {...props}
     >
-      <ScrollArea
+      <ScrollArea.Root
         className={cn('h-72 w-48 rounded-md border', className)}
         {...props}
       >
@@ -30,12 +31,12 @@ const ScrollAreaDemo = ({ className, ...props }) => {
           ))}
         </ScrollArea.Viewport>
 
-        <ScrollArea.Scrollbar orientation='vertical'>
+        <ScrollArea.Scrollbar.Root orientation='vertical'>
           <ScrollArea.Scrollbar.Thumb />
-        </ScrollArea.Scrollbar>
-      </ScrollArea>
+        </ScrollArea.Scrollbar.Root>
+      </ScrollArea.Root>
 
-      <ScrollArea
+      <ScrollArea.Root
         className={cn('w-72 rounded-md border', className)}
         {...props}
       >
@@ -63,12 +64,12 @@ const ScrollAreaDemo = ({ className, ...props }) => {
           </div>
         </ScrollArea.Viewport>
 
-        <ScrollArea.Scrollbar orientation='horizontal'>
+        <ScrollArea.Scrollbar.Root orientation='horizontal'>
           <ScrollArea.Scrollbar.Thumb />
-        </ScrollArea.Scrollbar>
-      </ScrollArea>
+        </ScrollArea.Scrollbar.Root>
+      </ScrollArea.Root>
 
-      <ScrollArea
+      <ScrollArea.Root
         className={cn('h-72 w-48 rounded-md border', className)}
         {...props}
       >
@@ -115,16 +116,16 @@ const ScrollAreaDemo = ({ className, ...props }) => {
           </div>
         </ScrollArea.Viewport>
 
-        <ScrollArea.Scrollbar orientation='vertical'>
+        <ScrollArea.Scrollbar.Root orientation='vertical'>
           <ScrollArea.Scrollbar.Thumb />
-        </ScrollArea.Scrollbar>
+        </ScrollArea.Scrollbar.Root>
 
-        <ScrollArea.Scrollbar orientation='horizontal'>
+        <ScrollArea.Scrollbar.Root orientation='horizontal'>
           <ScrollArea.Scrollbar.Thumb />
-        </ScrollArea.Scrollbar>
+        </ScrollArea.Scrollbar.Root>
 
         <ScrollArea.Corner />
-      </ScrollArea>
+      </ScrollArea.Root>
     </div>
   );
 };

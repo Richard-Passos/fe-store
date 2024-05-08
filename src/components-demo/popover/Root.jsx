@@ -1,14 +1,15 @@
 import { Cross2Icon } from '@radix-ui/react-icons';
 import { forwardRef } from 'react';
 
-import { Button, Form, Input, Popover, Text } from '@/components/ui';
+import { Button, Input, Text } from '@/components/atoms';
+import { Form, Popover } from '@/components/molecules';
 import { cn } from '@/utils';
 
 import ClientForm from './ClientForm';
 
 const PopoverDemo = (props) => {
   return (
-    <Popover {...props}>
+    <Popover.Root {...props}>
       <Popover.Trigger asChild>
         <Button>Open popover</Button>
       </Popover.Trigger>
@@ -21,9 +22,9 @@ const PopoverDemo = (props) => {
                 Dimensions
               </Text.Subtitle>
 
-              <Text className='text-sm text-muted-content'>
+              <Text.Root className='text-sm text-content/75'>
                 Set the dimensions for the layer.
-              </Text>
+              </Text.Root>
             </header>
 
             <FormField name='width'>
@@ -93,7 +94,7 @@ const PopoverDemo = (props) => {
           </ClientForm>
         </Popover.Content>
       </Popover.Portal>
-    </Popover>
+    </Popover.Root>
   );
 };
 
@@ -102,7 +103,7 @@ const FormField = ({ className, ...props }) => {
     <Form.Field
       className={cn(
         'grid grid-cols-3 items-center gap-x-4 space-y-0',
-        className,
+        className
       )}
       {...props}
     />

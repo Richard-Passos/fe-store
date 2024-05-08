@@ -22,7 +22,6 @@ export { default as InputDemo } from './input';
 export { default as LabelDemo } from './label';
 export { default as LinkDemo } from './link';
 export { default as MenubarDemo } from './menubar';
-export { default as NavigationMenuDemo } from './navigation-menu';
 export { default as PopoverDemo } from './popover';
 export { default as ProgressDemo } from './progress';
 export { default as RadioGroupDemo } from './radio-group';

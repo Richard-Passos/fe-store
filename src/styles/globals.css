@@ -4,62 +4,171 @@
 
 @layer base {
   :root {
-    @apply [--font-blank-space:.25em] [--max-h:calc(var(--max-w)/1.778)] [--max-w:theme(screens.2xl)];
+    @apply [--max-h:calc(var(--max-w)/1.778)] [--max-w:theme(screens.2xl)] [--spacing-lg:calc(var(--spacing-md)*2)] [--spacing-md:clamp(theme(spacing.7),14vmin,theme(spacing.14))] [--spacing-sm:calc(var(--spacing-md)/2)] [--spacing-xl:calc(var(--spacing-md)*4)] [--spacing-xs:calc(var(--spacing-md)/4)];
 
-    --main: 240 20% 2%;
-    --content: 229 22% 90%;
+    --root-main: var(--main);
+    --root-active: var(--active);
+    --root-content: var(--content);
+    --root-muted: var(--muted);
 
-    --inverted: 229 22% 90%;
-    --inverted-c: 240 20% 2%;
+    --root-inverted: var(--inverted);
+    --root-inverted-a: var(--inverted-a);
+    --root-inverted-c: var(--inverted-c);
+    --root-inverted-m: var(--inverted-m);
 
-    --muted: 240 20% 9%;
-    --muted-c: 229 22% 75%;
+    --root-primary: var(--primary);
+    --root-primary-a: var(--primary-a);
+    --root-primary-c: var(--primary-c);
+    --root-primary-m: var(--primary-m);
 
-    --primary: 240 81% 52%;
-    --primary-c: 240 61% 96%;
+    --root-secondary: var(--secondary);
+    --root-secondary-a: var(--secondary-a);
+    --root-secondary-c: var(--secondary-c);
+    --root-secondary-m: var(--secondary-m);
 
-    --secondary: 225 22% 7%;
-    --secondary-c: 225 62% 97%;
+    --root-accent: var(--accent);
+    --root-accent-a: var(--accent-a);
+    --root-accent-c: var(--accent-c);
+    --root-accent-m: var(--accent-m);
 
-    --accent: 105 60% 50%;
-    --accent-c: 105 61% 90%;
+    --root-info: var(--info);
+    --root-info-a: var(--info-a);
+    --root-info-c: var(--info-c);
+    --root-info-m: var(--info-m);
 
-    --info: 199 77% 54%;
-    --info-c: 199 67% 94%;
+    --root-success: var(--success);
+    --root-success-a: var(--success-a);
+    --root-success-c: var(--success-c);
+    --root-success-m: var(--success-m);
 
-    --success: 120 49% 44%;
-    --success-c: 120 69% 94%;
+    --root-warning: var(--warning);
+    --root-warning-a: var(--warning-a);
+    --root-warning-c: var(--warning-c);
+    --root-warning-m: var(--warning-m);
 
-    --warning: 48 79% 47%;
-    --warning-c: 48 69% 97%;
+    --root-danger: var(--danger);
+    --root-danger-a: var(--danger-a);
+    --root-danger-c: var(--danger-c);
+    --root-danger-m: var(--danger-m);
 
-    --danger: 354 70% 53%;
-    --danger-c: 354 60% 93%;
+    --root-border: var(--border);
 
     --radius-sm: 0.5rem;
     --radius-md: 0.75rem;
     --radius-lg: 1rem;
   }
 
-  * {
-    @apply outline-none [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-muted-content/25 hover:[&::-webkit-scrollbar-thumb]:bg-muted-content/50 [&::-webkit-scrollbar]:w-2.5;
+  .light {
+    --main: 245 60% 96%;
+    --active: 245 58% 92%;
+    --content: 245 50% 4%;
+    --muted: 245 55% 94%;
+
+    --inverted: 245 47% 3%;
+    --inverted-a: 245 45% 7%;
+    --inverted-c: 245 37% 97%;
+    --inverted-m: 245 42% 5%;
+
+    --primary: 245 75% 45%;
+    --primary-a: 245 73% 49%;
+    --primary-c: 245 65% 95%;
+    --primary-m: 245 70% 46%;
+
+    --secondary: 245 86% 67%;
+    --secondary-a: 245 84% 63%;
+    --secondary-c: 245 76% 5%;
+    --secondary-m: 245 81% 65%;
+
+    --accent: 245 72% 28%;
+    --accent-a: 245 70% 32%;
+    --accent-c: 245 62% 95%;
+    --accent-m: 245 67% 29%;
+
+    --info: 199 77% 54%;
+    --info-a: 199 75% 58%;
+    --info-c: 199 67% 95%;
+    --info-m: 199 72% 56%;
+
+    --success: 120 49% 44%;
+    --success-a: 120 47% 48%;
+    --success-c: 120 39% 95%;
+    --success-m: 120 44% 45%;
+
+    --warning: 48 79% 47%;
+    --warning-a: 48 77% 51%;
+    --warning-c: 48 69% 95%;
+    --warning-m: 48 74% 48%;
+
+    --danger: 354 70% 53%;
+    --danger-a: 354 68% 57%;
+    --danger-c: 354 60% 95%;
+    --danger-m: 354 65% 54%;
+
+    --border: 245 0% 85%;
   }
 
-  *:focus-visible {
+  .dark {
+    --main: 245 47% 3%;
+    --active: 245 45% 7%;
+    --content: 245 37% 97%;
+    --muted: 245 42% 5%;
+
+    --inverted: 245 60% 96%;
+    --inverted-a: 245 58% 92%;
+    --inverted-c: 245 50% 4%;
+    --inverted-m: 245 55% 94%;
+
+    --primary: 245 86% 50%;
+    --primary-a: 245 84% 54%;
+    --primary-c: 245 76% 95%;
+    --primary-m: 245 81% 52%;
+
+    --secondary: 245 72% 72%;
+    --secondary-a: 245 70% 68%;
+    --secondary-c: 245 62% 5%;
+    --secondary-m: 245 67% 70%;
+
+    --accent: 245 75% 58%;
+    --accent-a: 245 73% 62%;
+    --accent-c: 245 65% 95%;
+    --accent-m: 245 70% 60%;
+
+    --info: 199 77% 54%;
+    --info-a: 199 75 58%;
+    --info-c: 199 67% 95%;
+    --info-m: 199 72% 56%;
+
+    --success: 120 49% 44%;
+    --success-a: 120 47% 48%;
+    --success-c: 120 39% 95%;
+    --success-m: 120 44% 46%;
+
+    --warning: 48 79% 47%;
+    --warning-a: 48 77% 51%;
+    --warning-c: 48 69% 95%;
+    --warning-m: 48 74% 49%;
+
+    --danger: 354 80% 57%;
+    --danger-a: 354 78% 61%;
+    --danger-c: 354 70% 95%;
+    --danger-m: 354 75% 59%;
+
+    --border: 245 25% 8%;
+  }
+
+  * {
+    @apply outline-none;
+  }
+
+  :focus-visible {
     @apply outline;
   }
 
-  :where(h1, h2, h3, h4, h5, h6, p, span, button) {
+  :where(h1, h2, h3, h4, h5, h6, p, button) {
     @apply w-fit;
   }
 
   :where(span, a, small, label) {
     @apply inline-block;
-  }
-}
-
-@layer utilities {
-  .hide-scrollbar {
-    @apply [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden;
   }
 }

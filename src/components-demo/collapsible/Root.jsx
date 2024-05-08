@@ -2,7 +2,8 @@
 
 import { CaretSortIcon } from '@radix-ui/react-icons';
 
-import { Button, Collapsible, Text } from '@/components/ui';
+import { Button, Text } from '@/components/atoms';
+import { Collapsible } from '@/components/molecules';
 import { cn } from '@/utils';
 
 import CollapsibleClient from './Client';
@@ -18,7 +19,7 @@ const CollapsibleDemo = (props) => {
         <Collapsible.Trigger asChild>
           <Button
             className='aspect-square rounded-sm px-0'
-            variants={{ size: 'sm', style: 'outline', color: 'inverted' }}
+            variants={{ size: 'sm', type: 'outline', color: 'inverted' }}
           >
             <CaretSortIcon
               aria-hidden
@@ -31,16 +32,16 @@ const CollapsibleDemo = (props) => {
       </div>
 
       <Item>
-        <Text>@radix-ui/primitives</Text>
+        <Text.Root>@radix-ui/primitives</Text.Root>
       </Item>
 
       <Collapsible.Content className='space-y-2'>
         <Item>
-          <Text>@radix-ui/colors</Text>
+          <Text.Root>@radix-ui/colors</Text.Root>
         </Item>
 
         <Item>
-          <Text>@stitches/react</Text>
+          <Text.Root>@stitches/react</Text.Root>
         </Item>
       </Collapsible.Content>
     </CollapsibleClient>

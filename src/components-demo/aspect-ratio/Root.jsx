@@ -1,7 +1,7 @@
-import { ListComponent } from '@/components';
-import { AspectRatio, Image } from '@/components/ui';
+import { ListComponent } from '@/components/molecules';
+import { AspectRatio, Image } from '@/components/atoms';
 
-const ASPECT_RATIO_VARIANTS = [
+const ASPECT_RATIO = [
   { ratio: 16 / 9 },
   { ratio: 4 / 3 },
   { ratio: 3 / 2 },
@@ -12,8 +12,8 @@ const ASPECT_RATIO_VARIANTS = [
 
 const AspectRatioDemo = ({ className, ...props }) => {
   return (
-    <ListComponent {...props}>
-      {ASPECT_RATIO_VARIANTS.map((variants, i) => (
+    <ListComponent.Root {...props}>
+      {ASPECT_RATIO.map((variants, i) => (
         <ListComponent.Item
           className='max-w-lg'
           key={Object.entries(variants).join()}
@@ -37,7 +37,7 @@ const AspectRatioDemo = ({ className, ...props }) => {
           </AspectRatio>
         </ListComponent.Item>
       ))}
-    </ListComponent>
+    </ListComponent.Root>
   );
 };
 

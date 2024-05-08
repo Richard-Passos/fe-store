@@ -1,11 +1,11 @@
-import { Tabs } from '@/components/ui';
+import { Tabs } from '@/components/molecules';
 import { cn } from '@/utils';
 
 import Forms from './forms';
 
 const TabsDemo = ({ className, ...props }) => {
   return (
-    <Tabs
+    <Tabs.Root
       className={cn('w-full max-w-sm', className)}
       defaultValue='account'
       {...props}
@@ -19,7 +19,7 @@ const TabsDemo = ({ className, ...props }) => {
       <Forms.Account />
 
       <Forms.Password />
-    </Tabs>
+    </Tabs.Root>
   );
 };
 

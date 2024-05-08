@@ -1,9 +1,9 @@
-import { Table } from '@/components/ui';
+import { Table } from '@/components/molecules';
 import { cn } from '@/utils';
 
 const TableDemo = ({ className, ...props }) => {
   return (
-    <Table
+    <Table.Root
       className={cn('mx-auto max-w-xl', className)}
       {...props}
     >
@@ -36,7 +36,7 @@ const TableDemo = ({ className, ...props }) => {
           ),
         )}
       </Table.Body>
-    </Table>
+    </Table.Root>
   );
 };
 

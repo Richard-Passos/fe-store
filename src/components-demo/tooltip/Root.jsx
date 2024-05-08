@@ -1,6 +1,7 @@
 import { PlusIcon } from '@radix-ui/react-icons';
 
-import { Button, Tooltip } from '@/components/ui';
+import { Button } from '@/components/atoms';
+import { Tooltip } from '@/components/molecules';
 import { cn } from '@/utils';
 
 const TooltipDemo = ({ className, ...props }) => {
