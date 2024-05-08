@@ -26,9 +26,7 @@ const HeroTemplate = ({ namespace, className, ...props }) => {
         </Text.Title>
 
         <Text.Description className='mt-xs max-w-xl leading-relaxed'>
-          {t.rich('description', {
-            b: (chunks) => <b>{chunks}</b>
-          })}
+          {t.rich('description')}
         </Text.Description>
 
         <Action
