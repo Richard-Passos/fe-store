@@ -14,11 +14,7 @@ const Cta = ({ namespace, className, ...props }) => {
       type={t('type')}
       {...props}
     >
-      <Text.Title className='text-center'>
-        {t.rich('title', {
-          b: (chunks) => <b>{chunks}</b>
-        })}
-      </Text.Title>
+      <Text.Title className='text-center'>{t.rich('title')}</Text.Title>
 
       <Text.Description className='mt-4 text-center'>
         {t('description')}
