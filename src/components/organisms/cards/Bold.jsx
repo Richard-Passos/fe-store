@@ -14,7 +14,7 @@ const CardBold = ({ namespace, className, ...props }) => {
       type={t('type')}
       {...props}
     >
-      <Card.Title className='text-center text-4xl/none font-bold'>
+      <Card.Title className='text-center text-5xl/none font-bold'>
         {t('title')}
       </Card.Title>
 
