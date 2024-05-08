@@ -3,7 +3,7 @@ import { useTranslations } from 'next-intl';
 import { Icon } from '@/components/atoms';
 import { TextDescription } from '@/components/atoms/text';
 import { Accordion } from '@/components/molecules';
-import { getTranslationKeys } from '@/utils';
+import { capitalize, getTranslationKeys } from '@/utils';
 
 const AccordionsFaq = ({ namespace, ...props }) => {
   const t = useTranslations(namespace);
@@ -21,7 +21,7 @@ const AccordionsFaq = ({ namespace, ...props }) => {
         >
           <Accordion.Header>
             <Accordion.Trigger className='h-20 text-lg hover:bg-transparent'>
-              {t(`items.${key}.title`)}
+              {capitalize(t(`items.${key}.title`))}
 
               <div
                 aria-hidden
