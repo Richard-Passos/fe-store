@@ -9,7 +9,7 @@ const TextTitle = ({ asChild, className, ...props }, ref) => {
   return (
     <Tag
       className={cn(
-        'text-5xl/none font-bold tracking-tight first-letter:uppercase [&_b]:text-primary',
+        'text-5xl/none font-bold tracking-tight first-letter:uppercase [&_:is(b,i)]:font-bold [&_b]:text-primary',
         className
       )}
       ref={ref}
