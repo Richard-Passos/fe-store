@@ -9,7 +9,7 @@ const TextDescription = ({ asChild, className, ...props }, ref) => {
   return (
     <Tag
       className={cn(
-        'leading-relaxed text-content/75 first-letter:uppercase [&_:is(b,a)]:text-content [&_b]:font-medium',
+        'leading-relaxed text-content/75 first-letter:uppercase',
         className
       )}
       ref={ref}
