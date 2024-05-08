@@ -9,7 +9,7 @@ const TextSmall = ({ asChild, className, ...props }, ref) => {
   return (
     <Tag
       className={cn(
-        'text-xs text-content/75 first-letter:uppercase [&_:is(b,a)]:text-content [&_b]:font-medium',
+        'text-xs text-content/75 first-letter:uppercase',
         className
       )}
       ref={ref}
