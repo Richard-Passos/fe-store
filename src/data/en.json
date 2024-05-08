@@ -40,21 +40,21 @@
             "items": {
               "0": {
                 "title": "Saves time",
-                "description": "No need to spend hours implementing all over again. Get it right away!",
+                "description": "Donec ullamcorper augue sed mi lobortis semper. Proin interdum.",
                 "icon": "/images/stopwatch.svg",
                 "color": "muted",
                 "type": null
               },
               "1": {
                 "title": "It’s realistic",
-                "description": "Get internalization, templates, and a easy to customize code.",
+                "description": "Nulla facilisi. Nullam odio ex, viverra quis.",
                 "icon": "/images/globe.svg",
                 "color": "muted",
                 "type": null
               },
               "2": {
                 "title": "It’s simple",
-                "description": "Clone it via Github, and remove what you don't want.",
+                "description": "Nunc feugiat magna a posuere tempus. Nullam accumsan ex.",
                 "icon": "/images/check-badge.svg",
                 "color": "muted",
                 "type": null
@@ -80,28 +80,28 @@
             "items": {
               "0": {
                 "title": "100% Free!",
-                "description": "Forevar.",
+                "description": "Forever.",
                 "color": "primary",
                 "type": null,
                 "template": "cards.bold"
               },
               "1": {
                 "title": "100% Free!",
-                "description": "Forevar.",
+                "description": "Forever.",
                 "color": "muted",
                 "type": null,
                 "template": "cards.bold"
               },
               "2": {
                 "title": "100% Free!",
-                "description": "Forevar.",
+                "description": "Forever.",
                 "color": "inverted",
                 "type": null,
                 "template": "cards.bold"
               },
               "3": {
                 "title": "100% Free!",
-                "description": "Forevar.",
+                "description": "Forever.",
                 "color": "accent",
                 "type": null,
                 "template": "cards.bold"
@@ -122,22 +122,22 @@
             "template": "cards.enum",
             "items": {
               "0": {
-                "description": "Start with two neutral colors for the text and the background.",
+                "description": "Faucibus et molestie ac feugiat sed lectus vestibulum mattis ullamcorper velit sed.",
                 "color": null,
                 "type": "clean"
               },
               "1": {
-                "description": "Choose your primary and secondary colors. Primary is for main CTAs and sections, and Secondary is for less important buttons and info cards.",
+                "description": "eget mauris pharetra et ultrices neque ornare aenean euismod elementum nisi quis eleifend quam adipiscing vitae proin sagittis.",
                 "color": null,
                 "type": "clean"
               },
               "2": {
-                "description": "Accent color is an additional color. It appears in images, highlights, hyperlinks, boxes, cards, etc.",
+                "description": "volutpat est velit egestas dui id ornare arcu odio ut sem nulla pharetra diam sit amet.",
                 "color": null,
                 "type": "clean"
               },
               "3": {
-                "description": "Happy with the results? Press on “Export” and choose among different options to export in various formats, like .zip, .png, CSS, SCSS, QR Code, and more.",
+                "description": "quis imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin libero nunc consequat interdum varius sit.",
                 "color": null,
                 "type": "clean"
               }
@@ -168,11 +168,15 @@
                 "badge": null,
                 "items": {
                   "0": {
-                    "description": "Choose any component",
+                    "description": "ipsum dolor sit",
                     "icon": "/images/check-circle.svg"
                   },
                   "1": {
-                    "description": "Export all you want",
+                    "description": "odio aenean sed adipiscing diam",
+                    "icon": "/images/check-circle.svg"
+                  },
+                  "2": {
+                    "description": "ipsum consequat nisl vel",
                     "icon": "/images/check-circle.svg"
                   }
                 },
@@ -195,19 +199,19 @@
                 },
                 "items": {
                   "0": {
-                    "description": "Choose any component",
+                    "description": "ipsum dolor sit",
                     "icon": "/images/check-circle.svg"
                   },
                   "1": {
-                    "description": "Export all you want",
+                    "description": "odio aenean sed adipiscing diam",
                     "icon": "/images/check-circle.svg"
                   },
                   "2": {
-                    "description": "Get a big thank you for checking this site out",
+                    "description": "ipsum consequat nisl vel",
                     "icon": "/images/check-circle.svg"
                   },
                   "3": {
-                    "description": "Get access to dashboard",
+                    "description": "in aliquam sem fringilla",
                     "icon": "/images/check-circle.svg"
                   }
                 },
@@ -226,23 +230,23 @@
                 "badge": null,
                 "items": {
                   "0": {
-                    "description": "Choose any component",
+                    "description": "ipsum dolor sit",
                     "icon": "/images/check-circle.svg"
                   },
                   "1": {
-                    "description": "Export all you want",
+                    "description": "odio aenean sed adipiscing diam",
                     "icon": "/images/check-circle.svg"
                   },
                   "2": {
-                    "description": "Get a big thank you for checking this site out",
+                    "description": "ipsum consequat nisl vel",
                     "icon": "/images/check-circle.svg"
                   },
                   "3": {
-                    "description": "Get access to dashboard",
+                    "description": "in aliquam sem fringilla",
                     "icon": "/images/check-circle.svg"
                   },
                   "4": {
-                    "description": "Super duper exclusive members-only content.",
+                    "description": "id venenatis a condimentum vitae sapien",
                     "icon": "/images/check-circle.svg"
                   }
                 },
@@ -265,10 +269,10 @@
             "template": "cards.testimonials",
             "items": {
               "0": {
-                "description": "Wow! I love this site. Realtime Colors is all websites at the same time.",
+                "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo.",
                 "quoteIcon": "/images/quote.svg",
                 "author": {
-                  "name": "Cool User",
+                  "name": "Great User",
                   "role": "Product Designer",
                   "image": null
                 },
@@ -280,7 +284,7 @@
                 "type": null
               },
               "1": {
-                "description": "Amazing. I found my favorite colors in literally... 2 minutes? Woah! Totally real review",
+                "description": "Lorem ipsum dolor sit amet consectetur, adipiscing elit ac potenti sociis, dictumst class nostra leo.",
                 "quoteIcon": "/images/quote.svg",
                 "author": {
                   "name": "Creative Person",
@@ -327,24 +331,24 @@
             "animation": "rotate135",
             "items": {
               "0": {
-                "title": "How many colors should I choose?",
-                "description": "Normally, 3 colors are absolutely fine (meaning background, text, and one accent color). However, if you want, you can have more. Usually, we don’t add more than 6 colors across a platform. It would just make things too... complicated. Plus, it makes it hard to keep the colors consistent throughout the design."
+                "title": "Lorem ipsum dolor sit amet, consectetu?",
+                "description": "Animi, id est laborum et dolorum fuga. Nihil molestiae consequatur, vel illum qui dolorem eum. Non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Duis aute <a>irure dolor</a> in reprehenderit in voluptate velit."
               },
               "1": {
-                "title": "How does the contrast checker work?",
-                "description": "The contrast checker shows the contrast ratio between the selected color and its background/foreground. The contrast checker has 3 lights: x / Red: The contrast ratio does not pass either AAA or AA. Therefore, both large and normal texts are hardly readable. - / Yellow: The contrast ratio might pass AA but won't pass AAA. Large texts might be readable but normal texts are probably not readable. ✓ / Green: The contrast ratio passes both AA and AAA. Both large and normal texts are readable. Learn more about the contrast checker."
+                "title": "Lorem ipsum dolor sit amet?",
+                "description": "Architecto beatae vitae dicta sunt explicabo. Ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo. <ul><li>Animi, id est laborum et dolorum fuga.</li><li>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</li><li>Itaque earum rerum hic tenetur a sapiente delectus.</li></ul>"
               },
               "2": {
-                "title": "What does the hero image represent?",
-                "description": "The hero image is inspired by Piet Mondrian's Composition with Large Red Plane, Yellow, Black, Grey and Blue. This composition keeps the ratio of the main colors (red, blue, and yellow) very close to the 60-30-10 rule of UI design. This is mainly why I've chosen this composition to visualize the distribution of the colors on the page."
+                "title": "Nam libero tempore, cum soluta?",
+                "description": "Duis aute irure dolor in <b>reprehenderit in voluptate velit. Corrupti quos dolores et quas molestias excepturi sint occaecati</b>. Excepteur sint occaecat cupidatat non proident, sunt in culpa. Ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
               },
               "3": {
-                "title": "How can I set up the fonts?",
-                "description": "You can enter the name of a font from Google Fonts or the fonts installed on your device. Read more about Font Setup."
+                "title": "cumque nihil impedit quo minus?",
+                "description": "Esse cillum dolore eu fugiat nulla pariatur. Accusantium doloremque laudantium, totam rem aperiam. <ol><li>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</li><li>Nihil molestiae consequatur, vel illum qui dolorem eum.</li><li>Qui officia deserunt mollit anim id est laborum.</li></ol>"
               },
               "4": {
-                "title": "How can I learn more about this tool?",
-                "description": "You can find more information about Realtime Colors on the Docs. You can also contact me for any questions you might have."
+                "title": "nobis est eligendi optio?",
+                "description": "<b>Itaque earum rerum hic tenetur a sapiente delectus.</b> <i> Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat.</i> Duis aute irure dolor in reprehenderit in voluptate velit."
               }
             },
             "color": "muted",
