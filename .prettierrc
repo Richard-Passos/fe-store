@@ -16,8 +16,17 @@
   "singleAttributePerLine": true,
   "singleQuote": true,
   "tabWidth": 2,
-  "tailwindAttributes": ["classNames", "Variants$"],
+  "tailwindAttributes": [
+    "class",
+    "className",
+    "animations",
+    ".*Variants",
+    ".*Colors",
+    ".*Types",
+    ".*Sizes",
+    ".*Directions"
+  ],
   "tailwindFunctions": ["cnv"],
-  "trailingComma": "all",
+  "trailingComma": "none",
   "useTabs": false
 }
