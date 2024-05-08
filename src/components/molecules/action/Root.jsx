@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 
 import { Button, Link } from '@/components/atoms';
+import { capitalize } from '@/utils';
 
 const Action = ({ namespace, href, children, ...props }) => {
   const translations = useTranslations(namespace);
@@ -8,7 +9,7 @@ const Action = ({ namespace, href, children, ...props }) => {
   const t = namespace ? translations : () => {};
 
   href = href ?? t('href');
-  children = children ?? t('label');
+  children = children ?? capitalize(t('label'));
 
   return (
     <Button
@@ -20,7 +21,7 @@ const Action = ({ namespace, href, children, ...props }) => {
     >
       {href ? (
         <Link
-          className='font-medium no-underline'
+          className='before:hidden'
           href={href}
         >
           {children}
