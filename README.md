@@ -4,8 +4,7 @@
 
 ## 🚀 Run project
 
-Visit the live [website](https://fetemplate.vercel.app
-)
+Visit the live [website](https://fetemplate.vercel.app)
 
 <br>
 
