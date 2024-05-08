@@ -27,9 +27,7 @@ const SingleComponentView = ({ slug, className }) => {
       </Text.Title>
 
       <Text.Description className='mt-1.5 max-w-xl text-center'>
-        {t.rich('description', {
-          b: (chunks) => <b>{chunks}</b>
-        })}
+        {t.rich('description')}
       </Text.Description>
 
       <Component
