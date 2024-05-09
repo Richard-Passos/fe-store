@@ -18,7 +18,8 @@ const buttonVariants = cnv({
   variants: {
     color: {
       ...colorVariants,
-      main: `${colorVariants.main} focus-visible:outline-content`
+      main: `${colorVariants.main} focus-visible:outline-content`,
+      inherit: `${colorVariants.inherit} focus-visible:outline-content`
     },
     type: buttonTypes,
     size: buttonSizes

@@ -2,7 +2,7 @@ import { useTranslations } from 'next-intl';
 
 import { Icon, Separator, Text } from '@/components/atoms';
 import { Sheet } from '@/components/molecules';
-import { cn, getTranslationKeys } from '@/utils';
+import { cn, translationKeys } from '@/utils';
 
 import Nav from './Nav';
 

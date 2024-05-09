@@ -1,13 +1,12 @@
 import { forwardRef } from 'react';
 
+import { TextSubtitle } from '@/components/atoms/text';
 import { cn } from '@/utils';
-
-import { TextTitle } from '@/components/atoms/text';
 
 const AlertTitle = ({ className, ...props }, ref) => {
   return (
-    <TextTitle
-      className={cn('mb-1 text-content leading-none', className)}
+    <TextSubtitle
+      className={cn('text-4xl/none font-semibold', className)}
       ref={ref}
       {...props}
     />

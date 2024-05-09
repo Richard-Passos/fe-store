@@ -3,7 +3,7 @@ import { useTranslations } from 'next-intl';
 import { Icon } from '@/components/atoms';
 import { TextDescription } from '@/components/atoms/text';
 import { Accordion } from '@/components/molecules';
-import { capitalize, getTranslationKeys } from '@/utils';
+import { capitalize, translationKeys } from '@/utils';
 
 const AccordionsFaq = ({ namespace, ...props }) => {
   const t = useTranslations(namespace);
@@ -14,7 +14,7 @@ const AccordionsFaq = ({ namespace, ...props }) => {
       type={t('type')}
       {...props}
     >
-      {getTranslationKeys(t, 'items').map((key) => (
+      {translationKeys(t, 'items').map((key) => (
         <Accordion.Item
           key={key}
           value={key}

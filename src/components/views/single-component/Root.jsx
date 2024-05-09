@@ -1,9 +1,9 @@
 import { useTranslations } from 'next-intl';
 import { notFound } from 'next/navigation';
 
-import * as components from '@/components-demo';
 import { Text } from '@/components/atoms';
 import { Section } from '@/components/molecules';
+import * as structures from '@/components/structures';
 import { cn, normCompName, normKey } from '@/utils';
 
 const SingleComponentView = ({ slug, className }) => {
@@ -11,9 +11,9 @@ const SingleComponentView = ({ slug, className }) => {
 
   const t = useTranslations(namespace);
 
-  const Component = components[normCompName(slug) + 'Demo'];
+  const Block = structures[normCompName(t('block.slug'))];
 
-  if (!Component) notFound();
+  if (!t('title')) notFound();
 
   return (
     <Section
@@ -21,6 +21,7 @@ const SingleComponentView = ({ slug, className }) => {
         '-mt-[--header-h] min-h-svh w-9/10 pt-[calc(theme(spacing.lg)+var(--header-h))] lg:w-full',
         className
       )}
+      size='xl'
     >
       <Text.Title className='max-w-xl text-center text-2xl'>
         {t('title')}
@@ -30,10 +31,12 @@ const SingleComponentView = ({ slug, className }) => {
         {t.rich('description')}
       </Text.Description>
 
-      <Component
-        className='mt-md'
-        variants={t.raw('variants')}
-      />
+      {Block && (
+        <Block
+          className='mt-md first:mt-0'
+          namespace={`${namespace}.block`}
+        />
+      )}
     </Section>
   );
 };

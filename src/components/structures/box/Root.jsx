@@ -1,12 +1,12 @@
 import { useTranslations } from 'next-intl';
 
 import * as organisms from '@/components/organisms';
-import { cn, getTemplate } from '@/utils';
+import { cn, template } from '@/utils';
 
 const BoxStructure = ({ namespace, className, ...props }) => {
   const t = useTranslations(namespace);
 
-  const Block = getTemplate(t('template'), organisms);
+  const Block = template(t('template'), organisms);
 
   return (
     <div

@@ -14,7 +14,6 @@ export { default as Dialog } from './dialog';
 export { default as DropdownMenu } from './dropdown-menu';
 export { default as Form } from './form';
 export { default as HoverCard } from './hover-card';
-export { default as ListComponent } from './list-component';
 export { default as LocaleChanger } from './locale-changer';
 export { default as Logo } from './logo';
 export { default as Menubar } from './menubar';

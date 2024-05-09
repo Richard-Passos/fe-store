@@ -6,7 +6,7 @@ import { forwardRef } from 'react';
 import { Box } from '@/components/atoms';
 import { cn } from '@/utils';
 
-const Accordion = ({ className, variant, ...props }, ref) => {
+const Accordion = ({ className, mode, children, ...props }, ref) => {
   return (
     <Box
       asChild
@@ -14,11 +14,7 @@ const Accordion = ({ className, variant, ...props }, ref) => {
       ref={ref}
       {...props}
     >
-      <Root
-        collapsible={true}
-        type={variant}
-        {...props}
-      />
+      <Root type={mode}>{children}</Root>
     </Box>
   );
 };

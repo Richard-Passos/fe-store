@@ -353,7 +353,8 @@
             },
             "color": "muted",
             "type": null,
-            "collapsible": true
+            "mode": null,
+            "collapsible": null
           },
           "color": null,
           "type": null,

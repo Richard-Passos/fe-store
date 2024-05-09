@@ -1,19 +1,16 @@
-import colorVariants from '@/components/colorVariants';
 import { cnv } from '@/utils';
 
 const alertTypes = {
-  solid: 'bg-main text-content',
+  solid: 'bg-main text-content border-border',
   outline: 'border-main text-main'
 };
 
 const alertVariants = cnv({
-  base: 'relative w-full max-w-md rounded-md border border-transparent p-5',
+  base: 'relative w-full max-w-md rounded-md border border-transparent p-sm',
   variants: {
-    color: colorVariants,
     type: alertTypes
   },
   defaultVariants: {
-    color: 'main',
     type: 'solid'
   }
 });

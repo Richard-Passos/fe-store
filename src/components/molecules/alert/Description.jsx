@@ -1,13 +1,12 @@
 import { forwardRef } from 'react';
 
-import { cn } from '@/utils';
-
 import { TextDescription } from '@/components/atoms/text';
+import { cn } from '@/utils';
 
 const AlertDescription = ({ className, ...props }, ref) => {
   return (
     <TextDescription
-      className={cn('text-sm leading-relaxed', className)}
+      className={cn('text-sm', className)}
       ref={ref}
       {...props}
     />

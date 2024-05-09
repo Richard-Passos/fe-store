@@ -5,7 +5,7 @@ import { SheetTrigger } from '@/components/molecules/sheet';
 import { cn } from '@/utils';
 
 const HeaderMenuTrigger = ({ className, ...props }) => {
-  const t = useTranslations('header.menu.trigger');
+  const t = useTranslations('header.menu.action');
 
   return (
     <SheetTrigger asChild>

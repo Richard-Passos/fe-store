@@ -3,14 +3,19 @@
 import { Title } from '@radix-ui/react-alert-dialog';
 import { forwardRef } from 'react';
 
+import { TextSubtitle } from '@/components/atoms/text';
 import { cn } from '@/utils';
 
 const AlertDialogTitle = ({ className, ...props }, ref) => (
   <Title
-    className={cn('text-lg font-semibold', className)}
+    asChild
     ref={ref}
-    {...props}
-  />
+  >
+    <TextSubtitle
+      className={cn('text-lg/none font-semibold', className)}
+      {...props}
+    />
+  </Title>
 );
 
 export default forwardRef(AlertDialogTitle);

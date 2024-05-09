@@ -6,7 +6,7 @@ import { cn } from '@/utils';
 const AlertIcon = ({ className, ...props }, ref) => {
   return (
     <Slot
-      className={cn('absolute left-4 top-5 h-5 w-5 [&~*]:pl-8', className)}
+      className={cn('absolute left-4 top-5 size-5 [&~*]:pl-8', className)}
       ref={ref}
       {...props}
     />

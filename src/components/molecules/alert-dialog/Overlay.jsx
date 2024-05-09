@@ -3,15 +3,12 @@
 import { Overlay } from '@radix-ui/react-alert-dialog';
 import { forwardRef } from 'react';
 
-import { cn } from '@/utils';
+import { alertDialogOverlayVariants } from './variants';
 
-const AlertDialogOverlay = ({ className, ...props }, ref) => {
+const AlertDialogOverlay = ({ color, className, ...props }, ref) => {
   return (
     <Overlay
-      className={cn(
-        'fixed inset-0 z-50 bg-content/75 data-closed:animate-out data-closed:fade-out data-open:animate-in data-open:fade-in',
-        className
-      )}
+      className={alertDialogOverlayVariants({ color, className })}
       ref={ref}
       {...props}
     />

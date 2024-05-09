@@ -3,15 +3,20 @@
 import { Description } from '@radix-ui/react-alert-dialog';
 import { forwardRef } from 'react';
 
+import { TextDescription } from '@/components/atoms/text';
 import { cn } from '@/utils';
 
 const AlertDialogDescription = ({ className, ...props }, ref) => {
   return (
     <Description
-      className={cn('text-sm text-content/75', className)}
+      asChild
       ref={ref}
-      {...props}
-    />
+    >
+      <TextDescription
+        className={cn('text-sm', className)}
+        {...props}
+      />
+    </Description>
   );
 };
 

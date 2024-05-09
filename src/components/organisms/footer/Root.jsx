@@ -12,7 +12,7 @@ import {
   Section,
   ThemeChanger
 } from '@/components/molecules';
-import { cn, getTranslationKeys } from '@/utils';
+import { cn, translationKeys } from '@/utils';
 
 const Footer = ({ className, ...props }) => {
   const global = useTranslations(),
@@ -38,27 +38,25 @@ const Footer = ({ className, ...props }) => {
               </TextDescription>
 
               <nav className='mt-6 flex w-fit gap-1 rounded-sm bg-active p-1'>
-                {getTranslationKeys(global, 'personalInfo.socials').map(
-                  (key) => (
-                    <Action
-                      className='aspect-square px-0'
-                      color='primary'
-                      href={global(`personalInfo.socials.${key}.href`)}
-                      key={key}
-                      size='xs'
-                      type='ghost'
-                    >
-                      <Icon
-                        className='size-2/3'
-                        src={global(`personalInfo.socials.${key}.icon`)}
-                      />
+                {translationKeys(global, 'personalInfo.socials').map((key) => (
+                  <Action
+                    className='aspect-square px-0'
+                    color='primary'
+                    href={global(`personalInfo.socials.${key}.href`)}
+                    key={key}
+                    size='xs'
+                    type='ghost'
+                  >
+                    <Icon
+                      className='size-2/3'
+                      src={global(`personalInfo.socials.${key}.icon`)}
+                    />
 
-                      <span className='sr-only'>
-                        {global(`personalInfo.socials.${key}.label`)}
-                      </span>
-                    </Action>
-                  )
-                )}
+                    <span className='sr-only'>
+                      {global(`personalInfo.socials.${key}.label`)}
+                    </span>
+                  </Action>
+                ))}
               </nav>
             </section>
 

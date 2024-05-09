@@ -2,7 +2,7 @@ import { useTranslations } from 'next-intl';
 
 import { Badge, Icon } from '@/components/atoms';
 import { Action, Card } from '@/components/molecules';
-import { cn, getTranslationKeys, renderComp } from '@/utils';
+import { cn, renderComp, translationKeys } from '@/utils';
 
 const CardsPricing = ({ namespace, className, ...props }) => {
   const t = useTranslations(namespace);
@@ -16,7 +16,7 @@ const CardsPricing = ({ namespace, className, ...props }) => {
     >
       {renderComp(
         <Badge
-          className='absolute top-0 w-fit -translate-y-1/2'
+          className='absolute top-0 -translate-y-1/2'
           color={t('badge.color')}
           type={t('badge.type')}
         >
@@ -32,7 +32,7 @@ const CardsPricing = ({ namespace, className, ...props }) => {
       </Card.Description>
 
       <ul className='my-sm flex w-9/10 flex-col justify-start gap-1.5'>
-        {getTranslationKeys(t, 'items').map((key) => (
+        {translationKeys(t, 'items').map((key) => (
           <li
             className='flex gap-2'
             key={key}

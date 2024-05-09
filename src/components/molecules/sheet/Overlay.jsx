@@ -9,7 +9,7 @@ const SheetOverlay = ({ className, ...props }, ref) => {
   return (
     <Overlay
       className={cn(
-        'fixed inset-0 z-50 bg-content/75 data-closed:animate-out data-closed:fade-out data-open:animate-in data-open:fade-in',
+        'fixed inset-0 z-50 bg-main/50 data-closed:animate-out data-closed:fade-out data-open:animate-in data-open:fade-in dark:bg-main/75',
         className
       )}
       ref={ref}

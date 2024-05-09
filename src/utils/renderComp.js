@@ -1,3 +1,3 @@
-const renderComp = (Comp, booleans) => !booleans?.some((bool) => !bool) && Comp;
+const renderComp = (Comp, bools) => !bools?.some((bool) => !bool) && Comp;
 
 export default renderComp;

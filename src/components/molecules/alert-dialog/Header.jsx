@@ -4,8 +4,8 @@ const AlertDialogHeader = ({ className, ...props }) => {
   return (
     <header
       className={cn(
-        'flex flex-col gap-y-2 max-sm:items-center max-sm:text-center',
-        className,
+        'flex flex-col max-sm:items-center max-sm:text-center',
+        className
       )}
       {...props}
     />

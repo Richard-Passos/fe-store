@@ -2,7 +2,7 @@ import { useTranslations } from 'next-intl';
 
 import { BentoGrid } from '@/components/molecules';
 import * as organisms from '@/components/organisms';
-import { cn, getTemplate, getTranslationKeys } from '@/utils';
+import { cn, template, translationKeys } from '@/utils';
 
 const BentoGridOrganism = ({ namespace, className, ...props }) => {
   const t = useTranslations(namespace);
@@ -13,8 +13,8 @@ const BentoGridOrganism = ({ namespace, className, ...props }) => {
       templates={t.raw('templates')}
       {...props}
     >
-      {getTranslationKeys(t, 'items').map((key, i) => {
-        const Item = getTemplate(t(`items.${key}.template`), organisms);
+      {translationKeys(t, 'items').map((key, i) => {
+        const Item = template(t(`items.${key}.template`), organisms);
 
         return (
           Item && (

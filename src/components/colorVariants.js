@@ -14,7 +14,8 @@ const colorVariants = {
   warning:
     '[--root-main:--warning] [--root-active:--warning-a] [--root-content:--warning-c] [--root-muted:--warning-m]',
   danger:
-    '[--root-main:--danger] [--root-active:--danger-a] [--root-content:--danger-c] [--root-muted:--danger-m]'
+    '[--root-main:--danger] [--root-active:--danger-a] [--root-content:--danger-c] [--root-muted:--danger-m]',
+  inherit: '[--root-main] [--root-active] [--root-content] [--root-muted]'
 };
 
 const defaultColor = 'main';

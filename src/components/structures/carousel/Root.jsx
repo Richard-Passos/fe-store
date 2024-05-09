@@ -1,12 +1,12 @@
 import { useTranslations } from 'next-intl';
 
 import * as organisms from '@/components/organisms';
-import { cn, getTemplate, getTranslationKeys } from '@/utils';
+import { cn, template, translationKeys } from '@/utils';
 
 const CarouselStructure = ({ namespace, className, ...props }) => {
   const t = useTranslations(namespace);
 
-  const Item = getTemplate(t('template'), organisms);
+  const Item = template(t('template'), organisms);
 
   return (
     <ul
@@ -16,7 +16,7 @@ const CarouselStructure = ({ namespace, className, ...props }) => {
       )}
       {...props}
     >
-      {getTranslationKeys(t, 'items').map(
+      {translationKeys(t, 'items').map(
         (key, i) =>
           Item && (
             <Item

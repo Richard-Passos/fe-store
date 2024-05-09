@@ -1,7 +1,7 @@
 import { cnv } from '@/utils';
 
 const badgeTypes = {
-  solid: 'bg-main text-content w-full border-border',
+  solid: 'bg-main text-content border-border',
   ghost: 'bg-main/10 text-main'
 };
 
