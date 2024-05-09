@@ -393,7 +393,7 @@
       "title": "Modelo de FE",
       "description": "Forma fácil de navegar entre os componentes.",
       "direction": "left",
-      "trigger": {
+      "action": {
         "label": "Alternar menu",
         "icon": "/images/menu.svg",
         "color": "main",
@@ -460,23 +460,69 @@
   },
   "components": {
     "accordion": {
-      "title": "Accordion",
-      "description": "Accordion",
-      "variants": [
-        { "variant": "single", "collapsible": true },
-        { "variant": "single", "collapsible": false },
-        { "variant": "single", "defaultValue": "item-1" },
-        { "variant": "multiple" },
-        { "variant": "multiple", "defaultValue": ["item-1", "item-2"] }
-      ]
+      "title": "Acordeão",
+      "description": "Acordeão",
+      "block": {
+        "slug": "demo",
+        "template": "accordion",
+        "icon": "/images/plus.svg",
+        "animation": "rotate135",
+        "items": {
+          "0": {
+            "title": "É acessível?",
+            "description": "Sim. Segue o padrão de design WAI-ARIA."
+          },
+          "1": {
+            "title": "Está estilizado?",
+            "description": "Sim. Ele vem com estilos padrão que combinam esteticamente com os outros componentes."
+          },
+          "2": {
+            "title": "É animado?",
+            "description": "Sim. É animado por padrão, mas você pode desativá-lo se preferir."
+          }
+        },
+        "color": "muted",
+        "type": null
+      }
     },
     "alert": {
-      "title": "Alert",
-      "description": "Alert"
+      "title": "Alerta",
+      "description": "Alerta",
+      "block": {
+        "slug": "demo",
+        "template": "alert",
+        "icon": "/images/info.svg",
+        "title": "Atenção!",
+        "description": "Você pode adicionar componentes ao seu aplicativo usando a linha de comando."
+      }
     },
     "alertDialog": {
-      "title": "Alert dialog",
-      "description": "Alert dialog"
+      "title": "Diálogo de Alerta",
+      "description": "Diálogo de Alerta",
+      "block": {
+        "slug": "demo",
+        "template": "alert-dialog",
+        "title": "Você tem certeza absoluta?",
+        "description": "Esta ação não pode ser desfeita. Isso excluirá permanentemente sua conta e removerá seus dados de nossos servidores.",
+        "action": {
+          "label": "Mostrar diálogo",
+          "color": null,
+          "type": null,
+          "size": null
+        },
+        "cancel": {
+          "label": "Cancelar",
+          "color": null,
+          "type": null,
+          "size": "sm"
+        },
+        "confirm": {
+          "label": "Continuar",
+          "color": null,
+          "type": null,
+          "size": "sm"
+        }
+      }
     },
     "aspectRatio": {
       "title": "Aspect ratio",
