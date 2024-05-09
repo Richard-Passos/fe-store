@@ -219,7 +219,7 @@
                 "type": null
               },
               "2": {
-                "title": "Enterprise",
+                "title": "Empresa",
                 "price": "$0.00 / mês",
                 "action": {
                   "label": "Saiba Mais",
@@ -406,7 +406,7 @@
     }
   },
   "footer": {
-    "description": "A cor de destaque é uma cor adicional. Ela aparece em imagens, realces, hiperlinks, caixas, cartões, etc.",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet, ullam perferendis blanditiis voluptate iusto in.",
     "contact": {
       "label": "Quer conversar? Envie-me uma mensagem.",
       "icon": "/images/paperplane.svg"
