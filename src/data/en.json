@@ -389,30 +389,30 @@
   },
   "header": {
     "menu": {
-      "title": "FE template",
-      "description": "Easy way to navigate between component.",
+      "title": "Modelo de FE",
+      "description": "Forma fácil de navegar entre os componentes.",
       "direction": "left",
       "trigger": {
-        "label": "Toggle menu",
+        "label": "Alternar menu",
         "icon": "/images/menu.svg",
         "color": "main",
         "type": null,
         "size": null
       },
       "close": {
-        "label": "Close menu",
+        "label": "Fechar menu",
         "icon": "/images/times.svg"
       }
     }
   },
   "footer": {
-    "description": "Accent color is an additional color. It appears in images, highlights, hyperlinks, boxes, cards, etc.",
+    "description": "A cor de destaque é uma cor adicional. Ela aparece em imagens, realces, hiperlinks, caixas, cartões, etc.",
     "contact": {
-      "label": "Wanna talk? Send me a message.",
+      "label": "Quer conversar? Envie-me uma mensagem.",
       "icon": "/images/paperplane.svg"
     },
     "backTop": {
-      "label": "Back to the top",
+      "label": "Voltar ao topo",
       "icon": "/images/arrow-up.svg"
     },
     "copyright": {
@@ -420,7 +420,7 @@
       "href": "https://github.com/Richard-Passos"
     },
     "message": {
-      "label": "Made with ❤️ by <a>Richard Passos</a>",
+      "label": "Feito com ❤️ por <a>Richard Passos</a>",
       "href": "https://github.com/Richard-Passos"
     }
   },
@@ -429,19 +429,19 @@
       "first": "FE",
       "last": "Template"
     },
-    "summary": "The ultimate front-end template repository.",
-    "description": "Unleash your front-end projects with FE Template, the definitive starting point for your web development journey. Dive into meticulously organized folders and expertly crafted components, designed with industry best practices in mind. Build your next masterpiece effortlessly and efficiently, with unparalleled ease and precision.",
+    "summary": "O repositório definitivo de modelos de front-end.",
+    "description": "Desencadeie seus projetos de front-end com o Template FE, o ponto de partida definitivo para sua jornada de desenvolvimento web. Mergulhe em pastas meticulosamente organizadas e componentes habilmente elaborados, projetados com as melhores práticas da indústria em mente. Construa sua próxima obra-prima sem esforço e eficiência, com uma facilidade e precisão incomparáveis.",
     "email": "hi.richardp@gmail.com",
     "logo": {
       "src": "/images/logo.svg",
-      "alt": "Richard Passos logo",
+      "alt": "Logotipo de Richard Passos",
       "width": 63,
       "height": 63
     },
     "favicon": "/images/favicon.icon",
     "socials": {
       "portfolio": {
-        "label": "Portfolio",
+        "label": "Portfólio",
         "href": "https://richardp.vercel.app",
         "icon": "/images/link.svg"
       },
@@ -451,7 +451,7 @@
         "icon": "/images/github.svg"
       },
       "linkedin": {
-        "label": "Linkedin",
+        "label": "LinkedIn",
         "href": "https://www.linkedin.com/in/richardp-dev",
         "icon": "/images/linkedin.svg"
       }
@@ -636,20 +636,20 @@
   },
   "themes": {
     "light": {
-      "label": "Light",
+      "label": "Claro",
       "icon": "/images/sun.svg"
     },
     "dark": {
-      "label": "Dark",
+      "label": "Escuro",
       "icon": "/images/moon.svg"
     },
     "system": {
-      "label": "System",
+      "label": "Sistema",
       "icon": "/images/settings.svg"
     }
   },
   "locales": {
-    "en": "English",
-    "pt": "Portuguese"
+    "en": "Inglês",
+    "pt": "Português"
   }
 }
