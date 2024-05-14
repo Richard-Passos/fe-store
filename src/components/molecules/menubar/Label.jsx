@@ -10,7 +10,7 @@ const MenubarLabel = ({ className, asChild, children, ...props }, ref) => {
   return (
     <Label
       asChild
-      className={cn('opacity-75', className)}
+      className={cn('px-3 py-1.5 opacity-75', className)}
       ref={ref}
       {...props}
     >
