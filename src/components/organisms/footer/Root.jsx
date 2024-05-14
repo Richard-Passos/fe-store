@@ -24,7 +24,7 @@ const Footer = ({ className, ...props }) => {
       className={cn('my-0 rounded-b-none !pb-0', className)}
       color='muted'
       size='full'
-      type='solid'
+      variant='solid'
       {...props}
     >
       <footer>
@@ -45,11 +45,12 @@ const Footer = ({ className, ...props }) => {
                     href={global(`personalInfo.socials.${key}.href`)}
                     key={key}
                     size='xs'
-                    type='ghost'
+                    variant='ghost'
                   >
                     <Icon
                       className='size-2/3'
-                      src={global(`personalInfo.socials.${key}.icon`)}
+                      color={global(`personalInfo.socials.${key}.icon.color`)}
+                      src={global(`personalInfo.socials.${key}.icon.src`)}
                     />
 
                     <span className='sr-only'>
@@ -70,23 +71,26 @@ const Footer = ({ className, ...props }) => {
               >
                 <Card.Root
                   asChild
-                  className='max-w-none basis-0 transition-colors hover:bg-active focus-visible:outline-main max-lg:p-xs'
+                  className='max-w-none basis-0 transition-colors hover:bg-active focus-visible:outline-main sm:max-lg:p-xs'
                   color='primary'
                 >
                   <Link
-                    className='grid items-end gap-2 text-start before:hidden sm:grid-cols-3'
+                    className='grid items-center gap-2 before:hidden sm:grid-cols-3 sm:items-end'
                     href={`mailto://${global('personalInfo.email')}`}
                   >
                     <div className='sm:col-span-2'>
                       <Card.Title>{t('contact.label')}</Card.Title>
 
-                      <Card.Description className='mt-2 break-all text-xs text-active first-letter:normal-case'>
+                      <Card.Description className='mt-2 break-all text-xs first-letter:normal-case'>
                         {global('personalInfo.email')}
                       </Card.Description>
                     </div>
 
-                    <div className='aspect-square w-full text-content/20 max-sm:hidden'>
-                      <Icon src={t('contact.icon')} />
+                    <div className='aspect-square w-full opacity-20 max-sm:hidden'>
+                      <Icon
+                        color={t('contact.icon.color')}
+                        src={t('contact.icon.src')}
+                      />
                     </div>
                   </Link>
                 </Card.Root>
@@ -110,7 +114,10 @@ const Footer = ({ className, ...props }) => {
                     </Card.Title>
 
                     <div className='aspect-square w-full max-lg:hidden'>
-                      <Icon src={t('backTop.icon')} />
+                      <Icon
+                        color={t('backTop.icon.color')}
+                        src={t('backTop.icon.src')}
+                      />
                     </div>
                   </Link>
                 </Card.Root>
@@ -134,8 +141,9 @@ const Footer = ({ className, ...props }) => {
 
             <div className='flex grow items-center justify-center gap-1 max-sm:hidden'>
               <ThemeChanger
-                color='muted'
+                color='inherit'
                 items={global.raw('themes')}
+                variant='solid'
               />
 
               <span
@@ -147,8 +155,9 @@ const Footer = ({ className, ...props }) => {
 
               <Suspense>
                 <LocaleChanger
-                  color='muted'
+                  color='inherit'
                   items={global.raw('locales')}
+                  variant='solid'
                 />
               </Suspense>
             </div>
