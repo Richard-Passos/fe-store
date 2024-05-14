@@ -3,18 +3,18 @@
 import { Root } from '@radix-ui/react-menubar';
 import { forwardRef } from 'react';
 
+import { Box } from '@/components/atoms';
 import { cn } from '@/utils';
 
-const Menubar = ({ className, ...props }, ref) => {
+const Menubar = ({ className, asChild, children, ...props }, ref) => {
   return (
-    <Root
-      className={cn(
-        'flex items-center gap-1 rounded-md border bg-main p-1',
-        className,
-      )}
+    <Box
+      className={cn('flex-row items-center p-1', className)}
       ref={ref}
       {...props}
-    />
+    >
+      <Root asChild={asChild}>{children}</Root>
+    </Box>
   );
 };
 

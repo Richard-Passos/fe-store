@@ -1,7 +1,6 @@
 import MenubarCheckboxItem from './CheckboxItem';
 import MenubarContent from './Content';
 import MenubarGroup from './Group';
-import MenubarIcon from './Icon';
 import MenubarItem from './Item';
 import MenubarItemIndicator from './ItemIndicator';
 import MenubarLabel from './Label';
@@ -20,7 +19,6 @@ const Menubar = {
   CheckboxItem: MenubarCheckboxItem,
   Content: MenubarContent,
   Group: MenubarGroup,
-  Icon: MenubarIcon,
   Item: MenubarItem,
   ItemIndicator: MenubarItem,
   Label: MenubarLabel,
@@ -31,7 +29,7 @@ const Menubar = {
   Separator: MenubarSeparator,
   Shortcut: MenubarShortcut,
   Trigger: MenubarTrigger,
-  Sub: MenubarSub,
+  Sub: MenubarSub
 };
 
 export default Menubar;
@@ -40,7 +38,6 @@ export {
   MenubarCheckboxItem,
   MenubarContent,
   MenubarGroup,
-  MenubarIcon,
   MenubarItem,
   MenubarItemIndicator,
   MenubarLabel,
@@ -51,5 +48,5 @@ export {
   MenubarSeparator,
   MenubarShortcut,
   MenubarTrigger,
-  MenubarSub,
+  MenubarSub
 };

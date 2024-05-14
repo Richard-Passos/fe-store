@@ -3,15 +3,18 @@
 import { Trigger } from '@radix-ui/react-menubar';
 import { forwardRef } from 'react';
 
+import { button } from '@/components/atoms/button';
 import { cn } from '@/utils';
 
-const MenubarTrigger = ({ className, ...props }, ref) => {
+const MenubarTrigger = ({ color, className, ...props }, ref) => {
   return (
     <Trigger
-      className={cn(
-        'inline-flex items-center gap-2 rounded-sm px-4 py-1.5 text-sm font-medium transition-colors hover:bg-active focus-visible:transition-all data-disabled:pointer-events-none data-disabled:opacity-50 data-open:bg-active',
-        className
-      )}
+      className={button({
+        color,
+        variant: 'solid',
+        size: 'xs',
+        className: cn('text-sm data-open:bg-active ', className)
+      })}
       ref={ref}
       {...props}
     />

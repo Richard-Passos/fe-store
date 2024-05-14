@@ -5,16 +5,15 @@ import { forwardRef } from 'react';
 
 import { cn } from '@/utils';
 
-import { menubarContentVariants } from '../Content';
+import { menubarContent } from '../variants';
 
-const MenubarSubContent = ({ className, ...props }, ref) => {
+const MenubarSubContent = ({ color, className, ...props }, ref) => {
   return (
     <SubContent
-      className={cn(
-        menubarContentVariants(),
-        'min-w-[8rem] shadow-lg',
-        className,
-      )}
+      className={menubarContent({
+        color,
+        className: cn('min-w-[8rem] shadow-lg', className)
+      })}
       ref={ref}
       {...props}
     />
