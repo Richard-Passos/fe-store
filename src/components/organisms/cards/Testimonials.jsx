@@ -11,17 +11,23 @@ const CardsTestimonials = ({ namespace, className, ...props }) => {
     <Card.Root
       className={cn('isolate max-w-80', className)}
       color={t('color')}
-      type={t('type')}
+      variant={t('variant')}
       {...props}
     >
       <div className='flex items-start justify-between gap-4'>
-        <div className='size-12 text-content/5'>
-          <Icon src={t('quoteIcon')} />
+        <div className='size-12 opacity-5'>
+          <Icon
+            color={t('quoteIcon.color')}
+            src={t('quoteIcon.src')}
+          />
         </div>
 
         <Rating
           className='w-1/3'
-          icon={t('rating.icon')}
+          icon={{
+            src: t('rating.icon.src'),
+            color: t('rating.icon.color')
+          }}
           value={t.raw('rating.value')}
         />
       </div>
