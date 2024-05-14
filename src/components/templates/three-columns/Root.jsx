@@ -15,7 +15,7 @@ const ThreeColumnsTemplate = ({ namespace, className, ...props }) => {
       className={cn('grid items-start gap-md sm:grid-cols-3', className)}
       color={t('color')}
       size={t('size')}
-      type={t('type')}
+      variant={t('variant')}
       {...props}
     >
       {renderComp(
