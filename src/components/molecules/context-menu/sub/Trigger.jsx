@@ -5,16 +5,15 @@ import { forwardRef } from 'react';
 
 import { cn } from '@/utils';
 
-import { contextMenuItemVariants } from '../Item';
+import { contextMenuItem } from '../variants';
 
 const ContextMenuSubTrigger = ({ className, ...props }, ref) => {
   return (
     <SubTrigger
-      className={cn(
-        contextMenuItemVariants(),
-        'data-open:bg-active',
-        className
-      )}
+      className={contextMenuItem({
+        color,
+        className: cn('data-open:bg-active', className)
+      })}
       ref={ref}
       {...props}
     />

@@ -5,12 +5,15 @@ import { forwardRef } from 'react';
 
 import { cn } from '@/utils';
 
-import { contextMenuItemVariants } from './Item';
+import { contextMenuItem } from './variants';
 
-const ContextMenuRadioItem = ({ className, ...props }, ref) => {
+const ContextMenuRadioItem = ({ color, className, ...props }, ref) => {
   return (
     <RadioItem
-      className={cn(contextMenuItemVariants(), 'relative pl-8', className)}
+      className={contextMenuItem({
+        color,
+        className: cn('relative pl-8', className)
+      })}
       ref={ref}
       {...props}
     />

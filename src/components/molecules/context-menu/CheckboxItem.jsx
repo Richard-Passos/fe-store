@@ -5,12 +5,15 @@ import { forwardRef } from 'react';
 
 import { cn } from '@/utils';
 
-import { contextMenuItemVariants } from './Item';
+import { contextMenuItem } from './variants';
 
 const ContextMenuCheckboxItem = ({ className, ...props }, ref) => {
   return (
     <CheckboxItem
-      className={cn(contextMenuItemVariants(), 'relative pl-8', className)}
+      className={contextMenuItem({
+        color,
+        className: cn('relative pl-8', className)
+      })}
       ref={ref}
       {...props}
     />

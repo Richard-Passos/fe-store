@@ -1,17 +1,22 @@
 'use client';
 
-import { Separator } from '@radix-ui/react-context-menu';
+import { Separator as RadixSeparator } from '@radix-ui/react-context-menu';
 import { forwardRef } from 'react';
 
-import { cn } from '@/utils';
+import { Separator } from '@/components/atoms';
 
-const ContextMenuSeparator = ({ className, ...props }, ref) => {
+const ContextMenuSeparator = (
+  { className, asChild, children, ...props },
+  ref
+) => {
   return (
     <Separator
-      className={cn('-mx-1 my-1 h-px bg-border', className)}
+      asChild
       ref={ref}
       {...props}
-    />
+    >
+      <RadixSeparator asChild={asChild}>{children}</RadixSeparator>
+    </Separator>
   );
 };
 
