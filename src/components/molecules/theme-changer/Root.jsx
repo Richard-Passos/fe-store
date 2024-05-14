@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 import { Icon, Select } from '@/components/atoms';
 import { cn, normId } from '@/utils';
 
-const ThemeChanger = ({ items, className, color, type, ...props }) => {
+const ThemeChanger = ({ items, className, color, variant, ...props }) => {
   const [isMounted, setIsMounted] = useState(false),
     { theme, setTheme } = useTheme();
 
@@ -23,12 +23,9 @@ const ThemeChanger = ({ items, className, color, type, ...props }) => {
       {...props}
     >
       <Select.Trigger
-        className={cn(
-          'size-8 justify-center border-0 px-0 lowercase',
-          className
-        )}
+        className={cn('size-8 justify-center px-0 lowercase', className)}
         color={color}
-        type={type}
+        variant={variant}
       >
         <Select.Value />
       </Select.Trigger>
@@ -36,10 +33,10 @@ const ThemeChanger = ({ items, className, color, type, ...props }) => {
       <Select.Content
         align='center'
         color={color}
-        type={type}
+        variant={variant}
       >
         <Select.Viewport>
-          {Object.entries(items ?? {}).map(([key, data = {}]) => (
+          {Object.entries(items ?? {}).map(([key, data]) => (
             <Select.Item.Root
               className='size-8 justify-center px-0'
               key={key}
@@ -49,10 +46,10 @@ const ThemeChanger = ({ items, className, color, type, ...props }) => {
                 <Icon
                   aria-hidden
                   className='mx-auto size-1/2'
-                  src={data.icon}
+                  {...data?.icon}
                 />
 
-                <span className='sr-only'>{data.label}</span>
+                <span className='sr-only'>{data?.label}</span>
               </Select.Item.Text>
             </Select.Item.Root>
           ))}
