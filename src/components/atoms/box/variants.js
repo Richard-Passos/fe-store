@@ -1,19 +1,19 @@
 import { cnv } from '@/utils';
 
-const boxTypes = {
+const boxVariants = {
   solid: 'bg-main text-content border-border shadow-md dark:shadow-none',
   clean: 'text-content'
 };
 
-const boxVariants = cnv({
+const box = cnv({
   base: 'relative flex flex-col rounded-md border border-transparent p-sm',
   variants: {
-    type: boxTypes
+    variant: boxVariants
   },
   defaultVariants: {
-    type: 'solid'
+    variant: 'solid'
   }
 });
 
-export default boxVariants;
-export { boxVariants, boxTypes };
+export default box;
+export { box, boxVariants };

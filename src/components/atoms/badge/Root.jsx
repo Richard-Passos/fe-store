@@ -1,13 +1,13 @@
 import { Slot } from '@radix-ui/react-slot';
 
-import variants from './variants';
+import badge from './variants';
 
-const Badge = ({ asChild, color, type, size, className, ...props }) => {
+const Badge = ({ asChild, color, variant, className, ...props }) => {
   const Tag = asChild ? Slot : 'div';
 
   return (
     <Tag
-      className={variants({ color, type, size, className })}
+      className={badge ({ color, variant, className })}
       {...props}
     />
   );
