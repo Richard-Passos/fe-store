@@ -30,6 +30,7 @@ const Header = ({ className, ...props }) => {
             <ThemeChanger
               color='inherit'
               items={t.raw('themes')}
+              variant='solid'
             />
 
             <span
@@ -43,6 +44,7 @@ const Header = ({ className, ...props }) => {
               <LocaleChanger
                 color='inherit'
                 items={t.raw('locales')}
+                variant='solid'
               />
             </Suspense>
           </div>
