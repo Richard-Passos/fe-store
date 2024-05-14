@@ -5,7 +5,7 @@ import { useFormContext } from 'react-hook-form';
 import { Icon, Select } from '@/components/atoms';
 import { FormControl } from '@/components/molecules/form';
 import { useChangeKeyWhenFalsy, useFormField } from '@/hooks';
-import { normId } from '@/utils';
+import { cn, normId } from '@/utils';
 
 const DemosCardOrganismTemplatesFormSelect = ({
   placeholder,
@@ -34,8 +34,8 @@ const DemosCardOrganismTemplatesFormSelect = ({
 
           <div className='size-3.5'>
             <Icon
-              className='transition-transform duration-300 group-data-open:rotate-180'
               {...icon}
+              className={cn('group-data-open:animate-[--anim]', icon.animation)}
             />
           </div>
         </Select.Trigger>
