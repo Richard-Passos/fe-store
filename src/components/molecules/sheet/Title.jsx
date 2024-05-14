@@ -3,15 +3,17 @@
 import { Title } from '@radix-ui/react-dialog';
 import { forwardRef } from 'react';
 
-import { cn } from '@/utils';
+import { TextSubtitle } from '@/components/atoms/text';
 
-const SheetTitle = ({ className, ...props }, ref) => {
+const SheetTitle = ({ asChild, children, ...props }, ref) => {
   return (
-    <Title
-      className={cn('text-lg font-semibold leading-none', className)}
+    <TextSubtitle
+      asChild
       ref={ref}
       {...props}
-    />
+    >
+      <Title asChild={asChild}>{children}</Title>
+    </TextSubtitle>
   );
 };
 

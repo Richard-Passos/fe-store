@@ -3,15 +3,12 @@
 import { Overlay } from '@radix-ui/react-dialog';
 import { forwardRef } from 'react';
 
-import { cn } from '@/utils';
+import { sheetOverlay } from './variants';
 
-const SheetOverlay = ({ className, ...props }, ref) => {
+const SheetOverlay = ({ color, className, ...props }, ref) => {
   return (
     <Overlay
-      className={cn(
-        'fixed inset-0 z-50 bg-main/50 data-closed:animate-out data-closed:fade-out data-open:animate-in data-open:fade-in dark:bg-main/75',
-        className
-      )}
+      className={sheetOverlay({ color, className })}
       ref={ref}
       {...props}
     />

@@ -3,15 +3,18 @@
 import { Close } from '@radix-ui/react-dialog';
 import { forwardRef } from 'react';
 
+import { button } from '@/components/atoms/button';
 import { cn } from '@/utils';
 
-const SheetClose = ({ className, ...props }, ref) => {
+const SheetClose = ({ color, variant, size, className, ...props }, ref) => {
   return (
     <Close
-      className={cn(
-        'absolute right-4 top-4 flex size-6 items-center justify-center rounded-sm transition-colors hover:bg-content/10 disabled:pointer-events-none disabled:opacity-50 [&>svg]:size-1/2',
-        className,
-      )}
+      className={button({
+        color: color ?? 'inherit',
+        variant,
+        size,
+        className: cn('absolute right-4 top-4 size-6 px-0', className)
+      })}
       ref={ref}
       {...props}
     />

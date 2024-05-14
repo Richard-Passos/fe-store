@@ -3,15 +3,19 @@
 import { Description } from '@radix-ui/react-dialog';
 import { forwardRef } from 'react';
 
+import { TextDescription } from '@/components/atoms/text';
 import { cn } from '@/utils';
 
-const SheetDescription = ({ className, ...props }, ref) => {
+const SheetDescription = ({ className, asChild, children, ...props }, ref) => {
   return (
-    <Description
-      className={cn('text-sm text-content/75', className)}
+    <TextDescription
+      asChild
+      className={cn('text-sm/relaxed', className)}
       ref={ref}
       {...props}
-    />
+    >
+      <Description asChild={asChild}>{children}</Description>
+    </TextDescription>
   );
 };
 
