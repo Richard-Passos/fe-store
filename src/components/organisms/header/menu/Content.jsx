@@ -1,8 +1,8 @@
 import { useTranslations } from 'next-intl';
 
-import { Icon, Separator, Text } from '@/components/atoms';
+import { Icon, Separator } from '@/components/atoms';
 import { Sheet } from '@/components/molecules';
-import { cn, translationKeys } from '@/utils';
+import { cn } from '@/utils';
 
 import Nav from './Nav';
 
@@ -29,13 +29,17 @@ const HeaderMenuContent = ({ className, ...props }) => {
         data={global.raw('components')}
       />
 
-      <Sheet.Close>
+      <Sheet.Close
+        aria-label={t('close.label')}
+        color={t('close.color')}
+        size={t('close.size')}
+        variant={t('close.variant')}
+      >
         <Icon
           className='size-1/2'
-          src={t('close.icon')}
+          color={t('close.icon.color')}
+          src={t('close.icon.src')}
         />
-
-        <Text.Root className='sr-only'>{t('close.label')}</Text.Root>
       </Sheet.Close>
     </Sheet.Content>
   );
