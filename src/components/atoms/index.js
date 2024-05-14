@@ -14,6 +14,7 @@ export { default as Link } from './link';
 export { default as Progress } from './progress';
 export { default as Select } from './select';
 export { default as Separator } from './separator';
+export { default as Shortcut } from './shortcut';
 export { default as Skeleton } from './skeleton';
 export { default as Slider } from './slider';
 export { default as Switch } from './switch';
