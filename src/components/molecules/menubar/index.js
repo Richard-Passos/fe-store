@@ -10,7 +10,6 @@ import MenubarRadioGroup from './RadioGroup';
 import MenubarRadioItem from './RadioItem';
 import MenubarRoot from './Root';
 import MenubarSeparator from './Separator';
-import MenubarShortcut from './Shortcut';
 import MenubarTrigger from './Trigger';
 import MenubarSub from './sub';
 
@@ -27,7 +26,6 @@ const Menubar = {
   RadioGroup: MenubarRadioGroup,
   RadioItem: MenubarRadioItem,
   Separator: MenubarSeparator,
-  Shortcut: MenubarShortcut,
   Trigger: MenubarTrigger,
   Sub: MenubarSub
 };
@@ -46,7 +44,6 @@ export {
   MenubarRadioGroup,
   MenubarRadioItem,
   MenubarSeparator,
-  MenubarShortcut,
   MenubarTrigger,
   MenubarSub
 };
