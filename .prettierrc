@@ -19,12 +19,12 @@
   "tailwindAttributes": [
     "class",
     "className",
-    "animations",
-    ".*Variants",
-    ".*Colors",
-    ".*Types",
-    ".*Sizes",
-    ".*Directions"
+    ".*lassNames",
+    ".*nimations",
+    ".*ariants",
+    ".*olors",
+    ".*izes",
+    ".*irections"
   ],
   "tailwindFunctions": ["cnv"],
   "trailingComma": "none",
