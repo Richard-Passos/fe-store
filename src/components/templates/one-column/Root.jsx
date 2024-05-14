@@ -14,7 +14,7 @@ const OneColumnTemplate = ({ namespace, ...props }) => {
     <Section
       color={t('color')}
       size={t('size')}
-      type={t('type')}
+      variant={t('variant')}
       {...props}
     >
       {renderComp(
