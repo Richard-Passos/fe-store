@@ -36,10 +36,7 @@ const DemosCardOrganismTemplatesForm = ({ namespace, ...props }) => {
   };
 
   return (
-    <Card.Root
-      asChild
-      {...props}
-    >
+    <Card.Root {...props}>
       <ClientForm
         configs={configs}
         defaultValues={defaultValues}
