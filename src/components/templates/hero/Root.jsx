@@ -34,14 +34,17 @@ const HeroTemplate = ({ namespace, className, ...props }) => {
           color={t('action.color')}
           href={t('action.href')}
           size={t('action.size')}
-          type={t('action.type')}
+          variant={t('action.variant')}
         >
           {t('action.label')}
         </Action>
 
         <Text.Description className='mt-sm flex items-center text-xs'>
           <span className='size-4'>
-            <Icon src={t('scroll.icon')} />
+            <Icon
+              color={t('scroll.icon.color')}
+              src={t('scroll.icon.src')}
+            />
           </span>
           &nbsp;
           <span className='first-letter:uppercase'>
