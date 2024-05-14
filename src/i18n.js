@@ -1,7 +1,7 @@
 import { getRequestConfig } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 
-import richVariants from '@/components/richVariants';
+import rich from '@/components/rich';
 import { locales } from '@/navigation';
 import { normKey } from '@/utils';
 
@@ -21,7 +21,7 @@ const i18nConfig = getRequestConfig(async ({ locale }) => {
 
       return error;
     },
-    defaultTranslationValues: richVariants
+    defaultTranslationValues: rich
   };
 });
 
