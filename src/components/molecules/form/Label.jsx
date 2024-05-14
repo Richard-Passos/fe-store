@@ -2,10 +2,9 @@
 
 import { forwardRef } from 'react';
 
+import { Label } from '@/components/atoms';
 import { useFormField } from '@/hooks';
 import { cn } from '@/utils';
-
-import { Label } from '@/components/atoms';
 
 const FormLabel = ({ className, ...props }, ref) => {
   const { error, id } = useFormField();

@@ -1,11 +1,10 @@
-import { Slot } from '@radix-ui/react-slot';
 import { forwardRef } from 'react';
 
-const FormSubmit = ({ asChild, ...props }, ref) => {
-  const Tag = asChild ? Slot : 'button';
+import { Button } from '@/components/atoms';
 
+const FormSubmit = (props, ref) => {
   return (
-    <Tag
+    <Button
       ref={ref}
       type='submit'
       {...props}

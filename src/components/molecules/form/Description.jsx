@@ -2,21 +2,24 @@
 
 import { forwardRef } from 'react';
 
+import { TextDescription } from '@/components/atoms/text';
 import { useFormField } from '@/hooks';
 import { cn } from '@/utils';
 
-import { Text } from '@/components/atoms';
-
-const FormDescription = ({ className, ...props }, ref) => {
+const FormDescription = ({ className, children, ...props }, ref) => {
   const { descriptionId } = useFormField();
 
   return (
-    <Text.Root
-      className={cn('sr-only', className)}
-      id={descriptionId}
-      ref={ref}
-      {...props}
-    />
+    children && (
+      <TextDescription
+        className={cn('text-xs', className)}
+        id={descriptionId}
+        ref={ref}
+        {...props}
+      >
+        {children}
+      </TextDescription>
+    )
   );
 };
 

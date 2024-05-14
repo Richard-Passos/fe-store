@@ -17,8 +17,8 @@ const Form = {
   Message: FormMessage,
   Provider: FormProvider,
   Submit: FormSubmit,
-  Reset: FormReset,
-}
+  Reset: FormReset
+};
 
 export default Form;
 export {
@@ -30,5 +30,5 @@ export {
   FormMessage,
   FormProvider,
   FormReset,
-  FormSubmit,
+  FormSubmit
 };

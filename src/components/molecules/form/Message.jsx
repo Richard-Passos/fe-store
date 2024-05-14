@@ -2,23 +2,26 @@
 
 import { forwardRef } from 'react';
 
+import { TextRoot } from '@/components/atoms/text';
 import { useFormField } from '@/hooks';
 import { cn } from '@/utils';
-
-import { Text } from '@/components/atoms';
 
 const FormMessage = ({ className, children, ...props }, ref) => {
   const { messageId, error } = useFormField();
 
+  const content = error?.message ?? children;
+
   return (
-    <Text.Root
-      className={cn('text-sm font-medium text-danger', className)}
-      id={messageId}
-      ref={ref}
-      {...props}
-    >
-      {error?.message ?? children}
-    </Text.Root>
+    content && (
+      <TextRoot
+        className={cn('text-xs font-medium text-danger', className)}
+        id={messageId}
+        ref={ref}
+        {...props}
+      >
+        {content}
+      </TextRoot>
+    )
   );
 };
 

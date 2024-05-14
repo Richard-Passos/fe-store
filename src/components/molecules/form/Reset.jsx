@@ -1,16 +1,15 @@
 'use client';
 
-import { Slot } from '@radix-ui/react-slot';
 import { forwardRef } from 'react';
 import { useFormContext } from 'react-hook-form';
 
-const FormReset = ({ values, asChild, ...props }, ref) => {
+import Button from '@/components/atoms/button';
+
+const FormReset = ({ values, ...props }, ref) => {
   const { reset } = useFormContext();
 
-  const Tag = asChild ? Slot : 'button';
-
   return (
-    <Tag
+    <Button
       onClick={() => reset(values)}
       ref={ref}
       type='reset'
