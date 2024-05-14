@@ -1,8 +1,7 @@
 import { useTranslations } from 'next-intl';
 
 import { Input, Textarea } from '@/components/atoms';
-import { Action, Card, Form } from '@/components/molecules';
-import { ToastAction } from '@/components/molecules/toast';
+import { Card, Form } from '@/components/molecules';
 import { normKey, renderComp, translationKeys } from '@/utils';
 
 import ClientForm from './Client';
@@ -105,6 +104,7 @@ const DemosCardOrganismTemplatesForm = ({ namespace, ...props }) => {
                     <Control
                       icon={{
                         color: t(`${field}.icon.color`),
+                        animation: t(`${field}.icon.animation`),
                         src: t(`${field}.icon.src`)
                       }}
                       items={translationKeys(t, `${field}.items`).map(
@@ -121,11 +121,11 @@ const DemosCardOrganismTemplatesForm = ({ namespace, ...props }) => {
                     />
                   )}
 
-                  <Form.Description>
+                  <Form.Description className='mt-2'>
                     {t(`${field}.description`)}
                   </Form.Description>
 
-                  <Form.Message />
+                  <Form.Message className='mt-2' />
                 </Form.Field>
               )
             );
@@ -134,14 +134,20 @@ const DemosCardOrganismTemplatesForm = ({ namespace, ...props }) => {
 
         <Card.Actions className='mt-6'>
           <Form.Reset
-            asChild
+            color={t('cancel.color')}
+            size={t('cancel.size')}
             values={defaultValues}
+            variant={t('cancel.variant')}
           >
-            <Action namespace={`${namespace}.cancel`} />
+            {t('cancel.label')}
           </Form.Reset>
 
-          <Form.Submit asChild>
-            <Action namespace={`${namespace}.confirm`} />
+          <Form.Submit
+            color={t('confirm.color')}
+            size={t('confirm.size')}
+            variant={t('confirm.variant')}
+          >
+            {t('confirm.label')}
           </Form.Submit>
         </Card.Actions>
       </ClientForm>
