@@ -1,6 +1,6 @@
 import { cva } from 'class-variance-authority';
 
-import colorVariants, { defaultColor } from '@/components/colorVariants';
+import colors, { defaultColor } from '@/components/colors';
 
 import cn from './cn';
 
@@ -10,7 +10,7 @@ const DEFAULTS = {
 
 const cnv = ({ base, variants, defaultVariants, ...config }) => {
   variants = {
-    color: colorVariants,
+    color: colors,
     ...variants
   };
 
@@ -27,8 +27,8 @@ const cnv = ({ base, variants, defaultVariants, ...config }) => {
 
   const getClassName = cva(base, { ...config, variants, defaultVariants });
 
-  return (variants = []) => {
-    variants = Object.entries(variants).reduce(
+  return (variants) => {
+    variants = Object.entries(variants ?? {}).reduce(
       (obj, [key, value]) => ({ ...obj, [key]: value ?? undefined }),
       {}
     );
