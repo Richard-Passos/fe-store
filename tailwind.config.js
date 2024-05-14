@@ -7,8 +7,7 @@ module.exports = {
     './src/app/**/*.jsx',
     './src/components/**/*.jsx',
     './src/components/**/variants.js',
-    './src/components/*Variants.js',
-    './src/styles/*.css'
+    './src/components/*.js'
   ],
   theme: {
     extend: {
@@ -74,11 +73,11 @@ module.exports = {
           content: getColor('--root-danger-c'),
           muted: getColor('--root-danger-m')
         },
-        border: getColor('--root-border'),
+        border: 'hsl(var(--root-content) / .1)',
         current: 'currentColor'
       },
       borderColor: {
-        DEFAULT: getColor('--root-border')
+        DEFAULT: 'hsl(var(--root-content) / .1)'
       },
       borderRadius: {
         sm: 'var(--radius-sm)',
@@ -90,7 +89,7 @@ module.exports = {
         DEFAULT: 'currentColor'
       },
       outlineOffset: {
-        DEFAULT: '2'
+        DEFAULT: 2
       },
       outlineWidth: {
         DEFAULT: 2
@@ -115,11 +114,16 @@ module.exports = {
         'slide-up': {
           from: { height: 'var(--height, 0)' },
           to: { height: 0 }
+        },
+        rotate135: {
+          from: { transform: 'rotate(0deg)' },
+          to: { transform: 'rotate(135deg)' }
         }
       },
       animation: {
         'slide-down': 'slide-down 300ms cubic-bezier(0.87, 0, 0.13, 1)',
-        'slide-up': 'slide-up 300ms cubic-bezier(0.87, 0, 0.13, 1)'
+        'slide-up': 'slide-up 300ms cubic-bezier(0.87, 0, 0.13, 1)',
+        rotate135: 'rotate135 300ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards'
       },
       fontFamily: {
         app: 'var(--font-app)'
