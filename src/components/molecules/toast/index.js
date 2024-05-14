@@ -5,9 +5,11 @@ import ToastHeader from './Header';
 import ToastIcon from './Icon';
 import ToastProvider from './Provider';
 import ToastRoot from './Root';
+import ToastTimerbar from './Timerbar';
 import ToastTitle from './Title';
 import ToastViewport from './Viewport';
-export * from './variants'
+
+export * from './variants';
 
 const Toast = {
   Root: ToastRoot,
@@ -17,9 +19,10 @@ const Toast = {
   Header: ToastHeader,
   Icon: ToastIcon,
   Provider: ToastProvider,
+  Timerbar: ToastTimerbar,
   Title: ToastTitle,
-  Viewport: ToastViewport,
-}
+  Viewport: ToastViewport
+};
 
 export default Toast;
 export {
@@ -30,6 +33,7 @@ export {
   ToastHeader,
   ToastIcon,
   ToastProvider,
+  ToastTimerbar,
   ToastTitle,
-  ToastViewport,
+  ToastViewport
 };

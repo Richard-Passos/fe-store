@@ -3,15 +3,19 @@
 import { Description } from '@radix-ui/react-toast';
 import { forwardRef } from 'react';
 
+import { TextDescription } from '@/components/atoms/text';
 import { cn } from '@/utils';
 
-const ToastDescription = ({ className, ...props }, ref) => {
+const ToastDescription = ({ className, children, ...props }, ref) => {
   return (
-    <Description
-      className={cn('text-sm leading-relaxed', className)}
+    <TextDescription
+      asChild
+      className={cn('text-sm/relaxed', className)}
       ref={ref}
       {...props}
-    />
+    >
+      <Description>{children}</Description>
+    </TextDescription>
   );
 };
 
