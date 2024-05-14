@@ -11,7 +11,7 @@ const Cta = ({ namespace, className, ...props }) => {
     <Box
       className={cn('my-lg items-center rounded-lg sm:p-md', className)}
       color={t('color')}
-      type={t('type')}
+      variant={t('variant')}
       {...props}
     >
       <Text.Title className='text-center'>{t.rich('title')}</Text.Title>
