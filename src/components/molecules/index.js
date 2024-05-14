@@ -20,7 +20,6 @@ export { default as Menubar } from './menubar';
 export { default as Popover } from './popover';
 export { default as RadioGroup } from './radio-group';
 export { default as Rating } from './rating';
-export { default as ScrollArea } from './scroll-area';
 export { default as Section } from './section';
 export { default as Sheet } from './sheet';
 export { default as Table } from './table';

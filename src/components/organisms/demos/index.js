@@ -25,7 +25,6 @@ import MenubarDemo from './menubar';
 import PopoverDemo from './popover';
 import ProgressDemo from './progress';
 import RadioGroupDemo from './radio-group';
-import ScrollAreaDemo from './scroll-area';
 import SelectDemo from './select';
 import SeparatorDemo from './separator';
 import SheetDemo from './sheet';
