@@ -5,16 +5,15 @@ import { forwardRef } from 'react';
 
 import { cn } from '@/utils';
 
-import { dropdownMenuItemVariants } from '../Item';
+import { dropdownMenuItem } from '../variants';
 
 const DropdownMenuSubTrigger = ({ className, ...props }, ref) => {
   return (
     <SubTrigger
-      className={cn(
-        dropdownMenuItemVariants(),
-        'data-open:bg-active',
-        className
-      )}
+      className={dropdownMenuItem({
+        color,
+        className: cn('data-open:bg-active', className)
+      })}
       ref={ref}
       {...props}
     />

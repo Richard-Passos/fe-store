@@ -1,7 +1,26 @@
 'use client';
 
 import { Trigger } from '@radix-ui/react-dropdown-menu';
+import { forwardRef } from 'react';
 
-const DropdownMenuTrigger = Trigger;
+import { button } from '@/components/atoms/button';
 
-export default DropdownMenuTrigger;
+const DropdownMenuTrigger = (
+  { color, variant, size, className, ...props },
+  ref
+) => {
+  return (
+    <Trigger
+      className={button({
+        color,
+        variant,
+        size,
+        className
+      })}
+      ref={ref}
+      {...props}
+    />
+  );
+};
+
+export default forwardRef(DropdownMenuTrigger);

@@ -5,12 +5,15 @@ import { forwardRef } from 'react';
 
 import { cn } from '@/utils';
 
-import { dropdownMenuItemVariants } from './Item';
+import { dropdownMenuItem } from './variants';
 
 const DropdownMenuCheckboxItem = ({ className, ...props }, ref) => {
   return (
     <CheckboxItem
-      className={cn(dropdownMenuItemVariants(), 'relative pl-8', className)}
+      className={dropdownMenuItem({
+        color,
+        className: cn('relative pl-8', className)
+      })}
       ref={ref}
       {...props}
     />

@@ -5,16 +5,15 @@ import { forwardRef } from 'react';
 
 import { cn } from '@/utils';
 
-import { dropdownMenuContentVariants } from '../Content';
+import { dropdownMenuContent } from '../variants';
 
-const DropdownMenuSubContent = ({ className, ...props }, ref) => {
+const DropdownMenuSubContent = ({ color, className, ...props }, ref) => {
   return (
     <SubContent
-      className={cn(
-        dropdownMenuContentVariants(),
-        'min-w-[8rem] shadow-lg',
-        className,
-      )}
+      className={dropdownMenuContent({
+        color,
+        className: cn('min-w-[8rem] shadow-lg', className)
+      })}
       ref={ref}
       {...props}
     />
