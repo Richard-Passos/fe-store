@@ -11,7 +11,7 @@ const CardBold = ({ namespace, className, ...props }) => {
       className={cn('min-h-48 items-center justify-center', className)}
       color={t('color')}
       namespace={namespace}
-      type={t('type')}
+      variant={t('variant')}
       {...props}
     >
       <Card.Title className='text-center text-5xl/none font-bold'>
