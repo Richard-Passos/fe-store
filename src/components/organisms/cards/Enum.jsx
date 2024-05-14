@@ -10,7 +10,7 @@ const CardEnum = ({ namespace, className, idx, ...props }) => {
     <Card.Root
       className={cn('flex-row gap-4 p-xs', className)}
       color={t('color')}
-      type={t('type')}
+      variant={t('variant')}
       {...props}
     >
       <Card.Title className='text-primary'>
