@@ -1,13 +1,13 @@
 import { forwardRef } from 'react';
 import Svg from 'react-inlinesvg';
 
-import { cn } from '@/utils';
+import icon from './variants';
 
-const Icon = ({ className, ...props }, ref) => {
+const Icon = ({ color, className, ...props }, ref) => {
   return (
     <Svg
+      className={icon({ color, className })}
       innerRef={ref}
-      className={cn('size-full *:fill-current', className)}
       {...props}
     />
   );
