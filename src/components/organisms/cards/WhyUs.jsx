@@ -9,16 +9,17 @@ const CardsWhyUs = ({ namespace, ...props }) => {
   return (
     <Card.Root
       color={t('color')}
-      type={t('type')}
+      variant={t('variant')}
       {...props}
     >
       <div
         aria-hidden
-        className='flex size-12 items-center justify-center rounded-sm bg-primary/10 text-primary'
+        className='flex size-12 items-center justify-center rounded-sm bg-primary/10'
       >
         <Icon
           className='size-2/3'
-          src={t('icon')}
+          color={t('icon.color')}
+          src={t('icon.src')}
         />
       </div>
 
