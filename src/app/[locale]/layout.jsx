@@ -2,7 +2,8 @@ import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { Inter } from 'next/font/google';
 
 import { ErrorBoundary, GlobalProviders } from '@/components/atoms';
-import { Footer, Header } from '@/components/organisms';
+import { ToastProvider, ToastViewport } from '@/components/molecules/toast';
+import { Footer, Header, Toaster } from '@/components/organisms';
 import { locales } from '@/navigation';
 import '@/styles/globals.css';
 import { cn } from '@/utils';
@@ -19,29 +20,37 @@ const Layout = ({ children, params: { locale } }) => {
       suppressHydrationWarning
     >
       <GlobalProviders.State>
-        <Header.State>
-          <body
-            className={cn(
-              'relative !mr-0 flex min-h-svh flex-col items-center overflow-x-clip bg-main font-app',
-              font.variable
-            )}
-            id='start'
-          >
-            <GlobalProviders.Theme>
-              <Header.Root />
+        <GlobalProviders.Icon>
+          <ToastProvider>
+            <Header.State>
+              <body
+                className={cn(
+                  'relative !mr-0 flex min-h-svh flex-col items-center overflow-x-clip bg-main font-app',
+                  font.variable
+                )}
+                id='start'
+              >
+                <GlobalProviders.Theme>
+                  <Header.Root />
 
-              <ErrorBoundary.Provider>
-                <ErrorBoundary.Root>
-                  <main className='relative flex w-full max-w-bounds flex-col items-center'>
-                    {children}
-                  </main>
-                </ErrorBoundary.Root>
-              </ErrorBoundary.Provider>
+                  <ErrorBoundary.Provider>
+                    <ErrorBoundary.Root>
+                      <main className='relative flex w-full max-w-bounds flex-col items-center'>
+                        {children}
+                      </main>
+                    </ErrorBoundary.Root>
+                  </ErrorBoundary.Provider>
 
-              <Footer />
-            </GlobalProviders.Theme>
-          </body>
-        </Header.State>
+                  <Footer />
+
+                  <Toaster />
+
+                  <ToastViewport />
+                </GlobalProviders.Theme>
+              </body>
+            </Header.State>
+          </ToastProvider>
+        </GlobalProviders.Icon>
       </GlobalProviders.State>
     </html>
   );
