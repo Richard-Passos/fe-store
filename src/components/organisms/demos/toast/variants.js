@@ -1,17 +1,8 @@
-import colorVariants from '@/components/colorVariants';
-import { toastTypes } from '@/components/molecules/toast';
+import colors from '@/components/colors';
 
-const TOAST_COLORS = Object.keys(colorVariants),
-  TOAST_TYPES = Object.keys(toastTypes);
+const TOAST_COLORS = Object.keys(colors);
 
-const TOAST = TOAST_COLORS.map((color) =>
-  TOAST_TYPES.map((type) => ({
-    color,
-    type
-  }))
-)
-  .reduce((arr, variants) => [...arr, ...variants], [])
-  .sort((a, b) => b.type.localeCompare(a.type));
+const TOAST = TOAST_COLORS.map((color) => ({ color }));
 
 export default TOAST;
-export { TOAST_COLORS, TOAST_TYPES };
+export { TOAST_COLORS };

@@ -1,3 +1,3 @@
-import CalendarDemo from './Root';
+import DemosCalendarOrganism from './Root';
 
-export default CalendarDemo;
+export default DemosCalendarOrganism;

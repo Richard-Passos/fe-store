@@ -1,3 +1,3 @@
-import BadgeDemo from './Root';
+import DemosBadgeOrganism from './Root';
 
-export default BadgeDemo;
+export default DemosBadgeOrganism;

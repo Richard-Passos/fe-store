@@ -1,34 +1,32 @@
 import { useTranslations } from 'next-intl';
 
+import animations from '@/components/animations';
 import { Icon } from '@/components/atoms';
+import { TextDescription } from '@/components/atoms/text';
 import { Accordion } from '@/components/molecules';
-import { capitalize, cn, translationKeys } from '@/utils';
+import { capitalize, cn, normKey, translationKeys } from '@/utils';
 import variantsComb from '@/utils/variantsComb';
 
 import Demos from '../Root';
 
 const ACCORDION = [
   {
-    mode: ['single'],
+    type: ['single'],
     collapsible: [true, false],
     defaultValue: [null, 'item-0']
   },
   {
-    mode: ['multiple'],
+    type: ['multiple'],
     defaultValue: [[], ['item-0'], ['item-1', 'item-2']]
   }
 ];
 
-const DemosAccordionOrganism = ({ namespace, className, ...props }) => {
+const DemosAccordionOrganism = ({ namespace, ...props }) => {
   const t = useTranslations(namespace);
 
   return ACCORDION.map((variants, i) =>
     variantsComb(variants).map((variants, idx) => (
       <Demos
-        className={cn(
-          'max-w-none basis-full sm:max-w-[50%] sm:basis-1/3',
-          className
-        )}
         key={`${i}${idx}`}
         variants={variants}
         {...props}
@@ -36,7 +34,7 @@ const DemosAccordionOrganism = ({ namespace, className, ...props }) => {
         <Accordion.Root
           className='rounded-sm'
           color={t('color')}
-          type={t('type')}
+          variant={t('variant')}
           {...variants}
         >
           {translationKeys(t, 'items').map((key) => (
@@ -50,15 +48,21 @@ const DemosAccordionOrganism = ({ namespace, className, ...props }) => {
 
                   <div className='size-4'>
                     <Icon
-                      aria-hidden
-                      src={t('icon')}
+                      className={cn(
+                        'group-data-open:animate-[--anim]',
+                        animations[normKey(t('icon.animation'))]
+                      )}
+                      color={t('icon.color')}
+                      src={t('icon.src')}
                     />
                   </div>
                 </Accordion.Trigger>
               </Accordion.Header>
 
               <Accordion.Content>
-                {t(`items.${key}.description`)}
+                <TextDescription>
+                  {t(`items.${key}.description`)}
+                </TextDescription>
               </Accordion.Content>
             </Accordion.Item>
           ))}

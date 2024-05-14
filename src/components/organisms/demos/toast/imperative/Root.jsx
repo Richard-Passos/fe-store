@@ -1,7 +1,7 @@
 'use client';
 
-import { ListComponent } from '@/components/molecules';
 import { Button } from '@/components/atoms';
+import { ListComponent } from '@/components/molecules';
 import { Toast } from '@/components/molecules';
 import { useToast } from '@/hooks';
 import { cn } from '@/utils';
@@ -29,7 +29,7 @@ const ToastDemoImperative = ({ className, ...props }) => {
                   description:
                     'This toast is called via a toast function from useToast.',
                   action: <ToastAction {...variants}>Close</ToastAction>,
-                  variants,
+                  variants
                 })
               }
             >
@@ -57,8 +57,8 @@ const ToastAction = ({ variants, className, children, ...props }) => {
         className={cn(style !== 'outline' && '[--main:--content]', className)}
         variants={{
           color: 'inherit',
-          type: 'outline',
-          size: 'sm',
+          variant: 'outline',
+          size: 'sm'
         }}
       >
         {children}

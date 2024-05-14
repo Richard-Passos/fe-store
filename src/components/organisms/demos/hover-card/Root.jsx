@@ -7,7 +7,7 @@ const HoverCardDemo = (props) => {
   return (
     <HoverCard.Root {...props}>
       <HoverCard.Trigger asChild>
-        <Button variants={{ type: 'link' }}>@nextjs</Button>
+        <Button variants={{ variant: 'link' }}>@nextjs</Button>
       </HoverCard.Trigger>
 
       <HoverCard.Content>

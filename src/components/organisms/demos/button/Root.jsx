@@ -1,46 +1,33 @@
+import { useTranslations } from 'next-intl';
+
 import { Button } from '@/components/atoms';
-import { buttonSizes, buttonTypes } from '@/components/atoms/button';
-import colorVariants from '@/components/colorVariants';
-import { ListComponent } from '@/components/molecules';
+import { buttonSizes, buttonVariants } from '@/components/atoms/button';
+import colors from '@/components/colors';
+import variantsComb from '@/utils/variantsComb';
 
-const BUTTON_COLORS = Object.keys(colorVariants),
-  BUTTON_TYPES = Object.keys(buttonTypes),
-  BUTTON_SIZES = Object.keys(buttonSizes);
+import Demos from '../Root';
 
-const BUTTON = BUTTON_COLORS.map((color) =>
-  BUTTON_TYPES.map((type) =>
-    BUTTON_SIZES.map((size) => ({
-      color,
-      type,
-      size
-    }))
-  )
-)
-  .reduce(
-    (arr, variantsArr) => [
-      ...arr,
-      ...variantsArr.reduce((arr, variants) => [...arr, ...variants], [])
-    ],
-    []
-  )
-  .sort((a, b) => b.type.localeCompare(a.type))
-  .sort((a, b) => b.size.localeCompare(a.size));
-
-const ButtonDemo = ({ className, ...props }) => {
-  return (
-    <ListComponent.Root {...props}>
-      {BUTTON.map((variants) => (
-        <ListComponent.Item
-          className='max-w-sm'
-          key={Object.entries(variants).join()}
-        >
-          <ListComponent.Subtitle variants={variants} />
-
-          <Button {...variants}>Button</Button>
-        </ListComponent.Item>
-      ))}
-    </ListComponent.Root>
-  );
+const BUTTON = {
+  color: Object.keys(colors),
+  variant: Object.keys(buttonVariants),
+  size: Object.keys(buttonSizes)
 };
 
-export default ButtonDemo;
+const DemosButtonOrganism = ({ namespace, className, ...props }) => {
+  const t = useTranslations(namespace);
+
+  return variantsComb(BUTTON)
+    .sort((a, b) => b.variant.localeCompare(a.variant))
+    .sort((a, b) => b.size.localeCompare(a.size))
+    .map((variants, i) => (
+      <Demos
+        key={i}
+        variants={variants}
+        {...props}
+      >
+        <Button {...variants}>{t('label')}</Button>
+      </Demos>
+    ));
+};
+
+export default DemosButtonOrganism;

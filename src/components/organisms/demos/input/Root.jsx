@@ -1,18 +1,18 @@
-import { ListComponent } from '@/components/molecules';
 import { Input } from '@/components/atoms';
+import { ListComponent } from '@/components/molecules';
 
 const INPUT = [
-  { type: 'color' },
-  { type: 'email', placeholder: 'johndoe@example.com' },
-  { type: 'file' },
-  { type: 'hidden' },
-  { type: 'number', placeholder: '100' },
-  { type: 'password', placeholder: '******' },
-  { type: 'search', placeholder: 'Type to search...' },
-  { type: 'tel', placeholder: 'xx xxxx-xxxx' },
-  { type: 'text', placeholder: 'John Doe' },
-  { type: 'time' },
-  { type: 'url', placeholder: 'google.com' },
+  { variant: 'color' },
+  { variant: 'email', placeholder: 'johndoe@example.com' },
+  { variant: 'file' },
+  { variant: 'hidden' },
+  { variant: 'number', placeholder: '100' },
+  { variant: 'password', placeholder: '******' },
+  { variant: 'search', placeholder: 'Type to search...' },
+  { variant: 'tel', placeholder: 'xx xxxx-xxxx' },
+  { variant: 'text', placeholder: 'John Doe' },
+  { variant: 'time' },
+  { variant: 'url', placeholder: 'google.com' }
 ];
 
 const InputDemo = (props) => {

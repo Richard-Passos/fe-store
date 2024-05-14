@@ -1,3 +1,3 @@
-import ButtonDemo from './Root';
+import DemosButtonOrganism from './Root';
 
-export default ButtonDemo;
+export default DemosButtonOrganism;

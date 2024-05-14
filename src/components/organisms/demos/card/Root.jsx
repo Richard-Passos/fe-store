@@ -1,14 +1,26 @@
-import CardNotfications from './Notifications';
-import CardForm from './form';
+import { useTranslations } from 'next-intl';
 
-const CardDemo = () => {
-  return (
-    <>
-      <CardForm />
+import { cn, normCompName, translationKeys } from '@/utils';
 
-      <CardNotfications />
-    </>
-  );
+import templates from './templates';
+
+const DemosCardOrganism = ({ namespace, className, ...props }) => {
+  const t = useTranslations(namespace);
+
+  return translationKeys(t, 'templates').map((key) => {
+    const Card = templates[normCompName(key)];
+
+    return (
+      Card && (
+        <Card
+          className={cn('h-fit w-full max-w-sm', className)}
+          key={key}
+          namespace={`${namespace}.templates.${key}`}
+          {...props}
+        />
+      )
+    );
+  });
 };
 
-export default CardDemo;
+export default DemosCardOrganism;

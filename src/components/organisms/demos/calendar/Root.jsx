@@ -1,66 +1,72 @@
-import { ListComponent } from '@/components/molecules';
+import { useTranslations } from 'next-intl';
+
+import animations from '@/components/animations';
+import { Icon } from '@/components/atoms';
 import { cn, normCompName } from '@/utils';
+import variantsComb from '@/utils/variantsComb';
 
-import * as CalendarModes from './modes';
+import Demos from '../Root';
+import modes from './modes';
 
-const CALENDAR_MODE = ['default', 'single', 'multiple', 'range'],
-  CALENDAR_CAPTION_LAYOUT = [
-    'buttons',
-    'dropdown',
-    'dropdown-buttons',
-  ],
-  CALENDAR_NUMBER_OF_MONTHS = [1, 2];
-
-const CALENDAR = CALENDAR_MODE.map((mode) =>
-  CALENDAR_CAPTION_LAYOUT.map((captionLayout) =>
-    CALENDAR_NUMBER_OF_MONTHS.map((numberOfMonths) => ({
-      mode,
-      captionLayout,
-      numberOfMonths,
-    })),
-  ),
-)
-  .reduce(
-    (arr, variantsArr) => [
-      ...arr,
-      ...variantsArr.reduce((arr, variants) => [...arr, ...variants], []),
-    ],
-    [],
-  )
-  .sort((a, b) => a.numberOfMonths - b.numberOfMonths);
-
-const CalendarDemo = ({ className, ...props }) => {
-  return (
-    <ListComponent.Root {...props}>
-      {CALENDAR.map((variants) => {
-        const Calendar =
-          CalendarModes[normCompName(variants.mode)] ||
-          CalendarModes.Default;
-
-        return (
-          <ListComponent.Item
-            className={cn(
-              'max-sm:px-0',
-              variants.numberOfMonths === 1
-                ? 'max-w-sm'
-                : 'max-w-none sm:w-auto',
-            )}
-            key={Object.entries(variants).join()}
-          >
-            <ListComponent.Subtitle
-              className='max-sm:px-5'
-              variants={variants}
-            />
-
-            <Calendar
-              className='max-sm:mx-auto'
-              {...variants}
-            />
-          </ListComponent.Item>
-        );
-      })}
-    </ListComponent.Root>
-  );
+const CALENDAR = {
+  mode: ['default', 'single', 'multiple', 'range'],
+  captionLayout: ['buttons', 'dropdown', 'dropdown-buttons'],
+  numberOfMonths: [1, 2]
 };
 
-export default CalendarDemo;
+const DemosCalendarOrganism = ({ namespace, ...props }) => {
+  const t = useTranslations(namespace);
+
+  return variantsComb(CALENDAR)
+    .sort((a, b) => a.numberOfMonths - b.numberOfMonths)
+    .map((variants, i) => {
+      const Calendar = modes[normCompName(variants.mode)] || modes.Default;
+
+      return (
+        <Demos
+          key={i}
+          variants={variants}
+          {...props}
+        >
+          <Calendar
+            className='rounded-sm'
+            components={{
+              IconLeft: (
+                <div>
+                  <Icon
+                    color={t('iconLeft.color')}
+                    src={t('iconLeft.src')}
+                  />
+                </div>
+              ),
+              IconRight: (
+                <div>
+                  <Icon
+                    color={t('iconRight.color')}
+                    src={t('iconRight.src')}
+                  />
+                </div>
+              ),
+              IconDropdown: (
+                <div>
+                  <Icon
+                    className={cn(
+                      '[select:focus+div_&]:animate-[--anim]',
+                      animations[t('iconDropdown.animation')]
+                    )}
+                    color={t('iconDropdown.color')}
+                    src={t('iconDropdown.src')}
+                  />
+                </div>
+              )
+            }}
+            fromYear={t.raw('fromYear')}
+            toYear={t.raw('toYear')}
+            {...variants}
+          />
+        </Demos>
+      );
+    });
+};
+
+export default DemosCalendarOrganism;

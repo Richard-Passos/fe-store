@@ -49,7 +49,7 @@ const FormDemo = (props) => {
             asChild
             values={{ name: '', email: '' }}
           >
-            <Button variants={{ color: 'inverted', type: 'outline' }}>
+            <Button variants={{ color: 'inverted', variant: 'outline' }}>
               Cancel
             </Button>
           </Form.Reset>

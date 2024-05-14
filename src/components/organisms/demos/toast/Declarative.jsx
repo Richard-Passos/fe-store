@@ -3,8 +3,8 @@
 import { Cross2Icon } from '@radix-ui/react-icons';
 import { useEffect, useRef, useState } from 'react';
 
-import {Toast, ListComponent } from '@/components/molecules';
 import { Button, Timerbar } from '@/components/atoms';
+import { ListComponent, Toast } from '@/components/molecules';
 import { cn } from '@/utils';
 
 import { TOAST_DURATION } from './Root';
@@ -17,13 +17,13 @@ const ToastDemoDeclarative = (props) => {
   return (
     <ListComponent.Root {...props}>
       {TOAST.map((variants) => {
-        const { type, color } = variants;
+        const { variant, color } = variants;
 
-        const isToastOpen = !!isOpen[type]?.[color],
+        const isToastOpen = !!isOpen[variant]?.[color],
           setIsToastOpen = (toastState) =>
             setIsOpen((state) => ({
               ...state,
-              [type]: { ...state[type], [color]: toastState },
+              [variant]: { ...state[variant], [color]: toastState }
             }));
 
         return (
@@ -64,7 +64,7 @@ const ToastDemoDeclarative = (props) => {
 
               {isToastOpen && (
                 <ToastTimerbar
-                isPaused={isPaused}
+                  isPaused={isPaused}
                   variants={variants}
                 />
               )}
@@ -111,8 +111,8 @@ const ToastAction = ({ variants, className, children, ...props }) => {
         className={cn(style !== 'outline' && '[--main:--content]', className)}
         variants={{
           color: 'inherit',
-          type: 'outline',
-          size: 'sm',
+          variant: 'outline',
+          size: 'sm'
         }}
       >
         {children}
@@ -142,12 +142,12 @@ const ToastTimerbar = ({ variants, className, ...props }) => {
       className={cn(
         'absolute bottom-0 left-0',
         style !== 'outline' && '[--main:--content]',
-        className,
+        className
       )}
       duration={TOAST_DURATION}
       variants={{
         color: 'inherit',
-        size: 'xs',
+        size: 'xs'
       }}
       {...props}
     >

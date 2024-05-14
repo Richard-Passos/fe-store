@@ -4,10 +4,10 @@ import { useEffect, useState } from 'react';
 
 import { Progress } from '@/components/atoms';
 import { progressSizes } from '@/components/atoms/progress';
-import colorVariants from '@/components/colorVariants';
+import colors from '@/components/colors';
 import { ListComponent } from '@/components/molecules';
 
-const PROGRESS_COLORS = Object.keys(colorVariants),
+const PROGRESS_COLORS = Object.keys(colors),
   PROGRESS_SIZES = Object.keys(progressSizes);
 
 const PROGRESS = PROGRESS_COLORS.map((color) =>

@@ -16,7 +16,7 @@ const TabsDemoPasswordFormInput = (props, ref) => {
       <Input
         placeholder={isShowing ? 'password' : '********'}
         ref={ref}
-        type={!isShowing && 'password'}
+        variant={!isShowing && 'password'}
         {...props}
       />
 

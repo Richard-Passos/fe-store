@@ -4,19 +4,16 @@ import { useState } from 'react';
 
 import { Calendar } from '@/components/molecules';
 
-import CALENDAR_PROPS from './props';
-
-const CalendarViewModeRange = (props) => {
+const DemosCalendarOrganismModesRange = (props) => {
   const [days, setDays] = useState({});
 
   return (
     <Calendar
       onSelect={setDays}
       selected={days}
-      {...CALENDAR_PROPS}
       {...props}
     />
   );
 };
 
-export default CalendarViewModeRange;
+export default DemosCalendarOrganismModesRange;

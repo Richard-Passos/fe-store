@@ -1,14 +1,15 @@
 import { useTranslations } from 'next-intl';
 
 import { Button } from '@/components/atoms';
-import colorVariants from '@/components/colorVariants';
+import colors from '@/components/colors';
 import { Action, AlertDialog } from '@/components/molecules';
+import { cn } from '@/utils';
 import variantsComb from '@/utils/variantsComb';
 
 import Demos from '../Root';
 
 const ALERT_DIALOG = {
-  color: Object.keys(colorVariants)
+  color: Object.keys(colors)
 };
 
 const DemosAlertDialogOrganism = ({ namespace, className, ...props }) => {
@@ -16,6 +17,7 @@ const DemosAlertDialogOrganism = ({ namespace, className, ...props }) => {
 
   return variantsComb(ALERT_DIALOG).map((variants, i) => (
     <Demos
+      className={cn('w-fit', className)}
       key={i}
       variants={variants}
       {...props}
@@ -42,23 +44,14 @@ const DemosAlertDialogOrganism = ({ namespace, className, ...props }) => {
 
             <AlertDialog.Actions className='mt-6'>
               <AlertDialog.Cancel asChild>
-                <Button
-                  className='border-content/25 bg-main text-content hover:bg-active'
-                  color='inherit'
-                  size={t('cancel.size')}
-                >
-                  {t('cancel.label')}
-                </Button>
+                <Action namespace={`${namespace}.cancel`} />
               </AlertDialog.Cancel>
 
               <AlertDialog.Action asChild>
-                <Button
-                  className='border-transparent bg-primary text-primary-content hover:bg-primary-active'
-                  color='inherit'
-                  size={t('confirm.size')}
-                >
-                  {t('confirm.label')}
-                </Button>
+                <Action
+                  className='bg-primary text-primary-content hover:bg-primary-active'
+                  namespace={`${namespace}.confirm`}
+                />
               </AlertDialog.Action>
             </AlertDialog.Actions>
           </AlertDialog.Content>

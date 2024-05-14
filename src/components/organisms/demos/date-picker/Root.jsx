@@ -41,9 +41,9 @@ const DatePickerDemo = () => {
               IconRight: ChevronRightIcon
             }}
             initialFocus
-            mode='single'
             onSelect={setDate}
             selected={date}
+            type='single'
           />
         </Popover.Content>
       </Popover.Portal>

@@ -1,3 +1,3 @@
-import AvatarDemo from './Root';
+import DemosAvatarOrganism from './Root';
 
-export default AvatarDemo;
+export default DemosAvatarOrganism;

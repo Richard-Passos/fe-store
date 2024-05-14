@@ -1,4 +1,19 @@
-export { default as Default } from './Default';
-export { default as Multiple } from './Multiple';
-export { default as Range } from './Range';
-export { default as Single } from './Single';
+import DemosCalendarOrganismModesDefault from './Default';
+import DemosCalendarOrganismModesMultiple from './Multiple';
+import DemosCalendarOrganismModesRange from './Range';
+import DemosCalendarOrganismModesSingle from './Single';
+
+const DemosCalendarOrganismModes = {
+  Default: DemosCalendarOrganismModesDefault,
+  Multiple: DemosCalendarOrganismModesMultiple,
+  Range: DemosCalendarOrganismModesRange,
+  Single: DemosCalendarOrganismModesSingle
+};
+
+export default DemosCalendarOrganismModes;
+export {
+  DemosCalendarOrganismModesDefault,
+  DemosCalendarOrganismModesMultiple,
+  DemosCalendarOrganismModesRange,
+  DemosCalendarOrganismModesSingle
+};

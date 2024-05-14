@@ -2,16 +2,13 @@
 
 import { Calendar } from '@/components/molecules';
 
-import CALENDAR_PROPS from './props';
-
-const CalendarViewModeDefault = (props) => {
+const DemosCalendarOrganismModesDefault = (props) => {
   return (
     <Calendar
       selected={new Date()}
-      {...CALENDAR_PROPS}
       {...props}
     />
   );
 };
 
-export default CalendarViewModeDefault;
+export default DemosCalendarOrganismModesDefault;

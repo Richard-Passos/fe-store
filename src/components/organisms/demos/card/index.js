@@ -1,3 +1,3 @@
-import CardDemo from './Root';
+import DemosCardOrganism from './Root';
 
-export default CardDemo;
+export default DemosCardOrganism;

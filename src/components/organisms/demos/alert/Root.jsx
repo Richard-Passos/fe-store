@@ -1,25 +1,24 @@
 import { useTranslations } from 'next-intl';
 
 import { Icon } from '@/components/atoms';
-import colorVariants from '@/components/colorVariants';
+import colors from '@/components/colors';
 import { Alert } from '@/components/molecules';
-import { alertTypes } from '@/components/molecules/alert';
-import { cn, renderComp } from '@/utils';
+import { alertVariants } from '@/components/molecules/alert';
+import { renderComp } from '@/utils';
 import variantsComb from '@/utils/variantsComb';
 
 import Demos from '../Root';
 
 const ALERT = {
-  color: Object.keys(colorVariants),
-  type: Object.keys(alertTypes)
+  color: Object.keys(colors),
+  variant: Object.keys(alertVariants)
 };
 
-const DemosAlertOrganism = ({ namespace, className, ...props }) => {
+const DemosAlertOrganism = ({ namespace, ...props }) => {
   const t = useTranslations(namespace);
 
   return variantsComb(ALERT).map((variants, i) => (
     <Demos
-      className={cn('max-w-fit basis-auto', className)}
       key={i}
       variants={variants}
       {...props}
@@ -31,10 +30,13 @@ const DemosAlertOrganism = ({ namespace, className, ...props }) => {
         {renderComp(
           <Alert.Icon>
             <div>
-              <Icon src={t('icon')} />
+              <Icon
+                color={t('icon.color')}
+                src={t('icon.src')}
+              />
             </div>
           </Alert.Icon>,
-          [t('icon')]
+          [t('icon.src')]
         )}
 
         {renderComp(<Alert.Title>{t('title')}</Alert.Title>, [t('title')])}

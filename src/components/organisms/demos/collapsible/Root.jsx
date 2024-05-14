@@ -19,7 +19,7 @@ const CollapsibleDemo = (props) => {
         <Collapsible.Trigger asChild>
           <Button
             className='aspect-square rounded-sm px-0'
-            variants={{ size: 'sm', type: 'outline', color: 'inverted' }}
+            variants={{ size: 'sm', variant: 'outline', color: 'inverted' }}
           >
             <CaretSortIcon
               aria-hidden

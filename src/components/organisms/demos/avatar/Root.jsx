@@ -1,19 +1,31 @@
+import { useTranslations } from 'next-intl';
+
 import { Avatar } from '@/components/molecules';
+import { cn } from '@/utils';
 
-const AvatarDemo = (props) => {
+import Demos from '../Root';
+
+const DemosAvatarOrganism = ({ namespace, className, ...props }) => {
+  const t = useTranslations(namespace);
+
   return (
-    <Avatar.Root {...props}>
-      <Avatar.Image
-        alt='A road winding through a forest near the ocean.'
-        height={902}
-        priority
-        src='/images/demo.png'
-        width={600}
-      />
+    <Demos
+      className={cn('w-fit', className)}
+      {...props}
+    >
+      <Avatar.Root>
+        <Avatar.Image
+          alt={t('alt')}
+          height={t.raw('height')}
+          priority
+          src={t('src')}
+          width={t.raw('width')}
+        />
 
-      <Avatar.Fallback>RF</Avatar.Fallback>
-    </Avatar.Root>
+        <Avatar.Fallback>{t('fallback')}</Avatar.Fallback>
+      </Avatar.Root>
+    </Demos>
   );
 };
 
-export default AvatarDemo;
+export default DemosAvatarOrganism;

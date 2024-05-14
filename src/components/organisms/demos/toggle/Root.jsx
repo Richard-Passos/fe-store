@@ -2,18 +2,18 @@
 
 import { FontItalicIcon } from '@radix-ui/react-icons';
 
-import { ListComponent } from '@/components/molecules';
 import { Toggle } from '@/components/atoms';
-import { toggleSizes, toggleTypes } from '@/components/atoms/toggle';
+import { toggleSizes, toggleVariants } from '@/components/atoms/toggle';
+import { ListComponent } from '@/components/molecules';
 
-const TOGGLE_TYPES = Object.keys(toggleTypes),
+const TOGGLE_TYPES = Object.keys(toggleVariants),
   TOGGLE_SIZES = Object.keys(toggleSizes);
 
-const TOGGLE = TOGGLE_TYPES.map((type) =>
+const TOGGLE = TOGGLE_TYPES.map((variant) =>
   TOGGLE_SIZES.map((size) => ({
-    type,
-    size,
-  })),
+    variant,
+    size
+  }))
 )
   .reduce((arr, variants) => [...arr, ...variants], [])
   .sort((a, b) => b.size.localeCompare(a.size));

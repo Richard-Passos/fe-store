@@ -1,3 +1,3 @@
-import AspectRatioDemo from './Root';
+import DemosAspectRatioOrganism from './Root';
 
-export default AspectRatioDemo;
+export default DemosAspectRatioOrganism;

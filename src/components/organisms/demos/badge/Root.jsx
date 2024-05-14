@@ -1,35 +1,33 @@
+import { useTranslations } from 'next-intl';
+
 import { Badge } from '@/components/atoms';
-import { badgeTypes } from '@/components/atoms/badge';
-import colorVariants from '@/components/colorVariants';
-import { ListComponent } from '@/components/molecules';
+import { badgeVariants } from '@/components/atoms/badge';
+import colors from '@/components/colors';
+import { cn } from '@/utils';
+import variantsComb from '@/utils/variantsComb';
 
-const BADGE_COLORS = Object.keys(colorVariants),
-  BADGE_TYPES = Object.keys(badgeTypes);
+import Demos from '../Root';
 
-const BADGE = BADGE_COLORS.map((color) =>
-  BADGE_TYPES.map((type) => ({
-    color,
-    type
-  }))
-)
-  .reduce((arr, variants) => [...arr, ...variants], [])
-  .sort((a, b) => b.type.localeCompare(a.type));
-
-const BadgeDemo = ({ className, ...props }) => {
-  return (
-    <ListComponent.Root {...props}>
-      {BADGE.map((variants) => (
-        <ListComponent.Item
-          className='max-w-xs'
-          key={Object.entries(variants).join()}
-        >
-          <ListComponent.Subtitle variants={variants} />
-
-          <Badge {...variants}>Badge</Badge>
-        </ListComponent.Item>
-      ))}
-    </ListComponent.Root>
-  );
+const BADGE = {
+  color: Object.keys(colors),
+  variant: Object.keys(badgeVariants)
 };
 
-export default BadgeDemo;
+const DemosBadgeOrganism = ({ namespace, className, ...props }) => {
+  const t = useTranslations(namespace);
+
+  return variantsComb(BADGE)
+    .sort((a, b) => b.variant.localeCompare(a.variant))
+    .map((variants, i) => (
+      <Demos
+        className={cn('w-72', className)}
+        key={i}
+        variants={variants}
+        {...props}
+      >
+        <Badge {...variants}>{t('label')}</Badge>
+      </Demos>
+    ));
+};
+
+export default DemosBadgeOrganism;

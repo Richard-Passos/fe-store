@@ -1,9 +1,9 @@
 import { Timerbar } from '@/components/atoms';
 import { progressSizes } from '@/components/atoms/progress';
-import colorVariants from '@/components/colorVariants';
+import colors from '@/components/colors';
 import { ListComponent } from '@/components/molecules';
 
-const TIMERBAR_COLORS = Object.keys(colorVariants),
+const TIMERBAR_COLORS = Object.keys(colors),
   TIMERBAR_SIZES = Object.keys(progressSizes);
 
 const TIMERBAR = TIMERBAR_COLORS.map((color) =>
