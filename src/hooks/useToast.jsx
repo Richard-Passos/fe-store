@@ -21,7 +21,7 @@ const addToRemoveQueue = (toastId) => {
 
       dispatch({
         type: 'REMOVE_TOAST',
-        toastId,
+        toastId
       });
     }, TOAST_REMOVE_DELAY_FOR_ANIMATIONS);
 
@@ -33,7 +33,7 @@ const actions = {
   ADD_TOAST(state, { toast }) {
     return {
       ...state,
-      toasts: [toast, ...state.toasts],
+      toasts: [toast, ...state.toasts]
     };
   },
   UPDATE_TOAST(state, action) {
@@ -43,10 +43,10 @@ const actions = {
         toast.id === action.toast.id
           ? {
               ...toast,
-              ...action.toast,
+              ...action.toast
             }
-          : toast,
-      ),
+          : toast
+      )
     };
   },
   DISMISS_TOAST(state, { toastId }) {
@@ -58,7 +58,7 @@ const actions = {
 
         return {
           ...toast,
-          open: false,
+          open: false
         };
       });
     } else {
@@ -68,15 +68,15 @@ const actions = {
         toast.id === toastId
           ? {
               ...toast,
-              open: false,
+              open: false
             }
-          : toast,
+          : toast
       );
     }
 
     return {
       ...state,
-      toasts,
+      toasts
     };
   },
   REMOVE_TOAST(state, { toastId }) {
@@ -85,9 +85,9 @@ const actions = {
       toasts:
         toastId === undefined
           ? []
-          : state.toasts.filter(({ id }) => id !== toastId),
+          : state.toasts.filter(({ id }) => id !== toastId)
     };
-  },
+  }
 };
 
 const reducer = (state, action) => {
@@ -115,7 +115,7 @@ const toast = (props) => {
     update = (props) =>
       dispatch({
         type: 'UPDATE_TOAST',
-        toast: { ...props, id },
+        toast: { ...props, id }
       });
 
   dispatch({
@@ -126,14 +126,14 @@ const toast = (props) => {
       open: true,
       onOpenChange: (open) => {
         if (!open) dismiss();
-      },
-    },
+      }
+    }
   });
 
   return {
     id,
     dismiss,
-    update,
+    update
   };
 };
 
@@ -153,7 +153,7 @@ const useToast = () => {
   return {
     ...state,
     toast,
-    dismiss: (toastId) => dispatch({ type: 'DISMISS_TOAST', toastId }),
+    dismiss: (toastId) => dispatch({ type: 'DISMISS_TOAST', toastId })
   };
 };
 
