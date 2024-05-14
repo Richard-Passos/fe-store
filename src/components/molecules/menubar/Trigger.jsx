@@ -13,7 +13,7 @@ const MenubarTrigger = ({ color, className, ...props }, ref) => {
         color,
         variant: 'solid',
         size: 'xs',
-        className: cn('text-sm data-open:bg-active ', className)
+        className: cn('text-sm data-open:bg-active', className)
       })}
       ref={ref}
       {...props}
