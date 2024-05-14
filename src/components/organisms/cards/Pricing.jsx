@@ -11,14 +11,14 @@ const CardsPricing = ({ namespace, className, ...props }) => {
     <Card.Root
       className={cn('items-center', className)}
       color={t('color')}
-      type={t('type')}
+      variant={t('variant')}
       {...props}
     >
       {renderComp(
         <Badge
           className='absolute top-0 -translate-y-1/2'
           color={t('badge.color')}
-          type={t('badge.type')}
+          variant={t('badge.variant')}
         >
           {t('badge.label')}
         </Badge>,
@@ -37,8 +37,11 @@ const CardsPricing = ({ namespace, className, ...props }) => {
             className='flex gap-2'
             key={key}
           >
-            <div className='size-4 text-primary'>
-              <Icon src={t(`items.${key}.icon`)} />
+            <div className='size-4'>
+              <Icon
+                color={t(`items.${key}.icon.color`)}
+                src={t(`items.${key}.icon.src`)}
+              />
             </div>
 
             <Card.Description className='text-xs'>
