@@ -51,8 +51,6 @@
     --root-danger-c: var(--danger-c);
     --root-danger-m: var(--danger-m);
 
-    --root-border: var(--border);
-
     --radius-sm: 0.5rem;
     --radius-md: 0.75rem;
     --radius-lg: 1rem;
@@ -104,7 +102,7 @@
     --danger-c: 354 60% 95%;
     --danger-m: 354 65% 54%;
 
-    --border: 245 0% 85%;
+    --border: hsl(var(--root-content) / 0.1);
   }
 
   .dark {
@@ -153,7 +151,7 @@
     --danger-c: 354 70% 95%;
     --danger-m: 354 75% 59%;
 
-    --border: 245 25% 8%;
+    --border: hsl(var(--root-content) / 0.05);
   }
 
   * {
