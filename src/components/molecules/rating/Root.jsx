@@ -12,7 +12,7 @@ const Rating = ({ className, value, icon, ...props }) => {
           className='aspect-square grow basis-0 text-primary'
           key={i}
         >
-          <Icon src={icon} />
+          <Icon {...icon} />
         </div>
       ))}
     </ul>
