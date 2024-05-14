@@ -13,7 +13,7 @@ const ComponentsNavOrganism = ({ namespace, className, ...props }) => {
     <Box
       className={cn('group size-full grow px-0 shadow-lg', className)}
       color={t('color')}
-      type={t('type')}
+      variant={t('variant')}
       {...props}
     >
       {renderComp(
@@ -30,7 +30,7 @@ const ComponentsNavOrganism = ({ namespace, className, ...props }) => {
               href={`/components/${normId(key)}`}
               key={key}
               size={t('action.size')}
-              type={t('action.type')}
+              variant={t('action.variant')}
             >
               <span className='opacity-75 group-hover/action:opacity-100'>
                 {global(`components.${key}.title`)}
