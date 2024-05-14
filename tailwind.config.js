@@ -73,11 +73,11 @@ module.exports = {
           content: getColor('--root-danger-c'),
           muted: getColor('--root-danger-m')
         },
-        border: 'hsl(var(--root-content) / .1)',
+        border: 'var(--border)',
         current: 'currentColor'
       },
       borderColor: {
-        DEFAULT: 'hsl(var(--root-content) / .1)'
+        DEFAULT: 'var(--border)'
       },
       borderRadius: {
         sm: 'var(--radius-sm)',
