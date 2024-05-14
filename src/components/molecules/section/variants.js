@@ -1,6 +1,6 @@
 import { cnv } from '@/utils';
 
-const sectionTypes = {
+const sectionVariants = {
     default: 'py-lg min-h-screen 2xl:min-h-bounds',
     solid: 'rounded-lg p-sm sm:p-md my-md border',
     slot: 'h-fit'
@@ -13,17 +13,17 @@ const sectionTypes = {
     full: 'w-full'
   };
 
-const sectionVariants = cnv({
+const section = cnv({
   base: 'relative isolate flex w-9/10 flex-col items-center justify-center bg-main',
   variants: {
-    type: sectionTypes,
+    variant: sectionVariants,
     size: sectionSizes
   },
   defaultVariants: {
-    type: 'default',
+    variant: 'default',
     size: 'lg'
   }
 });
 
-export default sectionVariants;
-export { sectionVariants };
+export default section;
+export { section, sectionVariants, sectionSizes };
