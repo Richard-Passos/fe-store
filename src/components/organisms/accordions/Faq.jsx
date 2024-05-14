@@ -1,17 +1,20 @@
 import { useTranslations } from 'next-intl';
 
+import animations from '@/components/animations';
 import { Icon } from '@/components/atoms';
 import { TextDescription } from '@/components/atoms/text';
 import { Accordion } from '@/components/molecules';
-import { capitalize, translationKeys } from '@/utils';
+import { capitalize, cn, normKey, translationKeys } from '@/utils';
 
 const AccordionsFaq = ({ namespace, ...props }) => {
   const t = useTranslations(namespace);
 
   return (
     <Accordion.Root
+      collapsible={t.raw('collapsible')}
       color={t('color')}
       type={t('type')}
+      variant={t('variant')}
       {...props}
     >
       {translationKeys(t, 'items').map((key) => (
@@ -28,8 +31,12 @@ const AccordionsFaq = ({ namespace, ...props }) => {
                 className='flex aspect-square h-1/2 items-center justify-center rounded-sm transition-colors group-hover:bg-active'
               >
                 <Icon
-                  className='size-1/2 transition-transform duration-300 ease-backOut group-data-open:rotate-[135deg]'
-                  src={t('icon')}
+                  className={cn(
+                    'size-1/2 group-data-open:animate-[--anim]',
+                    animations[normKey(t('icon.animation'))]
+                  )}
+                  color={t('icon.color')}
+                  src={t('icon.src')}
                 />
               </div>
             </Accordion.Trigger>
