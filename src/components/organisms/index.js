@@ -5,3 +5,4 @@ export { default as Cta } from './cta';
 export { default as Demos } from './demos';
 export { default as Footer } from './footer';
 export { default as Header } from './header';
+export { default as Toaster } from './toaster';
