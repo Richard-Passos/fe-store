@@ -16,12 +16,13 @@ const HeaderMenuTrigger = ({ className, ...props }) => {
         )}
         color={t('color')}
         size={t('size')}
-        type={t('type')}
+        variant={t('variant')}
         {...props}
       >
         <Icon
           className='size-1/2'
-          src={t('icon')}
+          color={t('icon.color')}
+          src={t('icon.src')}
         />
 
         <Text.Root className='sr-only'>{t('label')}</Text.Root>
