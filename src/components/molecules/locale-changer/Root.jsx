@@ -7,7 +7,7 @@ import { Select } from '@/components/atoms';
 import { usePathname, useRouter } from '@/navigation';
 import { cn, normId } from '@/utils';
 
-const LocaleChanger = ({ items, className, color, type, ...props }) => {
+const LocaleChanger = ({ items, className, color, variant, ...props }) => {
   const activeLocale = useLocale(),
     router = useRouter(),
     pathname = usePathname(),
@@ -22,12 +22,9 @@ const LocaleChanger = ({ items, className, color, type, ...props }) => {
       {...props}
     >
       <Select.Trigger
-        className={cn(
-          'size-8 justify-center border-0 px-0 lowercase',
-          className
-        )}
+        className={cn('size-8 justify-center px-0 lowercase', className)}
         color={color}
-        type={type}
+        variant={variant}
       >
         <Select.Value />
       </Select.Trigger>
@@ -35,7 +32,7 @@ const LocaleChanger = ({ items, className, color, type, ...props }) => {
       <Select.Content
         align='center'
         color={color}
-        type={type}
+        variant={variant}
       >
         <Select.Viewport>
           {Object.entries(items ?? {}).map(([key, label]) => (
