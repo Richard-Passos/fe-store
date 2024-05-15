@@ -85,7 +85,7 @@ const DemosCardOrganismTemplatesForm = ({ namespace, ...props }) => {
                     {t(`${field}.label`)}
                     {
                       (renderComp(
-                        <span className='text-xs lowercase opacity-75'>
+                        <span className='text-xs lowercase text-content/75'>
                           &nbsp;(${t(`${field}.optionalText`)})
                         </span>
                       ),
