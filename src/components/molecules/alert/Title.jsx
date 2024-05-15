@@ -6,7 +6,7 @@ import { cn } from '@/utils';
 const AlertTitle = ({ className, ...props }, ref) => {
   return (
     <TextSubtitle
-      className={cn('text-4xl/none font-semibold', className)}
+      className={cn('text-4xl', className)}
       ref={ref}
       {...props}
     />

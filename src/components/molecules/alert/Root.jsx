@@ -1,11 +1,12 @@
 import { forwardRef } from 'react';
 
-import variants from './variants';
+import { Box } from '@/components/atoms';
+import { cn } from '@/utils';
 
-const Alert = ({ color, type, className, ...props }, ref) => {
+const Alert = ({ className, ...props }, ref) => {
   return (
-    <section
-      className={variants({ color, type, className })}
+    <Box
+      className={cn('max-w-md flex-row gap-xs', className)}
       ref={ref}
       role='alert'
       {...props}
