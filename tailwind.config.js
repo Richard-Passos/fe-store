@@ -1,4 +1,4 @@
-const getColor = (cssVar) => `hsl(var(${cssVar}))`;
+const getColor = (cssVar) => `hsl(var(${cssVar}) / <alpha-value>)`;
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
