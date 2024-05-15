@@ -3,20 +3,19 @@
 import { Image as RadixImage } from '@radix-ui/react-avatar';
 import { forwardRef } from 'react';
 
+import { Image } from '@/components/atoms';
 import { cn } from '@/utils';
 
-import { Image } from '@/components/atoms';
-
-const AvatarImage = ({ asChild, className, children, ...props }, ref) => {
+const AvatarImage = ({ className, ...props }, ref) => {
   return (
     <RadixImage
       asChild
-      className={cn('h-full w-full rounded-inherit', className)}
+      className={cn('size-full object-cover', className)}
       ref={ref}
       {...props}
     >
       {/* eslint-disable-next-line jsx-a11y/alt-text */}
-      {asChild ? children : <Image />}
+      <Image />
     </RadixImage>
   );
 };

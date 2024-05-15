@@ -8,10 +8,7 @@ import { cn } from '@/utils';
 const AvatarFallback = ({ className, ...props }, ref) => {
   return (
     <Fallback
-      className={cn(
-        'flex h-full w-full items-center justify-center rounded-inherit bg-main',
-        className
-      )}
+      className={cn('flex size-full items-center justify-center', className)}
       ref={ref}
       {...props}
     />
