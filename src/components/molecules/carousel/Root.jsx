@@ -8,7 +8,7 @@ import { CarouselContext, CarouselProvider } from '@/contexts';
 import { cn } from '@/utils';
 
 const Carousel = forwardRef(({ options, className, ...props }, ref) => {
-  const { setActiveIdx, progress } = useContext(CarouselContext);
+  const { setState } = useContext(CarouselContext);
 
   options = {
     autoWidth: true,
@@ -17,19 +17,22 @@ const Carousel = forwardRef(({ options, className, ...props }, ref) => {
     trimSpace: false,
     pagination: false,
     gap: 'var(--spacing-sm)',
-    ...options,
+    ...options
   };
 
   return (
     <Splide
-      className={cn('flex w-full flex-col items-center gap-sm', className)}
+      className={cn('flex w-full flex-col items-center', className)}
       hasTrack={false}
       onMove={(carousel) => {
         const end = carousel.length - 1,
           rate = Math.min(carousel.index / end, 1);
 
-        progress.current = rate;
-        setActiveIdx(carousel.index);
+        setState((state) => ({
+          ...state,
+          activeIdx: carousel.index,
+          progress: rate
+        }));
       }}
       options={options}
       ref={ref}
@@ -40,9 +43,9 @@ const Carousel = forwardRef(({ options, className, ...props }, ref) => {
 });
 Carousel.displayName = 'Carousel';
 
-const CarouselWithProvider = (props, ref) => {
+const CarouselWithProvider = ({ value, props }, ref) => {
   return (
-    <CarouselProvider>
+    <CarouselProvider value={value}>
       <Carousel
         ref={ref}
         {...props}

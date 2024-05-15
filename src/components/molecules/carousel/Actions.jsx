@@ -3,7 +3,10 @@ import { cn } from '@/utils';
 const CarouselActions = ({ className, ...props }) => {
   return (
     <section
-      className={cn('splide__arrows flex items-center gap-3.5', className)}
+      className={cn(
+        'splide__arrows flex flex-wrap items-center justify-center gap-2',
+        className
+      )}
       {...props}
     />
   );

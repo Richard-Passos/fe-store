@@ -2,32 +2,30 @@
 
 import { useContext } from 'react';
 
+import { TextRoot } from '@/components/atoms/text';
 import { CarouselContext } from '@/contexts';
 import { cn } from '@/utils';
 
-import { Text } from '@/components/atoms';
+const CarouselActiveIdx = ({ itemsLength, className, ...props }) => {
+  const { state } = useContext(CarouselContext);
 
-const CarouselActiveIdx = ({ itemsLength = '', className, ...props }) => {
-  const { activeIdx } = useContext(CarouselContext);
+  const lengthStr = itemsLength?.toString() ?? '';
 
   return (
-    <Text.Root
-      aria-label={`Index ${activeIdx} of ${itemsLength}`}
-      className={cn(
-        'flex gap-font-blank-space text-xs font-semibold',
-        className,
-      )}
+    <TextRoot
+      aria-label={state.activeIdx}
+      className={cn('text-xs font-medium', className)}
       {...props}
     >
       <span className='relative'>
         <span className='absolute right-0 top-0'>
-          {`${activeIdx + 1}`.padStart(2, '0')}
+          {`${+state.activeIdx + 1}`.padStart(lengthStr.length, '0')}
         </span>
 
-        <span className='invisible'>00</span>
+        <span className='invisible'>{'0'.repeat(lengthStr.length)}</span>
       </span>
-      — {itemsLength.toString().padStart(2, '0')}
-    </Text.Root>
+      — {lengthStr.padStart(2, '0')}
+    </TextRoot>
   );
 };
 

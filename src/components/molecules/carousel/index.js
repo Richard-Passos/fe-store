@@ -2,9 +2,9 @@ import CarouselAction from './Action';
 import CarouselActions from './Actions';
 import CarouselActiveIdx from './ActiveIdx';
 import CarouselItem from './Item';
+import CarouselProgress from './Progress';
 import CarouselRoot from './Root';
 import CarouselTrack from './Track';
-import CarouselProgress from './progress';
 
 const Carousel = {
   Root: CarouselRoot,
@@ -12,8 +12,8 @@ const Carousel = {
   Actions: CarouselActions,
   ActiveIdx: CarouselActiveIdx,
   Item: CarouselItem,
-  Track: CarouselTrack,
-  Progress: CarouselProgress,  
+  Progress: CarouselProgress,
+  Track: CarouselTrack
 };
 
 export default Carousel;
@@ -23,6 +23,6 @@ export {
   CarouselActions,
   CarouselActiveIdx,
   CarouselItem,
-  CarouselTrack,
   CarouselProgress,
+  CarouselTrack
 };
