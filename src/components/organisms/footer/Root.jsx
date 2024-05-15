@@ -128,14 +128,7 @@ const Footer = ({ className, ...props }) => {
           <section className='relative mt-sm flex w-full items-center gap-2 border-t border-transparent px-[5%] py-sm max-sm:flex-col sm:col-span-full'>
             <Text.Small className='grow max-sm:text-center'>
               {t.rich('copyright.label', {
-                a: (chunks) => (
-                  <Link
-                    className='text-content'
-                    href={t('copyright.href')}
-                  >
-                    {chunks}
-                  </Link>
-                )
+                a: (chunks) => <Link href={t('copyright.href')}>{chunks}</Link>
               })}
             </Text.Small>
 
@@ -164,14 +157,7 @@ const Footer = ({ className, ...props }) => {
 
             <Text.Small className='grow text-center sm:text-end'>
               {t.rich('message.label', {
-                a: (chunks) => (
-                  <Link
-                    className='text-content'
-                    href={t('message.href')}
-                  >
-                    {chunks}
-                  </Link>
-                )
+                a: (chunks) => <Link href={t('message.href')}>{chunks}</Link>
               })}
             </Text.Small>
 
