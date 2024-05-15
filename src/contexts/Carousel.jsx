@@ -1,20 +1,18 @@
 'use client';
 
-import { createContext, useRef, useState } from 'react';
+import { createContext, useState } from 'react';
 
 const CarouselContext = createContext({
-  activeIdx: 0,
-  setActiveIdx: () => {},
-  progress: { current: 0 },
+  state: { activeIdx: 0, progress: 0 },
+  setState: () => {}
 });
 
 const CarouselProvider = ({ value, ...props }) => {
-  const [activeIdx, setActiveIdx] = useState(0),
-    progress = useRef(0);
+  const [state, setState] = useState({ activeIdx: 0, progress: 0 });
 
   return (
     <CarouselContext.Provider
-      value={{ activeIdx, setActiveIdx, progress, ...value }}
+      value={{ state, setState, ...value }}
       {...props}
     />
   );
