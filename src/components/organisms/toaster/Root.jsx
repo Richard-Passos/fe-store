@@ -26,23 +26,23 @@ const ToasterOrganism = () => {
           [icon?.src]
         )}
 
-        <Toast.Header className='mr-6'>
-          {renderComp(<Toast.Title>{title}</Toast.Title>, [title])}
+        {renderComp(
+          <Toast.Header>
+            <Toast.Title>{title}</Toast.Title>
 
-          {renderComp(
-            <Toast.Description className='opacity-100'>
-              {description}
-            </Toast.Description>,
-            [!title, description]
-          )}
+            <Toast.Description>{description}</Toast.Description>
+          </Toast.Header>,
+          [title, description]
+        )}
 
-          {renderComp(<Toast.Description>{description}</Toast.Description>, [
-            title,
-            description
-          ])}
-        </Toast.Header>
+        {renderComp(
+          <Toast.Description className='text-opacity-100'>
+            {description}
+          </Toast.Description>,
+          [!title, description]
+        )}
 
-        <Slot className='mr-6'>{action}</Slot>
+        {renderComp(<Slot className='ml-xs'>{action}</Slot>, [action])}
 
         <Toast.Close
           aria-label={close?.label}
