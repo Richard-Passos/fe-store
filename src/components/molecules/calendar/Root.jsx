@@ -1,78 +1,97 @@
 'use client';
 
+import { Slot } from '@radix-ui/react-slot';
+import { useLocale } from 'next-intl';
 import { DayPicker } from 'react-day-picker';
 
-import { buttonVariants } from '@/components/atoms/button';
-import { cn } from '@/utils';
+import { Box } from '@/components/atoms';
+import { button } from '@/components/atoms/button';
+import { dateFnsLocales } from '@/navigation';
+import { cn, normKey } from '@/utils';
 
-const Calendar = ({ className, classNames = {}, ...props }) => {
-  const mergedClassNames = Object.entries(calendarClassNames).reduce(
-    (obj, [key, value]) => ({ ...obj, [key]: cn(value, classNames[key]) }),
+const Calendar = ({ className, classNames, components, ...props }) => {
+  const locale = useLocale();
+
+  const mergedClassNames = Object.entries(calendarClassNames ?? {}).reduce(
+    (obj, [key, value]) => ({ ...obj, [key]: cn(value, classNames?.[key]) }),
     {}
   );
 
   return (
-    <DayPicker
-      className={cn('w-fit rounded-md border bg-main p-4 text-sm', className)}
-      classNames={{ ...classNames, ...mergedClassNames }}
+    <Box
+      asChild
+      className={cn('text-sm', className)}
       fixedWeeks
+      locale={dateFnsLocales[normKey(locale)]}
       showOutsideDays
       {...props}
-    />
+    >
+      <DayPicker
+        classNames={{ ...classNames, ...mergedClassNames }}
+        components={Object.entries(components ?? {}).reduce(
+          (obj, [key, value]) => ({
+            ...obj,
+            [key]: (props) => <Slot {...props}>{value}</Slot>
+          }),
+          {}
+        )}
+      />
+    </Box>
   );
 };
 
 const calendarClassNames = {
-  caption: 'relative flex h-7 items-center justify-center',
-  caption_dropdowns: 'flex h-full gap-2 first:[&>div]:hidden',
-  caption_label: 'flex h-full items-center gap-1 rounded-sm px-2 font-medium',
+  caption: 'relative flex h-7 w-full gap-2 items-center justify-between',
+  caption_dropdowns: 'flex h-full gap-1 first:[&>div]:hidden',
+  caption_label: 'flex h-full items-center gap-1 rounded-sm font-medium',
 
   cell: 'p-0',
 
-  day: buttonVariants({
-    color: 'inverted',
-    type: 'ghost',
-    size: 'sm',
+  day: button({
+    color: 'main',
+    size: 'xs',
+    variant: 'ghost',
     className:
-      'aspect-square h-9 px-0 disabled:opacity-10 [&:not(button)]:pointer-events-none'
+      'aspect-square focus-visible:z-10 px-0 disabled:opacity-25 [&:not(button)]:pointer-events-none'
   }),
   day_hidden: 'invisible',
-  day_outside: 'opacity-25 hover:opacity-100 aria-selected:opacity-100',
-  day_range_end: 'rounded-l-none [&.rounded-r-none]:rounded-l-full',
-  day_range_middle: 'rounded-none',
-  day_range_start: 'rounded-r-none [&.rounded-l-none]:rounded-r-full',
-  day_selected: 'bg-primary text-primary-content hover:bg-primary/80',
+  day_outside: 'opacity-50 hover:opacity-100 aria-selected:opacity-100',
+  day_range_end: 'rounded-l-none bg [&.rounded-r-none]:rounded-l-sm',
+  day_range_middle: '!rounded-none',
+  day_range_start: 'rounded-r-none [&.rounded-l-none]:rounded-r-sm',
+  day_selected: 'bg-primary text-primary-content hover:bg-primary-active',
 
   dropdown:
-    'absolute inset-0 cursor-pointer bg-main opacity-0 [&:focus+div]:outline',
-  dropdown_month: 'relative [&>div]:border [&>span]:hidden',
-  dropdown_year: 'relative [&>div]:border [&>span]:hidden',
-  dropdown_icon: 'h-3.5 w-3.5',
+    'absolute inset-0 cursor-pointer opacity-0 [&:focus+div]:outline [&:hover+div]:bg-active',
+  dropdown_month:
+    'relative [&>div]:px-2 [&>div]:pointer-events-none [&>span]:hidden',
+  dropdown_year:
+    'relative [&>div]:px-2 [&>div]:pointer-events-none [&>span]:hidden',
+  dropdown_icon: 'size-2.5',
 
   head_cell:
-    'inline-flex w-9 items-center justify-center font-normal text-content/75',
+    'inline-flex w-8 items-center justify-center font-normal text-content/75 lowercase',
 
-  month: 'space-y-4',
-  months: 'flex w-min flex-wrap justify-center gap-4 min-[553px]:w-fit',
+  month: 'flex flex-col gap-4 items-center',
+  months: 'flex flex-wrap justify-center gap-4',
 
-  nav_button: buttonVariants({
-    color: 'inverted',
-    type: 'outline',
-    size: 'sm',
-    className: 'absolute top-0 aspect-square h-full rounded-sm px-0'
+  nav: 'flex gap-1 items-center justify-center',
+  nav_button: button({
+    color: 'main',
+    size: 'xs',
+    variant: 'ghost',
+    className: 'aspect-square px-0'
   }),
-  nav_button_next: 'right-0',
-  nav_button_previous: 'left-0',
-  nav_icon: 'h-4 w-4',
+  nav_icon: 'size-1/2',
 
   row: 'mt-2 flex',
 
-  weeknumber: buttonVariants({
-    color: 'inverted',
-    type: 'ghost',
-    size: 'sm',
+  weeknumber: button({
+    color: 'main',
+    size: 'xs',
+    variant: 'ghost',
     className:
-      'aspect-square h-9 px-0 font-normal text-content/75 disabled:opacity-10 [&:not(button)]:pointer-events-none'
+      'aspect-square px-0 font-normal text-opacity-75 disabled:opacity-25 [&:not(button)]:pointer-events-none'
   })
 };
 
