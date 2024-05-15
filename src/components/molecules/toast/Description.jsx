@@ -6,15 +6,15 @@ import { forwardRef } from 'react';
 import { TextDescription } from '@/components/atoms/text';
 import { cn } from '@/utils';
 
-const ToastDescription = ({ className, children, ...props }, ref) => {
+const ToastDescription = ({ className, asChild, children, ...props }, ref) => {
   return (
     <TextDescription
       asChild
-      className={cn('text-sm/relaxed', className)}
+      className={cn('text-sm', className)}
       ref={ref}
       {...props}
     >
-      <Description>{children}</Description>
+      <Description asChild={asChild}>{children}</Description>
     </TextDescription>
   );
 };

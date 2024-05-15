@@ -2,14 +2,11 @@ import ToastAction from './Action';
 import ToastClose from './Close';
 import ToastDescription from './Description';
 import ToastHeader from './Header';
-import ToastIcon from './Icon';
 import ToastProvider from './Provider';
 import ToastRoot from './Root';
 import ToastTimerbar from './Timerbar';
 import ToastTitle from './Title';
 import ToastViewport from './Viewport';
-
-export * from './variants';
 
 const Toast = {
   Root: ToastRoot,
@@ -17,7 +14,6 @@ const Toast = {
   Close: ToastClose,
   Description: ToastDescription,
   Header: ToastHeader,
-  Icon: ToastIcon,
   Provider: ToastProvider,
   Timerbar: ToastTimerbar,
   Title: ToastTitle,
@@ -31,7 +27,6 @@ export {
   ToastClose,
   ToastDescription,
   ToastHeader,
-  ToastIcon,
   ToastProvider,
   ToastTimerbar,
   ToastTitle,

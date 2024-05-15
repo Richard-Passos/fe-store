@@ -3,15 +3,17 @@
 import { Title } from '@radix-ui/react-toast';
 import { forwardRef } from 'react';
 
-import { cn } from '@/utils';
+import { TextSubtitle } from '@/components/atoms/text';
 
-const ToastTitle = ({ className, ...props }, ref) => {
+const ToastTitle = ({ className, asChild, children, ...props }, ref) => {
   return (
-    <Title
-      className={cn('font-semibold leading-none', className)}
+    <TextSubtitle
+      asChild
       ref={ref}
       {...props}
-    />
+    >
+      <Title asChild={asChild}>{children}</Title>
+    </TextSubtitle>
   );
 };
 
