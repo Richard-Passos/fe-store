@@ -13,7 +13,7 @@ const ContextMenuMenuLabel = (
   return (
     <Label
       asChild
-      className={cn('px-3 py-1.5 opacity-75', className)}
+      className={cn('px-3 py-1.5 text-content/75', className)}
       ref={ref}
       {...props}
     >
