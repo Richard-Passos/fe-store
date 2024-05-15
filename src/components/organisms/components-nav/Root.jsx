@@ -13,7 +13,6 @@ const ComponentsNavOrganism = ({ namespace, className, ...props }) => {
     <Box
       className={cn('group size-full grow px-0 shadow-lg', className)}
       color={t('color')}
-      variant={t('variant')}
       {...props}
     >
       {renderComp(
@@ -21,20 +20,17 @@ const ComponentsNavOrganism = ({ namespace, className, ...props }) => {
         [t('title')]
       )}
 
-      <div className='relative mt-sm grow basis-xl overflow-hidden'>
-        <nav className='absolute inset-0 grid grid-cols-2 gap-2 overflow-y-hidden px-xs [scrollbar-gutter:stable_both-edges] group-hover:overflow-y-auto md:grid-cols-3'>
+      <div className='relative mt-xs grow basis-xl overflow-hidden'>
+        <nav className='absolute inset-0 grid grid-cols-2 gap-2 overflow-y-hidden px-xs pt-1 [scrollbar-gutter:stable_both-edges] group-hover:overflow-y-auto md:grid-cols-3'>
           {translationKeys(global, 'components').map((key) => (
             <Action
-              className='group/action aspect-video size-full rounded-sm p-2 text-sm'
+              className='aspect-video size-full rounded-sm p-2 text-sm text-opacity-75 hover:text-opacity-100'
               color={t('action.color')}
               href={`/components/${normId(key)}`}
               key={key}
-              size={t('action.size')}
               variant={t('action.variant')}
             >
-              <span className='opacity-75 group-hover/action:opacity-100'>
-                {global(`components.${key}.title`)}
-              </span>
+              {global(`components.${key}.title`)}
             </Action>
           ))}
         </nav>
