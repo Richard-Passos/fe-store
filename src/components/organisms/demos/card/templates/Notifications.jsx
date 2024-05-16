@@ -27,8 +27,13 @@ const DemosCardOrganismTemplatesNotifications = ({ namespace, ...props }) => {
       <Card.Actions className='mt-6'>
         <Action
           className='w-full'
-          namespace={`${namespace}.action`}
-        />
+          color={t('action.color')}
+          href={t('action.href')}
+          size={t('action.size')}
+          variant={t('action.variant')}
+        >
+          {t('action.label')}
+        </Action>
       </Card.Actions>
     </Card.Root>
   );

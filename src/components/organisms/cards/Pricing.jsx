@@ -53,8 +53,13 @@ const CardsPricing = ({ namespace, className, ...props }) => {
 
       <Action
         className='mt-auto w-full'
-        namespace={`${namespace}.action`}
-      />
+        color={t('action.color')}
+        href={t('action.href')}
+        size={t('action.size')}
+        variant={t('action.variant')}
+      >
+        {t('action.label')}
+      </Action>
     </Card.Root>
   );
 };
