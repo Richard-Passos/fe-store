@@ -7,10 +7,16 @@ const controlVariants = {
 };
 
 const control = cnv({
-  base: 'group flex h-12 w-full cursor-pointer rounded-sm border border-transparent px-4 text-sm transition-colors placeholder:text-content/75 focus:outline disabled:cursor-not-allowed disabled:opacity-50',
+  base: 'group inline-flex h-12 w-full cursor-pointer rounded-sm border border-transparent px-4 text-sm transition-colors placeholder:text-content/75 focus:outline-main disabled:cursor-not-allowed disabled:opacity-50',
   variants: {
     variant: controlVariants
   },
+  compoundVariants: [
+    {
+      color: ['main', 'muted', 'inherit'],
+      className: 'focus:outline-content'
+    }
+  ],
   defaultVariants: {
     variant: 'outline'
   }
