@@ -11,7 +11,10 @@ const ToastTimerbar = ({ className, ...props }) => {
 
   return (
     <Timerbar.Root
-      className={cn('absolute bottom-0 left-0', className)}
+      className={cn(
+        'absolute bottom-0 left-0 [--root-main:--root-content]',
+        className
+      )}
       color='inherit'
       duration={duration}
       isPaused={state.isPaused}

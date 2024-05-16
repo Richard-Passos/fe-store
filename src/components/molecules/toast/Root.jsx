@@ -32,7 +32,7 @@ Toast.displayName = 'Toast';
 
 const ToastWithProvider = ({ duration, value, ...props }, ref) => {
   return (
-    <ToastProvider value={{ duration, ...value }}>
+    <ToastProvider value={{ duration: duration ?? 5000, ...value }}>
       <Toast
         ref={ref}
         {...props}
