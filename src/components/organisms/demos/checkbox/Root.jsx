@@ -29,7 +29,7 @@ const DemosCheckboxOrganism = ({ namespace, className, ...props }) => {
           >
             <Checkbox.Indicator>
               <Icon
-                color='current'
+                color={t('icon.color')}
                 src={t('icon.src')}
               />
             </Checkbox.Indicator>
