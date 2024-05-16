@@ -1,60 +1,72 @@
-'use client';
+import { useTranslations } from 'next-intl';
 
-import { CaretSortIcon } from '@radix-ui/react-icons';
-
-import { Button, Text } from '@/components/atoms';
+import animations from '@/components/animations';
+import { Box, Icon, Text } from '@/components/atoms';
+import { TextTitle } from '@/components/atoms/text';
 import { Collapsible } from '@/components/molecules';
-import { cn } from '@/utils';
+import { cn, normId, translationKeys } from '@/utils';
 
-import CollapsibleClient from './Client';
+const DemosCollapsibleOrganism = ({ namespace, className, ...props }) => {
+  const t = useTranslations(namespace);
 
-const CollapsibleDemo = (props) => {
+  const items = translationKeys(t, 'items');
+
+  const [fisrtItem, ...restItems] = items;
+
   return (
-    <CollapsibleClient {...props}>
-      <div className='mb-4 flex items-center justify-between gap-4 px-4'>
-        <Text.Title className='text-sm'>
-          @peduarte starred 3 repositories
-        </Text.Title>
-
-        <Collapsible.Trigger asChild>
-          <Button
-            className='aspect-square rounded-sm px-0'
-            variants={{ size: 'sm', variant: 'outline', color: 'inverted' }}
-          >
-            <CaretSortIcon
-              aria-hidden
-              className='h-5 w-5'
-            />
-
-            <span className='sr-only'>Toggle</span>
-          </Button>
-        </Collapsible.Trigger>
-      </div>
-
-      <Item>
-        <Text.Root>@radix-ui/primitives</Text.Root>
-      </Item>
-
-      <Collapsible.Content className='space-y-2'>
-        <Item>
-          <Text.Root>@radix-ui/colors</Text.Root>
-        </Item>
-
-        <Item>
-          <Text.Root>@stitches/react</Text.Root>
-        </Item>
-      </Collapsible.Content>
-    </CollapsibleClient>
-  );
-};
-
-const Item = ({ className, ...props }) => {
-  return (
-    <article
-      className={cn('rounded-sm border px-4 py-3 text-sm', className)}
+    <Collapsible.Root
+      className={cn('w-full max-w-sm', className)}
       {...props}
-    />
+    >
+      <Box
+        className='h-12 flex-row items-center justify-between gap-4 rounded-sm px-4 py-0'
+        variant='clean'
+      >
+        <TextTitle className='text-sm font-medium first-letter:normal-case'>
+          {t('title', {
+            user: normId(t('user')),
+            count: items.length
+          })}
+        </TextTitle>
+        &nbsp;
+        <Collapsible.Trigger
+          aria-label={t('trigger.label')}
+          className='group aspect-square px-0'
+          color={t('trigger.color')}
+          size={t('trigger.size')}
+          variant={t('trigger.variant')}
+        >
+          <Icon
+            className={cn(
+              'size-2/3 group-data-open:animate-[anim]',
+              animations[t('trigger.icon.animation')]
+            )}
+            color={t('trigger.icon.color')}
+            src={t('trigger.icon.src')}
+          />
+        </Collapsible.Trigger>
+      </Box>
+
+      <Box className='mt-2 h-12 justify-center rounded-sm py-0'>
+        <Text.Subtitle className='text-sm font-normal first-letter:normal-case'>
+          {t(`items.${fisrtItem}.title`)}
+        </Text.Subtitle>
+      </Box>
+
+      <Collapsible.Content className='mt-2 flex flex-col gap-2'>
+        {restItems.map((key) => (
+          <Box
+            className='h-12 justify-center rounded-sm py-0'
+            key={key}
+          >
+            <Text.Subtitle className='text-sm font-normal first-letter:normal-case'>
+              {t(`items.${key}.title`)}
+            </Text.Subtitle>
+          </Box>
+        ))}
+      </Collapsible.Content>
+    </Collapsible.Root>
   );
 };
 
-export default CollapsibleDemo;
+export default DemosCollapsibleOrganism;
