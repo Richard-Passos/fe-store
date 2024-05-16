@@ -3,7 +3,7 @@ import { Slot } from '@radix-ui/react-slot';
 import box from './variants';
 
 const Box = ({ asChild, color, variant, className, ...props }) => {
-  const Tag = asChild ? Slot : 'div';
+  const Tag = asChild ? Slot : 'section';
 
   return (
     <Tag
