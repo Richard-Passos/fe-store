@@ -3,19 +3,15 @@
 import { Root } from '@radix-ui/react-accordion';
 import { forwardRef } from 'react';
 
-import { Box } from '@/components/atoms';
 import { cn } from '@/utils';
 
-const Accordion = ({ className, mode, children, ...props }, ref) => {
+const Accordion = ({ className, ...props }, ref) => {
   return (
-    <Box
-      asChild
-      className={cn('w-full p-0', className)}
+    <Root
+      className={cn('w-full', className)}
       ref={ref}
       {...props}
-    >
-      <Root type={mode}>{children}</Root>
-    </Box>
+    />
   );
 };
 

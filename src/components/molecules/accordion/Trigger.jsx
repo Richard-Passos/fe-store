@@ -12,6 +12,7 @@ const AccordionTrigger = ({ className, ...props }, ref) => {
         'group flex h-12 w-full cursor-pointer items-center justify-between px-6 font-medium outline-none transition-colors hover:bg-active',
         className
       )}
+      data-accordion-trigger
       ref={ref}
       {...props}
     />

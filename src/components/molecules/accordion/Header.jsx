@@ -9,7 +9,7 @@ const AccordionHeader = ({ className, ...props }, ref) => {
   return (
     <Header
       className={cn(
-        'relative -mb-px w-full border-b border-transparent before:absolute before:-bottom-px before:left-1/2 before:h-px before:w-9/10 before:-translate-x-1/2 before:bg-border',
+        'relative -mb-px w-full border-b border-transparent before:absolute before:inset-x-[5%] before:-bottom-px before:h-px before:bg-border',
         className
       )}
       ref={ref}
