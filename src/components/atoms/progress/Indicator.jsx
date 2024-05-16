@@ -12,13 +12,13 @@ const ProgressIndicator = ({ className, style, ...props }, ref) => {
   return (
     <Indicator
       className={cn(
-        'size-full translate-x-[--x] bg-main transition-transform',
-        className,
+        'size-full translate-x-[--x] bg-main transition-transform duration-300',
+        className
       )}
       ref={ref}
       style={{
         '--x': `-${Math.max(100 - (value / max) * 100, min)}%`,
-        ...style,
+        ...style
       }}
       {...props}
     />
