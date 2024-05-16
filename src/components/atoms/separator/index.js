@@ -1,4 +1,5 @@
-import Separator, { separatorOrientations, separatorVariants } from './Root';
+import Separator from './Root';
+
+export * from './variants';
 
 export default Separator;
-export { separatorOrientations, separatorVariants };

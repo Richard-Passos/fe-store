@@ -3,12 +3,14 @@
 import { Root } from '@radix-ui/react-separator';
 import { forwardRef } from 'react';
 
-import { cn, cnv } from '@/utils';
+import { cn } from '@/utils';
+
+import separator from './variants';
 
 const Separator = ({ className, orientation, ...props }, ref) => {
   return (
     <Root
-      className={cn(separatorVariants({ orientation }), className)}
+      className={cn(separator({ orientation }), className)}
       decorative
       orientation={orientation}
       ref={ref}
@@ -17,20 +19,4 @@ const Separator = ({ className, orientation, ...props }, ref) => {
   );
 };
 
-const separatorOrientations = {
-  horizontal: 'h-px w-full',
-  vertical: 'h-full w-px',
-};
-
-const separatorVariants = cnv({
-  base: 'shrink-0 bg-border',
-  variants: {
-    orientation: separatorOrientations,
-  },
-  defaultVariants: {
-    orientation: 'horizontal',
-  },
-});
-
 export default forwardRef(Separator);
-export { separatorOrientations, separatorVariants };
