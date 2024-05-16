@@ -1,3 +1,3 @@
-import CheckboxDemo from './Root';
+import DemosCheckboxOrganism from './Root';
 
-export default CheckboxDemo;
+export default DemosCheckboxOrganism;
