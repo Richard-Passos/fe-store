@@ -1,14 +1,14 @@
 'use client';
 
-import { ThemeProvider } from 'next-themes'
+import { ThemeProvider } from 'next-themes';
 
 const GlobalThemeProvider = (props) => {
   return (
     <ThemeProvider
-        disableTransitionOnChange
-        themes={['light', 'dark']}
-        attribute='class'
-        {...props}
+      attribute='class'
+      disableTransitionOnChange
+      themes={['light', 'dark']}
+      {...props}
     />
   );
 };
