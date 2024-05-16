@@ -475,7 +475,7 @@
           "src": "/images/times.svg",
           "color": "current"
         },
-        "color": "main",
+        "color": "inherit",
         "variant": "ghost"
       }
     }
@@ -497,11 +497,11 @@
       }
     },
     "copyright": {
-      "label": "© 2024 <a>@Richard Passos</a>",
+      "label": "© 2024 <a>Richard Passos</a>",
       "href": "https://github.com/Richard-Passos"
     },
     "message": {
-      "label": "Made with ❤️ by <a>@Richard Passos</a>",
+      "label": "Made with ❤️ by <a>Richard Passos</a>",
       "href": "https://github.com/Richard-Passos"
     }
   },
@@ -797,7 +797,8 @@
               "title": "Push Notifications",
               "description": "Send notifications to device.",
               "icon": {
-                "src": "/images/bell-alert.svg"
+                "src": "/images/bell-alert.svg",
+                "color": "current"
               },
               "items": {
                 "0": {
