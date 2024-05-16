@@ -31,14 +31,11 @@ const DemosAccordionOrganism = ({ namespace, ...props }) => {
         variants={variants}
         {...props}
       >
-        <Accordion.Root
-          className='rounded-sm'
-          color={t('color')}
-          variant={t('variant')}
-          {...variants}
-        >
+        <Accordion.Root {...variants}>
           {translationKeys(t, 'items').map((key) => (
             <Accordion.Item
+              className='rounded-sm'
+              color={t('color')}
               key={key}
               value={`item-${key}`}
             >
