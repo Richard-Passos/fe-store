@@ -3,17 +3,17 @@
 import { Trigger } from '@radix-ui/react-select';
 import { forwardRef } from 'react';
 
-import controlVariants from '@/components/controlVariants';
+import control from '@/components/controlVariants';
 import { cn } from '@/utils';
 
-const SelectTrigger = ({ color, type, className, ...props }, ref) => {
+const SelectTrigger = ({ color, variant, className, ...props }, ref) => {
   return (
     <Trigger
-      className={controlVariants({
+      className={control({
         color,
-        type,
+        variant,
         className: cn(
-          'items-center justify-between data-open:outline [&>:not(svg)]:data-[placeholder]:text-content/75',
+          'items-center justify-between data-open:outline [&_:not(:has(svg),svg)]:data-[placeholder]:text-content/75',
           className
         )
       })}

@@ -3,12 +3,12 @@
 import { ScrollUpButton } from '@radix-ui/react-select';
 import { forwardRef } from 'react';
 
-import variants from './variants';
+import { selectScrollButton} from '../variants';
 
 const SelectScrollUpButton = ({ dir = 'up', className, ...props }, ref) => {
   return (
     <ScrollUpButton
-    className={variants({ dir, className })}
+    className={selectScrollButton({ dir, className })}
     ref={ref}
       {...props}
     />

@@ -3,12 +3,12 @@
 import { Content } from '@radix-ui/react-select';
 import { forwardRef } from 'react';
 
-import { selectContentVariants } from './variants.js';
+import { selectContent } from './variants';
 
 const SelectContent = ({ color, className, ...props }, ref) => {
   return (
     <Content
-      className={selectContentVariants({ color, className })}
+      className={selectContent({ color, className })}
       position='popper'
       ref={ref}
       sideOffset={8}
