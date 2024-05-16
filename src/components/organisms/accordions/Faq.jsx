@@ -12,13 +12,12 @@ const AccordionsFaq = ({ namespace, ...props }) => {
   return (
     <Accordion.Root
       collapsible={t.raw('collapsible')}
-      color={t('color')}
       type={t('type')}
-      variant={t('variant')}
       {...props}
     >
       {translationKeys(t, 'items').map((key) => (
         <Accordion.Item
+          color={t('color')}
           key={key}
           value={key}
         >
