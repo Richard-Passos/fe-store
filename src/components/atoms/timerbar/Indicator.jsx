@@ -1,26 +1,26 @@
-'use client'
-
-import { forwardRef, useContext } from 'react';
-
-import { cn } from '@/utils';
+'use client';
 
 import { Indicator } from '@radix-ui/react-progress';
+import { forwardRef, useContext } from 'react';
+
 import { TimerbarContext } from '@/contexts';
-import { TIMERBAR_UPDATE_DELAY } from './Root';
+import { TIMERBAR_UPDATE_DELAY } from '@/contexts/Timerbar';
+import { cn } from '@/utils';
 
 const TimerbarIndicator = ({ className, style, ...props }, ref) => {
-  const { value, duration } = useContext(TimerbarContext);
+  const { activeValue, duration } = useContext(TimerbarContext);
 
   return (
     <Indicator
-    className={cn(
-      'size-full translate-x-[--x] ease-linear bg-main transition-transform',
-      className,
-    )}      ref={ref}
-      style={{ 
-        '--x': `-${Math.max(100 - (value / duration) * 100, 0)}%`,
-        transitionDuration: TIMERBAR_UPDATE_DELAY, 
-        ...style 
+      className={cn(
+        'size-full translate-x-[--x] bg-main transition-transform ease-linear',
+        className
+      )}
+      ref={ref}
+      style={{
+        '--x': `-${Math.max(100 - (activeValue / duration) * 100, 0)}%`,
+        transitionDuration: TIMERBAR_UPDATE_DELAY,
+        ...style
       }}
       {...props}
     />

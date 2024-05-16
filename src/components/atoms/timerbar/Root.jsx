@@ -1,39 +1,41 @@
 'use client';
 
 import { Root } from '@radix-ui/react-progress';
-import { forwardRef, useState } from 'react';
+import { forwardRef, useContext } from 'react';
 
-import { TimerbarProvider } from '@/contexts';
-import { useTimer } from '@/hooks';
+import { TimerbarContext, TimerbarProvider } from '@/contexts';
 
-import variants from './variants';
+import timerbar from './variants';
 
-const TIMERBAR_UPDATE_DELAY = 100;
-
-const Timerbar = (
-  { isPaused, duration = 5000, color, size, className, ...props },
-  ref
-) => {
-  const [value, setValue] = useState(duration - TIMERBAR_UPDATE_DELAY);
-
-  const handleSetValue = () =>
-    setValue((value) => (value > 0 ? value - TIMERBAR_UPDATE_DELAY : 0));
-
-  useTimer(isPaused, handleSetValue, duration - TIMERBAR_UPDATE_DELAY);
+const Timerbar = forwardRef(({ color, size, className, ...props }, ref) => {
+  const { activeValue, duration } = useContext(TimerbarContext);
 
   return (
-    <TimerbarProvider value={{ value, duration }}>
-      <Root
-        className={variants({ color, size, className })}
-        max={duration}
-        min={0}
+    <Root
+      className={timerbar({ color, size, className })}
+      max={duration}
+      min={0}
+      ref={ref}
+      value={activeValue}
+      {...props}
+    />
+  );
+});
+Timerbar.displayName = 'Timerbar';
+
+const TimerbarWithProvider = ({ duration, isPaused, value, ...props }, ref) => {
+  return (
+    <TimerbarProvider
+      duration={duration ?? 5000}
+      isPaused={isPaused}
+      value={value}
+    >
+      <Timerbar
         ref={ref}
-        value={value}
         {...props}
       />
     </TimerbarProvider>
   );
 };
 
-export default forwardRef(Timerbar);
-export { TIMERBAR_UPDATE_DELAY };
+export default forwardRef(TimerbarWithProvider);
