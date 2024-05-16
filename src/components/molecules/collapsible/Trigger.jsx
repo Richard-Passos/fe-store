@@ -1,7 +1,26 @@
 'use client';
 
 import { Trigger } from '@radix-ui/react-collapsible';
+import { forwardRef } from 'react';
 
-const CollapsibleTrigger = Trigger;
+import { button } from '@/components/atoms/button';
 
-export default CollapsibleTrigger;
+const CollapsibleTrigger = (
+  { color, variant, size, className, ...props },
+  ref
+) => {
+  return (
+    <Trigger
+      className={button({
+        color,
+        variant,
+        size,
+        className
+      })}
+      ref={ref}
+      {...props}
+    />
+  );
+};
+
+export default forwardRef(CollapsibleTrigger);
