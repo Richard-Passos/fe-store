@@ -12,6 +12,7 @@ const AlertDialogDescription = (
 ) => {
   return (
     <TextDescription
+      asChild
       className={cn('text-sm', className)}
       ref={ref}
       {...props}
