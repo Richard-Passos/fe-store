@@ -1,8 +1,7 @@
 import { useTranslations } from 'next-intl';
 
-import { Button } from '@/components/atoms';
 import colors from '@/components/colors';
-import { Action, AlertDialog } from '@/components/molecules';
+import { AlertDialog } from '@/components/molecules';
 import { cn } from '@/utils';
 import variantsComb from '@/utils/variantsComb';
 
@@ -23,11 +22,12 @@ const DemosAlertDialogOrganism = ({ namespace, className, ...props }) => {
       {...props}
     >
       <AlertDialog.Root>
-        <AlertDialog.Trigger asChild>
-          <Action
-            namespace={`${namespace}.action`}
-            {...variants}
-          />
+        <AlertDialog.Trigger
+          color={variants.color}
+          size={t('trigger.size')}
+          variant={t('trigger.variant')}
+        >
+          {t('trigger.label')}
         </AlertDialog.Trigger>
 
         <AlertDialog.Portal>
@@ -43,15 +43,21 @@ const DemosAlertDialogOrganism = ({ namespace, className, ...props }) => {
             </AlertDialog.Header>
 
             <AlertDialog.Actions className='mt-6'>
-              <AlertDialog.Cancel asChild>
-                <Action namespace={`${namespace}.cancel`} />
+              <AlertDialog.Cancel
+                color='inherit'
+                size={t('cancel.size')}
+                variant={t('cancel.variant')}
+              >
+                {t('cancel.label')}
               </AlertDialog.Cancel>
 
-              <AlertDialog.Action asChild>
-                <Action
-                  className='bg-primary text-primary-content hover:bg-primary-active'
-                  namespace={`${namespace}.confirm`}
-                />
+              <AlertDialog.Action
+                className='[--root-active:--root-primary-a] [--root-content:--root-primary-c] [--root-main:--root-primary] [--root-muted:--root-primary-m]'
+                color='inherit'
+                size={t('confirm.size')}
+                variant={t('confirm.variant')}
+              >
+                {t('confirm.label')}
               </AlertDialog.Action>
             </AlertDialog.Actions>
           </AlertDialog.Content>
