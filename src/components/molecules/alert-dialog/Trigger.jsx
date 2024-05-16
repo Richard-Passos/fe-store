@@ -1,7 +1,26 @@
 'use client';
 
 import { Trigger } from '@radix-ui/react-alert-dialog';
+import { forwardRef } from 'react';
 
-const AlertDialogTrigger = Trigger;
+import { button } from '@/components/atoms/button';
 
-export default AlertDialogTrigger;
+const AlertDialogTrigger = (
+  { color, variant, size, className, ...props },
+  ref
+) => {
+  return (
+    <Trigger
+      className={button({
+        color,
+        variant,
+        size,
+        className
+      })}
+      ref={ref}
+      {...props}
+    />
+  );
+};
+
+export default forwardRef(AlertDialogTrigger);

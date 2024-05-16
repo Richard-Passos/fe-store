@@ -6,17 +6,18 @@ import { forwardRef } from 'react';
 import { TextDescription } from '@/components/atoms/text';
 import { cn } from '@/utils';
 
-const AlertDialogDescription = ({ className, ...props }, ref) => {
+const AlertDialogDescription = (
+  { className, asChild, children, ...props },
+  ref
+) => {
   return (
-    <Description
-      asChild
+    <TextDescription
+      className={cn('text-sm', className)}
       ref={ref}
+      {...props}
     >
-      <TextDescription
-        className={cn('text-sm', className)}
-        {...props}
-      />
-    </Description>
+      <Description asChild={asChild}>{children}</Description>
+    </TextDescription>
   );
 };
 
