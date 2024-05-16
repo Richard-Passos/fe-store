@@ -19,7 +19,9 @@ const HeaderMenuContent = ({ className, ...props }) => {
       <Sheet.Header className='p-6'>
         <Sheet.Title>{t('title')}</Sheet.Title>
 
-        <Sheet.Description>{t('description')}</Sheet.Description>
+        <Sheet.Description className='mt-1.5'>
+          {t('description')}
+        </Sheet.Description>
       </Sheet.Header>
 
       <Separator className='mx-6 w-auto grow' />
