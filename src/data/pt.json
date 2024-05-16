@@ -755,7 +755,16 @@
     },
     "checkbox": {
       "title": "Checkbox",
-      "description": "Checkbox"
+      "description": "Checkbox",
+      "block": {
+        "slug": "demo",
+        "template": "checkbox",
+        "label": "Aceitar termos e condições.",
+        "icon": {
+          "src": "/images/check.svg",
+          "color": "current"
+        }
+      }
     },
     "collapsible": {
       "title": "Collapsible",
