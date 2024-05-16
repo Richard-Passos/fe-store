@@ -25,11 +25,9 @@
             "title": "Amazing components",
             "action": {
               "color": "muted",
-              "variant": null,
-              "size": null
+              "variant": null
             },
-            "color": null,
-            "variant": null
+            "color": null
           }
         },
         "whyUs": {
@@ -499,11 +497,11 @@
       }
     },
     "copyright": {
-      "label": "© 2024 <a>Richard Passos</a>",
+      "label": "© 2024 <a>@Richard Passos</a>",
       "href": "https://github.com/Richard-Passos"
     },
     "message": {
-      "label": "Made with ❤️ by <a>Richard Passos</a>",
+      "label": "Made with ❤️ by <a>@Richard Passos</a>",
       "href": "https://github.com/Richard-Passos"
     }
   },
@@ -578,8 +576,7 @@
             "description": "Yes. It's animated by default, but you can disable it if you prefer."
           }
         },
-        "color": "muted",
-        "variant": null
+        "color": "muted"
       }
     },
     "alert": {
@@ -604,21 +601,18 @@
         "template": "alert-dialog",
         "title": "Are you absolutely sure?",
         "description": "This action cannot be undone. This will permanently delete your account and remove your data from our servers.",
-        "action": {
+        "trigger": {
           "label": "Show dialog",
-          "color": "inherit",
           "variant": "solid",
           "size": "md"
         },
         "cancel": {
           "label": "Cancel",
-          "color": "inherit",
           "variant": "solid",
           "size": "sm"
         },
         "confirm": {
           "label": "Continue",
-          "color": "inherit",
           "variant": "solid",
           "size": "sm"
         }
@@ -708,7 +702,7 @@
                 "type": "text",
                 "placeholder": "John Doe",
                 "defaultValue": "",
-                "description": "Your name and surname.",
+                "description": "",
                 "config": {
                   "string": [],
                   "min": [2, "Name must be at leat two letters."]
@@ -720,9 +714,11 @@
                 "control": "select",
                 "placeholder": "Select a framework...",
                 "defaultValue": "",
-                "description": "Select the framework that must be used on your project.",
+                "description": "",
                 "icon": {
-                  "src": "/images/angle-down.svg"
+                  "src": "/images/angle-down.svg",
+                  "color": "current",
+                  "animation": "rotate180"
                 },
                 "items": {
                   "nextJs": {
@@ -785,7 +781,7 @@
                 "color": "inherit",
                 "variant": "ghost"
               },
-              "color": "inverted"
+              "color": "muted"
             }
           },
           "notifications": {
