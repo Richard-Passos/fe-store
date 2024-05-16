@@ -25,7 +25,7 @@ const Layout = ({ children, params: { locale } }) => {
             <Header.State>
               <body
                 className={cn(
-                  'relative !mr-0 flex min-h-svh flex-col items-center overflow-x-clip bg-main font-app',
+                  'relative !mr-0 flex min-h-svh flex-col items-center overflow-x-clip bg-main font-app [&[data-scroll-locked]]:!mr-0',
                   font.variable
                 )}
                 id='start'
