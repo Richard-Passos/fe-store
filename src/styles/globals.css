@@ -102,7 +102,7 @@
     --danger-c: 354 60% 95%;
     --danger-m: 354 65% 54%;
 
-    --border: hsl(var(--root-content) / 0.1);
+    --border-opacity: 0.1;
   }
 
   .dark {
@@ -151,7 +151,7 @@
     --danger-c: 354 70% 95%;
     --danger-m: 354 75% 59%;
 
-    --border: hsl(var(--root-content) / 0.05);
+    --border-opacity: 0.05;
   }
 
   * {
