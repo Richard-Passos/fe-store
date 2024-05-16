@@ -1,3 +1,3 @@
-import CollapsibleDemo from './Root';
+import DemosCollapsibleOrganism from './Root';
 
-export default CollapsibleDemo;
+export default DemosCollapsibleOrganism;
