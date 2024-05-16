@@ -1,25 +1,14 @@
-import { useTranslations } from 'next-intl';
-
 import { Button, Link } from '@/components/atoms';
-import { capitalize } from '@/utils';
 
-const Action = ({ namespace, href, children, ...props }) => {
-  const translations = useTranslations(namespace);
-
-  const t = namespace ? translations : () => {};
-
-  href = href ?? t('href');
-  children = children ?? capitalize(t('label'));
+const Action = ({ href, children, ...props }) => {
+  const isLink = !!href;
 
   return (
     <Button
-      asChild={href}
-      color={t('color')}
-      size={t('size')}
-      type={t('type')}
+      asChild={isLink}
       {...props}
     >
-      {href ? (
+      {isLink ? (
         <Link
           className='before:hidden'
           href={href}
