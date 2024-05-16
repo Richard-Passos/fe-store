@@ -9,7 +9,7 @@ const Switch = ({ className, ...props }, ref) => {
   return (
     <Root
       className={cn(
-        'bg-content/75/25 peer inline-flex w-10 shrink-0 cursor-pointer rounded-full p-0.5 transition-colors disabled:cursor-not-allowed disabled:opacity-50 data-checked:bg-inverted',
+        'peer inline-flex w-10 shrink-0 cursor-pointer rounded-full border bg-content/10 p-0.5 transition-colors disabled:cursor-not-allowed disabled:opacity-50 data-checked:bg-primary',
         className
       )}
       ref={ref}
