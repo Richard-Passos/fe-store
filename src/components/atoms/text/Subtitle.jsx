@@ -8,7 +8,10 @@ const TextSubtitle = ({ asChild, className, ...props }, ref) => {
 
   return (
     <Tag
-      className={cn('text-2xl/none tracking-tight font-semibold first-letter:uppercase', className)}
+      className={cn(
+        'text-2xl font-semibold leading-none tracking-tight first-letter:uppercase',
+        className
+      )}
       ref={ref}
       {...props}
     />
