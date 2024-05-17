@@ -1,11 +1,13 @@
 import { useTranslations } from 'next-intl';
 
 import animations from '@/components/animations';
-import { Box, Icon, Text } from '@/components/atoms';
+import { Icon } from '@/components/atoms';
 import { Collapsible } from '@/components/molecules';
 import { cn, normId, translationKeys } from '@/utils';
 
 import Demos from '../Root';
+import Item from './Item';
+import Title from './Title';
 
 const DemosCollapsibleOrganism = ({ namespace, ...props }) => {
   const t = useTranslations(namespace);
@@ -17,11 +19,11 @@ const DemosCollapsibleOrganism = ({ namespace, ...props }) => {
   return (
     <Demos {...props}>
       <Collapsible.Root className='w-full max-w-sm'>
-        <DemosCollapsibleOrganismItem
+        <Item
           color={t('color')}
           variant={t('variant')}
         >
-          <DemosCollapsibleOrganismTitle
+          <Title
             asChild
             className='font-medium'
           >
@@ -31,7 +33,7 @@ const DemosCollapsibleOrganism = ({ namespace, ...props }) => {
                 count: items.length
               })}
             </h2>
-          </DemosCollapsibleOrganismTitle>
+          </Title>
           &nbsp;
           <Collapsible.Trigger
             aria-label={t('trigger.label')}
@@ -49,54 +51,29 @@ const DemosCollapsibleOrganism = ({ namespace, ...props }) => {
               src={t('trigger.icon.src')}
             />
           </Collapsible.Trigger>
-        </DemosCollapsibleOrganismItem>
+        </Item>
 
-        <DemosCollapsibleOrganismItem
+        <Item
           className='mt-2'
           color={t(`items.${fisrtItem}.color`)}
           variant={t(`items.${fisrtItem}.variant`)}
         >
-          <DemosCollapsibleOrganismTitle>
-            {t(`items.${fisrtItem}.title`)}
-          </DemosCollapsibleOrganismTitle>
-        </DemosCollapsibleOrganismItem>
+          <Title>{t(`items.${fisrtItem}.title`)}</Title>
+        </Item>
 
         <Collapsible.Content className='mt-2 space-y-2'>
           {restItems.map((key) => (
-            <DemosCollapsibleOrganismItem
+            <Item
               color={t(`items.${key}.color`)}
               key={key}
               variant={t(`items.${key}.variant`)}
             >
-              <DemosCollapsibleOrganismTitle>
-                {t(`items.${key}.title`)}
-              </DemosCollapsibleOrganismTitle>
-            </DemosCollapsibleOrganismItem>
+              <Title>{t(`items.${key}.title`)}</Title>
+            </Item>
           ))}
         </Collapsible.Content>
       </Collapsible.Root>
     </Demos>
-  );
-};
-
-const DemosCollapsibleOrganismItem = ({ className, ...props }) => {
-  return (
-    <Box
-      className={cn(
-        'h-12 flex-row items-center justify-between rounded-sm px-4 py-0',
-        className
-      )}
-      {...props}
-    />
-  );
-};
-
-const DemosCollapsibleOrganismTitle = ({ className, ...props }) => {
-  return (
-    <Text.Subtitle
-      className={cn('text-sm font-normal first-letter:normal-case', className)}
-      {...props}
-    />
   );
 };
 
