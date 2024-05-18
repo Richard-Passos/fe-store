@@ -46,7 +46,7 @@ const DemosAccordionOrganism = ({ namespace, ...props }) => {
                   <div className='size-4'>
                     <Icon
                       className={cn(
-                        'group-data-open:animate-[--anim]',
+                        'group-data-open:animate-active',
                         animations[normKey(t('icon.animation'))]
                       )}
                       color={t('icon.color')}
