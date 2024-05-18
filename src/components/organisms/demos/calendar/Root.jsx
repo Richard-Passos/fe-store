@@ -51,7 +51,7 @@ const DemosCalendarOrganism = ({ namespace, ...props }) => {
                 <div>
                   <Icon
                     className={cn(
-                      '[select:focus+div_&]:animate-[--anim]',
+                      '[select:focus+div_&]:animate-active',
                       animations[t('iconDropdown.animation')]
                     )}
                     color={t('iconDropdown.color')}
