@@ -1,8 +1,7 @@
 const animations = {
-  rotate135:
-    'animate-[enter_300ms_forwards] ease-backOut spin-in-[135deg] [--anim:exit_300ms_forwards] spin-out-[135deg]',
-  rotate180:
-    'animate-[enter_300ms_forwards] ease-backOut spin-in-[180deg] [--anim:exit_300ms_forwards] spin-out-[180deg]'
+  rotate135: 'animate-reset spin-out-0 !spin-in-[135deg]',
+  rotate180: 'animate-reset spin-out-0 !spin-in-180',
+  zoomNFade: 'animate-reset fade-out zoom-out-50 !fade-in-100 !zoom-in-100'
 };
 
 export default animations;
