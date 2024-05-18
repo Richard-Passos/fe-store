@@ -1,37 +1,28 @@
 import CommandEmpty from './Empty';
 import CommandGroup from './Group';
-import CommandIcon from './Icon';
+import CommandInput from './Input';
 import CommandItem from './Item';
 import CommandList from './List';
 import CommandLoading from './Loading';
 import CommandRoot from './Root';
-import CommandSeparator from './Separator';
-import CommandShortcut from './Shortcut';
-import CommandSearch from './search';
 
 const Command = {
   Root: CommandRoot,
   Empty: CommandEmpty,
   Group: CommandGroup,
-  Icon: CommandIcon,
+  Input: CommandInput,
   Item: CommandItem,
   List: CommandList,
-  Loading: CommandLoading,
-  Separator: CommandSeparator,
-  Shortcut: CommandShortcut,
-  Search: CommandSearch,
-}
+  Loading: CommandLoading
+};
 
 export default Command;
 export {
   CommandRoot,
   CommandEmpty,
   CommandGroup,
-  CommandIcon,
+  CommandInput,
   CommandItem,
   CommandList,
-  CommandLoading,
-  CommandSeparator,
-  CommandShortcut,
-  CommandSearch,
+  CommandLoading
 };

@@ -9,7 +9,7 @@ const CommandGroup = ({ className, ...props }, ref) => {
   return (
     <Group
       className={cn(
-        'p-1 [&_[cmdk-group-heading]]:px-4 [&_[cmdk-group-heading]]:py-1.5 [&_[cmdk-group-heading]]:text-xs [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-content/75',
+        '[&_[cmdk-group-heading]]:px-4 [&_[cmdk-group-heading]]:py-1.5 [&_[cmdk-group-heading]]:text-xs [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-content/75 [&_[cmdk-group-heading]]:first-letter:uppercase',
         className
       )}
       ref={ref}

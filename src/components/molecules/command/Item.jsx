@@ -3,15 +3,21 @@
 import { CommandItem as Item } from 'cmdk';
 import { forwardRef } from 'react';
 
+import { button } from '@/components/atoms/button';
 import { cn } from '@/utils';
 
 const CommandItem = ({ className, ...props }, ref) => {
   return (
     <Item
-      className={cn(
-        'flex cursor-default select-none items-center gap-2 rounded-sm px-4 py-1.5 text-sm aria-selected:bg-active data-disabled:opacity-50 first-letter:data-disabled:pointer-events-none',
-        className
-      )}
+      className={button({
+        color: 'inherit',
+        variant: 'solid',
+        size: 'sm',
+        className: cn(
+          'flex select-none justify-start border-none transition-none aria-selected:bg-active',
+          className
+        )
+      })}
       ref={ref}
       {...props}
     />

@@ -8,7 +8,10 @@ import { cn } from '@/utils';
 const CommandLoading = ({ className, ...props }, ref) => {
   return (
     <Loading
-      className={cn('py-6 text-center text-sm text-content/75', className)}
+      className={cn(
+        'flex flex-col items-center justify-center py-sm text-center',
+        className
+      )}
       ref={ref}
       {...props}
     />

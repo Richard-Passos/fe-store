@@ -9,8 +9,8 @@ const Command = ({ className, ...props }, ref) => {
   return (
     <CommandRoot
       className={cn(
-        'flex w-full flex-col rounded-md border bg-main',
-        className,
+        'w-full outline-none drop-shadow-md dark:drop-shadow-none',
+        className
       )}
       ref={ref}
       {...props}
