@@ -14,11 +14,13 @@ module.exports = {
       spacing: {
         px: '0.8px',
         '9/10': '90%',
+        '2xs': 'var(--spacing-2xs)',
         xs: 'var(--spacing-xs)',
-        sm: 'var(--spacing-sm)',
-        md: 'var(--spacing-md)',
-        lg: 'var(--spacing-lg)',
-        xl: 'var(--spacing-xl)'
+        s: 'var(--spacing-s)',
+        m: 'var(--spacing-m)',
+        l: 'var(--spacing-l)',
+        xl: 'var(--spacing-xl)',
+        '2xl': 'var(--spacing-2xl)'
       },
       colors: {
         main: getColor('--root-main'),
@@ -80,10 +82,14 @@ module.exports = {
         DEFAULT: 'hsl(var(--root-content)/var(--border-opacity))'
       },
       borderRadius: {
-        sm: 'var(--radius-sm)',
-        md: 'var(--radius-md)',
-        lg: 'var(--radius-lg)',
-        inherit: 'inherit'
+        inherit: 'inherit',
+        '2xs': 'var(--radius-2xs)',
+        xs: 'var(--radius-xs)',
+        s: 'var(--radius-s)',
+        m: 'var(--radius-m)',
+        l: 'var(--radius-l)',
+        xl: 'var(--radius-xl)',
+        '2xl': 'var(--radius-2xl)'
       },
       outlineColor: {
         DEFAULT: 'currentColor'
@@ -115,15 +121,36 @@ module.exports = {
           from: { height: 'var(--height, 0)' },
           to: { height: 0 }
         },
-        rotate135: {
-          from: { transform: 'rotate(0deg)' },
-          to: { transform: 'rotate(135deg)' }
+        reset: {
+          from: {
+            opacity: 'var(--tw-enter-opacity, 1)',
+            transform:
+              'translate3d(var(--tw-enter-translate-x, 0), var(--tw-enter-translate-y, 0), 0) scale3d(var(--tw-enter-scale, 1), var(--tw-enter-scale, 1), var(--tw-enter-scale, 1)) rotate(var(--tw-enter-rotate, 0))'
+          },
+          to: {
+            opacity: 'var(--tw-exit-opacity, 1)',
+            transform:
+              'translate3d(var(--tw-exit-translate-x, 0), var(--tw-exit-translate-y, 0), 0) scale3d(var(--tw-exit-scale, 1), var(--tw-exit-scale, 1), var(--tw-exit-scale, 1)) rotate(var(--tw-exit-rotate, 0))'
+          }
+        },
+        active: {
+          from: {
+            opacity: 'var(--tw-exit-opacity, 1)',
+            transform:
+              'translate3d(var(--tw-exit-translate-x, 0), var(--tw-exit-translate-y, 0), 0) scale3d(var(--tw-exit-scale, 1), var(--tw-exit-scale, 1), var(--tw-exit-scale, 1)) rotate(var(--tw-exit-rotate, 0))'
+          },
+          to: {
+            opacity: 'var(--tw-enter-opacity, 1)',
+            transform:
+              'translate3d(var(--tw-enter-translate-x, 0), var(--tw-enter-translate-y, 0), 0) scale3d(var(--tw-enter-scale, 1), var(--tw-enter-scale, 1), var(--tw-enter-scale, 1)) rotate(var(--tw-enter-rotate, 0))'
+          }
         }
       },
       animation: {
         'slide-down': 'slide-down 300ms cubic-bezier(0.87, 0, 0.13, 1)',
         'slide-up': 'slide-up 300ms cubic-bezier(0.87, 0, 0.13, 1)',
-        rotate135: 'rotate135 300ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards'
+        reset: 'reset 300ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards',
+        active: 'active 300ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards'
       },
       fontFamily: {
         app: 'var(--font-app)'
