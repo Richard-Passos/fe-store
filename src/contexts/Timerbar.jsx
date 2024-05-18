@@ -38,4 +38,4 @@ const TimerbarProvider = ({ duration, isPaused, value, ...props }) => {
 };
 
 export default TimerbarContext;
-export { TimerbarProvider };
+export { TimerbarProvider, TIMERBAR_UPDATE_DELAY };
