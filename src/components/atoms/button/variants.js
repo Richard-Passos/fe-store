@@ -6,14 +6,14 @@ const buttonVariants = {
     link: 'text-main hover:underline underline-offset-4'
   },
   buttonSizes = {
-    xs: 'h-8 px-2 text-xs',
-    sm: 'h-10 px-4 text-sm',
-    md: 'h-12 px-6',
-    lg: 'h-14 px-8 text-lg'
+    xs: 'h-8 px-2 gap-1 text-xs',
+    sm: 'h-10 px-4 gap-2 text-sm',
+    md: 'h-12 px-6 gap-3',
+    lg: 'h-14 px-8 gap-4 text-lg'
   };
 
 const button = cnv({
-  base: 'relative inline-flex items-center justify-center rounded-sm border border-transparent text-center font-medium transition-[color,background-color,border-color,text-decoration-color,fill,stroke,transform] focus-visible:outline-main active:scale-[.98] disabled:pointer-events-none disabled:opacity-50',
+  base: 'relative inline-flex items-center justify-center rounded-sm border border-transparent text-center font-medium transition-colors focus-visible:outline-main disabled:pointer-events-none disabled:opacity-50',
   variants: {
     variant: buttonVariants,
     size: buttonSizes
