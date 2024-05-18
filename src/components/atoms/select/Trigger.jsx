@@ -6,14 +6,15 @@ import { forwardRef } from 'react';
 import control from '@/components/controlVariants';
 import { cn } from '@/utils';
 
-const SelectTrigger = ({ color, variant, className, ...props }, ref) => {
+const SelectTrigger = ({ color, variant, size, className, ...props }, ref) => {
   return (
     <Trigger
       className={control({
         color,
         variant,
+        size,
         className: cn(
-          'items-center justify-between data-open:outline [&_:not(:has(svg),svg)]:data-[placeholder]:text-content/75',
+          'data-open:outline data-[placeholder]:font-normal data-[placeholder]:text-content/75 [&_svg]:text-content',
           className
         )
       })}
