@@ -1,4 +1,6 @@
 export { default as useChangeKeyWhenFalsy } from './useChangeKeyWhenFalsy';
+export { default as useCombobox } from './useCombobox';
+export { default as useComboboxItem } from './useComboboxItem';
 export { default as useEventListener } from './useEventListener';
 export { default as useFormField } from './useFormField';
 export { default as useInterval } from './useInterval';

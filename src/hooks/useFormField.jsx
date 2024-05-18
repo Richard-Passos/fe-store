@@ -18,14 +18,14 @@ const useFormField = () => {
     descriptionId: `${id}-description`,
     messageId: `${id}-message`,
     name,
-    ...fieldState,
+    ...fieldState
   };
 };
 
 const handleErrors = (obj) => {
   const errors = {
-    id: 'useFormField must be within FormField',
-    name: 'FormField must recieve a name as prop',
+    id: 'useFormField must be within FormField.',
+    name: 'FormField must recieve a name as prop.'
   };
 
   Object.entries(obj).forEach(([key, value]) => {
