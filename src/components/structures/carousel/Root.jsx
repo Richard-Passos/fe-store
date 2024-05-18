@@ -11,7 +11,7 @@ const CarouselStructure = ({ namespace, className, ...props }) => {
   return (
     <ul
       className={cn(
-        'flex flex-wrap items-center justify-center gap-sm',
+        'flex flex-wrap items-center justify-center gap-md',
         className
       )}
       {...props}

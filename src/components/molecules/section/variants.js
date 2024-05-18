@@ -1,8 +1,9 @@
 import { cnv } from '@/utils';
 
 const sectionVariants = {
-    default: 'py-lg min-h-screen 2xl:min-h-bounds',
-    solid: 'rounded-lg p-sm sm:p-md my-md border',
+    default:
+      'py-[--py] [--py:theme(spacing.2xl)] min-h-screen 2xl:min-h-bounds',
+    solid: 'rounded-lg p-lg sm:p-xl my-xl border',
     slot: 'h-fit'
   },
   sectionSizes = {

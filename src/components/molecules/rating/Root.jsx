@@ -4,7 +4,7 @@ import { cn } from '@/utils';
 const Rating = ({ className, value, icon, ...props }) => {
   return (
     <ul
-      className={cn('flex rounded-sm bg-primary/5 px-2 py-1', className)}
+      className={cn('flex rounded-sm bg-primary/5 px-xs py-1', className)}
       {...props}
     >
       {[...Array(Math.ceil(value ?? 0))].map((_, i) => (

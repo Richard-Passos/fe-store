@@ -22,7 +22,7 @@ const DemosCheckboxOrganism = ({ namespace, className, ...props }) => {
       {...props}
     >
       <Box className='rounded-sm p-0 shadow-none'>
-        <Label className='flex items-center gap-2 p-2.5'>
+        <Label className='flex items-center gap-xs p-2.5'>
           <Checkbox.Root
             className='mb-auto'
             {...variants}

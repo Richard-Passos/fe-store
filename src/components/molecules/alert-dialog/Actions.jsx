@@ -4,7 +4,7 @@ const AlertDialogActions = ({ className, ...props }) => {
   return (
     <section
       className={cn(
-        'flex gap-2 max-sm:flex-col-reverse sm:justify-end',
+        'flex gap-xs max-sm:flex-col-reverse sm:justify-end',
         className
       )}
       {...props}

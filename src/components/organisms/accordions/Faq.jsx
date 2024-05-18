@@ -2,7 +2,6 @@ import { useTranslations } from 'next-intl';
 
 import animations from '@/components/animations';
 import { Icon } from '@/components/atoms';
-import { TextDescription } from '@/components/atoms/text';
 import { Accordion } from '@/components/molecules';
 import { capitalize, cn, normKey, translationKeys } from '@/utils';
 
@@ -31,7 +30,7 @@ const AccordionsFaq = ({ namespace, ...props }) => {
               >
                 <Icon
                   className={cn(
-                    'group-data-open:animate-active size-1/2',
+                    'size-1/2 group-data-open:animate-active',
                     animations[normKey(t('icon.animation'))]
                   )}
                   color={t('icon.color')}
@@ -42,9 +41,7 @@ const AccordionsFaq = ({ namespace, ...props }) => {
           </Accordion.Header>
 
           <Accordion.Content>
-            <TextDescription>
-              {t.rich(`items.${key}.description`)}
-            </TextDescription>
+            {t.rich(`items.${key}.description`)}
           </Accordion.Content>
         </Accordion.Item>
       ))}

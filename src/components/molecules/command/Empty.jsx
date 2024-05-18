@@ -9,7 +9,7 @@ const CommandEmpty = ({ className, ...props }, ref) => {
   return (
     <Empty
       className={cn(
-        'flex flex-col items-center justify-center py-sm text-center',
+        'flex flex-col items-center justify-center py-md text-center',
         className
       )}
       ref={ref}

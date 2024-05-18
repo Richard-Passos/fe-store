@@ -41,7 +41,7 @@ const Calendar = ({ className, classNames, components, ...props }) => {
 };
 
 const calendarClassNames = {
-  caption: 'relative flex h-7 w-full gap-2 items-center justify-between',
+  caption: 'relative flex h-7 w-full gap-xs items-center justify-between',
   caption_dropdowns: 'flex h-full gap-1 first:[&>div]:hidden',
   caption_label: 'flex h-full items-center gap-1 rounded-sm font-medium',
 
@@ -56,17 +56,17 @@ const calendarClassNames = {
   }),
   day_hidden: 'invisible',
   day_outside: 'opacity-50 hover:opacity-100 aria-selected:opacity-100',
-  day_range_end: 'rounded-l-none bg [&.rounded-r-none]:rounded-l-sm',
+  day_range_end: 'rounded-lg-none bg [&.rounded-r-none]:rounded-lg-sm',
   day_range_middle: '!rounded-none',
-  day_range_start: 'rounded-r-none [&.rounded-l-none]:rounded-r-sm',
+  day_range_start: 'rounded-r-none [&.rounded-lg-none]:rounded-r-sm',
   day_selected: 'bg-primary text-primary-content hover:bg-primary-active',
 
   dropdown:
     'absolute inset-0 cursor-pointer opacity-0 [&:focus+div]:outline [&:hover+div]:bg-active',
   dropdown_month:
-    'relative [&>div]:px-2 [&>div]:pointer-events-none [&>span]:hidden',
+    'relative [&>div]:px-xs [&>div]:pointer-events-none [&>span]:hidden',
   dropdown_year:
-    'relative [&>div]:px-2 [&>div]:pointer-events-none [&>span]:hidden',
+    'relative [&>div]:px-xs [&>div]:pointer-events-none [&>span]:hidden',
   dropdown_icon: 'size-2.5',
 
   head_cell:
@@ -84,7 +84,7 @@ const calendarClassNames = {
   }),
   nav_icon: 'size-1/2',
 
-  row: 'mt-2 flex',
+  row: 'mt-xs flex',
 
   weeknumber: button({
     color: 'main',

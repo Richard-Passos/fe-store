@@ -33,7 +33,7 @@ const OneColumnTemplate = ({ namespace, ...props }) => {
 
       {Block && (
         <Block
-          className='mt-md first:mt-0'
+          className='mt-lg first:mt-0'
           namespace={`${namespace}.block`}
         />
       )}

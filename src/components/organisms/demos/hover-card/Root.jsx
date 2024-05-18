@@ -30,7 +30,7 @@ const HoverCardDemo = (props) => {
             The React Framework – created and maintained by @vercel.
           </Text.Root>
 
-          <div className='flex items-center gap-2 pt-2 text-content/75'>
+          <div className='flex items-center gap-xs pt-xs text-content/75'>
             <CalendarIcon className='h-4 w-4' />
 
             <Text.Root>Joined December 2021</Text.Root>

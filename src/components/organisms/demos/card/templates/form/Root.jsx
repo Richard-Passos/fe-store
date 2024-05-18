@@ -67,7 +67,7 @@ const DemosCardOrganismTemplatesForm = ({ namespace, ...props }) => {
           </Card.Description>
         </Card.Header>
 
-        <Card.Content className='mt-6 gap-4'>
+        <Card.Content className='mt-md gap-4'>
           {fieldKeys.map((key) => {
             const field = `fields.${key}`;
 
@@ -81,7 +81,7 @@ const DemosCardOrganismTemplatesForm = ({ namespace, ...props }) => {
                   key={key}
                   name={key}
                 >
-                  <Form.Label className='pb-2'>
+                  <Form.Label className='pb-xs'>
                     {t(`${field}.label`)}
                     {
                       (renderComp(
@@ -121,18 +121,18 @@ const DemosCardOrganismTemplatesForm = ({ namespace, ...props }) => {
                     />
                   )}
 
-                  <Form.Description className='mt-2'>
+                  <Form.Description className='mt-xs'>
                     {t(`${field}.description`)}
                   </Form.Description>
 
-                  <Form.Message className='mt-2' />
+                  <Form.Message className='mt-xs' />
                 </Form.Field>
               )
             );
           })}
         </Card.Content>
 
-        <Card.Actions className='mt-6'>
+        <Card.Actions className='mt-md'>
           <Form.Reset
             color={t('cancel.color')}
             size={t('cancel.size')}

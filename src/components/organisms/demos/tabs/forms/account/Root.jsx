@@ -12,7 +12,7 @@ const TabsDemoAccountForm = (props) => {
     >
       <Card.Root asChild>
         <ClientForm className='space-y-4'>
-          <Card.Header className='mb-6'>
+          <Card.Header className='mb-md'>
             <Card.Title>Account</Card.Title>
 
             <Card.Description>

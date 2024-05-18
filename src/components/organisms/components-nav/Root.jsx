@@ -16,15 +16,15 @@ const ComponentsNavOrganism = ({ namespace, className, ...props }) => {
       {...props}
     >
       {renderComp(
-        <TextTitle className='px-sm text-base'>{t('title')}</TextTitle>,
+        <TextTitle className='px-md text-base'>{t('title')}</TextTitle>,
         [t('title')]
       )}
 
-      <div className='relative mt-xs grow basis-xl overflow-hidden'>
-        <nav className='absolute inset-0 grid grid-cols-2 gap-2 overflow-y-hidden px-xs pt-1 [scrollbar-gutter:stable_both-edges] group-hover:overflow-y-auto md:grid-cols-3'>
+      <div className='relative mt-sm grow basis-xl overflow-hidden'>
+        <nav className='absolute inset-0 grid grid-cols-2 gap-xs overflow-y-hidden px-sm pt-1 [scrollbar-gutter:stable_both-edges] group-hover:overflow-y-auto md:grid-cols-3'>
           {translationKeys(global, 'components').map((key) => (
             <Action
-              className='aspect-video size-full rounded-sm p-2 text-sm text-opacity-75 hover:text-opacity-100'
+              className='aspect-video size-full rounded-sm p-xs text-sm text-opacity-75 hover:text-opacity-100'
               color={t('action.color')}
               href={`/components/${normId(key)}`}
               key={key}

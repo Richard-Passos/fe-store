@@ -7,7 +7,14 @@ import { Select } from '@/components/atoms';
 import { usePathname, useRouter } from '@/navigation';
 import { cn, normId } from '@/utils';
 
-const LocaleChanger = ({ items, className, color, variant, ...props }) => {
+const LocaleChanger = ({
+  items,
+  className,
+  color,
+  variant,
+  size,
+  ...props
+}) => {
   const activeLocale = useLocale(),
     router = useRouter(),
     pathname = usePathname(),
@@ -19,33 +26,38 @@ const LocaleChanger = ({ items, className, color, variant, ...props }) => {
         router.replace(`${pathname}?${searchParams}`, { locale })
       }
       value={activeLocale}
-      {...props}
     >
       <Select.Trigger
-        className={cn('size-8 justify-center px-0 lowercase', className)}
+        className={cn(
+          'aspect-square w-auto justify-center px-0 first-letter:normal-case',
+          className
+        )}
         color={color}
+        size={size}
         variant={variant}
+        {...props}
       >
         <Select.Value />
       </Select.Trigger>
 
       <Select.Content
-        align='center'
         color={color}
         variant={variant}
       >
         <Select.Viewport>
           {Object.entries(items ?? {}).map(([key, label]) => (
             <Select.Item.Root
-              className='size-8 justify-center px-0 lowercase '
+              className='aspect-square w-auto justify-center px-0 first-letter:normal-case'
+              color='inherit'
               key={key}
+              size={size}
               value={normId(key)}
             >
-              <Select.Item.Text>
+              <Select.Item.Label>
                 <span aria-hidden>{key}</span>
 
                 <span className='sr-only'>{label}</span>
-              </Select.Item.Text>
+              </Select.Item.Label>
             </Select.Item.Root>
           ))}
         </Select.Viewport>

@@ -6,7 +6,7 @@ import variantsComb from '@/utils/variantsComb';
 import Demos from '../Root';
 
 const ASPECT_RATIO = {
-  ratio: [16 / 9, 4 / 3, 3 / 2, 5 / 3, 5 / 4, 1 / 1]
+  ratio: [16 / 9, 4 / 3, 3 / 2, 5 / 3, 5 / 4, 1]
 };
 
 const DemosAspectRatioOrganism = ({ namespace, ...props }) => {

@@ -10,7 +10,7 @@ const FormDemo = (props) => {
       {...props}
     >
       <ClientForm className='space-y-4'>
-        <Card.Header className='mb-6'>
+        <Card.Header className='mb-md'>
           <Card.Title>Newsletter</Card.Title>
 
           <Card.Description>

@@ -17,7 +17,7 @@ const ToasterOrganism = () => {
         {...props}
       >
         {renderComp(
-          <div className='mb-auto mr-2 size-6'>
+          <div className='mb-auto mr-xs size-6'>
             <Icon
               aria-hidden
               {...icon}
@@ -42,7 +42,7 @@ const ToasterOrganism = () => {
           [!title, description]
         )}
 
-        {renderComp(<Slot className='ml-xs'>{action}</Slot>, [action])}
+        {renderComp(<Slot className='ml-sm'>{action}</Slot>, [action])}
 
         <Toast.Close
           aria-label={close?.label}

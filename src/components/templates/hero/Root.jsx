@@ -13,7 +13,7 @@ const HeroTemplate = ({ namespace, className, ...props }) => {
   return (
     <Section
       className={cn(
-        '-mt-[--header-h] grid min-h-svh gap-md pt-[calc(theme(spacing.lg)+var(--header-h))] sm:grid-cols-2',
+        '-mt-[--header-h] grid min-h-svh gap-lg pt-[calc(var(--py)+var(--header-h))] sm:grid-cols-2',
         className
       )}
       namespace={namespace}
@@ -25,12 +25,12 @@ const HeroTemplate = ({ namespace, className, ...props }) => {
           {t('title')}
         </Text.Title>
 
-        <Text.Description className='mt-xs max-w-xl leading-relaxed'>
+        <Text.Description className='mt-sm max-w-xl leading-relaxed'>
           {t.rich('description')}
         </Text.Description>
 
         <Action
-          className='mt-md w-fit'
+          className='mt-lg w-fit'
           color={t('action.color')}
           href={t('action.href')}
           size={t('action.size')}
@@ -39,7 +39,7 @@ const HeroTemplate = ({ namespace, className, ...props }) => {
           {t('action.label')}
         </Action>
 
-        <Text.Description className='mt-sm flex items-center text-xs'>
+        <Text.Description className='mt-md flex items-center text-xs'>
           <span className='size-4'>
             <Icon
               color={t('scroll.icon.color')}

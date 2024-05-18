@@ -37,12 +37,12 @@ const DemosAlertDialogOrganism = ({ namespace, className, ...props }) => {
             <AlertDialog.Header>
               <AlertDialog.Title>{t('title')}</AlertDialog.Title>
 
-              <AlertDialog.Description className='mt-2'>
+              <AlertDialog.Description className='mt-xs'>
                 {t('description')}
               </AlertDialog.Description>
             </AlertDialog.Header>
 
-            <AlertDialog.Actions className='mt-6'>
+            <AlertDialog.Actions className='mt-md'>
               <AlertDialog.Cancel
                 color='inherit'
                 size={t('cancel.size')}

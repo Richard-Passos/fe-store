@@ -18,7 +18,7 @@ const CardBold = ({ namespace, className, ...props }) => {
         {t('title')}
       </Card.Title>
 
-      <Card.Description className='mt-2 text-center'>
+      <Card.Description className='mt-xs text-center'>
         {t('description')}
       </Card.Description>
     </Card.Root>

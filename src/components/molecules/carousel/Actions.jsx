@@ -4,7 +4,7 @@ const CarouselActions = ({ className, ...props }) => {
   return (
     <section
       className={cn(
-        'splide__arrows flex flex-wrap items-center justify-center gap-2',
+        'splide__arrows flex flex-wrap items-center justify-center gap-xs',
         className
       )}
       {...props}

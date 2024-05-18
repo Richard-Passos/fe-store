@@ -9,7 +9,7 @@ const Cta = ({ namespace, className, ...props }) => {
 
   return (
     <Box
-      className={cn('my-lg items-center rounded-lg sm:p-md', className)}
+      className={cn('my-2xl items-center rounded-lg p-lg sm:p-xl', className)}
       color={t('color')}
       variant={t('variant')}
       {...props}
@@ -21,7 +21,7 @@ const Cta = ({ namespace, className, ...props }) => {
       </Text.Description>
 
       <Action
-        className='mt-sm'
+        className='mt-md'
         color={t('action.color')}
         href={t('action.href')}
         size={t('action.size')}

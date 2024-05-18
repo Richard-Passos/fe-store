@@ -10,7 +10,7 @@ const sheetContentDirections = {
 };
 
 const sheetContent = cnv({
-  base: 'fixed z-50 flex max-h-svh flex-col overflow-y-auto bg-main p-6 shadow-lg ease-in-out data-closed:duration-300 data-closed:animate-out data-open:duration-500 data-open:animate-in',
+  base: 'fixed z-50 flex max-h-svh flex-col overflow-y-auto bg-main p-md shadow-lg ease-in-out data-closed:duration-300 data-closed:animate-out data-open:duration-500 data-open:animate-in',
   variants: {
     dir: sheetContentDirections
   },

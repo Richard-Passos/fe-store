@@ -4,9 +4,9 @@ const rich = {
   b: (chunks) => <b className='font-medium text-content'>{chunks}</b>,
   i: (chunks) => <i className='font-medium italic text-content'>{chunks}</i>,
   a: (chunks) => <Link>{chunks}</Link>,
-  ul: (chunks) => <ul className='my-xs list-disc space-y-1 pl-sm'>{chunks}</ul>,
+  ul: (chunks) => <ul className='my-sm list-disc space-y-1 pl-md'>{chunks}</ul>,
   ol: (chunks) => (
-    <ol className='my-xs list-decimal space-y-1 pl-sm'>{chunks}</ol>
+    <ol className='my-sm list-decimal space-y-1 pl-md'>{chunks}</ol>
   ),
   li: (chunks) => <li>{chunks}</li>
 };

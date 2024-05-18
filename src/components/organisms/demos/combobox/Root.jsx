@@ -1,105 +1,171 @@
-'use client';
+import { useTranslations } from 'next-intl';
 
-import {
-  CheckIcon,
-  ChevronDownIcon,
-  MagnifyingGlassIcon
-} from '@radix-ui/react-icons';
-import { useState } from 'react';
+import animations from '@/components/animations';
+import { Icon } from '@/components/atoms';
+import { TextDescription } from '@/components/atoms/text';
+import { Popover } from '@/components/molecules';
+import Combobox from '@/components/organisms/combobox';
+import { cn, normId, translationKeys } from '@/utils';
 
-import { Command, Popover } from '@/components/molecules';
-import { cn } from '@/utils';
+import Demos from '../Root';
+import ComboboxPopover from './Popover';
 
-const DATA = [
-  {
-    value: 'next.js',
-    label: 'Next.js'
-  },
-  {
-    value: 'sveltekit',
-    label: 'SvelteKit'
-  },
-  {
-    value: 'nuxt.js',
-    label: 'Nuxt.js'
-  },
-  {
-    value: 'remix',
-    label: 'Remix'
-  },
-  {
-    value: 'astro',
-    label: 'Astro'
-  }
-];
-
-const ComboboxDemo = () => {
-  const [isOpen, setIsOpen] = useState(false),
-    [currValue, setCurrValue] = useState('');
+const DemosComboboxOrganism = ({ namespace, ...props }) => {
+  const t = useTranslations(namespace);
 
   return (
-    <Popover.Root
-      onOpenChange={setIsOpen}
-      open={isOpen}
-    >
-      <Popover.Trigger asChild>
-        <button
-          aria-expanded={isOpen}
-          className='group flex h-10 w-52 items-center justify-between rounded-sm border bg-main px-4 text-sm transition-colors focus:outline disabled:pointer-events-none disabled:opacity-50'
-          role='combobox'
-        >
-          <span className={cn(currValue === '' && 'text-content/75')}>
-            {currValue
-              ? DATA.find(({ value }) => value === currValue)?.label
-              : 'Select a framework...'}
-          </span>
+    <>
+      <Demos {...props}>
+        <Combobox.Root>
+          <Combobox.Trigger
+            className='pointer-events-none'
+            color={t('trigger.color')}
+            size={t('trigger.size')}
+            variant={t('trigger.variant')}
+          >
+            <Combobox.Value placeholder={t('trigger.placeholder')} />
+          </Combobox.Trigger>
 
-          <ChevronDownIcon className='h-3.5 w-3.5 transition-transform group-data-open:rotate-180' />
-        </button>
-      </Popover.Trigger>
+          <Combobox.Content
+            className='mt-xs'
+            color={t('color')}
+            variant={t('variant')}
+          >
+            <div className='relative flex items-center'>
+              <Combobox.Input
+                className='pl-11'
+                color={t('control.color')}
+                placeholder={t('control.placeholder')}
+                variant={t('control.variant')}
+              />
 
-      <Popover.Portal>
-        <Popover.Content className='w-52 border-none p-0'>
-          <Command.Root>
-            <Command.Search.Root>
-              <Command.Search.Icon>
-                <MagnifyingGlassIcon />
-              </Command.Search.Icon>
+              <Icon
+                aria-hidden
+                className='pointer-events-none absolute left-4 z-10 size-4'
+                color={t('control.icon.color')}
+                src={t('control.icon.src')}
+              />
+            </div>
 
-              <Command.Search.Input placeholder='Search framework...' />
-            </Command.Search.Root>
+            <Combobox.List>
+              <Combobox.Empty>
+                <TextDescription>{t('empty')}</TextDescription>
+              </Combobox.Empty>
 
-            <Command.List>
-              <Command.Empty>No framework found.</Command.Empty>
-
-              <Command.Group>
-                {DATA.map(({ value, label }) => (
-                  <Command.Item
-                    className='relative pl-8'
-                    key={value}
-                    onSelect={(val) => {
-                      setCurrValue(val === currValue ? '' : val);
-                      setIsOpen(false);
-                    }}
-                    value={value}
+              {translationKeys(t, 'items').map((key) => (
+                <Combobox.Item.Root
+                  key={key}
+                  value={normId(key)}
+                >
+                  <Combobox.Item.Indicator
+                    className={cn(
+                      'data-checked:animate-active',
+                      animations[t(`items.${key}.icon.animation`)]
+                    )}
                   >
-                    <CheckIcon
-                      className={cn(
-                        'absolute left-[.5625rem] h-3.5 w-3.5 opacity-0',
-                        currValue === value && 'opacity-100'
-                      )}
+                    <Icon
+                      color={t(`items.${key}.icon.color`)}
+                      src={t(`items.${key}.icon.src`)}
+                    />
+                  </Combobox.Item.Indicator>
+
+                  <Combobox.Item.Label>
+                    {t(`items.${key}.label`)}
+                  </Combobox.Item.Label>
+                </Combobox.Item.Root>
+              ))}
+            </Combobox.List>
+          </Combobox.Content>
+        </Combobox.Root>
+      </Demos>
+
+      <Demos {...props}>
+        <Combobox.Root>
+          <ComboboxPopover>
+            <Popover.Trigger asChild>
+              <Combobox.Trigger
+                className='group'
+                color={t('trigger.color')}
+                size={t('trigger.size')}
+                variant={t('trigger.variant')}
+              >
+                <Combobox.Value placeholder={t('trigger.placeholder')} />
+
+                <div className='size-4 shrink-0'>
+                  <Icon
+                    className={cn(
+                      'group-data-open:animate-active',
+                      animations[t('trigger.icon.animation')]
+                    )}
+                    color={t('trigger.icon.color')}
+                    src={t('trigger.icon.src')}
+                  />
+                </div>
+              </Combobox.Trigger>
+            </Popover.Trigger>
+
+            <Popover.Portal>
+              <Popover.Content
+                asChild
+                className='w-screen max-w-md p-0'
+              >
+                <Combobox.Content
+                  className='mt-xs'
+                  color={t('color')}
+                  variant={t('variant')}
+                >
+                  <div className='relative flex items-center'>
+                    <Combobox.Input
+                      className='pl-11'
+                      color={t('control.color')}
+                      placeholder={t('control.placeholder')}
+                      variant={t('control.variant')}
                     />
 
-                    {label}
-                  </Command.Item>
-                ))}
-              </Command.Group>
-            </Command.List>
-          </Command.Root>
-        </Popover.Content>
-      </Popover.Portal>
-    </Popover.Root>
+                    <Icon
+                      aria-hidden
+                      className='pointer-events-none absolute left-4 z-10 size-4'
+                      color={t('control.icon.color')}
+                      src={t('control.icon.src')}
+                    />
+                  </div>
+
+                  <Combobox.List>
+                    <Combobox.Empty>
+                      <TextDescription>{t('empty')}</TextDescription>
+                    </Combobox.Empty>
+
+                    {translationKeys(t, 'items').map((key) => (
+                      <Combobox.Item.Root
+                        key={key}
+                        value={normId(key)}
+                      >
+                        <Combobox.Item.Indicator
+                          className={cn(
+                            'data-checked:animate-active',
+                            animations[t(`items.${key}.icon.animation`)]
+                          )}
+                        >
+                          <Icon
+                            color={t(`items.${key}.icon.color`)}
+                            src={t(`items.${key}.icon.src`)}
+                          />
+                        </Combobox.Item.Indicator>
+
+                        <Combobox.Item.Label>
+                          {t(`items.${key}.label`)}
+                        </Combobox.Item.Label>
+                      </Combobox.Item.Root>
+                    ))}
+                  </Combobox.List>
+                </Combobox.Content>
+              </Popover.Content>
+            </Popover.Portal>
+          </ComboboxPopover>
+        </Combobox.Root>
+      </Demos>
+    </>
   );
 };
 
-export default ComboboxDemo;
+export default DemosComboboxOrganism;

@@ -6,6 +6,7 @@ const controlVariants = {
       'bg-main text-content border-border hover:border-[hsl(var(--root-content)/calc(var(--border-opacity)*2))]'
   },
   controlSizes = {
+    xs: 'h-8',
     sm: 'h-10',
     md: 'h-12',
     lg: 'h-14'

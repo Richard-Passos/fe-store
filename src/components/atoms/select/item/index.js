@@ -1,12 +1,12 @@
 import SelectItemIndicator from './Indicator';
+import SelectItemLabel from './Label';
 import SelectItemRoot from './Root';
-import SelectItemText from './Text';
 
 const SelectItem = {
   Root: SelectItemRoot,
   Indicator: SelectItemIndicator,
-  Text: SelectItemText,
-}
+  Label: SelectItemLabel
+};
 
 export default SelectItem;
-export { SelectItemRoot, SelectItemIndicator, SelectItemText };
+export { SelectItemRoot, SelectItemIndicator, SelectItemLabel };

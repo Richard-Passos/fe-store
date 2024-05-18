@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 import { Icon, Select } from '@/components/atoms';
 import { cn, normId } from '@/utils';
 
-const ThemeChanger = ({ items, className, color, variant, ...props }) => {
+const ThemeChanger = ({ items, className, color, variant, size, ...props }) => {
   const [isMounted, setIsMounted] = useState(false),
     { theme, setTheme } = useTheme();
 
@@ -20,29 +20,31 @@ const ThemeChanger = ({ items, className, color, variant, ...props }) => {
     <Select.Root
       onValueChange={setTheme}
       value={theme}
-      {...props}
     >
       <Select.Trigger
-        className={cn('size-8 justify-center px-0 lowercase', className)}
+        className={cn('aspect-square w-auto justify-center px-0', className)}
         color={color}
+        size={size}
         variant={variant}
+        {...props}
       >
         <Select.Value />
       </Select.Trigger>
 
       <Select.Content
-        align='center'
         color={color}
         variant={variant}
       >
         <Select.Viewport>
           {Object.entries(items ?? {}).map(([key, data]) => (
             <Select.Item.Root
-              className='size-8 justify-center px-0'
+              className='aspect-square w-auto justify-center px-0'
+              color='inherit'
               key={key}
+              size={size}
               value={normId(key)}
             >
-              <Select.Item.Text>
+              <Select.Item.Label>
                 <Icon
                   aria-hidden
                   className='mx-auto size-1/2'
@@ -50,7 +52,7 @@ const ThemeChanger = ({ items, className, color, variant, ...props }) => {
                 />
 
                 <span className='sr-only'>{data?.label}</span>
-              </Select.Item.Text>
+              </Select.Item.Label>
             </Select.Item.Root>
           ))}
         </Select.Viewport>

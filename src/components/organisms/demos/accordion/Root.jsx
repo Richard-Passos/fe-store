@@ -2,7 +2,6 @@ import { useTranslations } from 'next-intl';
 
 import animations from '@/components/animations';
 import { Icon } from '@/components/atoms';
-import { TextDescription } from '@/components/atoms/text';
 import { Accordion } from '@/components/molecules';
 import { capitalize, cn, normKey, translationKeys } from '@/utils';
 import variantsComb from '@/utils/variantsComb';
@@ -57,9 +56,7 @@ const DemosAccordionOrganism = ({ namespace, ...props }) => {
               </Accordion.Header>
 
               <Accordion.Content>
-                <TextDescription>
-                  {t(`items.${key}.description`)}
-                </TextDescription>
+                {t(`items.${key}.description`)}
               </Accordion.Content>
             </Accordion.Item>
           ))}

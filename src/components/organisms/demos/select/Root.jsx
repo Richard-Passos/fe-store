@@ -104,7 +104,7 @@ const SelectComp = ({ variants, ...props }) => {
 const SelectItem = ({ children, ...props }) => {
   return (
     <Select.Item.Root {...props}>
-      <Select.Item.Text>{children}</Select.Item.Text>
+      <Select.Item.Label>{children}</Select.Item.Label>
 
       <Select.Item.Indicator>
         <CheckIcon />

@@ -1,7 +1,7 @@
 import {
   CheckIcon,
   ChevronRightIcon,
-  DotFilledIcon,
+  DotFilledIcon
 } from '@radix-ui/react-icons';
 
 import { ContextMenu } from '@/components/molecules';
@@ -9,7 +9,7 @@ import { ContextMenu } from '@/components/molecules';
 const ContextMenuDemo = (props) => {
   return (
     <ContextMenu.Root {...props}>
-      <ContextMenu.Trigger className='flex aspect-video w-full max-w-xs items-center justify-center rounded-md border border-dashed text-sm'>
+      <ContextMenu.Trigger className='rounded-md flex aspect-video w-full max-w-xs items-center justify-center border border-dashed text-sm'>
         Right click here
       </ContextMenu.Trigger>
 

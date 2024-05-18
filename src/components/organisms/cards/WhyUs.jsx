@@ -23,9 +23,9 @@ const CardsWhyUs = ({ namespace, ...props }) => {
         />
       </div>
 
-      <Card.Title className='mt-6'>{t('title')}</Card.Title>
+      <Card.Title className='mt-md'>{t('title')}</Card.Title>
 
-      <Card.Description className='mt-2'>{t('description')}</Card.Description>
+      <Card.Description className='mt-xs'>{t('description')}</Card.Description>
     </Card.Root>
   );
 };

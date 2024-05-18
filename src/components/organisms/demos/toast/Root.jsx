@@ -18,7 +18,7 @@ const ToastDemo = ({ className, ...props }) => {
       <div
         className={cn(
           'flex flex-col items-center gap-12 px-3 sm:px-12',
-          className,
+          className
         )}
         {...props}
       >
@@ -29,7 +29,7 @@ const ToastDemo = ({ className, ...props }) => {
 
         <Separator />
 
-        <div className='space-y-6'>
+        <div className='space-y-md'>
           <Subtitle>Declarative way</Subtitle>
 
           <DeclarativeToasts />
@@ -37,7 +37,7 @@ const ToastDemo = ({ className, ...props }) => {
 
         <Separator />
 
-        <div className='space-y-6'>
+        <div className='space-y-md'>
           <Subtitle>Imperative way</Subtitle>
 
           <ImperativeToasts />

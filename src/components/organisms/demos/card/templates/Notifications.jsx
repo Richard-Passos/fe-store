@@ -20,11 +20,11 @@ const DemosCardOrganismTemplatesNotifications = ({ namespace, ...props }) => {
       </Card.Header>
 
       <DemosCardOrganismTemplatesNotificationsBlock
-        className='mt-6'
+        className='mt-md'
         namespace={`${namespace}.block`}
       />
 
-      <Card.Actions className='mt-6'>
+      <Card.Actions className='mt-md'>
         <Action
           className='w-full'
           color={t('action.color')}

@@ -19,7 +19,7 @@ const DatePickerDemo = () => {
       <Popover.Trigger asChild>
         <button
           className={cn(
-            'flex h-10 w-[277.6px] items-center gap-2 rounded-sm border bg-main px-4 text-sm'
+            'flex h-10 w-[277.6px] items-center gap-xs rounded-sm border bg-main px-4 text-sm'
           )}
         >
           <CalendarIcon className='h-4 w-4' />

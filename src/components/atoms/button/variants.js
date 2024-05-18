@@ -6,9 +6,9 @@ const buttonVariants = {
     link: 'text-main hover:underline underline-offset-4'
   },
   buttonSizes = {
-    xs: 'h-8 px-2 gap-1 text-xs',
-    sm: 'h-10 px-4 gap-2 text-sm',
-    md: 'h-12 px-6 gap-3',
+    xs: 'h-8 px-xs gap-1 text-xs',
+    sm: 'h-10 px-4 gap-xs text-sm',
+    md: 'h-12 px-md gap-3',
     lg: 'h-14 px-8 gap-4 text-lg'
   };
 

@@ -14,7 +14,7 @@ const ComboboxItemIndicator = (
   return (
     <div
       className={cn('size-4', className)}
-      data-indicator
+      data-item-indicator
       data-state={isChecked ? 'checked' : 'unchecked'}
       ref={ref}
       {...props}

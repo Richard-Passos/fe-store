@@ -22,7 +22,7 @@ const RadioGroupDemo = (props) => {
 const RadioGroupItem = ({ className, value, children, ...props }) => {
   return (
     <div
-      className={cn('flex items-center gap-2', className)}
+      className={cn('flex items-center gap-xs', className)}
       {...props}
     >
       <RadioGroup.Item

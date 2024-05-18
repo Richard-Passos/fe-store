@@ -1,20 +1,20 @@
-import { ListComponent } from '@/components/molecules';
 import { Image } from '@/components/atoms';
+import { ListComponent } from '@/components/molecules';
 
 const IMAGE = [
   {
     src: '/images/demo.png',
     alt: 'A road winding through a forest near the ocean.',
     height: 902,
-    width: 600,
+    width: 600
   },
   {
     src: '/images/demo.png',
     alt: '',
     height: 902,
-    width: 600,
+    width: 600
   },
-  { src: '' },
+  { src: '' }
 ];
 
 const ImageDemo = (props) => {

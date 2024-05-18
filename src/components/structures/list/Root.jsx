@@ -11,7 +11,7 @@ const ListStructure = ({ namespace, className, ...props }) => {
   return (
     <ul
       className={cn(
-        'flex h-fit w-full flex-wrap justify-center gap-sm',
+        'flex h-fit w-full flex-wrap justify-center gap-md',
         className
       )}
       {...props}

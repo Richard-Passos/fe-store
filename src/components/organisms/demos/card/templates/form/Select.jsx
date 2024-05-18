@@ -57,7 +57,7 @@ const DemosCardOrganismTemplatesFormSelect = ({
                 <Icon {...data.icon} />
               </Select.Item.Indicator>
 
-              <Select.Item.Text>{data.label}</Select.Item.Text>
+              <Select.Item.Label>{data.label}</Select.Item.Label>
             </Select.Item.Root>
           ))}
         </Select.Viewport>

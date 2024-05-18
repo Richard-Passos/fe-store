@@ -25,16 +25,16 @@ const CardsPricing = ({ namespace, className, ...props }) => {
         [t('badge.label')]
       )}
 
-      <Card.Title className='mt-2'>{t('title')}</Card.Title>
+      <Card.Title className='mt-xs'>{t('title')}</Card.Title>
 
       <Card.Description className='mt-4 font-medium'>
         {t('price')}
       </Card.Description>
 
-      <ul className='my-sm flex w-9/10 flex-col justify-start gap-1.5'>
+      <ul className='my-md flex w-9/10 flex-col justify-start gap-1.5'>
         {translationKeys(t, 'items').map((key) => (
           <li
-            className='flex gap-2'
+            className='flex gap-xs'
             key={key}
           >
             <div className='size-4'>

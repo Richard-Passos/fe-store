@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { Suspense } from 'react';
 
-import { Icon, Link, Text } from '@/components/atoms';
+import { Icon, Link, Separator, Text } from '@/components/atoms';
 import { TextDescription } from '@/components/atoms/text';
 import {
   Action,
@@ -29,15 +29,15 @@ const Footer = ({ className, ...props }) => {
     >
       <footer>
         <div className='mx-auto flex w-full max-w-bounds flex-col items-center'>
-          <div className='relative mb-xs grid w-9/10 gap-sm sm:grid-cols-3'>
+          <div className='relative mb-sm grid w-9/10 gap-md sm:grid-cols-3'>
             <section>
               <Logo />
 
-              <TextDescription className='mt-2 text-sm/normal sm:max-w-72'>
+              <TextDescription className='mt-xs text-sm/normal sm:max-w-72'>
                 {t('description')}
               </TextDescription>
 
-              <nav className='mt-6 flex w-fit gap-1 rounded-sm bg-active p-1'>
+              <nav className='mt-md flex w-fit gap-1 rounded-sm bg-active p-1'>
                 {translationKeys(global, 'personalInfo.socials').map((key) => (
                   <Action
                     className='aspect-square px-0'
@@ -71,17 +71,17 @@ const Footer = ({ className, ...props }) => {
               >
                 <Card.Root
                   asChild
-                  className='max-w-none basis-0 transition-colors hover:bg-active focus-visible:outline-main sm:max-lg:p-xs'
+                  className='max-w-none basis-0 transition-colors hover:bg-active focus-visible:outline-main sm:max-lg:p-sm'
                   color='primary'
                 >
                   <Link
-                    className='grid items-center gap-2 before:hidden sm:grid-cols-3 sm:items-end'
+                    className='grid items-center gap-xs before:hidden sm:grid-cols-3 sm:items-end'
                     href={`mailto://${global('personalInfo.email')}`}
                   >
                     <div className='sm:col-span-2'>
                       <Card.Title>{t('contact.label')}</Card.Title>
 
-                      <Card.Description className='mt-2 break-all text-xs first-letter:normal-case'>
+                      <Card.Description className='mt-xs break-all text-xs first-letter:normal-case'>
                         {global('personalInfo.email')}
                       </Card.Description>
                     </div>
@@ -102,7 +102,7 @@ const Footer = ({ className, ...props }) => {
               >
                 <Card.Root
                   asChild
-                  className='grid max-w-none basis-0 grid-cols-3 items-end gap-2 transition-colors hover:bg-active focus-visible:outline-main max-lg:p-xs max-sm:hidden'
+                  className='grid max-w-none basis-0 grid-cols-3 items-end gap-xs transition-colors hover:bg-active focus-visible:outline-main max-lg:p-sm max-sm:hidden'
                   color='accent'
                 >
                   <Link
@@ -125,31 +125,31 @@ const Footer = ({ className, ...props }) => {
             </BentoGrid.Root>
           </div>
 
-          <section className='relative mt-sm flex w-full items-center gap-2 border-t border-transparent px-[5%] py-sm max-sm:flex-col sm:col-span-full'>
+          <section className='relative mt-md flex w-full items-center gap-xs border-t border-transparent px-[5%] py-md max-sm:flex-col sm:col-span-full'>
             <Text.Small className='grow max-sm:text-center'>
               {t.rich('copyright.label', {
                 a: (chunks) => <Link href={t('copyright.href')}>{chunks}</Link>
               })}
             </Text.Small>
 
-            <div className='flex grow items-center justify-center gap-1 max-sm:hidden'>
+            <div className='mt flex grow justify-center gap-1 max-sm:hidden'>
               <ThemeChanger
                 color='inherit'
                 items={global.raw('themes')}
+                size='xs'
                 variant='solid'
               />
 
-              <span
-                className='text-border'
-                role='separator'
-              >
-                /
-              </span>
+              <Separator
+                className='h-auto rotate-12'
+                orientation='vertical'
+              />
 
               <Suspense>
                 <LocaleChanger
                   color='inherit'
                   items={global.raw('locales')}
+                  size='xs'
                   variant='solid'
                 />
               </Suspense>

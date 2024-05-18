@@ -4,7 +4,7 @@ const Skeleton = ({ className, ...props }) => {
   return (
     <div
       aria-label='Skeleton'
-      className={cn('bg-content/75/25 animate-pulse rounded-md', className)}
+      className={cn('animate-pulse rounded-md bg-active', className)}
       {...props}
     />
   );

@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { Suspense } from 'react';
 
-import { Box } from '@/components/atoms';
+import { Box, Separator } from '@/components/atoms';
 import { LocaleChanger, Logo, ThemeChanger } from '@/components/molecules';
 import { cn } from '@/utils';
 
@@ -26,24 +26,24 @@ const Header = ({ className, ...props }) => {
 
           <Logo className='justify-self-end sm:justify-self-center' />
 
-          <div className='flex items-center gap-1 justify-self-end max-sm:hidden'>
+          <div className='flex gap-1 justify-self-end max-sm:hidden'>
             <ThemeChanger
               color='inherit'
               items={t.raw('themes')}
+              size='xs'
               variant='solid'
             />
 
-            <span
-              className='text-border'
-              role='separator'
-            >
-              /
-            </span>
+            <Separator
+              className='h-auto rotate-12'
+              orientation='vertical'
+            />
 
             <Suspense>
               <LocaleChanger
                 color='inherit'
                 items={t.raw('locales')}
+                size='xs'
                 variant='solid'
               />
             </Suspense>

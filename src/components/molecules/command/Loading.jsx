@@ -9,7 +9,7 @@ const CommandLoading = ({ className, ...props }, ref) => {
   return (
     <Loading
       className={cn(
-        'flex flex-col items-center justify-center py-sm text-center',
+        'flex flex-col items-center justify-center py-md text-center',
         className
       )}
       ref={ref}

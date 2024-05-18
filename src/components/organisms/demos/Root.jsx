@@ -14,7 +14,7 @@ const Demos = ({ variants, className, children, ...props }) => {
       {...props}
     >
       {renderComp(
-        <ul className='mb-sm flex flex-wrap justify-center gap-2.5'>
+        <ul className='mb-md flex flex-wrap justify-center gap-2.5'>
           {variants.map(([key, value]) =>
             renderComp(
               <Badge

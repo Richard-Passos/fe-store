@@ -3,7 +3,8 @@ import { extendTailwindMerge } from 'tailwind-merge';
 const cn = extendTailwindMerge({
   extend: {
     theme: {
-      spacing: ['9/10', '2xs', 'xs', 's', 'm', 'l', 'xl', '2xl']
+      spacing: ['9/10', '2xs', 'xs', 'sm', 'md', 'lg', 'xl', '2xl'],
+      borderRadius: ['inherit', '2xs']
     }
   }
 });

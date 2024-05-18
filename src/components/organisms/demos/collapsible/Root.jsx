@@ -54,14 +54,14 @@ const DemosCollapsibleOrganism = ({ namespace, ...props }) => {
         </Item>
 
         <Item
-          className='mt-2'
+          className='mt-xs'
           color={t(`items.${fisrtItem}.color`)}
           variant={t(`items.${fisrtItem}.variant`)}
         >
           <Title>{t(`items.${fisrtItem}.title`)}</Title>
         </Item>
 
-        <Collapsible.Content className='mt-2 space-y-2'>
+        <Collapsible.Content className='mt-xs space-y-2'>
           {restItems.map((key) => (
             <Item
               color={t(`items.${key}.color`)}

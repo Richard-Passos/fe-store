@@ -12,7 +12,7 @@ const ThreeColumnsTemplate = ({ namespace, className, ...props }) => {
 
   return (
     <Section
-      className={cn('grid items-start gap-md sm:grid-cols-3', className)}
+      className={cn('grid items-start gap-lg sm:grid-cols-3', className)}
       color={t('color')}
       size={t('size')}
       variant={t('variant')}

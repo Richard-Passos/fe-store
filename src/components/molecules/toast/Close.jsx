@@ -13,7 +13,7 @@ const ToastClose = ({ color, variant, className, ...props }, ref) => {
         color: color ?? 'inherit',
         variant: variant ?? 'ghost',
         className: cn(
-          'absolute right-4 top-4 size-6 px-0 transition-[color,background-color,border-color,text-decoration-color,fill,stroke,opacity] group-focus-within:opacity-100 group-hover:opacity-100 sm:opacity-0 [*:has(+&)]:mr-6',
+          'absolute right-4 top-4 size-6 px-0 transition-[color,background-color,border-color,text-decoration-color,fill,stroke,opacity] group-focus-within:opacity-100 group-hover:opacity-100 sm:opacity-0 [*:has(+&)]:mr-md',
           className
         )
       })}

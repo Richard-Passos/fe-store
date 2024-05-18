@@ -51,21 +51,21 @@
     --root-danger-c: var(--danger-c);
     --root-danger-m: var(--danger-m);
 
-    --spacing-2xs: calc(var(--spacing-xs) / 1.618);
-    --spacing-xs: calc(var(--spacing-s) / 1.618);
-    --spacing-s: calc(var(--spacing-m) / 1.618);
-    --spacing-m: 1rem;
-    --spacing-l: calc(var(--spacing-m) * 1.618);
-    --spacing-xl: calc(var(--spacing-l) * 1.618);
-    --spacing-2xl: calc(var(--spacing-xl) * 1.618);
+    --radius-xs: calc(var(--radius-xs) / 1.618);
+    --radius-xs: calc(var(--radius-sm) / 1.618);
+    --radius-sm: calc(var(--radius-md) / 1.618);
+    --radius-md: calc(var(--radius-lg) / 1.618);
+    --radius-lg: 1rem;
+    --radius-xl: calc(var(--radius-lg) * 1.618);
+    --radius-2xl: calc(var(--radius-xl) * 1.618);
 
-    --radius-2xs: var(--radius-2xs);
-    --radius-xs: var(--radius-xs);
-    --radius-s: var(--radius-s);
-    --radius-m: var(--radius-m);
-    --radius-l: var(--radius-l);
-    --radius-xl: var(--radius-xl);
-    --radius-2xl: var(--radius-2xl);
+    --spacing-2xs: 4px;
+    --spacing-xs: 8px;
+    --spacing-sm: calc(var(--spacing-md) / 1.618);
+    --spacing-md: clamp(1rem, 0.5rem + 2.6667vmax, 1.5rem);
+    --spacing-lg: calc(var(--spacing-md) * 1.618);
+    --spacing-xl: calc(var(--spacing-lg) * 1.618);
+    --spacing-2xl: calc(var(--spacing-xl) * 1.618);
   }
 
   .light {

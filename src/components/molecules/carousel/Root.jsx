@@ -16,7 +16,7 @@ const Carousel = forwardRef(({ options, className, ...props }, ref) => {
     focus: 'center',
     trimSpace: false,
     pagination: false,
-    gap: 'var(--spacing-sm)',
+    gap: 'var(--spacing-s)',
     ...options
   };
 

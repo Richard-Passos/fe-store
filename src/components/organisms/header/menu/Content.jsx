@@ -16,7 +16,7 @@ const HeaderMenuContent = ({ className, ...props }) => {
       dir={t('direction')}
       {...props}
     >
-      <Sheet.Header className='p-6'>
+      <Sheet.Header className='p-md'>
         <Sheet.Title>{t('title')}</Sheet.Title>
 
         <Sheet.Description className='mt-1.5'>
@@ -24,10 +24,10 @@ const HeaderMenuContent = ({ className, ...props }) => {
         </Sheet.Description>
       </Sheet.Header>
 
-      <Separator className='mx-6 w-auto grow' />
+      <Separator className='mx-md w-auto grow' />
 
       <Nav
-        className='mt-6 px-6'
+        className='mt-md px-md'
         data={global.raw('components')}
       />
 

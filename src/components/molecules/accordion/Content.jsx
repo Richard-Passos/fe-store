@@ -3,20 +3,24 @@
 import { Content } from '@radix-ui/react-accordion';
 import { forwardRef } from 'react';
 
+import { TextDescription } from '@/components/atoms/text';
 import { cn } from '@/utils';
 
 const AccordionContent = ({ className, children, ...props }, ref) => {
   return (
-    <Content
+    <TextDescription
+      asChild
       className={cn(
-        'overflow-hidden text-sm [--height:--radix-accordion-content-height] data-closed:animate-slide-up data-open:animate-slide-down [&>div]:p-sm',
+        'overflow-hidden text-sm [--height:--radix-accordion-content-height] data-closed:animate-slide-up data-open:animate-slide-down [&>div]:p-md',
         className
       )}
       ref={ref}
       {...props}
     >
-      <div>{children}</div>
-    </Content>
+      <Content>
+        <div>{children}</div>
+      </Content>
+    </TextDescription>
   );
 };
 

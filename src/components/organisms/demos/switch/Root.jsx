@@ -4,7 +4,7 @@ import { cn } from '@/utils';
 const SwitchDemo = ({ className, ...props }) => {
   return (
     <div
-      className={cn('flex items-center gap-2', className)}
+      className={cn('flex items-center gap-xs', className)}
       {...props}
     >
       <Label htmlFor='airplane-mode'>Airplane mode</Label>

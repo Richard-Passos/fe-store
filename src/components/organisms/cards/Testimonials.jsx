@@ -31,7 +31,7 @@ const CardsTestimonials = ({ namespace, className, ...props }) => {
           value={t.raw('rating.value')}
         />
       </div>
-      <Card.Description className='mb-6 mt-4 font-medium text-content'>
+      <Card.Description className='mb-md mt-4 font-medium text-content'>
         {t('description')}
       </Card.Description>
       <section className='mt-auto flex items-center gap-4'>

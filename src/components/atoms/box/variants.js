@@ -6,7 +6,7 @@ const boxVariants = {
 };
 
 const box = cnv({
-  base: 'relative flex flex-col rounded-md border border-transparent p-sm',
+  base: 'relative flex flex-col rounded-md border border-transparent p-[--p] [--p:theme(spacing.md)]',
   variants: {
     variant: boxVariants
   },

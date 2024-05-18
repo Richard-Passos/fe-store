@@ -8,6 +8,7 @@ import { selectContent } from './variants';
 const SelectContent = ({ color, className, ...props }, ref) => {
   return (
     <Content
+      align='center'
       className={selectContent({ color, className })}
       position='popper'
       ref={ref}

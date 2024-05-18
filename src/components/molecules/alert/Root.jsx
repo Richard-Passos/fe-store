@@ -6,7 +6,7 @@ import { cn } from '@/utils';
 const Alert = ({ className, ...props }, ref) => {
   return (
     <Box
-      className={cn('max-w-md flex-row gap-xs', className)}
+      className={cn('max-w-md flex-row gap-sm', className)}
       ref={ref}
       role='alert'
       {...props}
