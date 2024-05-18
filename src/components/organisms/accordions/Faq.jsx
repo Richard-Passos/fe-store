@@ -31,7 +31,7 @@ const AccordionsFaq = ({ namespace, ...props }) => {
               >
                 <Icon
                   className={cn(
-                    'size-1/2 group-data-open:animate-[--anim]',
+                    'group-data-open:animate-active size-1/2',
                     animations[normKey(t('icon.animation'))]
                   )}
                   color={t('icon.color')}
