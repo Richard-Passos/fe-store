@@ -36,7 +36,7 @@ const DemosCardOrganismTemplatesFormSelect = ({
           <div className='size-3.5'>
             <Icon
               className={cn(
-                'group-data-open:animate-[--anim]',
+                'group-data-open:animate-active',
                 animations[icon.animation]
               )}
               color={icon.color}
