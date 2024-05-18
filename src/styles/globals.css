@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    @apply [--max-h:calc(var(--max-w)/1.778)] [--max-w:theme(screens.2xl)] [--spacing-lg:calc(var(--spacing-md)*2)] [--spacing-md:clamp(theme(spacing.7),14vmin,theme(spacing.14))] [--spacing-sm:calc(var(--spacing-md)/2)] [--spacing-xl:calc(var(--spacing-md)*4)] [--spacing-xs:calc(var(--spacing-md)/4)];
+    @apply [--max-h:calc(var(--max-w)/1.778)] [--max-w:theme(screens.2xl)];
 
     --root-main: var(--main);
     --root-active: var(--active);
@@ -51,9 +51,21 @@
     --root-danger-c: var(--danger-c);
     --root-danger-m: var(--danger-m);
 
-    --radius-sm: 0.5rem;
-    --radius-md: 0.75rem;
-    --radius-lg: 1rem;
+    --spacing-2xs: calc(var(--spacing-xs) / 1.618);
+    --spacing-xs: calc(var(--spacing-s) / 1.618);
+    --spacing-s: calc(var(--spacing-m) / 1.618);
+    --spacing-m: 1rem;
+    --spacing-l: calc(var(--spacing-m) * 1.618);
+    --spacing-xl: calc(var(--spacing-l) * 1.618);
+    --spacing-2xl: calc(var(--spacing-xl) * 1.618);
+
+    --radius-2xs: var(--radius-2xs);
+    --radius-xs: var(--radius-xs);
+    --radius-s: var(--radius-s);
+    --radius-m: var(--radius-m);
+    --radius-l: var(--radius-l);
+    --radius-xl: var(--radius-xl);
+    --radius-2xl: var(--radius-2xl);
   }
 
   .light {
@@ -152,6 +164,22 @@
     --danger-m: 354 75% 59%;
 
     --border-opacity: 0.05;
+  }
+
+  .animate-reset {
+    --tw-exit-opacity: initial;
+    --tw-exit-scale: initial;
+    --tw-exit-rotate: initial;
+    --tw-exit-translate-x: initial;
+    --tw-exit-translate-y: initial;
+  }
+
+  .animate-active {
+    --tw-enter-opacity: initial;
+    --tw-enter-scale: initial;
+    --tw-enter-rotate: initial;
+    --tw-enter-translate-x: initial;
+    --tw-enter-translate-y: initial;
   }
 
   * {
