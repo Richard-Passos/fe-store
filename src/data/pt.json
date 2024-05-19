@@ -14,7 +14,10 @@
             "size": null
           },
           "scroll": {
-            "icon": "/images/caret-down.svg",
+            "icon": {
+              "src": "/images/caret-down.svg",
+              "color": "current"
+            },
             "description": "Role para ver mais"
           },
           "block": {
@@ -41,21 +44,30 @@
               "0": {
                 "title": "Economiza tempo",
                 "description": "Donec ullamcorper augue sed mi lobortis semper. Proin interdum.",
-                "icon": "/images/stopwatch.svg",
+                "icon": {
+                  "src": "/images/stopwatch.svg",
+                  "color": "primary"
+                },
                 "color": "muted",
                 "variant": null
               },
               "1": {
                 "title": "É realista",
                 "description": "Nulla facilisi. Nullam odio ex, viverra quis.",
-                "icon": "/images/globe.svg",
+                "icon": {
+                  "src": "/images/globe.svg",
+                  "color": "primary"
+                },
                 "color": "muted",
                 "variant": null
               },
               "2": {
                 "title": "É simples",
                 "description": "Nunc feugiat magna a posuere tempus. Nullam accumsan ex.",
-                "icon": "/images/check-badge.svg",
+                "icon": {
+                  "src": "/images/check-badge.svg",
+                  "color": "primary"
+                },
                 "color": "muted",
                 "variant": null
               }
@@ -115,7 +127,7 @@
         },
         "howWorks": {
           "template": "three-columns",
-          "title": "Como Funciona?",
+          "title": "Como funciona?",
           "description": "Obtenha seu próximo projeto incrível em alguns passos.",
           "block": {
             "slug": "list",
@@ -169,15 +181,24 @@
                 "items": {
                   "0": {
                     "description": "ipsum dolor sit",
-                    "icon": "/images/check-circle.svg"
+                    "icon": {
+                      "src": "/images/check-circle.svg",
+                      "color": "primary"
+                    }
                   },
                   "1": {
                     "description": "odio aenean sed adipiscing diam",
-                    "icon": "/images/check-circle.svg"
+                    "icon": {
+                      "src": "/images/check-circle.svg",
+                      "color": "primary"
+                    }
                   },
                   "2": {
                     "description": "ipsum consequat nisl vel",
-                    "icon": "/images/check-circle.svg"
+                    "icon": {
+                      "src": "/images/check-circle.svg",
+                      "color": "primary"
+                    }
                   }
                 },
                 "color": null,
@@ -200,19 +221,31 @@
                 "items": {
                   "0": {
                     "description": "ipsum dolor sit",
-                    "icon": "/images/check-circle.svg"
+                    "icon": {
+                      "src": "/images/check-circle.svg",
+                      "color": "primary"
+                    }
                   },
                   "1": {
                     "description": "odio aenean sed adipiscing diam",
-                    "icon": "/images/check-circle.svg"
+                    "icon": {
+                      "src": "/images/check-circle.svg",
+                      "color": "primary"
+                    }
                   },
                   "2": {
                     "description": "ipsum consequat nisl vel",
-                    "icon": "/images/check-circle.svg"
+                    "icon": {
+                      "src": "/images/check-circle.svg",
+                      "color": "primary"
+                    }
                   },
                   "3": {
                     "description": "in aliquam sem fringilla",
-                    "icon": "/images/check-circle.svg"
+                    "icon": {
+                      "src": "/images/check-circle.svg",
+                      "color": "primary"
+                    }
                   }
                 },
                 "color": null,
@@ -231,23 +264,38 @@
                 "items": {
                   "0": {
                     "description": "ipsum dolor sit",
-                    "icon": "/images/check-circle.svg"
+                    "icon": {
+                      "src": "/images/check-circle.svg",
+                      "color": "primary"
+                    }
                   },
                   "1": {
                     "description": "odio aenean sed adipiscing diam",
-                    "icon": "/images/check-circle.svg"
+                    "icon": {
+                      "src": "/images/check-circle.svg",
+                      "color": "primary"
+                    }
                   },
                   "2": {
                     "description": "ipsum consequat nisl vel",
-                    "icon": "/images/check-circle.svg"
+                    "icon": {
+                      "src": "/images/check-circle.svg",
+                      "color": "primary"
+                    }
                   },
                   "3": {
                     "description": "in aliquam sem fringilla",
-                    "icon": "/images/check-circle.svg"
+                    "icon": {
+                      "src": "/images/check-circle.svg",
+                      "color": "primary"
+                    }
                   },
                   "4": {
                     "description": "id venenatis a condimentum vitae sapien",
-                    "icon": "/images/check-circle.svg"
+                    "icon": {
+                      "src": "/images/check-circle.svg",
+                      "color": "primary"
+                    }
                   }
                 },
                 "color": null,
@@ -270,7 +318,10 @@
             "items": {
               "0": {
                 "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo.",
-                "quoteIcon": "/images/quote.svg",
+                "quoteIcon": {
+                  "src": "/images/quote.svg",
+                  "color": "current"
+                },
                 "author": {
                   "name": "Ótimo Usuário",
                   "role": "Designer de Produto",
@@ -278,14 +329,20 @@
                 },
                 "rating": {
                   "value": 5,
-                  "icon": "/images/star.svg"
+                  "icon": {
+                    "src": "/images/star.svg",
+                    "color": "primary"
+                  }
                 },
                 "color": "muted",
                 "variant": null
               },
               "1": {
                 "description": "Lorem ipsum dolor sit amet consectetur, adipiscing elit ac potenti sociis, dictumst class nostra leo.",
-                "quoteIcon": "/images/quote.svg",
+                "quoteIcon": {
+                  "src": "/images/quote.svg",
+                  "color": "current"
+                },
                 "author": {
                   "name": "Pessoa Criativa",
                   "role": "Proprietário de Produto",
@@ -293,14 +350,20 @@
                 },
                 "rating": {
                   "value": 5,
-                  "icon": "/images/star.svg"
+                  "icon": {
+                    "src": "/images/star.svg",
+                    "color": "primary"
+                  }
                 },
                 "color": "muted",
                 "variant": null
               },
               "2": {
                 "description": "Astonished. Este produto é tão legal. Você deveria experimentar e atualizar para o plano Enterprise. Sem brincadeira.",
-                "quoteIcon": "/images/quote.svg",
+                "quoteIcon": {
+                  "src": "/images/quote.svg",
+                  "color": "current"
+                },
                 "author": {
                   "name": "Revisor Real",
                   "role": "Desenvolvedor",
@@ -308,7 +371,10 @@
                 },
                 "rating": {
                   "value": 5,
-                  "icon": "/images/star.svg"
+                  "icon": {
+                    "src": "/images/star.svg",
+                    "color": "primary"
+                  }
                 },
                 "color": "muted",
                 "variant": null
@@ -322,13 +388,29 @@
         },
         "faq": {
           "template": "three-columns",
+          "color": null,
+          "variant": null,
+          "size": null,
+          "hasPattern": false,
           "title": "Perguntas Frequentes",
           "description": "Respostas para algumas perguntas que você pode ter.",
           "block": {
             "slug": "box",
             "template": "accordions.faq",
-            "icon": "/images/plus.svg",
-            "animation": "rotate135",
+            "type": "single",
+            "collapsible": true,
+            "color": "muted",
+            "variant": "solid",
+            "trigger": {
+              "color": "inherit",
+              "variant": "solid",
+              "size": "md",
+              "icon": {
+                "src": "/images/plus.svg",
+                "animation": "rotate135",
+                "color": "current"
+              }
+            },
             "items": {
               "0": {
                 "title": "Lorem ipsum dolor sit amet, consectetu?",
@@ -336,7 +418,7 @@
               },
               "1": {
                 "title": "Lorem ipsum dolor sit amet?",
-                "description": "Architecto beatae vitae dicta sunt explicabo. Ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo. <ul><li>Animi, id est laborum et dolorum fuga.</li><li>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</li><li>Itaque earum rerum hic tenetur a sapiente delectus.</li></ul>"
+                "description": "Architecto beatae vitae dicta sunt explicabo. Ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo. <ul><li><b>Animi id</b>: est laborum et dolorum fuga.</li><li><b>Neque</b>: porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</li><li><b>Itaque earum</b>: rerum hic tenetur a sapiente delectus.</li></ul>"
               },
               "2": {
                 "title": "Nam libero tempore, cum soluta?",
@@ -344,22 +426,14 @@
               },
               "3": {
                 "title": "cumque nihil impedit quo minus?",
-                "description": "Esse cillum dolore eu fugiat nulla pariatur. Accusantium doloremque laudantium, totam rem aperiam. <ol><li>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</li><li>Nihil molestiae consequatur, vel illum qui dolorem eum.</li><li>Qui officia deserunt mollit anim id est laborum.</li></ol>"
+                "description": "Esse cillum dolore eu fugiat nulla pariatur. Accusantium doloremque laudantium, totam rem aperiam. <ol><li><b>Temporibus</b>: autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</li><li><b>Nihil</b>: molestiae consequatur, vel illum qui dolorem eum.</li><li><b>Qui</b>: officia deserunt mollit anim id est laborum.</li></ol>"
               },
               "4": {
                 "title": "nobis est eligendi optio?",
                 "description": "<b>Itaque earum rerum hic tenetur a sapiente delectus.</b> <i> Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat.</i> Duis aute irure dolor in reprehenderit in voluptate velit."
               }
-            },
-            "color": "muted",
-            "variant": null,
-            "type": null,
-            "collapsible": null
-          },
-          "color": null,
-          "variant": null,
-          "size": null,
-          "hasPattern": false
+            }
+          }
         },
         "cta": {
           "template": "one-column",
@@ -491,10 +565,17 @@
       "block": {
         "slug": "demo",
         "template": "accordion",
-        "icon": {
-          "src": "/images/plus.svg",
-          "color": "current",
-          "animation": "rotate135"
+        "color": "muted",
+        "variant": "solid",
+        "trigger": {
+          "color": "inherit",
+          "variant": "solid",
+          "size": "md",
+          "icon": {
+            "src": "/images/plus.svg",
+            "animation": "rotate135",
+            "color": "current"
+          }
         },
         "items": {
           "0": {
@@ -509,8 +590,7 @@
             "title": "É animado?",
             "description": "Sim. É animado por padrão, mas você pode desativá-lo se preferir."
           }
-        },
-        "color": "muted"
+        }
       }
     },
     "alert": {
@@ -657,25 +737,29 @@
                 "items": {
                   "nextJs": {
                     "icon": {
-                      "src": "/images/check.svg"
+                      "src": "/images/check.svg",
+                      "color": "current"
                     },
                     "label": "Next.js"
                   },
                   "svelteKit": {
                     "icon": {
-                      "src": "/images/check.svg"
+                      "src": "/images/check.svg",
+                      "color": "current"
                     },
                     "label": "Svelte Kit"
                   },
                   "astro": {
                     "icon": {
-                      "src": "/images/check.svg"
+                      "src": "/images/check.svg",
+                      "color": "current"
                     },
                     "label": "Astro"
                   },
                   "nuxtJs": {
                     "icon": {
-                      "src": "/images/check.svg"
+                      "src": "/images/check.svg",
+                      "color": "current"
                     },
                     "label": "Nuxt.js"
                   }
@@ -808,7 +892,76 @@
     },
     "combobox": {
       "title": "Combobox",
-      "description": "Combobox"
+      "description": "Combobox",
+      "block": {
+        "slug": "demo",
+        "template": "combobox",
+        "trigger": {
+          "placeholder": "Selecione um framework...",
+          "color": "muted",
+          "variant": "solid",
+          "size": "md",
+          "icon": {
+            "src": "/images/angle-down.svg",
+            "color": "current",
+            "animation": "rotate180"
+          }
+        },
+        "control": {
+          "placeholder": "Pesquise um framework...",
+          "color": "main",
+          "variant": "outline",
+          "icon": {
+            "src": "/images/search.svg",
+            "color": "current"
+          }
+        },
+        "empty": "Nenhum framework encontrado.",
+        "items": {
+          "nextJs": {
+            "icon": {
+              "src": "/images/check.svg",
+              "color": "current",
+              "animation": "zoomNFade"
+            },
+            "label": "Next.js"
+          },
+          "svelteKit": {
+            "icon": {
+              "src": "/images/check.svg",
+              "color": "current",
+              "animation": "zoomNFade"
+            },
+            "label": "SvelteKit"
+          },
+          "nuxtJs": {
+            "icon": {
+              "src": "/images/check.svg",
+              "color": "current",
+              "animation": "zoomNFade"
+            },
+            "label": "Nuxt.js"
+          },
+          "remix": {
+            "icon": {
+              "src": "/images/check.svg",
+              "color": "current",
+              "animation": "zoomNFade"
+            },
+            "label": "Remix"
+          },
+          "astro": {
+            "icon": {
+              "src": "/images/check.svg",
+              "color": "current",
+              "animation": "zoomNFade"
+            },
+            "label": "Astro"
+          }
+        },
+        "color": "main",
+        "variant": "solid"
+      }
     },
     "command": {
       "title": "Command",
