@@ -18,16 +18,14 @@ const SingleComponentView = ({ slug, className }) => {
   return (
     <Section
       className={cn(
-        '-mt-[--header-h] min-h-svh w-9/10 pt-[calc(theme(spacing.lg)+var(--header-h))] lg:w-full',
+        '-mt-[--header-h] min-h-svh w-9/10 pt-[calc(var(--py)+var(--header-h))]',
         className
       )}
       size='xl'
     >
-      <Text.Title className='max-w-xl text-center text-2xl'>
-        {t('title')}
-      </Text.Title>
+      <Text.Title className='text-center sm:max-w-2xl'>{t('title')}</Text.Title>
 
-      <Text.Description className='mt-1.5 max-w-xl text-center'>
+      <Text.Description className='mt-xs text-center sm:max-w-2xl'>
         {t.rich('description')}
       </Text.Description>
 
