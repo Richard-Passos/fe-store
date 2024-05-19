@@ -6,10 +6,10 @@ const buttonVariants = {
     link: 'text-main hover:underline underline-offset-4'
   },
   buttonSizes = {
-    xs: 'h-8 px-xs gap-1 text-xs',
-    sm: 'h-10 px-4 gap-xs text-sm',
-    md: 'h-12 px-md gap-3',
-    lg: 'h-14 px-8 gap-4 text-lg'
+    xs: 'h-8 px-xs gap-2xs text-xs',
+    sm: 'h-10 px-sm gap-xs text-sm',
+    md: 'h-12 px-md gap-sm',
+    lg: 'h-14 px-lg gap-sm text-lg'
   };
 
 const button = cnv({
