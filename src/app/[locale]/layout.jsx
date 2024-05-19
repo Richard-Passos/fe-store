@@ -25,17 +25,17 @@ const Layout = ({ children, params: { locale } }) => {
             <Header.State>
               <body
                 className={cn(
-                  'relative !mr-0 flex min-h-svh flex-col items-center overflow-x-clip bg-main font-app [&[data-scroll-locked]]:!mr-0',
+                  'relative flex min-h-svh flex-col items-center overflow-x-clip bg-main font-app text-content [:is(&,&[data-scroll-locked])]:!mr-0',
                   font.variable
                 )}
-                id='start'
+                id='top'
               >
                 <GlobalProviders.Theme>
                   <Header.Root />
 
                   <ErrorBoundary.Provider>
                     <ErrorBoundary.Root>
-                      <main className='relative flex w-full max-w-bounds flex-col items-center'>
+                      <main className='relative my-auto flex w-full max-w-bounds flex-col items-center'>
                         {children}
                       </main>
                     </ErrorBoundary.Root>
