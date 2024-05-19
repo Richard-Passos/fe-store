@@ -6,14 +6,13 @@ const controlVariants = {
       'bg-main text-content border-border hover:border-[hsl(var(--root-content)/calc(var(--border-opacity)*2))]'
   },
   controlSizes = {
-    xs: 'h-8',
-    sm: 'h-10',
-    md: 'h-12',
-    lg: 'h-14'
+    xs: 'h-8 gap-2xs',
+    sm: 'h-10 gap-xs',
+    md: 'h-12 gap-sm',
+    lg: 'h-14 gap-sm'
   };
-
 const control = cnv({
-  base: 'group inline-flex w-full cursor-pointer items-center justify-between rounded-sm border border-transparent px-4 text-sm font-medium transition-colors placeholder:font-normal placeholder:text-content/75 focus:outline-main disabled:cursor-not-allowed disabled:opacity-50',
+  base: 'group inline-flex w-full cursor-pointer items-center justify-between rounded-sm border border-transparent px-sm text-sm font-medium transition-colors placeholder:font-normal placeholder:text-content/75 focus:outline-main disabled:cursor-not-allowed disabled:opacity-50',
   variants: {
     variant: controlVariants,
     size: controlSizes
