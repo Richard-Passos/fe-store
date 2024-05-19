@@ -8,10 +8,7 @@ import { cn } from '@/utils';
 const AccordionTrigger = ({ className, ...props }, ref) => {
   return (
     <Trigger
-      className={cn(
-        'group flex h-12 w-full cursor-pointer items-center justify-between px-md font-medium outline-none transition-colors hover:bg-active',
-        className
-      )}
+      className={cn('focus-visible:outline-0', className)}
       data-accordion-trigger
       ref={ref}
       {...props}

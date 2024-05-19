@@ -8,7 +8,7 @@ import { cn } from '@/utils';
 const Accordion = ({ className, ...props }, ref) => {
   return (
     <Root
-      className={cn('w-full', className)}
+      className={cn('flex w-full flex-col', className)}
       ref={ref}
       {...props}
     />
