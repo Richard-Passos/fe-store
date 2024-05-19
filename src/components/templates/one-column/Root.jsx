@@ -25,7 +25,7 @@ const OneColumnTemplate = ({ namespace, ...props }) => {
       )}
 
       {renderComp(
-        <Text.Description className='mt-4 text-center sm:max-w-2xl'>
+        <Text.Description className='mt-xs text-center sm:max-w-2xl'>
           {t('description')}
         </Text.Description>,
         [t('description')]
