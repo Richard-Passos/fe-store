@@ -107,7 +107,7 @@ const Footer = ({ className, ...props }) => {
                 >
                   <Link
                     className='text-start before:hidden'
-                    href='#start'
+                    href='#top'
                   >
                     <Card.Title className='col-span-2 lg:text-3xl/none'>
                       {t('backTop.label')}
