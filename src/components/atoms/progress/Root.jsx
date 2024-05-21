@@ -3,25 +3,34 @@
 import { Root } from '@radix-ui/react-progress';
 import { forwardRef } from 'react';
 
-import { ProgressContext } from '@/contexts';
-import variants from './variants';
+import { ProgressProvider } from '@/contexts';
 
-const Progress = (
-  { value = 0, min = 0, max = 100, color, size, className, ...props },
-  ref,
+const ProgressRoot = forwardRef(({ activeValue, ...props }, ref) => {
+  return (
+    <Root
+      ref={ref}
+      value={activeValue}
+      {...props}
+    />
+  );
+});
+ProgressRoot.displayName = 'ProgressRoot';
+
+const ProgressRootWithProvider = (
+  { activeValue, min, max, value, ...props },
+  ref
 ) => {
   return (
-    <ProgressContext.Provider value={{ value, min, max }}>
-      <Root
-        className={variants({ color, size, className })}
+    <ProgressProvider value={{ activeValue, min, max, ...value }}>
+      <ProgressRoot
+        activeValue={activeValue}
         max={max}
-      min={min}
-      ref={ref}
-      value={value}
+        min={min}
+        ref={ref}
         {...props}
       />
-    </ProgressContext.Provider>
+    </ProgressProvider>
   );
 };
 
-export default forwardRef(Progress);
+export default forwardRef(ProgressRootWithProvider);

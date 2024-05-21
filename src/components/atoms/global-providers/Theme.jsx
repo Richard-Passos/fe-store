@@ -7,7 +7,6 @@ const GlobalThemeProvider = (props) => {
     <ThemeProvider
       attribute='class'
       disableTransitionOnChange
-      themes={['light', 'dark']}
       {...props}
     />
   );

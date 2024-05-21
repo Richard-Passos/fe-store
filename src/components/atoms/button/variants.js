@@ -8,12 +8,12 @@ const buttonVariants = {
   buttonSizes = {
     xs: 'h-8 px-xs gap-2xs text-xs',
     sm: 'h-10 px-sm gap-xs text-sm',
-    md: 'h-12 px-md gap-sm',
-    lg: 'h-14 px-lg gap-sm text-lg'
+    md: 'h-12 px-md gap-sm text-sm',
+    lg: 'h-14 px-lg gap-sm'
   };
 
 const button = cnv({
-  base: 'relative inline-flex items-center justify-center rounded-sm border border-transparent text-center font-medium transition-colors focus-visible:outline-main disabled:pointer-events-none disabled:opacity-50',
+  base: 'relative inline-flex items-center justify-center rounded-sm border border-transparent text-center font-medium transition-colors focus-visible:outline-main disabled:pointer-events-none disabled:opacity-50 [&:has(>svg:only-child)]:aspect-square [&:has(>svg:only-child)]:px-0',
   variants: {
     variant: buttonVariants,
     size: buttonSizes

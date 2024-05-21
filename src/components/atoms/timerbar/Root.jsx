@@ -1,18 +1,16 @@
 'use client';
 
 import { Root } from '@radix-ui/react-progress';
-import { forwardRef, useContext } from 'react';
+import { forwardRef } from 'react';
 
-import { TimerbarContext, TimerbarProvider } from '@/contexts';
+import { TimerbarProvider } from '@/contexts';
+import { useTimerbar } from '@/hooks';
 
-import timerbar from './variants';
-
-const Timerbar = forwardRef(({ color, size, className, ...props }, ref) => {
-  const { activeValue, duration } = useContext(TimerbarContext);
+const TimerbarRoot = forwardRef((props, ref) => {
+  const { activeValue, duration } = useTimerbar();
 
   return (
     <Root
-      className={timerbar({ color, size, className })}
       max={duration}
       min={0}
       ref={ref}
@@ -21,16 +19,19 @@ const Timerbar = forwardRef(({ color, size, className, ...props }, ref) => {
     />
   );
 });
-Timerbar.displayName = 'Timerbar';
+TimerbarRoot.displayName = 'TimerbarRoot';
 
-const TimerbarWithProvider = ({ duration, isPaused, value, ...props }, ref) => {
+const TimerbarRootWithProvider = (
+  { duration, isPaused, value, ...props },
+  ref
+) => {
   return (
     <TimerbarProvider
-      duration={duration ?? 5000}
+      duration={duration}
       isPaused={isPaused}
       value={value}
     >
-      <Timerbar
+      <TimerbarRoot
         ref={ref}
         {...props}
       />
@@ -38,4 +39,4 @@ const TimerbarWithProvider = ({ duration, isPaused, value, ...props }, ref) => {
   );
 };
 
-export default forwardRef(TimerbarWithProvider);
+export default forwardRef(TimerbarRootWithProvider);

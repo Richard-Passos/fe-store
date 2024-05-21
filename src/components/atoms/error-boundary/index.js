@@ -1,13 +1,3 @@
-import ErrorBoundaryRoot from './Root';
-import ErrorBoundaryProvider from './Provider';
+import Errorboundary from './Root';
 
-const ErrorBoundary = {
-  Root: ErrorBoundaryRoot,
-  Provider: ErrorBoundaryProvider,
-};
-
-export default ErrorBoundary;
-export {
-  ErrorBoundaryRoot,
-  ErrorBoundaryProvider,
-};
+export default Errorboundary;

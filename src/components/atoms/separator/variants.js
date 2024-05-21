@@ -6,7 +6,7 @@ const separatorOrientations = {
 };
 
 const separator = cnv({
-  base: 'shrink-0 bg-border',
+  base: 'bg-border',
   variants: {
     orientation: separatorOrientations
   },

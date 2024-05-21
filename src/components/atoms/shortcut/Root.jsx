@@ -1,15 +1,15 @@
+import { forwardRef } from 'react';
+
 import { cn } from '@/utils';
 
-const Shortcut = ({ className, ...props }) => {
+const Shortcut = ({ className, ...props }, ref) => {
   return (
     <span
-      className={cn(
-        'ml-auto text-xs tracking-widest text-content/75',
-        className
-      )}
+      className={cn('text-xs tracking-widest text-content/75', className)}
+      ref={ref}
       {...props}
     />
   );
 };
 
-export default Shortcut;
+export default forwardRef(Shortcut);

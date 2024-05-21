@@ -1,14 +1,10 @@
-import TimberbarRoot from './Root';
 import TimberbarIndicator from './Indicator';
-export * as variants from './variants';
+import TimberbarRoot from './Root';
 
 const Timberbar = {
   Root: TimberbarRoot,
-  Indicator: TimberbarIndicator,
+  Indicator: TimberbarIndicator
 };
 
 export default Timberbar;
-export {
-  TimberbarRoot,
-  TimberbarIndicator,
-};
+export { TimberbarRoot, TimberbarIndicator };

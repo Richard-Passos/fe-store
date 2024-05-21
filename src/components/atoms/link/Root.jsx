@@ -15,7 +15,7 @@ const Link = ({ asChild, href, className, ...props }, ref) => {
   return (
     <Tag
       className={cn(
-        'relative cursor-pointer font-medium leading-normal text-primary no-underline before:absolute before:inset-x-0 before:bottom-0 before:h-px before:scale-x-0 before:bg-current before:transition-transform before:duration-300 hover:before:scale-x-100',
+        'relative cursor-pointer font-medium text-primary no-underline before:absolute before:inset-x-0 before:bottom-0 before:h-px before:scale-x-0 before:bg-current before:transition-transform before:duration-300 hover:before:scale-x-100',
         className
       )}
       href={href ?? ''}

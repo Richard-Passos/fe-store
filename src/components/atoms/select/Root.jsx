@@ -2,6 +2,6 @@
 
 import { Root } from '@radix-ui/react-select';
 
-const Select = Root;
+const SelectRoot = Root;
 
-export default Select;
+export default SelectRoot;

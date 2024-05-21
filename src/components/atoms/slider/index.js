@@ -1,20 +1,14 @@
-import SliderRoot from './Root';
 import SliderRange from './Range';
+import SliderRoot from './Root';
 import SliderThumb from './Thumb';
 import SliderTrack from './Track';
-export * from './variants';
 
 const Slider = {
   Root: SliderRoot,
   Range: SliderRange,
   Thumb: SliderThumb,
-  Track: SliderTrack,
+  Track: SliderTrack
 };
 
 export default Slider;
-export {
-  SliderRoot,
-  SliderRange,
-  SliderThumb,
-  SliderTrack,
-};
+export { SliderRoot, SliderRange, SliderThumb, SliderTrack };

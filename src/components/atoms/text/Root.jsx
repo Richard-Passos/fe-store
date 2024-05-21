@@ -1,13 +1,14 @@
-import { cn } from '@/utils';
 import { Slot } from '@radix-ui/react-slot';
 import { forwardRef } from 'react';
 
-const Text = ({ asChild, className, ...props }, ref) => {
-  const Tag = asChild ? Slot : 'p';
+import text from './variants';
+
+const Text = ({ asChild, variant = 'p', className, ...props }, ref) => {
+  const Tag = asChild ? Slot : variant;
 
   return (
     <Tag
-    className={cn('first-letter:uppercase', className)}
+      className={text({ variant, className })}
       ref={ref}
       {...props}
     />

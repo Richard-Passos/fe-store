@@ -1,23 +1,18 @@
 'use client';
 
 import { Indicator } from '@radix-ui/react-progress';
-import { forwardRef, useContext } from 'react';
+import { forwardRef } from 'react';
 
-import { ProgressContext } from '@/contexts';
-import { cn } from '@/utils';
+import { useProgress } from '@/hooks';
 
-const ProgressIndicator = ({ className, style, ...props }, ref) => {
-  const { value, min, max } = useContext(ProgressContext);
+const ProgressIndicator = ({ style, ...props }, ref) => {
+  const { value, min, max } = useProgress();
 
   return (
     <Indicator
-      className={cn(
-        'size-full translate-x-[--x] bg-main transition-transform duration-300',
-        className
-      )}
       ref={ref}
       style={{
-        '--x': `-${Math.max(100 - (value / max) * 100, min)}%`,
+        '--progress-value': `${Math.max(100 - (value / max) * 100, min)}%`,
         ...style
       }}
       {...props}

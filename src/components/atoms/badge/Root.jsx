@@ -7,7 +7,7 @@ const Badge = ({ asChild, color, variant, className, ...props }) => {
 
   return (
     <Tag
-      className={badge ({ color, variant, className })}
+      className={badge({ color, variant, className })}
       {...props}
     />
   );
