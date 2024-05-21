@@ -1,17 +1,20 @@
+import { useTranslations } from 'next-intl';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { Inter } from 'next/font/google';
 
 import { ErrorBoundary, GlobalProviders } from '@/components/atoms';
-import { ToastProvider, ToastViewport } from '@/components/molecules/toast';
+import { ToastViewport } from '@/components/molecules/toast';
 import { Footer, Header, Toaster } from '@/components/organisms';
 import { locales } from '@/navigation';
 import '@/styles/globals.css';
-import { cn } from '@/utils';
+import { cn, translationKeys } from '@/utils';
 
 const font = Inter({ subsets: ['latin'], variable: '--font-app' });
 
 const Layout = ({ children, params: { locale } }) => {
   unstable_setRequestLocale(locale);
+
+  const t = useTranslations();
 
   return (
     <html
@@ -21,7 +24,7 @@ const Layout = ({ children, params: { locale } }) => {
     >
       <GlobalProviders.State>
         <GlobalProviders.Icon>
-          <ToastProvider>
+          <GlobalProviders.Toast>
             <Header.State>
               <body
                 className={cn(
@@ -30,16 +33,14 @@ const Layout = ({ children, params: { locale } }) => {
                 )}
                 id='top'
               >
-                <GlobalProviders.Theme>
+                <GlobalProviders.Theme themes={translationKeys(t, 'themes')}>
                   <Header.Root />
 
-                  <ErrorBoundary.Provider>
-                    <ErrorBoundary.Root>
-                      <main className='relative my-auto flex w-full max-w-bounds flex-col items-center'>
-                        {children}
-                      </main>
-                    </ErrorBoundary.Root>
-                  </ErrorBoundary.Provider>
+                  <ErrorBoundary>
+                    <main className='relative my-auto flex w-full max-w-bounds flex-col items-center'>
+                      {children}
+                    </main>
+                  </ErrorBoundary>
 
                   <Footer />
 
@@ -49,7 +50,7 @@ const Layout = ({ children, params: { locale } }) => {
                 </GlobalProviders.Theme>
               </body>
             </Header.State>
-          </ToastProvider>
+          </GlobalProviders.Toast>
         </GlobalProviders.Icon>
       </GlobalProviders.State>
     </html>
@@ -62,12 +63,12 @@ const generateMetadata = async ({ params: { locale } }) => {
   return {
     title: {
       default: `${t('name.first')} ${t('name.last')}`,
-      template: `%s — ${t('name.first')} ${t('name.last')}`
+      template: `%s - ${t('name.first')} ${t('name.last')}`
     },
     icon: t('favicon'),
     description: t('description'),
     openGraph: {
-      title: `${t('name.first')} ${t('name.last')} — ${t('summary')}`,
+      title: `${t('name.first')} ${t('name.last')} - ${t('summary')}`,
       description: t('description')
     }
   };
