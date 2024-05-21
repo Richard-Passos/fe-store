@@ -1,12 +1,11 @@
 'use client';
 
-import { useContext } from 'react';
+import { useErrorBoundary } from 'react-error-boundary';
 
-import { ErrorContext } from '@/contexts';
 import { ErrorView } from '@/components/views';
 
 const ErrorPage = (props) => {
-  const data = useContext(ErrorContext);
+  const data = useErrorBoundary();
 
   return (
     <ErrorView
