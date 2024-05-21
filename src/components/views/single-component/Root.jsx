@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { notFound } from 'next/navigation';
 
-import { Text } from '@/components/atoms';
+import { Heading, Text } from '@/components/atoms';
 import { Section } from '@/components/molecules';
 import * as structures from '@/components/structures';
 import { cn, normCompName, normKey } from '@/utils';
@@ -23,11 +23,19 @@ const SingleComponentView = ({ slug, className }) => {
       )}
       size='xl'
     >
-      <Text.Title className='text-center sm:max-w-2xl'>{t('title')}</Text.Title>
+      <Heading
+        className='text-center sm:max-w-2xl'
+        variant='h1'
+      >
+        {t('title')}
+      </Heading>
 
-      <Text.Description className='mt-xs text-center sm:max-w-2xl'>
+      <Text
+        className='mt-xs text-center sm:max-w-2xl'
+        variant='p'
+      >
         {t.rich('description')}
-      </Text.Description>
+      </Text>
 
       {Block && (
         <Block
