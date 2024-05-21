@@ -4,8 +4,14 @@ import { cnv } from '@/utils';
 const icon = cnv({
   base: 'size-full *:fill-main',
   variants: {
-    color: { ...colors, current: '[--root-main:currentColor]' }
+    color: { ...colors, current: '[--root-main]' }
   },
+  compoundVariants: [
+    {
+      color: 'current',
+      className: '*:fill-current'
+    }
+  ],
   defaultVariants: {
     color: 'current'
   }
