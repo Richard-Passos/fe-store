@@ -1,35 +1,40 @@
 'use client';
 
-import { createContext, useState } from 'react';
+import { createContext, useId, useState } from 'react';
 
 import { useInterval } from '@/hooks';
 
-const TIMERBAR_UPDATE_DELAY = 100;
-
 const TimerbarContext = createContext({
+  id: '',
   activeValue: 0,
   setActiveValue: () => {},
-  duration: 0
+  duration: 0,
+  updateDelay: 0
 });
 
-const TimerbarProvider = ({ duration, isPaused, value, ...props }) => {
-  const [activeValue, setActiveValue] = useState(
-    duration - TIMERBAR_UPDATE_DELAY
-  );
+const TimerbarProvider = ({
+  duration = 5000,
+  updateDelay = 100,
+  isPaused,
+  value,
+  ...props
+}) => {
+  const [activeValue, setActiveValue] = useState(duration - updateDelay),
+    id = useId();
 
   useInterval(
-    () =>
-      setActiveValue((value) =>
-        value > 0 ? value - TIMERBAR_UPDATE_DELAY : 0
-      ),
-    isPaused ? null : TIMERBAR_UPDATE_DELAY
+    () => setActiveValue((value) => (value > 0 ? value - updateDelay : 0)),
+    isPaused ? null : updateDelay
   );
 
   return (
     <TimerbarContext.Provider
       value={{
+        id,
         activeValue,
+        setActiveValue,
         duration,
+        updateDelay,
         ...value
       }}
       {...props}
@@ -38,4 +43,4 @@ const TimerbarProvider = ({ duration, isPaused, value, ...props }) => {
 };
 
 export default TimerbarContext;
-export { TimerbarProvider, TIMERBAR_UPDATE_DELAY };
+export { TimerbarProvider };
