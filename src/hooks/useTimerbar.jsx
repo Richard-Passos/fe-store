@@ -2,10 +2,10 @@
 
 import { useContext } from 'react';
 
-import { ToastContext } from '@/contexts';
+import { TimerbarContext } from '@/contexts';
 
-const useToast = () => {
-  const context = useContext(ToastContext);
+const useTimerbar = () => {
+  const context = useContext(TimerbarContext);
 
   handleErrors(context);
 
@@ -14,7 +14,7 @@ const useToast = () => {
 
 const handleErrors = (context) => {
   const errors = {
-    id: 'useToast must be within Toast.'
+    id: 'useTimerbar must be within Timerbar.'
   };
 
   Object.entries(context).forEach(([key, value]) => {
@@ -24,4 +24,4 @@ const handleErrors = (context) => {
   });
 };
 
-export default useToast;
+export default useTimerbar;

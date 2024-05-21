@@ -2,10 +2,10 @@
 
 import { useContext } from 'react';
 
-import { ToastContext } from '@/contexts';
+import { CarouselContext } from '@/contexts';
 
-const useToast = () => {
-  const context = useContext(ToastContext);
+const useCarousel = () => {
+  const context = useContext(CarouselContext);
 
   handleErrors(context);
 
@@ -14,7 +14,7 @@ const useToast = () => {
 
 const handleErrors = (context) => {
   const errors = {
-    id: 'useToast must be within Toast.'
+    id: 'useCarousel must be within Carousel.'
   };
 
   Object.entries(context).forEach(([key, value]) => {
@@ -24,4 +24,4 @@ const handleErrors = (context) => {
   });
 };
 
-export default useToast;
+export default useCarousel;
