@@ -5,8 +5,8 @@ import { Inter } from 'next/font/google';
 import { ErrorBoundary, GlobalProviders } from '@/components/atoms';
 import { ToastViewport } from '@/components/molecules/toast';
 import { Footer, Header, Toaster } from '@/components/organisms';
+import '@/globals.css';
 import { locales } from '@/navigation';
-import '@/styles/globals.css';
 import { cn, translationKeys } from '@/utils';
 
 const font = Inter({ subsets: ['latin'], variable: '--font-app' });
