@@ -19,15 +19,15 @@ const AccordionsFaq = ({ namespace, ...props }) => {
           value={normId(key)}
           variant={t('variant')}
         >
-          <Accordion.Trigger
-            className='h-20'
-            icon={{
-              src: t('trigger.icon.src'),
-              color: t('trigger.icon.color'),
-              animation: t('trigger.icon.animation')
-            }}
-          >
+          <Accordion.Trigger className='h-20'>
             {capitalize(t(`items.${key}.title`))}
+
+            <Accordion.Icon
+              animation={t('trigger.icon.animation')}
+              className='[&_svg]:size-1/2'
+              color={t('trigger.icon.color')}
+              src={t('trigger.icon.src')}
+            />
           </Accordion.Trigger>
 
           <Accordion.Content>
