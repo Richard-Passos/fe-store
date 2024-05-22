@@ -1,16 +1,17 @@
 import { forwardRef } from 'react';
 
-import { TextDescription } from '@/components/atoms/text';
+import { Text } from '@/components/atoms';
 import { cn } from '@/utils';
 
-const AlertDescription = ({ className, ...props }, ref) => {
+const MoleculeAlertDescription = ({ className, ...props }, ref) => {
   return (
-    <TextDescription
+    <Text
       className={cn('text-sm', className)}
       ref={ref}
+      variant='p'
       {...props}
     />
   );
 };
 
-export default forwardRef(AlertDescription);
+export default forwardRef(MoleculeAlertDescription);

@@ -1,16 +1,17 @@
 import { forwardRef } from 'react';
 
-import { TextSubtitle } from '@/components/atoms/text';
+import { Heading } from '@/components/atoms';
 import { cn } from '@/utils';
 
-const AlertTitle = ({ className, ...props }, ref) => {
+const MoleculeAlertTitle = ({ className, ...props }, ref) => {
   return (
-    <TextSubtitle
-      className={cn('text-4xl', className)}
+    <Heading
+      className={cn('text-4xl tracking-tight', className)}
       ref={ref}
+      variant='h3'
       {...props}
     />
   );
 };
 
-export default forwardRef(AlertTitle);
+export default forwardRef(MoleculeAlertTitle);

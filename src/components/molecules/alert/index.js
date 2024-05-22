@@ -1,14 +1,22 @@
-import AlertDescription from './Description';
-import AlertHeader from './Header';
-import AlertRoot from './Root';
-import AlertTitle from './Title';
+import MoleculeAlertDescription from './Description';
+import MoleculeAlertHeader from './Header';
+import MoleculeAlertIcon from './Icon';
+import MoleculeAlertRoot from './Root';
+import MoleculeAlertTitle from './Title';
 
-const Alert = {
-  Root: AlertRoot,
-  Description: AlertDescription,
-  Header: AlertHeader,
-  Title: AlertTitle
+const MoleculeAlert = {
+  Root: MoleculeAlertRoot,
+  Description: MoleculeAlertDescription,
+  Header: MoleculeAlertHeader,
+  Icon: MoleculeAlertIcon,
+  Title: MoleculeAlertTitle
 };
 
-export default Alert;
-export { AlertRoot, AlertDescription, AlertHeader, AlertTitle };
+export default MoleculeAlert;
+export {
+  MoleculeAlertRoot,
+  MoleculeAlertDescription,
+  MoleculeAlertHeader,
+  MoleculeAlertIcon,
+  MoleculeAlertTitle
+};

@@ -3,7 +3,7 @@ import { forwardRef } from 'react';
 import { Box } from '@/components/atoms';
 import { cn } from '@/utils';
 
-const Alert = ({ className, ...props }, ref) => {
+const MoleculeAlertRoot = ({ className, ...props }, ref) => {
   return (
     <Box
       className={cn('max-w-md flex-row gap-sm', className)}
@@ -14,4 +14,4 @@ const Alert = ({ className, ...props }, ref) => {
   );
 };
 
-export default forwardRef(Alert);
+export default forwardRef(MoleculeAlertRoot);
