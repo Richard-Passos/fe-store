@@ -37,14 +37,14 @@ const DemosAccordionOrganism = ({ namespace, ...props }) => {
               value={`item-${i}`}
               variant={t('variant')}
             >
-              <Accordion.Trigger
-                icon={{
-                  src: t('trigger.icon.src'),
-                  color: t('trigger.icon.color'),
-                  animation: t('trigger.icon.animation')
-                }}
-              >
+              <Accordion.Trigger>
                 {capitalize(t(`items.${key}.title`))}
+
+                <Accordion.Icon
+                  animation={t('trigger.icon.animation')}
+                  color={t('trigger.icon.color')}
+                  src={t('trigger.icon.src')}
+                />
               </Accordion.Trigger>
 
               <Accordion.Content>
