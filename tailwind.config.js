@@ -4,11 +4,12 @@ const getColor = (cssVar) => `hsl(var(${cssVar}) / <alpha-value>)`;
 module.exports = {
   darkMode: 'class',
   content: [
-    './src/app/**/*.jsx',
-    './src/components/**/*.jsx',
-    './src/components/**/variants.js',
-    './src/components/*.js'
+    './src/app/**/*.{jsx,tsx}',
+    './src/components/**/*.{jsx,tsx}',
+    './src/components/**/variants.{js,ts}',
+    './src/components/*.{js,ts}'
   ],
+  safelist: ['light', 'dark'],
   theme: {
     extend: {
       spacing: {
