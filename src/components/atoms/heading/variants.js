@@ -12,6 +12,7 @@ const headingVariants = {
 const heading = cnv({
   base: 'leading-none text-content first-letter:uppercase [&_b]:text-primary',
   variants: {
+    color: {},
     variant: headingVariants
   },
   defaultVariants: {

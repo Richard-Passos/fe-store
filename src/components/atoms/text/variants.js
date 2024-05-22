@@ -10,6 +10,7 @@ const textVariants = {
 const text = cnv({
   base: 'text-content',
   variants: {
+    color: {},
     variant: textVariants
   },
   defaultVariants: {
