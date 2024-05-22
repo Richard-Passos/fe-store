@@ -15,7 +15,7 @@
           },
           "scroll": {
             "icon": {
-              "src": "/images/caret-down.svg",
+              "src": "/images/angle-down.svg",
               "color": "current"
             },
             "description": "Role para ver mais"
@@ -1108,7 +1108,11 @@
     }
   },
   "locales": {
-    "en": "Inglês",
-    "pt": "Português"
+    "en": {
+      "label": "Inglês"
+    },
+    "pt": {
+      "label": "Português"
+    }
   }
 }
