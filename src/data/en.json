@@ -1106,7 +1106,11 @@
     }
   },
   "locales": {
-    "en": "Inglês",
-    "pt": "Português"
+    "en": {
+      "label": "English"
+    },
+    "pt": {
+      "label": "Portuguese"
+    }
   }
 }
