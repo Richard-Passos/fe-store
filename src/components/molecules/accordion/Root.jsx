@@ -1,13 +1,11 @@
-'use client';
-
-import { Root } from '@radix-ui/react-accordion';
 import { forwardRef } from 'react';
 
+import { AccordionRoot } from '@/components/atoms/accordion';
 import { cn } from '@/utils';
 
-const Accordion = ({ className, ...props }, ref) => {
+const MoleculeAccordionRoot = ({ className, ...props }, ref) => {
   return (
-    <Root
+    <AccordionRoot
       className={cn('flex w-full flex-col', className)}
       ref={ref}
       {...props}
@@ -15,4 +13,4 @@ const Accordion = ({ className, ...props }, ref) => {
   );
 };
 
-export default forwardRef(Accordion);
+export default forwardRef(MoleculeAccordionRoot);

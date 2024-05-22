@@ -1,21 +1,26 @@
-'use client';
-
-import { Content } from '@radix-ui/react-accordion';
 import { forwardRef } from 'react';
 
+import { Text } from '@/components/atoms';
+import { AccordionContent } from '@/components/atoms/accordion';
 import { cn } from '@/utils';
 
-const AccordionContent = ({ className, ...props }, ref) => {
+const MoleculeAccordionContent = ({ className, children, ...props }, ref) => {
   return (
-    <Content
+    <Text
+      asChild
       className={cn(
-        'animate-slide-up overflow-hidden [--height:--radix-accordion-content-height] data-open:animate-slide-down',
+        'animate-slide-up overflow-hidden text-sm [--height:--accordion-content-h] data-open:animate-slide-down',
         className
       )}
       ref={ref}
+      variant='p'
       {...props}
-    />
+    >
+      <AccordionContent>
+        <div className='p-md'>{children}</div>
+      </AccordionContent>
+    </Text>
   );
 };
 
-export default forwardRef(AccordionContent);
+export default forwardRef(MoleculeAccordionContent);
