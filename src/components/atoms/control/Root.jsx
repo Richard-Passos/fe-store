@@ -3,7 +3,10 @@ import { forwardRef } from 'react';
 
 import control from './variants';
 
-const Control = ({ asChild, className, ...props }, ref) => {
+const Control = (
+  { asChild, color, variant, size, className, ...props },
+  ref
+) => {
   const Tag = asChild ? Slot : 'input';
 
   return (
