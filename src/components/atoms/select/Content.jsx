@@ -5,7 +5,7 @@ import { forwardRef } from 'react';
 
 import { cn } from '@/utils';
 
-const SelectContent = ({ color, className, ...props }, ref) => {
+const SelectContent = ({ className, ...props }, ref) => {
   return (
     <Content
       align='center'
