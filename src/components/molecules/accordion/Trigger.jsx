@@ -1,11 +1,10 @@
 import { forwardRef } from 'react';
 
-import animations from '@/components/animations';
-import { Accordion, Button, Icon } from '@/components/atoms';
-import { cn, renderComp } from '@/utils';
+import { Accordion } from '@/components/atoms';
+import { cn } from '@/utils';
 
 const MoleculeAccordionTrigger = (
-  { className, asChild, children, icon, ...props },
+  { className, asChild, children, ...props },
   ref
 ) => {
   return (
@@ -22,27 +21,6 @@ const MoleculeAccordionTrigger = (
         data-accordion-trigger
       >
         {children}
-
-        {renderComp(
-          <Button
-            asChild
-            className='aspect-square h-1/2 group-hover/accordion-trigger:bg-active'
-            color='inherit'
-            variant='ghost'
-          >
-            <div>
-              <Icon
-                className={cn(
-                  'size-1/2 group-data-open/accordion-trigger:animate-active',
-                  animations[icon?.animation]
-                )}
-                color={icon?.color}
-                src={icon?.src}
-              />
-            </div>
-          </Button>,
-          [icon]
-        )}
       </Accordion.Trigger>
     </Accordion.Header>
   );

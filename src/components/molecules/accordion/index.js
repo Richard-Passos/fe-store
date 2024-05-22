@@ -1,14 +1,22 @@
-import AccordionContent from './Content';
-import AccordionItem from './Item';
-import AccordionRoot from './Root';
-import AccordionTrigger from './Trigger';
+import MoleculeAccordionContent from './Content';
+import MoleculeAccordionIcon from './Icon';
+import MoleculeAccordionItem from './Item';
+import MoleculeAccordionRoot from './Root';
+import MoleculeAccordionTrigger from './Trigger';
 
-const Accordion = {
-  Root: AccordionRoot,
-  Content: AccordionContent,
-  Item: AccordionItem,
-  Trigger: AccordionTrigger
+const MoleculeAccordion = {
+  Root: MoleculeAccordionRoot,
+  Content: MoleculeAccordionContent,
+  Icon: MoleculeAccordionIcon,
+  Item: MoleculeAccordionItem,
+  Trigger: MoleculeAccordionTrigger
 };
 
-export default Accordion;
-export { AccordionRoot, AccordionContent, AccordionItem, AccordionTrigger };
+export default MoleculeAccordion;
+export {
+  MoleculeAccordionRoot,
+  MoleculeAccordionContent,
+  MoleculeAccordionIcon,
+  MoleculeAccordionItem,
+  MoleculeAccordionTrigger
+};
