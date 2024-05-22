@@ -1,10 +1,7 @@
 import { useTranslations } from 'next-intl';
 
-import animations from '@/components/animations';
-import { Box, Button, Icon } from '@/components/atoms';
-import { TextDescription } from '@/components/atoms/text';
 import { Accordion } from '@/components/molecules';
-import { capitalize, cn, normKey, translationKeys } from '@/utils';
+import { capitalize, normId, translationKeys } from '@/utils';
 
 const AccordionsFaq = ({ namespace, ...props }) => {
   const t = useTranslations(namespace);
@@ -17,55 +14,25 @@ const AccordionsFaq = ({ namespace, ...props }) => {
     >
       {translationKeys(t, 'items').map((key) => (
         <Accordion.Item
-          asChild
+          color={t('color')}
           key={key}
-          value={`item-${key}`}
+          value={normId(key)}
+          variant={t('variant')}
         >
-          <Box
-            className='p-0'
-            color={t('color')}
-            variant={t('variant')}
+          <Accordion.Trigger
+            className='h-20'
+            icon={{
+              src: t('trigger.icon.src'),
+              color: t('trigger.icon.color'),
+              animation: t('trigger.icon.animation')
+            }}
           >
-            <Accordion.Header>
-              <Accordion.Trigger asChild>
-                <Button
-                  className='group h-20 w-full justify-between rounded-none border-0 text-start hover:bg-transparent'
-                  color='inherit'
-                  size='lg'
-                  varian='solid'
-                >
-                  {capitalize(t(`items.${key}.title`))}
+            {capitalize(t(`items.${key}.title`))}
+          </Accordion.Trigger>
 
-                  <Button
-                    asChild
-                    className='aspect-square h-1/2 px-0 group-hover:bg-active'
-                    color='inherit'
-                    variant='ghost'
-                  >
-                    <div>
-                      <Icon
-                        className={cn(
-                          'size-1/2 group-data-open:animate-active',
-                          animations[normKey(t('trigger.icon.animation'))]
-                        )}
-                        color={t('trigger.icon.color')}
-                        src={t('trigger.icon.src')}
-                      />
-                    </div>
-                  </Button>
-                </Button>
-              </Accordion.Trigger>
-            </Accordion.Header>
-
-            <Accordion.Content>
-              <TextDescription
-                asChild
-                className='px-lg py-md text-sm'
-              >
-                <div>{t.rich(`items.${key}.description`)}</div>
-              </TextDescription>
-            </Accordion.Content>
-          </Box>
+          <Accordion.Content>
+            {t.rich(`items.${key}.description`)}
+          </Accordion.Content>
         </Accordion.Item>
       ))}
     </Accordion.Root>
