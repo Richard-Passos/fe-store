@@ -1,6 +1,6 @@
 import { Button, Link } from '@/components/atoms';
 
-const Action = ({ href, children, ...props }) => {
+const MoleculeAction = ({ href, children, ...props }) => {
   const isLink = !!href;
 
   return (
@@ -22,4 +22,4 @@ const Action = ({ href, children, ...props }) => {
   );
 };
 
-export default Action;
+export default MoleculeAction;

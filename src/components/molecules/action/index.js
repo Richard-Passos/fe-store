@@ -1,3 +1,3 @@
-import Action from './Root'
+import MoleculeAction from './Root'
 
-export default Action
+export default MoleculeAction
