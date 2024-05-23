@@ -1,18 +1,13 @@
-'use client';
+import { forwardRef } from 'react';
 
-import { Slot } from '@radix-ui/react-slot';
-import { useLocale } from 'next-intl';
-import { DayPicker } from 'react-day-picker';
-
-import { Box } from '@/components/atoms';
+import { Box, Calendar } from '@/components/atoms';
 import { button } from '@/components/atoms/button';
-import { dateFnsLocales } from '@/navigation';
-import { cn, normKey } from '@/utils';
+import { cn } from '@/utils';
 
-const Calendar = ({ className, classNames, components, ...props }) => {
-  const locale = useLocale();
-
-  const mergedClassNames = Object.entries(calendarClassNames ?? {}).reduce(
+const MoleculeCalendar = ({ className, classNames, ...props }, ref) => {
+  const mergedClassNames = Object.entries(
+    moleculeCalendarClassNames ?? {}
+  ).reduce(
     (obj, [key, value]) => ({ ...obj, [key]: cn(value, classNames?.[key]) }),
     {}
   );
@@ -20,30 +15,21 @@ const Calendar = ({ className, classNames, components, ...props }) => {
   return (
     <Box
       asChild
-      className={cn('text-sm', className)}
-      fixedWeeks
-      locale={dateFnsLocales[normKey(locale)]}
-      showOutsideDays
+      className={cn('p-sm text-sm', className)}
+      classNames={{ ...classNames, ...mergedClassNames }}
+      ref={ref}
       {...props}
     >
-      <DayPicker
-        classNames={{ ...classNames, ...mergedClassNames }}
-        components={Object.entries(components ?? {}).reduce(
-          (obj, [key, value]) => ({
-            ...obj,
-            [key]: (props) => <Slot {...props}>{value}</Slot>
-          }),
-          {}
-        )}
-      />
+      <Calendar />
     </Box>
   );
 };
 
-const calendarClassNames = {
+const moleculeCalendarClassNames = {
   caption: 'relative flex h-7 w-full gap-xs items-center justify-between',
-  caption_dropdowns: 'flex h-full gap-1 first:[&>div]:hidden',
-  caption_label: 'flex h-full items-center gap-1 rounded-sm font-medium',
+  caption_dropdowns: 'flex h-full gap-2xs first:[&>div]:hidden',
+  caption_label:
+    'flex h-full items-center px-xs gap-2xs rounded-sm font-medium',
 
   cell: 'p-0',
 
@@ -56,9 +42,9 @@ const calendarClassNames = {
   }),
   day_hidden: 'invisible',
   day_outside: 'opacity-50 hover:opacity-100 aria-selected:opacity-100',
-  day_range_end: 'rounded-lg-none bg [&.rounded-r-none]:rounded-lg-sm',
+  day_range_end: 'rounded-l-none [&.rounded-r-none]:rounded-l-sm',
   day_range_middle: '!rounded-none',
-  day_range_start: 'rounded-r-none [&.rounded-lg-none]:rounded-r-sm',
+  day_range_start: 'rounded-r-none [&.rounded-l-none]:rounded-r-sm',
   day_selected: 'bg-primary text-primary-content hover:bg-primary-active',
 
   dropdown:
@@ -72,17 +58,16 @@ const calendarClassNames = {
   head_cell:
     'inline-flex w-8 items-center justify-center font-normal text-content/75 lowercase',
 
-  month: 'flex flex-col gap-4 items-center',
-  months: 'flex flex-wrap justify-center gap-4',
+  month: 'flex flex-col gap-sm items-center',
+  months: 'flex flex-wrap justify-center gap-sm',
 
-  nav: 'flex gap-1 items-center justify-center',
+  nav: 'flex gap-2xs items-center justify-center',
   nav_button: button({
     color: 'main',
     size: 'xs',
-    variant: 'ghost',
-    className: 'aspect-square px-0'
+    variant: 'ghost'
   }),
-  nav_icon: 'size-1/2',
+  nav_icon: 'h-1/2 aspect-square',
 
   row: 'mt-xs flex',
 
@@ -95,4 +80,4 @@ const calendarClassNames = {
   })
 };
 
-export default Calendar;
+export default forwardRef(MoleculeCalendar);

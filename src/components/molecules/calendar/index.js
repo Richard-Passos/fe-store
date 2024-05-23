@@ -1,3 +1,3 @@
-import Calendar from './Root';
+import MoleculeCalendar from './Root';
 
-export default Calendar;
+export default MoleculeCalendar;
