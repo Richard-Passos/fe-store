@@ -1,4 +1,5 @@
-import Badge from './Root';
-export * from './variants'
+import AtomBadge from './Root';
 
-export default Badge;
+export * from './variants';
+
+export default AtomBadge;
