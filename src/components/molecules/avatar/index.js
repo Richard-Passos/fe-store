@@ -1,12 +1,12 @@
-import AvatarFallback from './Fallback';
-import AvatarImage from './Image';
-import AvatarRoot from './Root';
+import MoleculeAvatarFallback from './Fallback';
+import MoleculeAvatarImage from './Image';
+import MoleculeAvatarRoot from './Root';
 
-const Avatar = {
-  Root: AvatarRoot,
-  Fallback: AvatarFallback,
-  Image: AvatarImage,
+const MoleculeAvatar = {
+  Root: MoleculeAvatarRoot,
+  Fallback: MoleculeAvatarFallback,
+  Image: MoleculeAvatarImage
 };
 
-export default Avatar;
-export { AvatarRoot, AvatarFallback, AvatarImage };
+export default MoleculeAvatar;
+export { MoleculeAvatarRoot, MoleculeAvatarFallback, MoleculeAvatarImage };

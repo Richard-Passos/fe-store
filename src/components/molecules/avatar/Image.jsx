@@ -1,14 +1,12 @@
-'use client';
-
-import { Image as RadixImage } from '@radix-ui/react-avatar';
 import { forwardRef } from 'react';
 
 import { Image } from '@/components/atoms';
+import { AvatarImage } from '@/components/atoms/avatar';
 import { cn } from '@/utils';
 
-const AvatarImage = ({ className, ...props }, ref) => {
+const MoleculeAvatarImage = ({ className, ...props }, ref) => {
   return (
-    <RadixImage
+    <AvatarImage
       asChild
       className={cn('size-full object-cover', className)}
       ref={ref}
@@ -16,8 +14,8 @@ const AvatarImage = ({ className, ...props }, ref) => {
     >
       {/* eslint-disable-next-line jsx-a11y/alt-text */}
       <Image />
-    </RadixImage>
+    </AvatarImage>
   );
 };
 
-export default forwardRef(AvatarImage);
+export default forwardRef(MoleculeAvatarImage);

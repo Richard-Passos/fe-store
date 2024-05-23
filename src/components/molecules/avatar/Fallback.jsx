@@ -1,13 +1,11 @@
-'use client';
-
-import { Fallback } from '@radix-ui/react-avatar';
 import { forwardRef } from 'react';
 
+import { AvatarFallback } from '@/components/atoms/avatar';
 import { cn } from '@/utils';
 
-const AvatarFallback = ({ className, ...props }, ref) => {
+const MoleculeAvatarFallback = ({ className, ...props }, ref) => {
   return (
-    <Fallback
+    <AvatarFallback
       className={cn('flex size-full items-center justify-center', className)}
       ref={ref}
       {...props}
@@ -15,4 +13,4 @@ const AvatarFallback = ({ className, ...props }, ref) => {
   );
 };
 
-export default forwardRef(AvatarFallback);
+export default forwardRef(MoleculeAvatarFallback);

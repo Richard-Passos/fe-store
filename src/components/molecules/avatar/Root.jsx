@@ -1,15 +1,13 @@
-'use client';
-
-import { Root } from '@radix-ui/react-avatar';
 import { forwardRef } from 'react';
 
+import { AvatarRoot } from '@/components/atoms/avatar';
 import { cn } from '@/utils';
 
-const Avatar = ({ className, ...props }, ref) => {
+const MoleculeAvatarRoot = ({ className, ...props }, ref) => {
   return (
-    <Root
+    <AvatarRoot
       className={cn(
-        'size-10 shrink-0 overflow-hidden rounded-full border bg-muted',
+        'size-10 overflow-hidden rounded-full border bg-muted',
         className
       )}
       ref={ref}
@@ -18,4 +16,4 @@ const Avatar = ({ className, ...props }, ref) => {
   );
 };
 
-export default forwardRef(Avatar);
+export default forwardRef(MoleculeAvatarRoot);
