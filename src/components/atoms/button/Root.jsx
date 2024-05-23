@@ -3,7 +3,7 @@ import { forwardRef } from 'react';
 
 import button from './variants';
 
-const Button = (
+const AtomButton = (
   { asChild, color, variant, size, className, ...props },
   ref
 ) => {
@@ -18,4 +18,4 @@ const Button = (
   );
 };
 
-export default forwardRef(Button);
+export default forwardRef(AtomButton);

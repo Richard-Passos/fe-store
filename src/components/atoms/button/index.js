@@ -1,5 +1,5 @@
-import Button from './Root';
+import AtomButton from './Root';
 
 export * from './variants';
 
-export default Button;
+export default AtomButton;
