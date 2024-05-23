@@ -1,12 +1,21 @@
+import { Slot } from '@radix-ui/react-slot';
+import { forwardRef } from 'react';
+
 import { cn, normGridTemplates } from '@/utils';
 
-const BentoGrid = ({ className, templates, style, ...props }) => {
+const MoleculeBentoGrid = (
+  { asChild, className, templates, style, ...props },
+  ref
+) => {
+  const Tag = asChild ? Slot : 'ul';
+
   return (
-    <ul
+    <Tag
       className={cn(
-        'rounded- grid size-full grid-cols-[repeat(auto-fit,minmax(0px,1fr))] gap-sm [--template:--default-template] [grid-template-areas:--template] sm:[--template:--sm-template] md:[--template:--md-template] lg:[--template:--lg-template] xl:[--template:--xl-template] 2xl:[--template:--2xl-template]',
+        'grid size-full grid-cols-[repeat(auto-fit,minmax(0px,1fr))] gap-sm [--template:--default-template] [grid-template-areas:--template] sm:[--template:--sm-template] md:[--template:--md-template] lg:[--template:--lg-template] xl:[--template:--xl-template] 2xl:[--template:--2xl-template]',
         className
       )}
+      ref={ref}
       style={{
         '--default-template': '',
         '--sm-template': 'var(--default-template)',
@@ -22,4 +31,4 @@ const BentoGrid = ({ className, templates, style, ...props }) => {
   );
 };
 
-export default BentoGrid;
+export default forwardRef(MoleculeBentoGrid);
