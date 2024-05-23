@@ -4,11 +4,14 @@ import { AccordionContent } from '@/components/atoms/accordion';
 import { text } from '@/components/atoms/text';
 import { cn } from '@/utils';
 
-const MoleculeAccordionContent = ({ className, children, ...props }, ref) => {
+const MoleculeAccordionContent = (
+  { variant = 'p', className, children, ...props },
+  ref
+) => {
   return (
     <AccordionContent
       className={text({
-        variant: 'p',
+        variant,
         className: cn(
           'animate-slide-up overflow-hidden text-sm [--height:--accordion-content-h] data-open:animate-slide-down',
           className
