@@ -1,18 +1,16 @@
-'use client';
-
-import { Overlay } from '@radix-ui/react-alert-dialog';
 import { forwardRef } from 'react';
 
-import { alertDialogOverlay } from './variants';
+import { AlertDialogOverlay } from '@/components/atoms/alert-dialog';
+import { overlay } from '@/components/atoms/overlay';
 
-const AlertDialogOverlay = ({ color, className, ...props }, ref) => {
+const MoleculeAlertDialogOverlay = ({ color, className, ...props }, ref) => {
   return (
-    <Overlay
-      className={alertDialogOverlay({ color, className })}
+    <AlertDialogOverlay
+      className={overlay({ color, className })}
       ref={ref}
       {...props}
     />
   );
 };
 
-export default forwardRef(AlertDialogOverlay);
+export default forwardRef(MoleculeAlertDialogOverlay);

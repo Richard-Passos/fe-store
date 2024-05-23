@@ -1,17 +1,15 @@
-'use client';
-
-import { Action } from '@radix-ui/react-alert-dialog';
 import { forwardRef } from 'react';
 
+import { AlertDialogAction } from '@/components/atoms/alert-dialog';
 import { button } from '@/components/atoms/button';
 import { cn } from '@/utils';
 
-const AlertDialogAction = (
+const MoleculeAlertDialogAction = (
   { color, variant, size, className, ...props },
   ref
 ) => {
   return (
-    <Action
+    <AlertDialogAction
       className={button({
         color,
         variant,
@@ -24,4 +22,4 @@ const AlertDialogAction = (
   );
 };
 
-export default forwardRef(AlertDialogAction);
+export default forwardRef(MoleculeAlertDialogAction);

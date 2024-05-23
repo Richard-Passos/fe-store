@@ -1,25 +1,20 @@
-'use client';
-
-import { Description } from '@radix-ui/react-alert-dialog';
 import { forwardRef } from 'react';
 
-import { TextDescription } from '@/components/atoms/text';
+import { AlertDialogDescription } from '@/components/atoms/alert-dialog';
+import { text } from '@/components/atoms/text';
 import { cn } from '@/utils';
 
-const AlertDialogDescription = (
-  { className, asChild, children, ...props },
+const MoleculeAlertDialogDescription = (
+  { variant = 'p', className, ...props },
   ref
 ) => {
   return (
-    <TextDescription
-      asChild
-      className={cn('text-sm', className)}
+    <AlertDialogDescription
+      className={text({ variant, className: cn('text-sm', className) })}
       ref={ref}
       {...props}
-    >
-      <Description asChild={asChild}>{children}</Description>
-    </TextDescription>
+    />
   );
 };
 
-export default forwardRef(AlertDialogDescription);
+export default forwardRef(MoleculeAlertDialogDescription);

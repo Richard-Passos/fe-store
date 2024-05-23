@@ -1,7 +1,5 @@
-'use client';
+import { AlertDialogPortal } from '@/components/atoms/alert-dialog';
 
-import { Portal } from '@radix-ui/react-alert-dialog';
+const MoleculeAlertDialogPortal = AlertDialogPortal;
 
-const AlertDialogPortal = Portal;
-
-export default AlertDialogPortal;
+export default MoleculeAlertDialogPortal;

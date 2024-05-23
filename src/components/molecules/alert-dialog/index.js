@@ -1,40 +1,40 @@
-import AlertDialogAction from './Action';
-import AlertDialogActions from './Actions';
-import AlertDialogCancel from './Cancel';
-import AlertDialogContent from './Content';
-import AlertDialogDescription from './Description';
-import AlertDialogHeader from './Header';
-import AlertDialogOverlay from './Overlay';
-import AlertDialogPortal from './Portal';
-import AlertDialogRoot from './Root';
-import AlertDialogTitle from './Title';
-import AlertDialogTrigger from './Trigger';
+import MoleculeAlertDialogAction from './Action';
+import MoleculeAlertDialogActions from './Actions';
+import MoleculeAlertDialogCancel from './Cancel';
+import MoleculeAlertDialogContent from './Content';
+import MoleculeAlertDialogDescription from './Description';
+import MoleculeAlertDialogHeader from './Header';
+import MoleculeAlertDialogOverlay from './Overlay';
+import MoleculeAlertDialogPortal from './Portal';
+import MoleculeAlertDialogRoot from './Root';
+import MoleculeAlertDialogTitle from './Title';
+import MoleculeAlertDialogTrigger from './Trigger';
 
-const AlertDialog = {
-  Root: AlertDialogRoot,
-  Action: AlertDialogAction,
-  Actions: AlertDialogActions,
-  Cancel: AlertDialogCancel,
-  Content: AlertDialogContent,
-  Description: AlertDialogDescription,
-  Header: AlertDialogHeader,
-  Overlay: AlertDialogOverlay,
-  Portal: AlertDialogPortal,
-  Title: AlertDialogTitle,
-  Trigger: AlertDialogTrigger,
+const MoleculeAlertDialog = {
+  Root: MoleculeAlertDialogRoot,
+  Action: MoleculeAlertDialogAction,
+  Actions: MoleculeAlertDialogActions,
+  Cancel: MoleculeAlertDialogCancel,
+  Content: MoleculeAlertDialogContent,
+  Description: MoleculeAlertDialogDescription,
+  Header: MoleculeAlertDialogHeader,
+  Overlay: MoleculeAlertDialogOverlay,
+  Portal: MoleculeAlertDialogPortal,
+  Title: MoleculeAlertDialogTitle,
+  Trigger: MoleculeAlertDialogTrigger
 };
 
-export default AlertDialog;
+export default MoleculeAlertDialog;
 export {
-  AlertDialogRoot,
-  AlertDialogAction,
-  AlertDialogActions,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogHeader,
-  AlertDialogOverlay,
-  AlertDialogPortal,
-  AlertDialogTitle,
-  AlertDialogTrigger,
+  MoleculeAlertDialogRoot,
+  MoleculeAlertDialogAction,
+  MoleculeAlertDialogActions,
+  MoleculeAlertDialogCancel,
+  MoleculeAlertDialogContent,
+  MoleculeAlertDialogDescription,
+  MoleculeAlertDialogHeader,
+  MoleculeAlertDialogOverlay,
+  MoleculeAlertDialogPortal,
+  MoleculeAlertDialogTitle,
+  MoleculeAlertDialogTrigger
 };

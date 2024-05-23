@@ -1,21 +1,20 @@
-'use client';
-
-import { Title } from '@radix-ui/react-alert-dialog';
 import { forwardRef } from 'react';
 
-import { TextSubtitle } from '@/components/atoms/text';
-import { cn } from '@/utils';
+import { AlertDialogTitle } from '@/components/atoms/alert-dialog';
+import { heading } from '@/components/atoms/heading';
 
-const AlertDialogTitle = ({ className, ...props }, ref) => (
-  <Title
-    asChild
+const MoleculeAlertDialogTitle = (
+  { variant = 'h3', className, ...props },
+  ref
+) => (
+  <AlertDialogTitle
+    className={heading({
+      variant,
+      className
+    })}
     ref={ref}
-  >
-    <TextSubtitle
-      className={cn('text-lg/none font-semibold', className)}
-      {...props}
-    />
-  </Title>
+    {...props}
+  />
 );
 
-export default forwardRef(AlertDialogTitle);
+export default forwardRef(MoleculeAlertDialogTitle);

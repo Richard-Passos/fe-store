@@ -1,7 +1,5 @@
-'use client';
+import { AlertDialogRoot } from '@/components/atoms/alert-dialog';
 
-import { Root } from '@radix-ui/react-alert-dialog';
+const MoleculeAlertDialogRoot = AlertDialogRoot;
 
-const AlertDialog = Root;
-
-export default AlertDialog;
+export default MoleculeAlertDialogRoot;

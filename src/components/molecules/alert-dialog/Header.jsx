@@ -1,10 +1,14 @@
+import { Slot } from '@radix-ui/react-slot';
+
 import { cn } from '@/utils';
 
-const AlertDialogHeader = ({ className, ...props }) => {
+const MoleculeAlertDialogHeader = ({ asChild, className, ...props }) => {
+  const Tag = asChild ? Slot : 'header';
+
   return (
-    <header
+    <Tag
       className={cn(
-        'flex flex-col max-sm:items-center max-sm:text-center',
+        'flex flex-col gap-xs max-sm:items-center max-sm:text-center',
         className
       )}
       {...props}
@@ -12,4 +16,4 @@ const AlertDialogHeader = ({ className, ...props }) => {
   );
 };
 
-export default AlertDialogHeader;
+export default MoleculeAlertDialogHeader;
