@@ -49,7 +49,9 @@ const generateMetadata = async ({ params: { locale } }) => {
       default: `${t('name.first')} ${t('name.last')}`,
       template: `%s - ${t('name.first')} ${t('name.last')}`
     },
-    icon: t('favicon'),
+    icons: {
+      icon: t('favicon')
+    },
     description: t('description'),
     openGraph: {
       title: `${t('name.first')} ${t('name.last')} - ${t('summary')}`,
