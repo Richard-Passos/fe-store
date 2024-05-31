@@ -1,57 +1,81 @@
 import { useTranslations } from 'next-intl';
-import { Suspense } from 'react';
+import { Suspense, forwardRef } from 'react';
 
-import { Box, Separator } from '@/components/atoms';
-import { LocaleChanger, Logo, ThemeChanger } from '@/components/molecules';
-import { cn } from '@/utils';
+import { Icon } from '@/components/atoms';
+import {
+  ActionIcon,
+  LocaleToggle,
+  ThemeToggle,
+  Tooltip
+} from '@/components/molecules';
+import Logo from '@/components/organisms/logo';
+import { cn, translationKeys } from '@/utils';
 
 import SetState from './SetState';
-import Menu from './menu';
 
-const Header = ({ className, ...props }) => {
-  const t = useTranslations();
+const OrganismsHeader = ({ className, ...props }, ref) => {
+  const t = useTranslations('header'),
+    global = useTranslations('');
+
+  const themes = translationKeys(global, 'themes'),
+    locales = translationKeys(global, 'locales');
 
   return (
     <SetState>
-      <Box
-        asChild
+      <header
         className={cn(
-          'z-10 grid w-full max-w-bounds grid-cols-2 items-center border-transparent px-[5%] shadow-none sm:grid-cols-3',
+          'relative z-40 flex w-full max-w-bounds flex-wrap items-center justify-between gap-md px-[5%] py-xl',
           className
         )}
+        ref={ref}
         {...props}
       >
-        <header>
-          <Menu />
+        <Logo />
 
-          <Logo className='justify-self-end sm:justify-self-center' />
+        <section className='flex items-center gap-xs'>
+          <Tooltip label={t('themeToggle.label')}>
+            <ThemeToggle.Root
+              asChild
+              values={themes}
+            >
+              <ActionIcon variant='default'>
+                {translationKeys(global, 'themes').map((key) => (
+                  <ThemeToggle.Item
+                    className='size-2/3'
+                    key={key}
+                    value={key}
+                  >
+                    <Icon src={global(`themes.${key}.icon`)} />
+                  </ThemeToggle.Item>
+                ))}
+              </ActionIcon>
+            </ThemeToggle.Root>
+          </Tooltip>
 
-          <div className='flex gap-1 justify-self-end max-sm:hidden'>
-            <ThemeChanger
-              color='inherit'
-              items={t.raw('themes')}
-              size='xs'
-              variant='solid'
-            />
-
-            <Separator
-              className='h-auto rotate-12'
-              orientation='vertical'
-            />
-
-            <Suspense>
-              <LocaleChanger
-                color='inherit'
-                items={t.raw('locales')}
-                size='xs'
-                variant='solid'
-              />
-            </Suspense>
-          </div>
-        </header>
-      </Box>
+          <Suspense>
+            <Tooltip label={t('localeToggle.label')}>
+              <LocaleToggle.Root
+                asChild
+                values={locales}
+              >
+                <ActionIcon variant='default'>
+                  {locales.map((key) => (
+                    <LocaleToggle.Item
+                      className='text-sm'
+                      key={key}
+                      value={key}
+                    >
+                      {key}
+                    </LocaleToggle.Item>
+                  ))}
+                </ActionIcon>
+              </LocaleToggle.Root>
+            </Tooltip>
+          </Suspense>
+        </section>
+      </header>
     </SetState>
   );
 };
 
-export default Header;
+export default forwardRef(OrganismsHeader);

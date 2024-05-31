@@ -1,16 +1,16 @@
 import { forwardRef } from 'react';
 import Svg from 'react-inlinesvg';
 
-import icon from './variants';
+import { cn } from '@/utils';
 
-const Icon = ({ color, className, ...props }, ref) => {
+const AtomsIcon = ({ className, ...props }, ref) => {
   return (
     <Svg
-      className={icon({ color, className })}
+      className={cn('size-full *:fill-current', className)}
       innerRef={ref}
       {...props}
     />
   );
 };
 
-export default forwardRef(Icon);
+export default forwardRef(AtomsIcon);

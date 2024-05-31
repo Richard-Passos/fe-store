@@ -1,14 +1,16 @@
-export { default as CarouselContext, CarouselProvider } from './Carousel';
-export { default as ComboboxContext, ComboboxProvider } from './Combobox';
+import ErrorBoundaryContext, { ErrorBoundaryProvider } from './ErrorBoundary';
+import ToggleContext, { ToggleProvider } from './Toggle';
+
+const Contexts = {
+  ErrorBoundary: ErrorBoundaryContext,
+  Toggle: ToggleContext
+};
+
+export default Contexts;
 export {
-  default as ComboboxItemContext,
-  ComboboxItemProvider
-} from './ComboboxItem';
-export {
-  default as ErrorBoundaryContext,
-  ErrorBoundaryProvider
-} from './ErrorBoundary';
-export { default as FormFieldContext, FormFieldProvider } from './FormField';
-export { default as ProgressContext, ProgressProvider } from './Progress';
-export { default as TimerbarContext, TimerbarProvider } from './Timerbar';
-export { default as ToastContext, ToastProvider } from './Toast';
+  Contexts,
+  ErrorBoundaryContext,
+  ErrorBoundaryProvider,
+  ToggleContext,
+  ToggleProvider
+};

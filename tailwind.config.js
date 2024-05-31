@@ -1,5 +1,3 @@
-const getColor = (cssVar) => `hsl(var(${cssVar}) / <alpha-value>)`;
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: 'class',
@@ -7,99 +5,64 @@ module.exports = {
     './src/app/**/*.{jsx,tsx}',
     './src/components/**/*.{jsx,tsx}',
     './src/components/**/variants.{js,ts}',
-    './src/components/*.{js,ts}'
+    './src/**/theme.{js,ts}'
   ],
   safelist: ['light', 'dark'],
+  corePlugins: {
+    preflight: false
+  },
   theme: {
     extend: {
       spacing: {
         px: '0.8px',
         '9/10': '90%',
-        '2xs': 'var(--spacing-2xs)',
-        xs: 'var(--spacing-xs)',
-        sm: 'var(--spacing-sm)',
-        md: 'var(--spacing-md)',
-        lg: 'var(--spacing-lg)',
-        xl: 'var(--spacing-xl)',
-        '2xl': 'var(--spacing-2xl)'
+        xs: 'var(--mantine-spacing-xs)',
+        sm: 'var(--mantine-spacing-sm)',
+        md: 'var(--mantine-spacing-md)',
+        lg: 'var(--mantine-spacing-lg)',
+        xl: 'var(--mantine-spacing-xl)'
       },
-      colors: {
-        main: getColor('--root-main'),
-        active: getColor('--root-active'),
-        content: getColor('--root-content'),
-        muted: getColor('--root-muted'),
-        inverted: {
-          DEFAULT: getColor('--root-inverted'),
-          active: getColor('--root-inverted-a'),
-          content: getColor('--root-inverted-c'),
-          muted: getColor('--root-inverted-m')
-        },
-        primary: {
-          DEFAULT: getColor('--root-primary'),
-          active: getColor('--root-primary-a'),
-          content: getColor('--root-primary-c'),
-          muted: getColor('--root-primary-m')
-        },
-        secondary: {
-          DEFAULT: getColor('--root-secondary'),
-          active: getColor('--root-secondary-a'),
-          content: getColor('--root-secondary-c'),
-          muted: getColor('--root-secondary-m')
-        },
-        accent: {
-          DEFAULT: getColor('--root-accent'),
-          active: getColor('--root-accent-a'),
-          content: getColor('--root-accent-c'),
-          muted: getColor('--root-accent-m')
-        },
-        info: {
-          DEFAULT: getColor('--root-info'),
-          active: getColor('--root-info-a'),
-          content: getColor('--root-info-c'),
-          muted: getColor('--root-info-m')
-        },
-        success: {
-          DEFAULT: getColor('--root-success'),
-          active: getColor('--root-success-a'),
-          content: getColor('--root-success-c'),
-          muted: getColor('--root-success-m')
-        },
-        warning: {
-          DEFAULT: getColor('--root-warning'),
-          active: getColor('--root-warning-a'),
-          content: getColor('--root-warning-c'),
-          muted: getColor('--root-warning-m')
-        },
-        danger: {
-          DEFAULT: getColor('--root-danger'),
-          active: getColor('--root-danger-a'),
-          content: getColor('--root-danger-c'),
-          muted: getColor('--root-danger-m')
-        },
-        border: 'hsl(var(--root-content)/var(--border-opacity))',
-        current: 'currentColor'
+      fontSize: {
+        xs: 'var(--mantine-font-size-xs)',
+        sm: 'var(--mantine-font-size-sm)',
+        md: 'var(--mantine-font-size-md)',
+        lg: 'var(--mantine-font-size-lg)',
+        xl: 'var(--mantine-font-size-xl)'
       },
-      borderColor: {
-        DEFAULT: 'hsl(var(--root-content)/var(--border-opacity))'
+      lineHeight: {
+        xs: 'var(--mantine-line-height-xs)',
+        sm: 'var(--mantine-line-height-sm)',
+        md: 'var(--mantine-line-height-md)',
+        lg: 'var(--mantine-line-height-lg)',
+        xl: 'var(--mantine-line-height-xl)'
+      },
+      boxShadow: {
+        xs: 'var(--mantine-shadow-xs)',
+        sm: 'var(--mantine-shadow-sm)',
+        md: 'var(--mantine-shadow-md)',
+        lg: 'var(--mantine-shadow-lg)',
+        xl: 'var(--mantine-shadow-xl)'
+      },
+      dropShadow: {
+        xs: 'var(--mantine-shadow-xs)',
+        sm: 'var(--mantine-shadow-sm)',
+        md: 'var(--mantine-shadow-md)',
+        lg: 'var(--mantine-shadow-lg)',
+        xl: 'var(--mantine-shadow-xl)'
       },
       borderRadius: {
-        inherit: 'inherit',
-        '2xs': 'var(--radius-2xs)',
-        xs: 'var(--radius-xs)',
-        sm: 'var(--radius-sm)',
-        md: 'var(--radius-md)',
-        lg: 'var(--radius-lg)',
-        xl: 'var(--radius-xl)',
-        '2xl': 'var(--radius-2xl)'
+        DEFAULT: 'var(--mantine-radius-default)',
+        xs: 'var(--mantine-radius-xs)',
+        sm: 'var(--mantine-radius-sm)',
+        md: 'var(--mantine-radius-md)',
+        lg: 'var(--mantine-radius-lg)',
+        xl: 'var(--mantine-radius-xl)'
       },
-      outlineColor: {
-        DEFAULT: 'currentColor'
-      },
-      outlineOffset: {
-        DEFAULT: 2
-      },
-      outlineWidth: {
-        DEFAULT: 2
+      zIndex: {
+        app: 'var(--mantine-z-index-app)',
+        modal: 'var(--mantine-z-index-modal)',
+        popover: 'var(--mantine-z-index-popover)',
+        overlay: 'var(--mantine-z-index-overlay)'
       },
       minHeight: {
         bounds: 'var(--max-h)'
@@ -113,60 +76,29 @@ module.exports = {
       maxWidth: {
         bounds: 'var(--max-w)'
       },
-      keyframes: {
-        'slide-down': {
-          from: { height: 0 },
-          to: { height: 'var(--height, 0)' }
-        },
-        'slide-up': {
-          from: { height: 'var(--height, 0)' },
-          to: { height: 0 }
-        },
-        reset: {
-          from: {
-            opacity: 'var(--tw-enter-opacity, 1)',
-            transform:
-              'translate3d(var(--tw-enter-translate-x, 0), var(--tw-enter-translate-y, 0), 0) scale3d(var(--tw-enter-scale, 1), var(--tw-enter-scale, 1), var(--tw-enter-scale, 1)) rotate(var(--tw-enter-rotate, 0))'
-          },
-          to: {
-            opacity: 'var(--tw-exit-opacity, 1)',
-            transform:
-              'translate3d(var(--tw-exit-translate-x, 0), var(--tw-exit-translate-y, 0), 0) scale3d(var(--tw-exit-scale, 1), var(--tw-exit-scale, 1), var(--tw-exit-scale, 1)) rotate(var(--tw-exit-rotate, 0))'
-          }
-        },
-        active: {
-          from: {
-            opacity: 'var(--tw-exit-opacity, 1)',
-            transform:
-              'translate3d(var(--tw-exit-translate-x, 0), var(--tw-exit-translate-y, 0), 0) scale3d(var(--tw-exit-scale, 1), var(--tw-exit-scale, 1), var(--tw-exit-scale, 1)) rotate(var(--tw-exit-rotate, 0))'
-          },
-          to: {
-            opacity: 'var(--tw-enter-opacity, 1)',
-            transform:
-              'translate3d(var(--tw-enter-translate-x, 0), var(--tw-enter-translate-y, 0), 0) scale3d(var(--tw-enter-scale, 1), var(--tw-enter-scale, 1), var(--tw-enter-scale, 1)) rotate(var(--tw-enter-rotate, 0))'
-          }
-        }
-      },
-      animation: {
-        'slide-down': 'slide-down 300ms cubic-bezier(0.87, 0, 0.13, 1)',
-        'slide-up': 'slide-up 300ms cubic-bezier(0.87, 0, 0.13, 1)',
-        reset: 'reset 300ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards',
-        active: 'active 300ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards'
-      },
       fontFamily: {
-        app: 'var(--font-app)'
+        title: 'var(--mantine-font-family-headings)',
+        display: 'var(--mantine-font-family)',
+        monospace: 'var(--mantine-font-family-monospace)'
       },
       data: {
-        active: 'state=active',
-        checked: 'state=checked',
+        open: 'state=open',
         closed: 'state=closed',
-        disabled: 'disabled',
-        open: 'state=open'
-      },
-      transitionTimingFunction: {
-        backOut: 'cubic-bezier(0.34, 1.56, 0.64, 1)'
+        active: 'state=active',
+        inactive: 'state=inactive',
+        checked: 'state=checked',
+        unchecked: 'state=unchecked',
+        valid: 'state=valid',
+        invalid: 'state=invalid',
+        disabled: 'disabled'
       }
+    },
+    screens: {
+      xs: 'em(640px)',
+      sm: 'em(768px)',
+      md: 'em(1024px)',
+      lg: 'em(1280px)',
+      xl: 'em(1536px)'
     }
-  },
-  plugins: [require('tailwindcss-animate')]
+  }
 };

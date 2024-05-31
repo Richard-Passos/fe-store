@@ -1,48 +1,20 @@
-export { default as Accordion } from './accordion';
-export { default as AlertDialog } from './alert-dialog';
-export { default as AspectRatio } from './aspect-ratio';
-export { default as Avatar } from './avatar';
-export { default as Badge } from './badge';
-export { default as Box } from './box';
-export { default as Button } from './button';
-export { default as Calendar } from './calendar';
-export { default as Carousel } from './carousel';
-export { default as Checkbox } from './checkbox';
-export { default as Collapsible } from './collapsible';
-export { default as Command } from './command';
-export { default as ContextMenu } from './context-menu';
-export { default as Control } from './control';
-export { default as Dialog } from './dialog';
-export { default as DropdownMenu } from './dropdown-menu';
-export { default as ErrorBoundary } from './error-boundary';
-export { default as Form } from './form';
-export { default as GlobalProviders } from './global-providers';
-export { default as GridPattern } from './grid-pattern';
-export { default as Heading } from './heading';
-export { default as GoverCard } from './hover-card';
-export { default as Icon } from './icon';
-export { default as Image } from './image';
-export { default as Item } from './item';
-export { default as Label } from './label';
-export { default as Link } from './link';
-export { default as Menubar } from './menubar';
-export { default as Overlay } from './overlay';
-export { default as Popover } from './popover';
-export { default as Progress } from './progress';
-export { default as RadioGroup } from './radio-group';
-export { default as Select } from './select';
-export { default as Separator } from './separator';
-export { default as Sheet } from './sheet';
-export { default as Shortcut } from './shortcut';
-export { default as Skeleton } from './skeleton';
-export { default as Slider } from './slider';
-export { default as Switch } from './switch';
-export { default as Tabs } from './sheet';
-export { default as Text } from './text';
-export { default as Textarea } from './textarea';
-export { default as Timerbar } from './timerbar';
-export { default as Toast } from './toast';
-export { default as Toggle } from './toggle';
-export { default as ToggleGroup } from './toggle-group';
-export { default as Toolbar } from './toolbar';
-export { default as Tooltip } from './tooltip';
+import Button from './button';
+import Icon from './icon';
+import Image from './image';
+import Link from './link';
+import Section from './section';
+import Text from './text';
+import Title from './title';
+
+const Atoms = {
+  Button,
+  Icon,
+  Image,
+  Link,
+  Section,
+  Text,
+  Title
+};
+
+export default Atoms;
+export { Atoms, Button, Icon, Image, Link, Section, Text, Title };

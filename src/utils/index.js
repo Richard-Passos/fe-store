@@ -1,14 +1,41 @@
-export { default as addQueryLocale } from './addQueryLocale';
-export { default as capitalize } from './capitalize';
-export { default as cn } from './cn';
-export { default as cnv } from './cnv';
-export { default as getData } from './getData';
-export { default as template } from './template';
-export { default as translationKeys } from './translationKeys';
-export { default as isExternalUrl } from './isExternalUrl';
-export { default as normCompName } from './normCompName';
-export { default as normId } from './normId';
-export { default as normKey } from './normKey';
-export { default as renderComp } from './renderComp';
-export { default as normGridTemplates } from './normGridTemplates';
-export { default as setRefs } from './setRefs';
+import addQueryLocale from './addQueryLocale';
+import capitalize from './capitalize';
+import cn from './cn';
+import cnv from './cnv';
+import isExternalUrl from './isExternalUrl';
+import normCompName from './normCompName';
+import normId from './normId';
+import normKey from './normKey';
+import renderComp from './renderComp';
+import setRefs from './setRefs';
+import translationKeys from './translationKeys';
+
+const utils = {
+  addQueryLocale: addQueryLocale,
+  capitalize: capitalize,
+  cn: cn,
+  cnv: cnv,
+  isExternalUrl: isExternalUrl,
+  normCompName: normCompName,
+  normId: normId,
+  normKey: normKey,
+  renderComp: renderComp,
+  setRefs: setRefs,
+  translationKeys: translationKeys
+};
+
+export default utils;
+export {
+  utils,
+  addQueryLocale,
+  capitalize,
+  cn,
+  cnv,
+  isExternalUrl,
+  normCompName,
+  normId,
+  normKey,
+  renderComp,
+  setRefs,
+  translationKeys
+};

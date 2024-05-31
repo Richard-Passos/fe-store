@@ -1,18 +1,5 @@
-import { Slot } from '@radix-ui/react-slot';
-import { forwardRef } from 'react';
+import { Text } from '@mantine/core';
 
-import text from './variants';
+const AtomsText = Text;
 
-const Text = ({ asChild, variant = 'p', className, ...props }, ref) => {
-  const Tag = asChild ? Slot : variant;
-
-  return (
-    <Tag
-      className={text({ variant, className })}
-      ref={ref}
-      {...props}
-    />
-  );
-};
-
-export default forwardRef(Text);
+export default AtomsText;

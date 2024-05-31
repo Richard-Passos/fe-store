@@ -1,17 +1,7 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useMounted } from '@mantine/hooks';
 
-const useIsMounted = (defaultValue = false) => {
-  const [isMounted, setIsMounted] = useState(defaultValue);
-
-  useEffect(() => {
-    setIsMounted(true);
-
-    return () => setIsMounted(false);
-  }, []);
-
-  return { isMounted, setIsMounted };
-};
+const useIsMounted = useMounted;
 
 export default useIsMounted;

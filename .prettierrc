@@ -16,16 +16,7 @@
   "singleAttributePerLine": true,
   "singleQuote": true,
   "tabWidth": 2,
-  "tailwindAttributes": [
-    "class",
-    "className",
-    ".*lassNames",
-    ".*nimations",
-    ".*ariants",
-    ".*olors",
-    ".*izes",
-    ".*irections"
-  ],
+  "tailwindAttributes": [".*lass", ".*lassName", ".*lassNames"],
   "tailwindFunctions": ["cnv"],
   "trailingComma": "none",
   "useTabs": false

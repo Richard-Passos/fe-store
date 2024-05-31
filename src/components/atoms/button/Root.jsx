@@ -1,21 +1,5 @@
-import { Slot } from '@radix-ui/react-slot';
-import { forwardRef } from 'react';
+import { Button } from '@mantine/core';
 
-import button from './variants';
+const AtomsButton = Button;
 
-const AtomButton = (
-  { asChild, color, variant, size, className, ...props },
-  ref
-) => {
-  const Tag = asChild ? Slot : 'button';
-
-  return (
-    <Tag
-      className={button({ color, variant, size, className })}
-      ref={ref}
-      {...props}
-    />
-  );
-};
-
-export default forwardRef(AtomButton);
+export default AtomsButton;

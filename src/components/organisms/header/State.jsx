@@ -2,10 +2,11 @@
 
 import { Slot } from '@radix-ui/react-slot';
 import { forwardRef } from 'react';
-import { useSelector } from 'react-redux';
 
-const HeaderState = ({ style, ...props }, ref) => {
-  const { height } = useSelector((data) => data.header);
+import { useHeaderContext } from '@/hooks/contexts';
+
+const OrganismsHeaderState = ({ style, ...props }, ref) => {
+  const { height } = useHeaderContext();
 
   return (
     <Slot
@@ -16,4 +17,4 @@ const HeaderState = ({ style, ...props }, ref) => {
   );
 };
 
-export default forwardRef(HeaderState);
+export default forwardRef(OrganismsHeaderState);

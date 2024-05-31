@@ -1,9 +1,29 @@
-export { default as Accordions } from './accordions';
-export { default as Cards } from './cards';
-export { default as Combobox } from './combobox';
-export { default as ComponentsNav } from './components-nav';
-export { default as Cta } from './cta';
-export { default as Demos } from './demos';
-export { default as Footer } from './footer';
-export { default as Header } from './header';
-export { default as Toaster } from './toaster';
+import Blocks from './blocks';
+import ErrorBoundary from './error-boundary';
+import Footer from './footer';
+import Header from './header';
+import Heros from './heros';
+import Logo from './logo';
+import Providers from './providers';
+
+const Organisms = {
+  Blocks,
+  ErrorBoundary,
+  Footer,
+  Header,
+  Heros,
+  Logo,
+  Providers
+};
+
+export default Organisms;
+export {
+  Organisms,
+  Blocks,
+  ErrorBoundary,
+  Footer,
+  Header,
+  Heros,
+  Logo,
+  Providers
+};

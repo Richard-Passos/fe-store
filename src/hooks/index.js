@@ -1,16 +1,34 @@
-export { default as useCarousel } from './useCarousel';
-export { default as useChangeKeyWhenFalsy } from './useChangeKeyWhenFalsy';
-export { default as useCombobox } from './useCombobox';
-export { default as useComboboxItem } from './useComboboxItem';
-export { default as useErrorBoundary } from './useErrorBoundary';
-export { default as useEventListener } from './useEventListener';
-export { default as useForm } from './useForm';
-export { default as useFormField } from './useFormField';
-export { default as useInterval } from './useInterval';
-export { default as useIsMounted } from './useIsMounted';
-export { default as useProgress } from './useProgress';
-export { default as useTimerbar } from './useTimerbar';
-export { default as useToast } from './useToast';
-export { default as useToasts } from './useToasts';
-export { default as useUpdateEffect } from './useUpdateEffect';
-export { default as useWindowSize } from './useWindowSize';
+import useColorScheme from './useColorScheme';
+import useComputedColorScheme from './useComputedColorScheme';
+import useErrorBoundary from './useErrorBoundary';
+import useEventListener from './useEventListener';
+import useId from './useId';
+import useLocale from './useLocale';
+import useTheme from './useTheme';
+import useToggle from './useToggle';
+import useUpdateEffect from './useUpdateEffect';
+
+const Hooks = {
+  useColorScheme,
+  useComputedColorScheme,
+  useErrorBoundary,
+  useEventListener,
+  useId,
+  useLocale,
+  useTheme,
+  useToggle,
+  useUpdateEffect
+};
+
+export {
+  Hooks,
+  useColorScheme,
+  useComputedColorScheme,
+  useErrorBoundary,
+  useEventListener,
+  useId,
+  useLocale,
+  useTheme,
+  useToggle,
+  useUpdateEffect
+};

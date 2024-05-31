@@ -1,5 +1,5 @@
-import NextImage from 'next/image';
+import Image from 'next/image';
 
-const Image = NextImage;
+const AtomsImage = Image;
 
-export default Image;
+export default AtomsImage;

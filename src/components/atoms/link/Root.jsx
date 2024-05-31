@@ -1,23 +1,19 @@
 'use client';
 
-import { Slot } from '@radix-ui/react-slot';
+import { Anchor } from '@mantine/core';
 import { forwardRef } from 'react';
 
-import { Link as NavLink } from '@/navigation';
-import { cn, isExternalUrl } from '@/utils';
+import { Link } from '@/navigation';
+import { isExternalUrl } from '@/utils';
 
-const Link = ({ asChild, href, className, ...props }, ref) => {
-  const Tag = asChild ? Slot : NavLink,
-    isExternal = isExternalUrl(href);
+const AtomsLink = ({ href, ...props }, ref) => {
+  const isExternal = isExternalUrl(href);
 
   const externalLinkProps = { rel: 'noreferrer', target: '_blank' };
 
   return (
-    <Tag
-      className={cn(
-        'relative cursor-pointer font-medium text-primary no-underline before:absolute before:inset-x-0 before:bottom-0 before:h-px before:scale-x-0 before:bg-current before:transition-transform before:duration-300 hover:before:scale-x-100',
-        className
-      )}
+    <Anchor
+      component={Link}
       href={href ?? ''}
       ref={ref}
       {...(isExternal && externalLinkProps)}
@@ -26,4 +22,4 @@ const Link = ({ asChild, href, className, ...props }, ref) => {
   );
 };
 
-export default forwardRef(Link);
+export default forwardRef(AtomsLink);

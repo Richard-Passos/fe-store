@@ -1,4 +1,14 @@
-export { default as ErrorView } from './error';
-export { default as HomeView } from './home';
-export { default as NotFoundView } from './not-found';
-export { default as SingleComponentView } from './single-component';
+import ErrorView from './error';
+import HomeView from './home';
+import NotFoundView from './not-found';
+import SingleProductView from './single-product';
+
+const Views = {
+  Error: ErrorView,
+  Home: HomeView,
+  NotFound: NotFoundView,
+  SingleProduct: SingleProductView
+};
+
+export default Views;
+export { Views, ErrorView, HomeView, NotFoundView, SingleProductView };

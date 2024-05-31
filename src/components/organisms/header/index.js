@@ -5,12 +5,8 @@ import HeaderState from './State';
 const Header = {
   Root: HeaderRoot,
   SetState: HeaderSetState,
-  State: HeaderState,
+  State: HeaderState
 };
 
 export default Header;
-export {
-  HeaderRoot,
-  HeaderSetState,
-  HeaderState,
-};
+export { Header, HeaderRoot, HeaderSetState, HeaderState };

@@ -1,7 +1,17 @@
-'use client';
+import { Tooltip } from '@mantine/core';
+import { Slot } from '@radix-ui/react-slot';
+import { forwardRef } from 'react';
 
-import { Root } from '@radix-ui/react-tooltip';
+const MoleculesTooltip = ({ asChild, transitionProps, ...props }, ref) => {
+  return (
+    <Tooltip
+      component={asChild && Slot}
+      openDelay={500}
+      ref={ref}
+      transitionProps={{ transition: 'pop', ...transitionProps }}
+      {...props}
+    />
+  );
+};
 
-const Tooltip = Root;
-
-export default Tooltip;
+export default forwardRef(MoleculesTooltip);
