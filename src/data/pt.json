@@ -30,7 +30,7 @@
       "src": "/images/logo.svg",
       "alt": "Logotipo do FE Template"
     },
-    "favicon": "/images/favicon.icon"
+    "favicon": "/images/favicon.ico"
   },
   "themes": {
     "light": {
