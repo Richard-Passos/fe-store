@@ -6,7 +6,7 @@ import { cn } from '@/utils';
 const AtomsIcon = ({ className, ...props }, ref) => {
   return (
     <Svg
-      className={cn('size-full *:fill-current', className)}
+      className={cn('size-full *:fill-current *:stroke-transparent', className)}
       innerRef={ref}
       {...props}
     />

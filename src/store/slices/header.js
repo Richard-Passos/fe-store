@@ -1,7 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  height: 0
+  height: 0,
+  isVisible: true
 };
 
 const storeSlicesHeader = createSlice({
@@ -10,9 +11,12 @@ const storeSlicesHeader = createSlice({
   reducers: {
     setHeight: (state, { payload }) => {
       state.height = payload;
+    },
+    setIsVisible: (state, { payload }) => {
+      state.isVisible = payload;
     }
   }
 });
 
 export default storeSlicesHeader;
-export const { setHeight } = storeSlicesHeader.actions;
+export const { setHeight, setIsVisible } = storeSlicesHeader.actions;

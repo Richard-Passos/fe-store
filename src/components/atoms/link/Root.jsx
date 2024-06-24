@@ -3,20 +3,13 @@
 import { Anchor } from '@mantine/core';
 import { forwardRef } from 'react';
 
-import { Link } from '@/navigation';
-import { isExternalUrl } from '@/utils';
+import Link from './Unstyled';
 
-const AtomsLink = ({ href, ...props }, ref) => {
-  const isExternal = isExternalUrl(href);
-
-  const externalLinkProps = { rel: 'noreferrer', target: '_blank' };
-
+const AtomsLink = (props, ref) => {
   return (
     <Anchor
       component={Link}
-      href={href ?? ''}
       ref={ref}
-      {...(isExternal && externalLinkProps)}
       {...props}
     />
   );

@@ -1,25 +1,23 @@
 import { useTranslations } from 'next-intl';
 import { forwardRef } from 'react';
 
-import { Icon, Link } from '@/components/atoms';
-import { cn } from '@/utils';
+import { normCompName } from '@/utils';
 
-const OrganismsLogo = ({ className, ...props }, ref) => {
-  const t = useTranslations('personalInfo.logo');
+import Variants from './variants';
+
+const OrganismsLogo = ({ variant = 'primary', ...props }, ref) => {
+  const t = useTranslations('personal.logo');
+
+  const Variant = Variants[normCompName(variant)];
 
   return (
-    <Link
-      aria-label={t('alt')}
-      className={cn(
-        'inline-flex size-10 items-center justify-center rounded',
-        className
-      )}
+    <Variant
       href='/'
+      icon={t('icon')}
+      label={t('label')}
       ref={ref}
       {...props}
-    >
-      <Icon src={t('src')} />
-    </Link>
+    />
   );
 };
 

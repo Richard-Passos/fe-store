@@ -1,5 +1,16 @@
-import Image from 'next/image';
+import { Image } from '@mantine/core';
+import NextImage from 'next/image';
+import { forwardRef } from 'react';
 
-const AtomsImage = Image;
+const AtomsImage = (props, ref) => {
+  return (
+    // eslint-disable-next-line jsx-a11y/alt-text
+    <Image
+      component={NextImage}
+      ref={ref}
+      {...props}
+    />
+  );
+};
 
-export default AtomsImage;
+export default forwardRef(AtomsImage);

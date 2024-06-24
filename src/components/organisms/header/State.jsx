@@ -6,12 +6,16 @@ import { forwardRef } from 'react';
 import { useHeaderContext } from '@/hooks/contexts';
 
 const OrganismsHeaderState = ({ style, ...props }, ref) => {
-  const { height } = useHeaderContext();
+  const { height, isVisible } = useHeaderContext();
 
   return (
     <Slot
       ref={ref}
-      style={{ '--header-h': `${height}px`, ...style }}
+      style={{
+        '--header-h': `${height}px`,
+        '--is-header-visible': isVisible,
+        ...style
+      }}
       {...props}
     />
   );

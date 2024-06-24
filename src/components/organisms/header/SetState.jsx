@@ -1,20 +1,32 @@
 'use client';
 
 import { Slot } from '@radix-ui/react-slot';
-import { useCallback, useEffect, useRef } from 'react';
+import { forwardRef, useCallback, useEffect, useRef, useState } from 'react';
 
-import { useEventListener } from '@/hooks';
+import { useEventListener, useHeadroom } from '@/hooks';
 import { useHeaderContext } from '@/hooks/contexts';
+import { setRefs } from '@/utils';
 
-const OrganismsHeaderSetState = (props) => {
-  const ref = useRef(null),
-    { setHeight } = useHeaderContext();
+const OrganismsHeaderSetState = (props, ref) => {
+  const innerRef = useRef(null),
+    [isFix, setIsFix] = useState(true),
+    { setHeight, setIsVisible } = useHeaderContext();
+
+  const pinned = useHeadroom({
+    fixedAt: 0,
+    onFix: () => setIsFix(true),
+    onRelease: () => setIsFix(false)
+  });
 
   const handleSetHeight = useCallback(
     (resetValue) => {
-      const { height } = ref.current?.getBoundingClientRect() || {};
+      const { current } = innerRef;
 
-      setHeight(resetValue ?? height);
+      if (current) {
+        const { height } = current.getBoundingClientRect();
+
+        setHeight(resetValue ?? height);
+      }
     },
     [setHeight]
   );
@@ -27,12 +39,20 @@ const OrganismsHeaderSetState = (props) => {
     return () => handleSetHeight(0);
   }, [handleSetHeight]);
 
+  useEffect(() => {
+    setIsVisible(pinned);
+
+    return () => setIsVisible(false);
+  }, [setIsVisible, pinned]);
+
   return (
     <Slot
-      ref={ref}
+      data-is-fix={isFix}
+      data-is-visible={pinned}
+      ref={setRefs(ref, innerRef)}
       {...props}
     />
   );
 };
 
-export default OrganismsHeaderSetState;
+export default forwardRef(OrganismsHeaderSetState);

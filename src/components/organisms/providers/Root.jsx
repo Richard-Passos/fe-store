@@ -1,13 +1,22 @@
 import IconProvider from './Icon';
+import IntlProvider from './Intl';
 import StoreProvider from './Store';
 import UiProvider from './Ui';
 
-const OrganismsProviders = ({ stateProps, uiProps, iconProps, children }) => {
+const OrganismsProviders = ({
+  stateProps,
+  intlProps,
+  uiProps,
+  iconProps,
+  children
+}) => {
   return (
     <StoreProvider {...stateProps}>
-      <UiProvider {...uiProps}>
-        <IconProvider {...iconProps}>{children}</IconProvider>
-      </UiProvider>
+      <IntlProvider {...intlProps}>
+        <UiProvider {...uiProps}>
+          <IconProvider {...iconProps}>{children}</IconProvider>
+        </UiProvider>
+      </IntlProvider>
     </StoreProvider>
   );
 };

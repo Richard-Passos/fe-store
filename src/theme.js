@@ -130,16 +130,16 @@ const themeOverride = createTheme({
       '#087f5b'
     ],
     green: [
-      '#ebfbee',
-      '#d3f9d8',
-      '#b2f2bb',
-      '#8ce99a',
-      '#69db7c',
-      '#51cf66',
-      '#40c057',
-      '#37b24d',
-      '#2f9e44',
-      '#2b8a3e'
+      '#ecfdf4',
+      '#d9fae8',
+      '#adf4ce',
+      '#7ff0b2',
+      '#5bec9a',
+      '#47e98c',
+      '#3ce983',
+      '#30ce70',
+      '#25b763',
+      '#0f9e52'
     ],
     lime: [
       '#f4fce3',
@@ -154,16 +154,16 @@ const themeOverride = createTheme({
       '#5c940d'
     ],
     yellow: [
-      '#fff9db',
-      '#fff3bf',
-      '#ffec99',
-      '#ffe066',
-      '#ffd43b',
-      '#fcc419',
-      '#fab005',
-      '#f59f00',
-      '#f08c00',
-      '#e67700'
+      '#fffae1',
+      '#fff4cc',
+      '#ffe89b',
+      '#ffdc64',
+      '#ffd138',
+      '#ffca1c',
+      '#ffc709',
+      '#e3af00',
+      '#ca9c00',
+      '#ae8600'
     ],
     orange: [
       '#fff4e6',
@@ -180,9 +180,9 @@ const themeOverride = createTheme({
   },
   primaryShade: {
     light: 6,
-    dark: 8
+    dark: 7
   },
-  primaryColor: 'red',
+  primaryColor: 'yellow',
   autoContrast: false,
   luminanceThreshold: 0.3,
   fontFamily: fonts.display.style.fontFamily,
@@ -194,20 +194,21 @@ const themeOverride = createTheme({
     to: 'cyan',
     deg: 45
   },
-  defaultRadius: 'sm',
+  defaultRadius: 'xl',
   activeClassName: 'active:scale-[.98]',
-  focusClassName: '',
+  focusClassName: 'focus-visible:outline',
   headings: {
     fontFamily: fonts.title.style.fontFamily,
     fontWeight: '700',
     textWrap: 'wrap',
     sizes: {
       h1: {
-        fontSize: 'calc(2.125rem * var(--mantine-scale))',
+        fontSize: 'calc(4rem * var(--mantine-scale))',
         lineHeight: '1.3'
       },
       h2: {
-        fontSize: 'calc(1.625rem * var(--mantine-scale))',
+        fontSize:
+           'calc(clamp(1.6875rem, -0.4219rem + 6.75vw, 3.375rem) * var(--mantine-scale))',
         lineHeight: '1.35'
       },
       h3: {

@@ -1,4 +1,10 @@
-import Tooltip from './Root';
+import TooltipGroup from './Group';
+import TooltipRoot from './Root';
+
+const Tooltip = {
+  Root: TooltipRoot,
+  Group: TooltipGroup
+};
 
 export default Tooltip;
-export { Tooltip };
+export { Tooltip, TooltipRoot, TooltipGroup };

@@ -1,4 +1,14 @@
-const Block = {};
+import About from './about';
+import Cart from './cart';
+import ProductCatalog from './product-catalog';
+import ProductDisplay from './product-display';
 
-export default Block;
-export { Block };
+const Blocks = {
+  About,
+  Cart,
+  ProductCatalog,
+  ProductDisplay
+};
+
+export default Blocks;
+export { Blocks, About, Cart, ProductCatalog, ProductDisplay };

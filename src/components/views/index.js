@@ -1,9 +1,13 @@
+import AboutView from './about';
+import CartView from './cart';
 import ErrorView from './error';
 import HomeView from './home';
 import NotFoundView from './not-found';
 import SingleProductView from './single-product';
 
 const Views = {
+  About: AboutView,
+  Cart: CartView,
   Error: ErrorView,
   Home: HomeView,
   NotFound: NotFoundView,
@@ -11,4 +15,12 @@ const Views = {
 };
 
 export default Views;
-export { Views, ErrorView, HomeView, NotFoundView, SingleProductView };
+export {
+  Views,
+  AboutView,
+  CartView,
+  ErrorView,
+  HomeView,
+  NotFoundView,
+  SingleProductView
+};

@@ -1,6 +1,7 @@
 import { ColorSchemeScript } from '@mantine/core';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 
+import { Notifications } from '@/components/molecules';
 import {
   ErrorBoundary,
   Footer,
@@ -15,7 +16,7 @@ const Layout = ({ params: { locale }, children }) => {
 
   return (
     <html
-      className='overflow-x-clip scroll-smooth'
+      className='overflow-x-clip scroll-smooth has-[body[data-scroll-locked]]:overflow-y-hidden'
       lang={locale}
     >
       <head>
@@ -28,13 +29,15 @@ const Layout = ({ params: { locale }, children }) => {
 
           <ErrorBoundary>
             <Header.State>
-              <main className='relative my-auto flex w-full max-w-bounds flex-col items-center'>
+              <main className='relative flex w-full max-w-bounds flex-col items-center'>
                 {children}
               </main>
             </Header.State>
           </ErrorBoundary>
 
           <Footer />
+
+          <Notifications />
         </Providers>
       </body>
     </html>
@@ -42,7 +45,7 @@ const Layout = ({ params: { locale }, children }) => {
 };
 
 const generateMetadata = async ({ params: { locale } }) => {
-  const t = await getTranslations({ locale, namespace: 'personalInfo' });
+  const t = await getTranslations({ locale, namespace: 'personal' });
 
   return {
     title: {

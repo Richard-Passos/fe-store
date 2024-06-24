@@ -4,13 +4,15 @@ import { createContext, useCallback } from 'react';
 
 import { useId, useToggle } from '@/hooks';
 
-const ToggleContext = createContext({
+const DEFAULTS = {
   id: '',
   activeValue: '',
   prevValue: '',
   nextValue: '',
   toggle: () => {}
-});
+};
+
+const ToggleContext = createContext(DEFAULTS);
 
 const ToggleProvider = ({ values = [], value, ...props }) => {
   const [activeIdx, toggle] = useToggle([...Array(values.length).keys()]),

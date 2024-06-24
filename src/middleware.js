@@ -1,13 +1,13 @@
 import createMiddleware from 'next-intl/middleware';
 
-import { locales } from '@/navigation';
+import { defaultLocale, locales } from '@/navigation';
 
 const middleware = createMiddleware({
   locales,
-  defaultLocale: locales[0],
+  defaultLocale
 });
 
 export default middleware;
 export const config = {
-  matcher: ['/((?!api|_next|_vercel|.*\\..*).*)'],
+  matcher: ['/((?!api|_next|_vercel|.*\\..*).*)']
 };
