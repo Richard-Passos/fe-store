@@ -3,10 +3,10 @@ import { forwardRef } from 'react';
 
 import { Group, Radio, Stack, Text, Title } from '@/components/atoms';
 import { Action } from '@/components/molecules';
-import { PaymentForm } from '@/components/organisms/forms';
 import { cart, cn, objToArray } from '@/utils';
 
 import Total from './Total';
+import Form from './form';
 
 const OrganismsBlocksCartCheckout = async (
   { namespace, className, ...props },
@@ -74,7 +74,7 @@ const OrganismsBlocksCartCheckout = async (
           className='ml-auto'
           gap='xs'
         >
-          <PaymentForm.Control name='shipping'>
+          <Form.Control name='shipping'>
             <Radio.Group defaultValue='free'>
               <Stack align='end'>
                 {shipping.map((data = {}) => (
@@ -97,7 +97,7 @@ const OrganismsBlocksCartCheckout = async (
                 ))}
               </Stack>
             </Radio.Group>
-          </PaymentForm.Control>
+          </Form.Control>
 
           <Text
             className='mt-md'
@@ -130,7 +130,7 @@ const OrganismsBlocksCartCheckout = async (
   groups = objToArray(groups);
 
   return (
-    <PaymentForm.Root
+    <Form.Root
       className={cn('px-md', className)}
       notification={notification}
       ref={ref}
@@ -154,7 +154,7 @@ const OrganismsBlocksCartCheckout = async (
         </Group>
       ))}
 
-      <PaymentForm.Submit asChild>
+      <Form.Submit asChild>
         <Action
           disabled={!itemsLength}
           fullWidth
@@ -162,8 +162,8 @@ const OrganismsBlocksCartCheckout = async (
         >
           {t('submit.label')}
         </Action>
-      </PaymentForm.Submit>
-    </PaymentForm.Root>
+      </Form.Submit>
+    </Form.Root>
   );
 };
 
