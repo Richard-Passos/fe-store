@@ -2,12 +2,12 @@ import { useTranslations } from 'next-intl';
 import { forwardRef } from 'react';
 
 import { CartForm } from '@/components/organisms/forms';
-import { cart } from '@/utils';
+import { cart, cn } from '@/utils';
 
 import Empty from './Empty';
 import Items from './Items';
 
-const OrganismsBlocksCartList = ({ namespace, ...props }, ref) => {
+const OrganismsBlocksCartList = ({ namespace, className, ...props }, ref) => {
   const t = useTranslations(namespace);
 
   const notification = {
@@ -24,7 +24,7 @@ const OrganismsBlocksCartList = ({ namespace, ...props }, ref) => {
 
   return (
     <CartForm.Root
-      className='relative'
+      className={cn('relative', className)}
       fields={fields}
       notification={notification}
       ref={ref}
