@@ -4,9 +4,12 @@ import { forwardRef } from 'react';
 import { Badge, Image, Title } from '@/components/atoms';
 import { Action, Table } from '@/components/molecules';
 import { CartForm } from '@/components/organisms/forms';
-import { cart, objToArray, translationKeys } from '@/utils';
+import { cart, cn, objToArray, translationKeys } from '@/utils';
 
-const OrganismsBlocksCartListItems = async ({ namespace, ...props }, ref) => {
+const OrganismsBlocksCartListItems = async (
+  { namespace, className, ...props },
+  ref
+) => {
   const [locale, format] = await Promise.all([getLocale(), getFormatter()]);
 
   const t = await getTranslations({ locale, namespace });
@@ -21,86 +24,88 @@ const OrganismsBlocksCartListItems = async ({ namespace, ...props }, ref) => {
 
   return (
     <>
-      <Table.Root
+      <div
+        className={cn('overflow-x-auto', className)}
         ref={ref}
-        verticalSpacing='lg'
         {...props}
       >
-        <Table.Head.Root>
-          {titles.map((key) => (
-            <Table.Head.Data key={key}>{t(`titles.${key}`)}</Table.Head.Data>
-          ))}
-        </Table.Head.Root>
+        <Table.Root verticalSpacing='lg'>
+          <Table.Head.Root>
+            {titles.map((key) => (
+              <Table.Head.Data key={key}>{t(`titles.${key}`)}</Table.Head.Data>
+            ))}
+          </Table.Head.Root>
 
-        <Table.Body>
-          {items.map((data = {}, i) => (
-            <Table.Row
-              className='group'
-              key={data.id}
-            >
-              <Table.Data>
-                <CartForm.Remove
-                  aria-label={t('remove.label')}
-                  className='focus-visible:opacity-100 group-hover:opacity-100 sm:opacity-0'
-                  id={data.id}
-                />
-              </Table.Data>
-
-              <Table.Data>
-                <div className='relative aspect-square h-auto w-24 max-w-full overflow-hidden rounded-lg'>
-                  <Image
-                    alt={data.thumbnailImage?.alt}
-                    className='object-cover'
-                    height={96}
-                    priority={i === 0}
-                    src={data.thumbnailImage?.src}
-                    width={96}
+          <Table.Body>
+            {items.map((data, i) => (
+              <Table.Row
+                className='group'
+                key={data.id}
+              >
+                <Table.Data>
+                  <CartForm.Remove
+                    aria-label={t('remove.label')}
+                    className='focus-visible:opacity-100 group-hover:opacity-100 sm:opacity-0'
+                    id={data.id}
                   />
-                </div>
-              </Table.Data>
+                </Table.Data>
 
-              <Table.Data>
-                <Title order={4}>{data.title}</Title>
+                <Table.Data>
+                  <div className='relative aspect-square h-auto w-24 max-w-full overflow-hidden rounded-lg bg-gray-light'>
+                    <Image
+                      alt={data.thumbnailImage?.alt}
+                      className='object-cover'
+                      height={96}
+                      priority={i === 0}
+                      src={data.thumbnailImage?.src}
+                      width={96}
+                    />
+                  </div>
+                </Table.Data>
 
-                <Badge
-                  className='mt-1 block'
-                  color='green'
-                  size='xs'
-                >
-                  {data.sizes?.[data.size]?.label}
-                </Badge>
-              </Table.Data>
+                <Table.Data>
+                  <Title order={4}>{data.title}</Title>
 
-              <Table.Data>
-                {format.number(data.price, {
-                  style: 'currency',
-                  currency: 'USD'
-                })}
-              </Table.Data>
-
-              <Table.Data>
-                <CartForm.Control name={`items.${i}.quantity`}>
-                  <CartForm.QuantityInput
-                    defaultSize={{ name: `items.${i}.size`, id: data.size }}
-                    defaultValue={data.quantity}
+                  <Badge
+                    className='mt-1 block'
+                    color='green'
                     size='xs'
-                    sizes={objToArray(data.sizes)}
-                  />
-                </CartForm.Control>
-              </Table.Data>
+                  >
+                    {data.sizes?.[data.size]?.label}
+                  </Badge>
+                </Table.Data>
 
-              <Table.Data>
-                {format.number(data.price * data.quantity, {
-                  style: 'currency',
-                  currency: 'USD'
-                })}
-              </Table.Data>
-            </Table.Row>
-          ))}
+                <Table.Data>
+                  {format.number(data.price, {
+                    style: 'currency',
+                    currency: 'USD'
+                  })}
+                </Table.Data>
 
-          <Table.Row />
-        </Table.Body>
-      </Table.Root>
+                <Table.Data>
+                  <CartForm.Control name={`items.${i}.quantity`}>
+                    <CartForm.QuantityInput
+                      defaultSize={{ name: `items.${i}.size`, id: data.size }}
+                      defaultValue={data.quantity}
+                      size='xs'
+                      sizes={objToArray(data.sizes)}
+                    />
+                  </CartForm.Control>
+                </Table.Data>
+
+                <Table.Data>
+                  {format.number(data.price * data.quantity, {
+                    style: 'currency',
+                    currency: 'USD'
+                  })}
+                </Table.Data>
+              </Table.Row>
+            ))}
+
+            <Table.Row />
+          </Table.Body>
+        </Table.Root>
+      </div>
 
       <section className='flex w-full gap-md px-md pt-lg max-sm:flex-col sm:items-center'>
         <CartForm.RemoveAll className='max-sm:w-full'>
