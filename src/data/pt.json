@@ -112,7 +112,7 @@
       },
       "blocks": {
         "productCatalog": {
-          "title": "<span>COLEÇÃO <gray><icon>/images/burst.svg</icon></gray> FIGMA <orange><icon>/images/hourglass.svg</icon></orange> DE </span> \\n<layerFilter>CAMADAS</layerFilter> <span><orange><icon>/images/zag.svg</icon></orange> E <green><icon>/images/dots.svg</icon></green></span> <componentFilter>COMPONENTES</componentFilter> <span><yellow><icon>/images/sun.svg</icon></yellow> PARA \\nVOCÊ <gray><icon>/images/comet.svg</icon></gray> E <yellow><icon>/images/snake.svg</icon></yellow> SEUS <green><icon>/images/tri.svg</icon></green> AMIGOS</span>",
+          "title": "<span>FIGMA'S <gray><icon>/images/burst.svg</icon></gray> COLLECTION <orange><icon>/images/hourglass.svg</icon></orange> OF</span> \n<layerFilter>LAYERS</layerFilter> <span><orange><icon>/images/zag.svg</icon></orange> AND <green><icon>/images/dots.svg</icon></green></span> <componentFilter>COMPONENTS</componentFilter> <span><yellow><icon>/images/sun.svg</icon></yellow> FOR \nYOU <gray><icon>/images/comet.svg</icon></gray> AND <yellow><icon>/images/snake.svg</icon></yellow> YOUR <green><icon>/images/tri.svg</icon></green> FRIENDS</span>",
           "price": 10,
           "href": "/products",
           "image": {
@@ -247,63 +247,54 @@
     }
   },
   "header": {
-    "links": {
+    "nav": {
       "shop": {
-        "label": "Loja",
+        "label": "Shop",
         "href": "/"
       },
       "about": {
-        "label": "Sobre",
+        "label": "About",
         "href": "/about"
       }
     },
     "cart": {
       "label": "Carrinho {count}"
     },
-    "themeToggle": {
-      "label": "Mudar o tema."
-    },
     "localeToggle": {
       "label": "Mudar o idioma."
     },
     "drawer": {
       "title": "A Loja Figma",
-      "trigger": {
-        "label": "Abrir menu"
+      "open": {
+        "label": "Open drawer"
       },
       "close": {
         "label": "Fechar menu"
       },
-      "primaryLinks": {
-        "shop": {
-          "label": "Loja",
-          "href": "/"
+      "nav": {
+        "primary": {
+          "shop": {
+            "label": "Shop",
+            "href": "/"
+          },
+          "about": {
+            "label": "About",
+            "href": "/about"
+          }
         },
-        "about": {
-          "label": "Sobre",
-          "href": "/about"
-        }
-      },
-      "secondaryLinks": {
-        "faq": {
-          "label": "Perguntas Frequentes",
-          "href": "#faq"
-        },
-        "contactUs": {
-          "label": "Fale conosco",
-          "href": "#contact-us"
-        },
-        "privacyPolicy": {
-          "label": "Política de privacidade",
-          "href": "#privacy-policy"
-        },
-        "termsOfService": {
-          "label": "Termos de serviço",
-          "href": "#terms-of-service"
-        },
-        "account": {
-          "label": "Conta",
-          "href": "#account"
+        "secondary": {
+          "faq": {
+            "label": "FAQ",
+            "href": "#faq"
+          },
+          "termsOfService": {
+            "label": "Terms of service",
+            "href": "#terms-of-service"
+          },
+          "cookies": {
+            "label": "Cookies",
+            "href": "#cookies"
+          }
         }
       }
     }
@@ -331,6 +322,10 @@
             "label": "Perguntas Frequentes",
             "href": "#"
           },
+          "termsOfService": {
+            "label": "Termos of service",
+            "href": "#terms-of-service"
+          },
           "about": {
             "label": "Cookies",
             "href": "#"
@@ -351,21 +346,17 @@
         }
       }
     },
-    "loop": "Maravilhosamente <icon>/images/burst.svg</icon> considerada <icon>/images/burst.svg</icon> coleção <icon>/images/burst.svg</icon> de <icon>/images/burst.svg</icon> objetos <icon>/images/burst.svg</icon> Figma <icon>/images/burst.svg</icon> para <icon>/images/burst.svg</icon> o nosso <icon>/images/burst.svg</icon> tempo <icon>/images/burst.svg</icon> em <icon>/images/burst.svg</icon>"
+    "loop": "Figma's <icon>/images/burst.svg</icon> marvelously <icon>/images/burst.svg</icon> considered <icon>/images/burst.svg</icon> collection <icon>/images/burst.svg</icon> of <icon>/images/burst.svg</icon> objects <icon>/images/burst.svg</icon> for <icon>/images/burst.svg</icon> our <icon>/images/burst.svg</icon> time <icon>/images/burst.svg</icon>"
   },
   "personal": {
-    "name": {
-      "first": "Figma",
-      "last": "Loja"
-    },
-    "summary": "O repositório definitivo de templates front-end.",
-    "description": "Liberte seus projetos front-end com o FE Template, o ponto de partida definitivo para sua jornada de desenvolvimento web. Mergulhe em pastas organizadas meticulosamente e componentes elaborados com as melhores práticas da indústria em mente. Construa sua próxima obra-prima de forma fácil e eficiente, com precisão incomparável.",
+    "name": "Figma Store",
+    "description": "Figma's collection of Layers and Components for you and your friends.",
     "email": "hi.richardp@gmail.com",
     "logo": {
-      "icon": "/images/logo.svg",
-      "label": "Loja Figma"
+      "label": "FE Template",
+      "favicon": "/images/favicon.ico",
+      "icon": "/images/logo.svg"
     },
-    "favicon": "/images/favicon.ico",
     "socials": {
       "portfolio": {
         "label": "Portfólio",
@@ -382,16 +373,6 @@
         "href": "https://www.linkedin.com/in/richardp-dev",
         "icon": "/images/linkedin.svg"
       }
-    }
-  },
-  "themes": {
-    "light": {
-      "label": "Claro",
-      "icon": "/images/sun.svg"
-    },
-    "dark": {
-      "label": "Escuro",
-      "icon": "/images/moon.svg"
     }
   },
   "locales": {
