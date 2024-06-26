@@ -2,21 +2,356 @@
   "pages": {
     "home": {
       "hero": {
-        "title": "Olá, mundo!",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe ab velit iusto ex nemo ea!",
-        "action": {
-          "label": "Clique aqui"
+        "items": {
+          "0": {
+            "label": "Version history coach jacket",
+            "image": {
+              "src": "/images/hero-01.webp",
+              "alt": "Two people wearing graphic design-themed apparel stand side by side, facing away from the camera. The person on the left wears a black cap and a beige shirt. The person on the right wears a navy blue jacket.",
+              "width": "920",
+              "height": "575",
+              "shape": "/images/shape-01.svg"
+            }
+          },
+          "1": {
+            "label": "Version history coach jacket",
+            "image": {
+              "src": "/images/hero-02.webp",
+              "alt": "Two people wearing graphic design-themed apparel stand side by side, facing away from the camera. The person on the left wears a black cap and a beige shirt. The person on the right wears a navy blue jacket.",
+              "width": "475",
+              "height": "475",
+              "shape": "/images/shape-02.svg"
+            }
+          },
+          "2": {
+            "label": "Version history coach jacket",
+            "image": {
+              "src": "/images/hero-03.webp",
+              "alt": "Two people wearing graphic design-themed apparel stand side by side, facing away from the camera. The person on the left wears a black cap and a beige shirt. The person on the right wears a navy blue jacket.",
+              "width": "475",
+              "height": "475",
+              "shape": "/images/shape-03.svg"
+            }
+          },
+          "3": {
+            "label": "Version history coach jacket",
+            "image": {
+              "src": "/images/hero-04.webp",
+              "alt": "Two people wearing graphic design-themed apparel stand side by side, facing away from the camera. The person on the left wears a black cap and a beige shirt. The person on the right wears a navy blue jacket.",
+              "width": "920",
+              "height": "575",
+              "shape": "/images/shape-01.svg"
+            }
+          },
+          "4": {
+            "label": "Version history coach jacket",
+            "image": {
+              "src": "/images/hero-05.webp",
+              "alt": "Two people wearing graphic design-themed apparel stand side by side, facing away from the camera. The person on the left wears a black cap and a beige shirt. The person on the right wears a navy blue jacket.",
+              "width": "475",
+              "height": "475",
+              "shape": "/images/shape-04.svg"
+            }
+          },
+          "5": {
+            "label": "Version history coach jacket",
+            "image": {
+              "src": "/images/hero-06.webp",
+              "alt": "Two people wearing graphic design-themed apparel stand side by side, facing away from the camera. The person on the left wears a black cap and a beige shirt. The person on the right wears a navy blue jacket.",
+              "width": "475",
+              "height": "475",
+              "shape": "/images/shape-02.svg"
+            }
+          },
+          "6": {
+            "label": "Version history coach jacket",
+            "image": {
+              "src": "/images/hero-07.webp",
+              "alt": "Two people wearing graphic design-themed apparel stand side by side, facing away from the camera. The person on the left wears a black cap and a beige shirt. The person on the right wears a navy blue jacket.",
+              "width": "475",
+              "height": "475",
+              "shape": "/images/shape-05.svg"
+            }
+          },
+          "7": {
+            "label": "Version history coach jacket",
+            "image": {
+              "src": "/images/hero-08.webp",
+              "alt": "Two people wearing graphic design-themed apparel stand side by side, facing away from the camera. The person on the left wears a black cap and a beige shirt. The person on the right wears a navy blue jacket.",
+              "width": "475",
+              "height": "475",
+              "shape": "/images/shape-04.svg"
+            }
+          },
+          "8": {
+            "label": "Version history coach jacket",
+            "image": {
+              "src": "/images/hero-09.webp",
+              "alt": "Two people wearing graphic design-themed apparel stand side by side, facing away from the camera. The person on the left wears a black cap and a beige shirt. The person on the right wears a navy blue jacket.",
+              "width": "475",
+              "height": "475",
+              "shape": "/images/shape-03.svg"
+            }
+          },
+          "9": {
+            "label": "Version history coach jacket",
+            "image": {
+              "src": "/images/hero-10.webp",
+              "alt": "Two people wearing graphic design-themed apparel stand side by side, facing away from the camera. The person on the left wears a black cap and a beige shirt. The person on the right wears a navy blue jacket.",
+              "width": "475",
+              "height": "475",
+              "shape": "/images/shape-02.svg"
+            }
+          }
+        },
+        "link": {
+          "label": "100% OF PROFITS FUND REFORESTATION",
+          "href": "/about",
+          "icon": "/images/hand.svg"
+        }
+      },
+      "blocks": {
+        "productCatalog": {
+          "title": "<span>FIGMA'S <gray><icon>/images/burst.svg</icon></gray> COLLECTION <orange><icon>/images/hourglass.svg</icon></orange> OF</span> \n<layerFilter>LAYERS</layerFilter> <span><orange><icon>/images/zag.svg</icon></orange> AND <green><icon>/images/dots.svg</icon></green></span> <componentFilter>COMPONENTS</componentFilter> <span><yellow><icon>/images/sun.svg</icon></yellow> FOR \nYOU <gray><icon>/images/comet.svg</icon></gray> AND <yellow><icon>/images/snake.svg</icon></yellow> YOUR <green><icon>/images/tri.svg</icon></green> FRIENDS</span>",
+          "price": 10,
+          "href": "/products",
+          "image": {
+            "alt": "",
+            "src": "/images/placeholder.webp",
+            "width": "240",
+            "height": "300"
+          }
+        }
+      }
+    },
+    "about": {
+      "title": "<orange><icon>/images/hourglass.svg</icon></orange> ABOUT <yellow><icon>/images/snake.svg</icon></yellow> US",
+      "description": "<p>Lorem ipsum dolor sit <strong>amet consectetur</strong>, adipisicing elit. Tempora dolores quidem blanditiis quia perferendis, fugiat aliquam corporis recusandae quis ipsa vero modi ad debitis <strong>libero architecto</strong> amet vitae at deserunt corrupti vel sit a quos.</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nobis expedita veritatis <strong>aperiam dignissimos</strong> magni? Totam, molestiae. Totam eaque perspiciatis, blanditiis beatae ex consequuntur nihil pariatur <strong>quia sapiente sit</strong>. Iusto.</p>",
+      "image": {
+        "src": "/images/team.webp",
+        "alt": "Two people wearing graphic design-themed apparel stand side by side, facing away from the camera. The person on the left wears a black cap and a beige shirt. The person on the right wears a navy blue jacket.",
+        "shape": "/images/shape-04.svg"
+      },
+      "metadata": {
+        "title": "About",
+        "description": "About site."
+      }
+    },
+    "cart": {
+      "title": "Shopping cart",
+      "list": {
+        "titles": {
+          "product": "Product",
+          "price": "Price",
+          "quantity": "Quantity",
+          "subtotal": "Subtotal"
+        },
+        "remove": {
+          "label": "Remove item"
+        },
+        "empty": {
+          "label": "Empty cart, AAACKKK"
+        },
+        "removeAll": {
+          "label": "{count, plural, =0 {No items to remove} =1 {Remove the single item} other {Remove all # items}}"
+        },
+        "updateAll": {
+          "label": "Update cart"
+        },
+        "notification": {
+          "title": "All good!",
+          "description": "Cart successfully updated.",
+          "close": {
+            "label": "Close notification"
+          }
+        }
+      },
+      "checkout": {
+        "title": "Cart totals",
+        "subtotal": {
+          "label": "Subtotal"
+        },
+        "shipping": {
+          "label": "Shipping",
+          "free": {
+            "label": "Free shipping"
+          },
+          "flat": {
+            "label": "Flat rate"
+          },
+          "pickup": {
+            "label": "Pickup"
+          },
+          "change": {
+            "label": "Change address"
+          },
+          "to": "Shipping to"
+        },
+        "total": {
+          "label": "Total"
+        },
+        "submit": {
+          "label": "Proceed to checkout"
+        },
+        "notification": {
+          "title": "Congrats!",
+          "description": "Purchase (not really) made successfully.",
+          "close": {
+            "label": "Close notification"
+          }
+        }
+      },
+      "metadata": {
+        "title": "Cart",
+        "description": "Cart items with a checkout form."
+      }
+    },
+    "singleProduct": {
+      "size": {
+        "label": "Size"
+      },
+      "quantity": {
+        "label": "Quantity"
+      },
+      "add": {
+        "label": "Add to cart"
+      },
+      "notification": {
+        "title": "All good!",
+        "description": "Item added to cart.",
+        "close": {
+          "label": "Close notification"
+        }
+      }
+    },
+    "error": {
+      "title": "Oops...",
+      "description": "Something went wrong!",
+      "actions": {
+        "tryAgain": {
+          "label": "Try again"
+        },
+        "backHome": {
+          "label": "Back home"
+        }
+      }
+    },
+    "notFound": {
+      "title": "404",
+      "description": "Oops... Something went wrong!",
+      "actions": {
+        "backHome": {
+          "label": "Back home"
         }
       }
     }
   },
   "header": {
+    "links": {
+      "shop": {
+        "label": "Shop",
+        "href": "/"
+      },
+      "about": {
+        "label": "About",
+        "href": "/about"
+      }
+    },
+    "cart": {
+      "label": "Cart {count}"
+    },
     "themeToggle": {
       "label": "Mudar o tema."
     },
     "localeToggle": {
       "label": "Mudar o idioma."
+    },
+    "drawer": {
+      "title": "The Figma Store",
+      "trigger": {
+        "label": "Open drawer"
+      },
+      "close": {
+        "label": "Close drawer"
+      },
+      "primaryLinks": {
+        "shop": {
+          "label": "Shop",
+          "href": "/"
+        },
+        "about": {
+          "label": "About",
+          "href": "/about"
+        }
+      },
+      "secondaryLinks": {
+        "faq": {
+          "label": "FAQ",
+          "href": "#faq"
+        },
+        "contactUs": {
+          "label": "Contact us",
+          "href": "#contact-us"
+        },
+        "privacyPolicy": {
+          "label": "Privacy policy",
+          "href": "#privacy-policy"
+        },
+        "termsOfService": {
+          "label": "Terms of service",
+          "href": "#terms-of-service"
+        },
+        "account": {
+          "label": "Account",
+          "href": "#account"
+        }
+      }
     }
+  },
+  "footer": {
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque voluptate possimus repellat eius perferendis distinctio?",
+    "nav": {
+      "company": {
+        "title": "Company",
+        "items": {
+          "shop": {
+            "label": "Shop",
+            "href": "/"
+          },
+          "about": {
+            "label": "About us",
+            "href": "/about"
+          }
+        }
+      },
+      "help": {
+        "title": "Get help",
+        "items": {
+          "shop": {
+            "label": "FAQ",
+            "href": "#"
+          },
+          "about": {
+            "label": "Cookies",
+            "href": "#"
+          }
+        }
+      },
+      "shop": {
+        "title": "Shop",
+        "items": {
+          "cart": {
+            "label": "Cart",
+            "href": "/cart"
+          },
+          "products": {
+            "label": "Products",
+            "href": "/products"
+          }
+        }
+      }
+    },
+    "loop": "Figma's <icon>/images/burst.svg</icon> marvelously <icon>/images/burst.svg</icon> considered <icon>/images/burst.svg</icon> collection <icon>/images/burst.svg</icon> of <icon>/images/burst.svg</icon> objects <icon>/images/burst.svg</icon> for <icon>/images/burst.svg</icon> our <icon>/images/burst.svg</icon> time <icon>/images/burst.svg</icon> on <icon>/images/burst.svg</icon>"
   },
   "personal": {
     "name": {
@@ -27,10 +362,27 @@
     "description": "Liberte seus projetos front-end com o FE Template, o ponto de partida definitivo para sua jornada de desenvolvimento web. Mergulhe em pastas organizadas meticulosamente e componentes elaborados com as melhores práticas da indústria em mente. Construa sua próxima obra-prima de forma fácil e eficiente, com precisão incomparável.",
     "email": "hi.richardp@gmail.com",
     "logo": {
-      "src": "/images/logo.svg",
-      "alt": "Logotipo do FE Template"
+      "icon": "/images/logo.svg",
+      "label": "FE Template"
     },
-    "favicon": "/images/favicon.ico"
+    "favicon": "/images/favicon.ico",
+    "socials": {
+      "portfolio": {
+        "label": "Portfolio",
+        "href": "https://richardp.vercel.app",
+        "icon": "/images/link.svg"
+      },
+      "github": {
+        "label": "Github",
+        "href": "https://github.com/Richard-Passos",
+        "icon": "/images/github.svg"
+      },
+      "linkedin": {
+        "label": "Linkedin",
+        "href": "https://www.linkedin.com/in/richardp-dev",
+        "icon": "/images/linkedin.svg"
+      }
+    }
   },
   "themes": {
     "light": {
@@ -48,6 +400,578 @@
     },
     "pt": {
       "label": "Português"
+    }
+  },
+  "products": {
+    "0": {
+      "type": {
+        "value": "layer",
+        "label": "Layer"
+      },
+      "title": "Layer",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci odit accusantium eligendi, dignissimos ducimus harum provident at nihil saepe illum velit nemo laboriosam eaque.",
+      "price": 10,
+      "isNew": {
+        "value": true,
+        "label": "New"
+      },
+      "sizes": {
+        "s": {
+          "label": "Small",
+          "quantity": 0
+        },
+        "m": {
+          "label": "Medium",
+          "quantity": 10
+        },
+        "l": {
+          "label": "Large",
+          "quantity": 10
+        },
+        "xl": {
+          "label": "X-large",
+          "quantity": 10
+        },
+        "2xl": {
+          "label": "2x-large",
+          "quantity": 1
+        }
+      },
+      "thumbnailImage": {
+        "alt": "",
+        "src": "/images/placeholder.webp"
+      },
+      "mainImage": {
+        "alt": "",
+        "src": "/images/placeholder2.png"
+      },
+      "galleryImages": {
+        "0": {
+          "alt": "",
+          "src": "/images/placeholder2.png"
+        },
+        "1": {
+          "alt": "",
+          "src": "/images/placeholder2.png"
+        },
+        "2": {
+          "alt": "",
+          "src": "/images/placeholder2.png"
+        }
+      }
+    },
+    "1": {
+      "type": {
+        "value": "component",
+        "label": "Component"
+      },
+      "title": "Component",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci odit accusantium eligendi, dignissimos ducimus harum provident at nihil saepe illum velit nemo laboriosam eaque.",
+      "price": 10,
+      "isNew": {
+        "value": true,
+        "label": "New"
+      },
+      "sizes": {
+        "s": {
+          "label": "Small",
+          "quantity": 0
+        },
+        "m": {
+          "label": "Medium",
+          "quantity": 10
+        },
+        "l": {
+          "label": "Large",
+          "quantity": 10
+        },
+        "xl": {
+          "label": "X-large",
+          "quantity": 10
+        },
+        "2xl": {
+          "label": "2x-large",
+          "quantity": 1
+        }
+      },
+      "thumbnailImage": {
+        "alt": "",
+        "src": "/images/placeholder.webp"
+      },
+      "mainImage": {
+        "alt": "",
+        "src": "/images/placeholder2.png"
+      },
+      "galleryImages": {
+        "0": {
+          "alt": "",
+          "src": "/images/placeholder2.png"
+        },
+        "1": {
+          "alt": "",
+          "src": "/images/placeholder2.png"
+        },
+        "2": {
+          "alt": "",
+          "src": "/images/placeholder2.png"
+        }
+      }
+    },
+    "2": {
+      "type": {
+        "value": "layer",
+        "label": "Layer"
+      },
+      "title": "Layer",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci odit accusantium eligendi, dignissimos ducimus harum provident at nihil saepe illum velit nemo laboriosam eaque.",
+      "price": 10,
+      "isNew": {
+        "value": false,
+        "label": "New"
+      },
+      "sizes": {
+        "s": {
+          "label": "Small",
+          "quantity": 0
+        },
+        "m": {
+          "label": "Medium",
+          "quantity": 10
+        },
+        "l": {
+          "label": "Large",
+          "quantity": 10
+        },
+        "xl": {
+          "label": "X-large",
+          "quantity": 10
+        },
+        "2xl": {
+          "label": "2x-large",
+          "quantity": 1
+        }
+      },
+      "thumbnailImage": {
+        "alt": "",
+        "src": "/images/placeholder.webp"
+      },
+      "mainImage": {
+        "alt": "",
+        "src": "/images/placeholder2.png"
+      },
+      "galleryImages": {
+        "0": {
+          "alt": "",
+          "src": "/images/placeholder2.png"
+        },
+        "1": {
+          "alt": "",
+          "src": "/images/placeholder2.png"
+        },
+        "2": {
+          "alt": "",
+          "src": "/images/placeholder2.png"
+        }
+      }
+    },
+    "3": {
+      "type": {
+        "value": "component",
+        "label": "Component"
+      },
+      "title": "Component",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci odit accusantium eligendi, dignissimos ducimus harum provident at nihil saepe illum velit nemo laboriosam eaque.",
+      "price": 10,
+      "isNew": {
+        "value": false,
+        "label": "New"
+      },
+      "sizes": {
+        "s": {
+          "label": "Small",
+          "quantity": 0
+        },
+        "m": {
+          "label": "Medium",
+          "quantity": 10
+        },
+        "l": {
+          "label": "Large",
+          "quantity": 10
+        },
+        "xl": {
+          "label": "X-large",
+          "quantity": 10
+        },
+        "2xl": {
+          "label": "2x-large",
+          "quantity": 1
+        }
+      },
+      "thumbnailImage": {
+        "alt": "",
+        "src": "/images/placeholder.webp"
+      },
+      "mainImage": {
+        "alt": "",
+        "src": "/images/placeholder2.png"
+      },
+      "galleryImages": {
+        "0": {
+          "alt": "",
+          "src": "/images/placeholder2.png"
+        },
+        "1": {
+          "alt": "",
+          "src": "/images/placeholder2.png"
+        },
+        "2": {
+          "alt": "",
+          "src": "/images/placeholder2.png"
+        }
+      }
+    },
+    "4": {
+      "type": {
+        "value": "layer",
+        "label": "Layer"
+      },
+      "title": "Layer",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci odit accusantium eligendi, dignissimos ducimus harum provident at nihil saepe illum velit nemo laboriosam eaque.",
+      "price": 10,
+      "isNew": {
+        "value": false,
+        "label": "New"
+      },
+      "sizes": {
+        "s": {
+          "label": "Small",
+          "quantity": 0
+        },
+        "m": {
+          "label": "Medium",
+          "quantity": 10
+        },
+        "l": {
+          "label": "Large",
+          "quantity": 10
+        },
+        "xl": {
+          "label": "X-large",
+          "quantity": 10
+        },
+        "2xl": {
+          "label": "2x-large",
+          "quantity": 1
+        }
+      },
+      "thumbnailImage": {
+        "alt": "",
+        "src": "/images/placeholder.webp"
+      },
+      "mainImage": {
+        "alt": "",
+        "src": "/images/placeholder2.png"
+      },
+      "galleryImages": {
+        "0": {
+          "alt": "",
+          "src": "/images/placeholder2.png"
+        },
+        "1": {
+          "alt": "",
+          "src": "/images/placeholder2.png"
+        },
+        "2": {
+          "alt": "",
+          "src": "/images/placeholder2.png"
+        }
+      }
+    },
+    "5": {
+      "type": {
+        "value": "component",
+        "label": "Component"
+      },
+      "title": "Component",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci odit accusantium eligendi, dignissimos ducimus harum provident at nihil saepe illum velit nemo laboriosam eaque.",
+      "price": 10,
+      "isNew": {
+        "value": false,
+        "label": "New"
+      },
+      "sizes": {
+        "s": {
+          "label": "Small",
+          "quantity": 0
+        },
+        "m": {
+          "label": "Medium",
+          "quantity": 10
+        },
+        "l": {
+          "label": "Large",
+          "quantity": 10
+        },
+        "xl": {
+          "label": "X-large",
+          "quantity": 10
+        },
+        "2xl": {
+          "label": "2x-large",
+          "quantity": 1
+        }
+      },
+      "thumbnailImage": {
+        "alt": "",
+        "src": "/images/placeholder.webp"
+      },
+      "mainImage": {
+        "alt": "",
+        "src": "/images/placeholder2.png"
+      },
+      "galleryImages": {
+        "0": {
+          "alt": "",
+          "src": "/images/placeholder2.png"
+        },
+        "1": {
+          "alt": "",
+          "src": "/images/placeholder2.png"
+        },
+        "2": {
+          "alt": "",
+          "src": "/images/placeholder2.png"
+        }
+      }
+    },
+    "6": {
+      "type": {
+        "value": "layer",
+        "label": "Layer"
+      },
+      "title": "Layer",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci odit accusantium eligendi, dignissimos ducimus harum provident at nihil saepe illum velit nemo laboriosam eaque.",
+      "price": 10,
+      "isNew": {
+        "value": false,
+        "label": "New"
+      },
+      "sizes": {
+        "s": {
+          "label": "Small",
+          "quantity": 0
+        },
+        "m": {
+          "label": "Medium",
+          "quantity": 10
+        },
+        "l": {
+          "label": "Large",
+          "quantity": 10
+        },
+        "xl": {
+          "label": "X-large",
+          "quantity": 10
+        },
+        "2xl": {
+          "label": "2x-large",
+          "quantity": 1
+        }
+      },
+      "thumbnailImage": {
+        "alt": "",
+        "src": "/images/placeholder.webp"
+      },
+      "mainImage": {
+        "alt": "",
+        "src": "/images/placeholder2.png"
+      },
+      "galleryImages": {
+        "0": {
+          "alt": "",
+          "src": "/images/placeholder2.png"
+        },
+        "1": {
+          "alt": "",
+          "src": "/images/placeholder2.png"
+        },
+        "2": {
+          "alt": "",
+          "src": "/images/placeholder2.png"
+        }
+      }
+    },
+    "7": {
+      "type": {
+        "value": "component",
+        "label": "Component"
+      },
+      "title": "Component",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci odit accusantium eligendi, dignissimos ducimus harum provident at nihil saepe illum velit nemo laboriosam eaque.",
+      "price": 10,
+      "isNew": {
+        "value": false,
+        "label": "New"
+      },
+      "sizes": {
+        "s": {
+          "label": "Small",
+          "quantity": 0
+        },
+        "m": {
+          "label": "Medium",
+          "quantity": 10
+        },
+        "l": {
+          "label": "Large",
+          "quantity": 10
+        },
+        "xl": {
+          "label": "X-large",
+          "quantity": 10
+        },
+        "2xl": {
+          "label": "2x-large",
+          "quantity": 1
+        }
+      },
+      "thumbnailImage": {
+        "alt": "",
+        "src": "/images/placeholder.webp"
+      },
+      "mainImage": {
+        "alt": "",
+        "src": "/images/placeholder2.png"
+      },
+      "galleryImages": {
+        "0": {
+          "alt": "",
+          "src": "/images/placeholder2.png"
+        },
+        "1": {
+          "alt": "",
+          "src": "/images/placeholder2.png"
+        },
+        "2": {
+          "alt": "",
+          "src": "/images/placeholder2.png"
+        }
+      }
+    },
+    "8": {
+      "type": {
+        "value": "layer",
+        "label": "Layer"
+      },
+      "title": "Layer",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci odit accusantium eligendi, dignissimos ducimus harum provident at nihil saepe illum velit nemo laboriosam eaque.",
+      "price": 10,
+      "isNew": {
+        "value": false,
+        "label": "New"
+      },
+      "sizes": {
+        "s": {
+          "label": "Small",
+          "quantity": 0
+        },
+        "m": {
+          "label": "Medium",
+          "quantity": 10
+        },
+        "l": {
+          "label": "Large",
+          "quantity": 10
+        },
+        "xl": {
+          "label": "X-large",
+          "quantity": 10
+        },
+        "2xl": {
+          "label": "2x-large",
+          "quantity": 1
+        }
+      },
+      "thumbnailImage": {
+        "alt": "",
+        "src": "/images/placeholder.webp"
+      },
+      "mainImage": {
+        "alt": "",
+        "src": "/images/placeholder2.png"
+      },
+      "galleryImages": {
+        "0": {
+          "alt": "",
+          "src": "/images/placeholder2.png"
+        },
+        "1": {
+          "alt": "",
+          "src": "/images/placeholder2.png"
+        },
+        "2": {
+          "alt": "",
+          "src": "/images/placeholder2.png"
+        }
+      }
+    },
+    "9": {
+      "type": {
+        "value": "component",
+        "label": "Component"
+      },
+      "title": "Component",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci odit accusantium eligendi, dignissimos ducimus harum provident at nihil saepe illum velit nemo laboriosam eaque.",
+      "price": 10,
+      "isNew": {
+        "value": false,
+        "label": "New"
+      },
+      "sizes": {
+        "s": {
+          "label": "Small",
+          "quantity": 0
+        },
+        "m": {
+          "label": "Medium",
+          "quantity": 10
+        },
+        "l": {
+          "label": "Large",
+          "quantity": 10
+        },
+        "xl": {
+          "label": "X-large",
+          "quantity": 10
+        },
+        "2xl": {
+          "label": "2x-large",
+          "quantity": 1
+        }
+      },
+      "thumbnailImage": {
+        "alt": "",
+        "src": "/images/placeholder.webp"
+      },
+      "mainImage": {
+        "alt": "",
+        "src": "/images/placeholder2.png"
+      },
+      "galleryImages": {
+        "0": {
+          "alt": "",
+          "src": "/images/placeholder2.png"
+        },
+        "1": {
+          "alt": "",
+          "src": "/images/placeholder2.png"
+        },
+        "2": {
+          "alt": "",
+          "src": "/images/placeholder2.png"
+        }
+      }
     }
   }
 }
