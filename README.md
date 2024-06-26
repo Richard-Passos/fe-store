@@ -1,4 +1,4 @@
-<h1 align="center">🗄️ Figma Store</h1>
+<h1 align="center">🗄️ The Figma Store</h1>
 
 <br>
 
