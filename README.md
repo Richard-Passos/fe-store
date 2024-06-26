@@ -1,4 +1,4 @@
-<h1 align="center">🗄️ Front-end template</h1>
+<h1 align="center">🗄️ Figma Store</h1>
 
 <br>
 
@@ -10,7 +10,7 @@ Visit the live [website](https://fetemplate.vercel.app)
 
 ## 📝 Description
 
-Welcome to the ultimate front-end template repository! My go-to starting point for front-end projects. Dive into a meticulously crafted folder structure and a collection of components designed with best practices in mind. Whether you're building a simple website or a complex web application, this template will help you kickstart your project with ease and efficiency.
+Discover our exclusive Figma collection tailored for you and your friends! Dive into a vibrant array of layers and components designed for our eco-conscious ecommerce platform, featuring clothing, badges, and more. Every purchase supports our mission: 100% of profits fund reforestation efforts, making each choice a step towards a greener future.
 
 <br/>
 
