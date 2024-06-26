@@ -18,16 +18,15 @@ const OrganismsBlocksProductDisplayCarousel = ({ data, ...props }, ref) => {
       <Carousel.Track className='!overflow-hidden rounded-lg'>
         {data.map(([key, data], i) => (
           <Carousel.Item
-            className='w-full bg-gray-light'
+            className='aspect-square w-full bg-gray-light md:aspect-[1/1.4]'
             key={key}
           >
             <Image
               alt={data.alt}
-              className='size-full object-cover'
-              height={600}
+              className='object-cover'
+              fill
               priority={i === 0}
               src={data.src}
-              width={448}
             />
           </Carousel.Item>
         ))}

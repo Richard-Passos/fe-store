@@ -12,7 +12,7 @@ import {
 } from '@/components/atoms';
 import { Action } from '@/components/molecules';
 import { CartForm } from '@/components/organisms/forms';
-import { cn, objToArray, uniqueId } from '@/utils';
+import { cn, objToArray } from '@/utils';
 
 import Carousel from './Carousel';
 
@@ -90,14 +90,14 @@ const OrganismsBlocksProductDisplay = async (
   return (
     <section
       className={cn(
-        'flex min-h-svh w-9/10 max-w-screen-lg items-center gap-lg py-xl max-sm:flex-col sm:pt-[--header-h] 2xl:min-h-bounds',
+        'flex min-h-svh w-9/10 max-w-screen-lg items-center gap-lg py-[--py] [--py:theme(spacing.xl)] max-md:flex-col sm:pt-[calc(var(--py)+var(--header-h))] 2xl:min-h-bounds',
         className
       )}
       ref={ref}
       {...props}
     >
       <Indicator
-        className='max-w-md flex-1'
+        className='w-full flex-1 md:max-w-md'
         disabled={!data.isNew?.value}
         label={data.isNew?.label}
         offset={32}
@@ -156,7 +156,7 @@ const OrganismsBlocksProductDisplay = async (
         <Group className='mt-xl pt-md'>
           <CartForm.Submit asChild>
             <Action
-              className='max-w-48 grow'
+              className='min-w-fit max-w-48 grow'
               size='md'
             >
               {t('add.label')}

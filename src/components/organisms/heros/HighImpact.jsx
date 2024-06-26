@@ -11,7 +11,7 @@ const OrganismsHeroHighImpact = ({ namespace, className, ...props }, ref) => {
 
   return (
     <section
-      className={cn('relative isolate flex w-full flex-col', className)}
+      className={cn('relative flex w-full flex-col', className)}
       ref={ref}
       {...props}
     >
@@ -89,7 +89,7 @@ const OrganismsHeroHighImpact = ({ namespace, className, ...props }, ref) => {
         <span className='absolute inset-y-0 -z-50 w-screen bg-primary-filled'></span>
       </Carousel.Root>
 
-      <div className='w relative h-[calc(var(--ai-size-xxl)/2)] w-full [--ai-size-xxl:clamp(theme(spacing.32),3.125rem+14vw,theme(spacing.44))]'>
+      <div className='relative h-[calc(var(--ai-size-xxl)/2)] w-full [--ai-size-xxl:clamp(theme(spacing.32),3.125rem+14vw,theme(spacing.44))]'>
         <span className='absolute left-1/2 top-0 h-1 w-screen -translate-x-1/2 -translate-y-1/2 bg-black' />
 
         <Action
@@ -113,7 +113,10 @@ const OrganismsHeroHighImpact = ({ namespace, className, ...props }, ref) => {
               a 10 10 0 1 1 0 -20
             '
             text={t('link.label')}
-            textProps={{ textLength: 55, fontSize: 2.5 }}
+            textProps={{
+              textLength: 60,
+              fontSize: 2.5
+            }}
             viewBox='0 0 24 24'
           />
         </Action>

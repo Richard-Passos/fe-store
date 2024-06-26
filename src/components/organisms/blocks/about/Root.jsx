@@ -14,23 +14,22 @@ const OrganismsBlocksAbout = ({ namespace, className, ...props }, ref) => {
   return (
     <section
       className={cn(
-        'flex items-center gap-xl py-xl max-sm:flex-col',
+        'flex w-9/10 max-w-screen-lg items-center gap-xl py-xl max-md:flex-col',
         className
       )}
       ref={ref}
       {...props}
     >
-      <Center className='relative aspect-square max-sm:w-9/10 sm:sticky sm:top-lg'>
+      <Center className='relative aspect-square w-full flex-1 p-1 md:sticky md:top-lg'>
         <Image
           alt={t('image.alt')}
-          className='relative z-10 size-full object-cover [mask-image:--shape] [mask-position:center] [mask-repeat:no-repeat] [mask-size:calc(100%-4px)]'
-          height={500}
+          className='relative z-10 object-cover [mask-image:--shape] [mask-position:center] [mask-repeat:no-repeat] [mask-size:100%]'
+          fill
           priority
           src={t('image.src')}
           style={{
             '--shape': `url(${t('image.shape')})`
           }}
-          width={500}
         />
 
         <Icon
@@ -40,11 +39,11 @@ const OrganismsBlocksAbout = ({ namespace, className, ...props }, ref) => {
       </Center>
 
       <Stack
-        className='sm:max-w-xl sm:py-xl'
+        className='flex-1 sm:max-w-xl md:py-xl'
         justify='center'
       >
         <Title
-          className='sm:-ml-[calc(theme(spacing.xl)*2)]'
+          className='md:-ml-[calc(theme(spacing.xl)*2)]'
           order={1}
         >
           {t.rich('title')}

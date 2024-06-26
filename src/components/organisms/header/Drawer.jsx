@@ -52,15 +52,15 @@ const OrganismsHeaderDrawer = (
           component='nav'
           gap='xs'
         >
-          {translationKeys(t, 'primaryLinks').map((key) => (
+          {translationKeys(t, 'nav.primary').map((key) => (
             <Title
               className='text-5xl text-current hover:text-primary-filled'
               component={Link}
-              href={t(`primaryLinks.${key}.href`)}
+              href={t(`nav.primary.${key}.href`)}
               key={key}
               variant='h2'
             >
-              {t(`primaryLinks.${key}.label`)}
+              {t(`nav.primary.${key}.label`)}
             </Title>
           ))}
         </Stack>
@@ -70,13 +70,13 @@ const OrganismsHeaderDrawer = (
           component='nav'
           gap='md'
         >
-          {translationKeys(t, 'secondaryLinks').map((key) => (
+          {translationKeys(t, 'nav.secondary').map((key) => (
             <Link
               className='text-current hover:text-primary-filled'
-              href={t(`secondaryLinks.${key}.href`)}
+              href={t(`nav.secondary.${key}.href`)}
               key={key}
             >
-              {t(`secondaryLinks.${key}.label`)}
+              {t(`nav.secondary.${key}.label`)}
             </Link>
           ))}
         </Stack>

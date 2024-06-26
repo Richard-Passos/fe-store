@@ -37,12 +37,12 @@ const OrganismsHeader = ({ className, ...props }, ref) => {
           component='nav'
           gap='xs'
         >
-          {translationKeys(t, 'links').map((key) => (
+          {translationKeys(t, 'nav').map((key) => (
             <Action
-              href={t(`links.${key}.href`)}
+              href={t(`nav.${key}.href`)}
               key={key}
             >
-              {t(`links.${key}.label`)}
+              {t(`nav.${key}.label`)}
             </Action>
           ))}
         </Group>

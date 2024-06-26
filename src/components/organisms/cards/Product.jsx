@@ -31,18 +31,16 @@ const OrganismsCardsProduct = ({ data = {}, className, ...props }, ref) => {
         >
           <Image
             alt={thumbnailImage.alt}
-            className='size-full object-cover'
-            height={300}
+            className='object-cover'
+            fill
             src={thumbnailImage.src}
-            width={240}
           />
 
           <Image
             alt={mainImage.alt}
-            className='absolute inset-0 size-full object-cover opacity-0 transition-opacity group-hover:opacity-100'
-            height={300}
+            className='absolute inset-0 object-cover opacity-0 transition-opacity group-hover:opacity-100'
+            fill
             src={mainImage.src}
-            width={240}
           />
         </Card.Section>
 
