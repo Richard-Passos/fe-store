@@ -235,7 +235,7 @@
     }
   },
   "header": {
-    "links": {
+    "nav": {
       "shop": {
         "label": "Shop",
         "href": "/"
@@ -248,50 +248,41 @@
     "cart": {
       "label": "Cart {count}"
     },
-    "themeToggle": {
-      "label": "Toggle theme."
-    },
     "localeToggle": {
       "label": "Toggle locale."
     },
     "drawer": {
       "title": "The Figma Store",
-      "trigger": {
+      "open": {
         "label": "Open drawer"
       },
       "close": {
         "label": "Close drawer"
       },
-      "primaryLinks": {
-        "shop": {
-          "label": "Shop",
-          "href": "/"
+      "nav": {
+        "primary": {
+          "shop": {
+            "label": "Shop",
+            "href": "/"
+          },
+          "about": {
+            "label": "About",
+            "href": "/about"
+          }
         },
-        "about": {
-          "label": "About",
-          "href": "/about"
-        }
-      },
-      "secondaryLinks": {
-        "faq": {
-          "label": "FAQ",
-          "href": "#faq"
-        },
-        "contactUs": {
-          "label": "Contact us",
-          "href": "#contact-us"
-        },
-        "privacyPolicy": {
-          "label": "Privacy policy",
-          "href": "#privacy-policy"
-        },
-        "termsOfService": {
-          "label": "Terms of service",
-          "href": "#terms-of-service"
-        },
-        "account": {
-          "label": "Account",
-          "href": "#account"
+        "secondary": {
+          "faq": {
+            "label": "FAQ",
+            "href": "#faq"
+          },
+          "termsOfService": {
+            "label": "Terms of service",
+            "href": "#terms-of-service"
+          },
+          "cookies": {
+            "label": "Cookies",
+            "href": "#cookies"
+          }
         }
       }
     }
@@ -319,6 +310,10 @@
             "label": "FAQ",
             "href": "#"
           },
+          "termsOfService": {
+            "label": "Termos of service",
+            "href": "#terms-of-service"
+          },
           "about": {
             "label": "Cookies",
             "href": "#"
@@ -339,21 +334,17 @@
         }
       }
     },
-    "loop": "Figma's <icon>/images/burst.svg</icon> marvelously <icon>/images/burst.svg</icon> considered <icon>/images/burst.svg</icon> collection <icon>/images/burst.svg</icon> of <icon>/images/burst.svg</icon> objects <icon>/images/burst.svg</icon> for <icon>/images/burst.svg</icon> our <icon>/images/burst.svg</icon> time <icon>/images/burst.svg</icon> on <icon>/images/burst.svg</icon>"
+    "loop": "Figma's <icon>/images/burst.svg</icon> marvelously <icon>/images/burst.svg</icon> considered <icon>/images/burst.svg</icon> collection <icon>/images/burst.svg</icon> of <icon>/images/burst.svg</icon> objects <icon>/images/burst.svg</icon> for <icon>/images/burst.svg</icon> our <icon>/images/burst.svg</icon> time <icon>/images/burst.svg</icon>"
   },
   "personal": {
-    "name": {
-      "first": "Figma",
-      "last": "Store"
-    },
-    "summary": "The ultimate front-end template repository.",
-    "description": "Unleash your front-end projects with FE Template, the definitive starting point for your web development journey. Dive into meticulously organized folders and expertly crafted components, designed with industry best practices in mind. Build your next masterpiece effortlessly and efficiently, with unparalleled ease and precision.",
+    "name": "Figma Store",
+    "description": "Figma's collection of Layers and Components for you and your friends.",
     "email": "hi.richardp@gmail.com",
     "logo": {
-      "icon": "/images/logo.svg",
-      "label": "FE Template"
+      "label": "FE Template",
+      "favicon": "/images/favicon.ico",
+      "icon": "/images/logo.svg"
     },
-    "favicon": "/images/favicon.ico",
     "socials": {
       "portfolio": {
         "label": "Portfolio",
@@ -366,20 +357,10 @@
         "icon": "/images/github.svg"
       },
       "linkedin": {
-        "label": "Linkedin",
+        "label": "LinkedIn",
         "href": "https://www.linkedin.com/in/richardp-dev",
         "icon": "/images/linkedin.svg"
       }
-    }
-  },
-  "themes": {
-    "light": {
-      "label": "Light",
-      "icon": "/images/sun.svg"
-    },
-    "dark": {
-      "label": "Dark",
-      "icon": "/images/moon.svg"
     }
   },
   "locales": {
